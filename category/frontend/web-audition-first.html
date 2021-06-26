@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>web 前端面试题 [web基础] | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="收集 web 前端常见面试题，包括 web基础, html,css,js,vue,react,webpack 等">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/75.bfc543b2.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-6337" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>web 前端面试题 [web基础]</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2020-08-20</span> <span>文章字数：421</span> <span>预计用时：2分6秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#_1-跨域问题">1. 跨域问题</a></li><li><a href="#_2-tcp-三次握手、四次挥手过程">2. TCP 三次握手、四次挥手过程</a></li><li><a href="#_3-常见-web-安全及防范">3. 常见 web 安全及防范</a></li><li><a href="#_5-http-和-https">5. HTTP 和 HTTPS</a></li><li><a href="#_6-一个页面从输入-url-到页面加载显示完成">6. 一个页面从输入 URL 到页面加载显示完成</a></li><li><a href="#_7-get-和-post-的区别">7. GET 和 POST 的区别</a></li><li><a href="#_8-http-状态码">8. HTTP 状态码</a></li></ul></div><p></p> <h4 id="_1-跨域问题"><a href="#_1-跨域问题" class="header-anchor">#</a> 1. 跨域问题</h4> <ul><li>JSONP:
+<ul><li>动态插入 script 标签，通过 script 标签引入一个 js 文件，这个 js 文件载入成功后会执行我们在 url 参数中指定的函数，并且会把我们需要的 json 数据作为参数传入。</li> <li>由于同源策略的限制，XmlHttpRequest 只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过 script 标签实现跨域请求，然后在服务端输出 JSON 数据并执行回调函数，从而解决了跨域的数据请求。</li> <li>优点是兼容性好，简单易用，支持浏览器与服务器双向通信。缺点是只支持 GET 请求。</li></ul></li> <li>CORS:
+<ul><li>服务器端对于 CORS 的支持，主要就是通过设置 Access-Control-Allow-Origin 来进行的。如果浏览器检测到相应的设置，就可以允许 Ajax 进行跨域访问。</li></ul></li></ul> <hr> <h4 id="_2-tcp-三次握手、四次挥手过程"><a href="#_2-tcp-三次握手、四次挥手过程" class="header-anchor">#</a> 2. TCP 三次握手、四次挥手过程</h4> <ul><li>三次握手：
+<ol><li>发送端首先发送一个带 SYN 标志的数据包给对方。</li> <li>接收端收到后，回传一个带有 SYN/ACK 标志的数据包以示传达确认信息。</li> <li>最后，发送端再回传一个带 ACK 标志的数据包，代表&quot;握手&quot;结束。<div class="custom-block tip"><p class="custom-block-title">注意</p> <p>若在握手过程中某个阶段莫名中断，TCP 协议会再次以相同的顺序发送相同的数据包。握手过程中使用了 TCP 的标志：SYN 和 ACK。</p></div></li></ol></li> <li>四次挥手：
+<ol><li>主动关闭方发送一个 FIN，用来关闭主动方到被动关闭方的数据传送，但此时主动关闭方还可以接受数据。</li> <li>被动关闭方收到 FIN 包后，发送一个 ACK 给对方，确认序号为收到序号 +1。</li> <li>被动关闭方发送一个 FIN，用来关闭被动关闭方到主动关闭方的数据传送。</li> <li>主动关闭方收到 FIN 后，发送一个 ACK 给被动关闭方，确认序号为收到序号 +1，至此，完成四次挥手。</li></ol></li></ul> <hr> <h4 id="_3-常见-web-安全及防范"><a href="#_3-常见-web-安全及防范" class="header-anchor">#</a> 3. 常见 web 安全及防范</h4> <ul><li>sql 注入原理：就是通过把 SQL 命令插入到 Web 表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的 SQL 命令。</li></ul> <ul><li>防范：
+<ol><li>要对用户的输入进行校验。</li> <li>不要使用动态拼装 SQL，可使用参数化的 SQL 或者直接使用存储过程进行数据查询存取。</li> <li>不要使用管理员权限的数据库连接。</li> <li>不要把机密信息明文存放。 ……</li></ol></li></ul> <ul><li>XSS 原理： Xss 攻击指的是攻击者往 Web 页面里插入恶意 html 标签或者 javascript 代码。</li></ul> <ul><li>防范：
+<ol><li>输入的地方对特殊字符做好过滤。</li> <li>需要通过 js 动态写入 html 时，要加以 encode 避免标签暴露出来。</li> <li>避免直接在 cookie 中泄露隐私信息。</li> <li>将 cookie 与系统 ip 绑定来降低 cookie 泄露后的风险。</li> <li>客户端如果不需对 cookie 操作，可在 Set-Cookie 末尾加入 HttpOnly。</li> <li>尽量采用 POST 而非 GET 提交表单。</li></ol></li></ul> <ul><li>CSRF 原理： XSS 是获取信息，不需要提前知道其他用户页面的代码和数据包。CSRF 是代替用户完成指定的动作，需要知道其他用户页面的代码和数据包。
+<ul><li>完成一次 CSRF 攻击所需要的步骤：
+<ol><li>登录受信任网站 A，并在本地生成 Cookie。</li> <li>在不登出 A 的情况下，访问危险网站 B。</li></ol></li></ul></li></ul> <ul><li>防范：
+<ol><li>客户端页面增加伪随机数。</li> <li>通过 token 校验等验证码的方法。</li></ol></li></ul> <hr> <h4 id="_5-http-和-https"><a href="#_5-http-和-https" class="header-anchor">#</a> 5. HTTP 和 HTTPS</h4> <ul><li><p>HTTP 协议通常承载于 TCP 协议之上，在 HTTP 和 TCP 之间添加一个安全协议层 (SSL 或 TSL)，这个时候，就成了我们常说的 HTTPS。</p></li> <li><p>HTTP 默认端口号为 80， HTTPS 默认端口号为 443。</p></li> <li><p>为什么 HTTPS 安全？</p> <ul><li>因为网络请求需要中间有很多的服务器路由器转发，中间节点都可能篡改信息。如果使用 HTTPS，秘钥在你和终点站才有。https 之所以比 http 安全，是因为它利用 ssl/tsl 协议传输。它包含证书，卸载，流量转发，负载均衡，页面适配，浏览器适配，refer 传递等。保障了传输过程的安全性。</li></ul></li></ul> <hr> <h4 id="_6-一个页面从输入-url-到页面加载显示完成"><a href="#_6-一个页面从输入-url-到页面加载显示完成" class="header-anchor">#</a> 6. 一个页面从输入 URL 到页面加载显示完成</h4> <ol><li>当发送一个 URL 请求时，不管这个 URL 是 Web 页面的 URL 还是 Web 页面上每个资源的 URL，浏览器都会开启一个线程来处理这个请求，同时在远程 DNS 服务器上启动一个 DNS 查询，这能使浏览器获得请求对应的 IP 地址。</li> <li>浏览器与远程 Web 服务器通过 TCP 三次握手协商来建立一个 TCP/IP 连接。该握手包括一个同步报文，一个同步 - 应答报文和一个应答报文，这三个报文在浏览器和服务器之间传递。该握手首先由客户端尝试建立起通信，而后服务器应答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。</li> <li>一旦 TCP/IP 连接建立，浏览器会通过该连接向远程服务器发送 HTTP 的 GET 请求。远程服务器找到资源并使用 HTTP 响应返回该资源，值为 200 的 HTTP 响应状态表示一个正确的响应。</li> <li>此时，Web 服务器提供资源服务，客户端开始下载资源。</li></ol> <ul><li>浏览器会解析 HTML 生成 DOM Tree，其次会根据 CSS 生成 CSS Rule Tree，而 javascript 又可以根据 DOM API 操作 DOM。</li></ul> <hr> <h4 id="_7-get-和-post-的区别"><a href="#_7-get-和-post-的区别" class="header-anchor">#</a> 7. GET 和 POST 的区别</h4> <ul><li>GET：一般用于信息获取，使用 URL 传递参数，对所发送信息的数量也有限制，一般在 2000 个字符。</li> <li>POST：一般用于修改服务器上的资源，对所发送的信息没有限制。</li> <li>GET 方式需要使用 Request.QueryString 来取得变量的值，POST 方式通过 Request.Form 来获取变量的值 <br>
+GET 通过地址栏传值，POST 通过提交表单来传值。
+<ul><li>以下情况使用 POST 请求：
+<ol><li>无法使用缓存文件（更新服务器上的文件或数据库）</li> <li>向服务器发送大量数据 (POST 没有数据量限制）</li> <li>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</li></ol></li></ul></li></ul> <hr> <h4 id="_8-http-状态码"><a href="#_8-http-状态码" class="header-anchor">#</a> 8. HTTP 状态码</h4> <ol><li>100 Continue 继续，一般在发送 post 请求时，已发送了 http header 之后服务端将返回此信息，表示确认，之后发送具体参数信息。</li> <li>200 OK 正常返回信息。</li> <li>201 Created 请求成功并且服务器创建了新的资源。</li> <li>202 Accepted 服务器已接受请求，但尚未处理。</li> <li>301 Moved Permanently 请求的网页已永久移动到新位置。</li> <li>302 Found 临时性重定向。</li> <li>303 SeeOther 临时性重定向，且总是使用 GET 请求新的 URI。</li> <li>304 Not Modified 自从上次请求后，请求的网页未修改过。</li> <li>400 BadRequest 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。</li> <li>401 Unauthorized 请求未授权。</li> <li>403 Forbidden 禁止访问。</li> <li>404 NotFound 找不到与 URI 相匹配的资源。</li> <li>500 InternalServer Error 服务器端错误。</li> <li>503 ServiceUnavailable 服务器端暂时无法处理请求（可能是过载或维护）。</li></ol></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/75.bfc543b2.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

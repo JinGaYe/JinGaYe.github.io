@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>[持续更新] vuepress-theme-sakura配置说明 | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="关于自定义主题vuepress-theme-sakura的一些配置和使用">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/73.759d36c6.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-5043" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>[持续更新] vuepress-theme-sakura配置说明</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2020-10-06</span> <span>文章字数：622</span> <span>预计用时：3分7秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#_1-安装-vuepress-theme-sakura">1. 安装 vuepress-theme-sakura</a></li><li><a href="#_2-配置主题">2. 配置主题</a></li><li><a href="#_3-主页">3. 主页</a></li><li><a href="#_4-config-js-的配置">4. config.js 的配置</a></li><li><a href="#_5-其他配置">5. 其他配置</a></li><li><a href="#_6-其他操作">6. 其他操作</a></li></ul></div><p></p> <div class="custom-block tip"><p class="custom-block-title">通用配置</p> <p>请查看<a href="https://jarrychen.cn/category/frontend/setup-a-vuepress-blog.html" target="_blank" rel="noopener noreferrer">Vuepress 框架搭建博客<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <h4 id="_1-安装-vuepress-theme-sakura"><a href="#_1-安装-vuepress-theme-sakura" class="header-anchor">#</a> 1. 安装 vuepress-theme-sakura</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> yourproject<span class="token punctuation">(</span>根目录<span class="token punctuation">)</span>
+<span class="token function">npm</span> i vuepress-theme-sakura -s
+</code></pre></div><h4 id="_2-配置主题"><a href="#_2-配置主题" class="header-anchor">#</a> 2. 配置主题</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//在config.js中使用</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  theme<span class="token operator">:</span> <span class="token string">'sakura'</span><span class="token punctuation">,</span>
+  <span class="token comment">//...</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//即可使用主题</span>
+</code></pre></div><h4 id="_3-主页"><a href="#_3-主页" class="header-anchor">#</a> 3. 主页</h4> <ul><li>在还没写任何一个页面时，使用了主题，运行起来也是跳往 404 页面，所以可以在<code>docs(我的md放置文件夹)</code>根目录下写一个<code>Read.me</code></li></ul> <div class="language-yaml extra-class"><pre class="language-yaml"><code>// 这样写就使用了首页的布局
+// 首页由于不知道怎样才能既干净又吸引眼球，故暂时如此，小伙伴有好的idea可以评论下方提
+<span class="token punctuation">---</span>
+<span class="token key atrule">home</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token punctuation">---</span>
+
+</code></pre></div><h4 id="_4-config-js-的配置"><a href="#_4-config-js-的配置" class="header-anchor">#</a> 4. config.js 的配置</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> PrerenderSPAPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'prerender-spa-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Renderer <span class="token operator">=</span> PrerenderSPAPlugin<span class="token punctuation">.</span>PuppeteerRenderer<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">NODE_ENV</span> <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">&quot;JarryChen's Blog&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 网站名</span>
+  base<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token comment">// 最好是设置为 /</span>
+  author<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 填写作者，用于复制时使用</span>
+  description<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 描述</span>
+  head<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 网站ico图标</span>
+      <span class="token string">'link'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>rel<span class="token operator">:</span> <span class="token string">'shortcut icon'</span><span class="token punctuation">,</span> type<span class="token operator">:</span> <span class="token string">'image/x-icon'</span><span class="token punctuation">,</span> href<span class="token operator">:</span> <span class="token string">'/favicon.ico'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 使用manifest</span>
+      <span class="token string">'link'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        rel<span class="token operator">:</span> <span class="token string">'manifest'</span><span class="token punctuation">,</span>
+        href<span class="token operator">:</span> <span class="token string">'/manifest.json'</span><span class="token punctuation">,</span>
+        preload<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 获取分享的样式图标，为fontawesome</span>
+      <span class="token string">'link'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        rel<span class="token operator">:</span> <span class="token string">'stylesheet'</span><span class="token punctuation">,</span>
+        href<span class="token operator">:</span>
+          <span class="token string">'https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css'</span><span class="token punctuation">,</span>
+        preload<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 如想使用iconfont，在此引入即可</span>
+      <span class="token string">'link'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        rel<span class="token operator">:</span> <span class="token string">'stylesheet'</span><span class="token punctuation">,</span>
+        href<span class="token operator">:</span> <span class="token string">'/iconfont.css'</span><span class="token punctuation">,</span>
+        preload<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// aplayer播放器的默认样式</span>
+      <span class="token string">'link'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        rel<span class="token operator">:</span> <span class="token string">'stylesheet'</span><span class="token punctuation">,</span>
+        href<span class="token operator">:</span> <span class="token string">'https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css'</span><span class="token punctuation">,</span>
+        preload<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 2898 验证</span>
+      <span class="token string">'meta'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'wlhlauth'</span><span class="token punctuation">,</span> content<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 百度验证</span>
+      <span class="token string">'meta'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'baidu-site-verification'</span><span class="token punctuation">,</span> content<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 360验证</span>
+      <span class="token string">'meta'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'360-site-verification'</span><span class="token punctuation">,</span> content<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 必应验证</span>
+      <span class="token string">'meta'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'msvalidate.01'</span><span class="token punctuation">,</span> content<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// yandex验证</span>
+      <span class="token string">'meta'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'yandex-verification'</span><span class="token punctuation">,</span> content<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 搜狗验证</span>
+      <span class="token string">'meta'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'sogou_site_verification'</span><span class="token punctuation">,</span> content<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token comment">// 百度联盟验证</span>
+      <span class="token string">'meta'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'baidu_union_verify'</span><span class="token punctuation">,</span> content<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+    smoothScroll<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//开启平滑滚动</span>
+    nav<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>text<span class="token operator">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> icon<span class="token operator">:</span> <span class="token string">'el-icon-s-home'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 顶部栏配置参见vuepress配置</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// 这里的icon只用在第一层上，支持iconfont或者是element提供的icon</span>
+        text<span class="token operator">:</span> <span class="token string">'test-1'</span><span class="token punctuation">,</span>
+        icon<span class="token operator">:</span> <span class="token string">'icon-archive'</span><span class="token punctuation">,</span>
+        items<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            text<span class="token operator">:</span> <span class="token string">'test-1-1'</span><span class="token punctuation">,</span>
+            link<span class="token operator">:</span> <span class="token string">'/category/test-1-1'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            text<span class="token operator">:</span> <span class="token string">'test-1-2'</span><span class="token punctuation">,</span>
+            link<span class="token operator">:</span> <span class="token string">'/category/test-1-2'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            text<span class="token operator">:</span> <span class="token string">'test-1-3'</span><span class="token punctuation">,</span>
+            link<span class="token operator">:</span> <span class="token string">'/category/test-1-3'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    commentsParam<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 评论使用畅言</span>
+      changyan_appid<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 畅言key</span>
+      changyan_appkey<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 畅言secret</span>
+      <span class="token comment">// 开启功能只需在此填充信息即可</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    createTime<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 建站时间</span>
+    busuanzi<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 网站统计修饰语</span>
+      pv<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      uv_first<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      uv_last<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    beian<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 备案号</span>
+    botui<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 填写你的机器人botui的路径(相对路径)</span>
+    mode<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 开启白昼和黑夜模式转换</span>
+    aiSearch<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 开启智能搜索框</span>
+    postShare<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 开启分享，设置禁用渠道</span>
+      disabled<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'diandian'</span><span class="token punctuation">,</span> <span class="token string">'douban'</span><span class="token punctuation">,</span> <span class="token string">'tencent'</span><span class="token punctuation">,</span> <span class="token string">'google'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    devTools<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 开启devTools进入debugger模式</span>
+    copyRight<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 开启复制带最后个人信息</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  serviceWorker<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">configureWebpack</span><span class="token operator">:</span> <span class="token parameter">config</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">NODE_ENV</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      config<span class="token punctuation">.</span>optimization<span class="token punctuation">.</span>splitChunks <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      config<span class="token punctuation">.</span>plugins<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+        <span class="token comment">// 生产模式开启预渲染</span>
+        <span class="token keyword">new</span> <span class="token class-name">PrerenderSPAPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token comment">//要求-给的WebPack-输出应用程序的路径预渲染。</span>
+          staticDir<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./dist/'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token comment">//必需，要渲染的路线。</span>
+          routes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token string">'/category'</span><span class="token punctuation">,</span> <span class="token string">'/life'</span><span class="token punctuation">,</span> <span class="token string">'/about'</span><span class="token punctuation">,</span> <span class="token string">'/archive'</span><span class="token punctuation">,</span> <span class="token string">'/comment'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          minify<span class="token operator">:</span> <span class="token punctuation">{</span>
+            minifyCSS<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// css压缩</span>
+            removeComments<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 移除注释</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          renderer<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">PrerenderSPAPlugin<span class="token punctuation">.</span>PuppeteerRenderer</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            renderAfterTime<span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">chainWebpack</span><span class="token operator">:</span> <span class="token parameter">config</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">NODE_ENV</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 开启webpack分包</span>
+      config<span class="token punctuation">.</span>optimization<span class="token punctuation">.</span><span class="token function">splitChunks</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        cacheGroups<span class="token operator">:</span> <span class="token punctuation">{</span>
+          common<span class="token operator">:</span> <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">'chunk-common'</span><span class="token punctuation">,</span> <span class="token comment">// 打包后的文件名</span>
+            chunks<span class="token operator">:</span> <span class="token string">'all'</span><span class="token punctuation">,</span> <span class="token comment">//</span>
+            minChunks<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            maxInitialRequests<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+            minSize<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            priority<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            reuseExistingChunk<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          vendors<span class="token operator">:</span> <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">'chunk-vendors'</span><span class="token punctuation">,</span>
+            test<span class="token operator">:</span> <span class="token regex">/[\\/]node_modules[\\/]/</span><span class="token punctuation">,</span>
+            chunks<span class="token operator">:</span> <span class="token string">'all'</span><span class="token punctuation">,</span>
+            priority<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            reuseExistingChunk<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            enforce<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          ElementUI<span class="token operator">:</span> <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">'chunk-element-ui'</span><span class="token punctuation">,</span>
+            test<span class="token operator">:</span> <span class="token regex">/[\\/]node_modules[\\/]element-ui[\\/]/</span><span class="token punctuation">,</span>
+            chunks<span class="token operator">:</span> <span class="token string">'all'</span><span class="token punctuation">,</span>
+            priority<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            reuseExistingChunk<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            enforce<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  evergreen<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 忘记是啥了，看vuepress官方文档即可</span>
+  markdown<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// markdown的配置，这里只设置目录包含的级别</span>
+    toc<span class="token operator">:</span> <span class="token punctuation">{</span>
+      includeLevel<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'helper-live2d'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// 我网站左下角的看板娘，一键配置</span>
+        log<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        live2d<span class="token operator">:</span> <span class="token punctuation">{</span>
+          enable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          model<span class="token operator">:</span> <span class="token string">'hibiki'</span><span class="token punctuation">,</span>
+          display<span class="token operator">:</span> <span class="token punctuation">{</span>
+            position<span class="token operator">:</span> <span class="token string">'left'</span><span class="token punctuation">,</span>
+            width<span class="token operator">:</span> <span class="token number">135</span><span class="token punctuation">,</span>
+            height<span class="token operator">:</span> <span class="token number">340</span><span class="token punctuation">,</span>
+            hOffset<span class="token operator">:</span> <span class="token number">45</span><span class="token punctuation">,</span>
+            vOffset<span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          mobile<span class="token operator">:</span> <span class="token punctuation">{</span>
+            show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          react<span class="token operator">:</span> <span class="token punctuation">{</span>
+            opacity<span class="token operator">:</span> <span class="token number">0.8</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'sitemap'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// 站点地图</span>
+        hostname<span class="token operator">:</span> <span class="token string">'https://jarrychen.cn'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'baidu-autopush'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 推送给百度，貌似没配对</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'rss'</span><span class="token punctuation">,</span> <span class="token comment">// 站点rss订阅，同上</span>
+      <span class="token punctuation">{</span>
+        base_url<span class="token operator">:</span> <span class="token string">'/category'</span><span class="token punctuation">,</span>
+        site_url<span class="token operator">:</span> <span class="token string">'https://jarrychen.cn/category'</span><span class="token punctuation">,</span>
+        copyright<span class="token operator">:</span> <span class="token string">'2020 Jarry Chen'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">filter</span><span class="token operator">:</span> <span class="token parameter">frontmatter</span> <span class="token operator">=&gt;</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        count<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'element-ui'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// markdown里直接使用element-ui</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="_5-其他配置"><a href="#_5-其他配置" class="header-anchor">#</a> 5. 其他配置</h4> <ul><li>单页面<code>frontmatter</code>比较重要的几个属性</li></ul> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">post</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span> <span class="token string">'xx'</span>
+<span class="token key atrule">comments</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">mathjax</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2020-03-20 19:30:30'</span>
+<span class="token punctuation">---</span>
+
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">参数解释</p> <ul><li><code>post</code>表明当前 md 是单页面，不是列表页</li> <li><code>categories</code>单页面必须填写，紧跟列表页的类别</li> <li><code>comments</code>单页面是否开启评论</li> <li><code>mathjax</code>如果代码里有使用数学公式，需要开启 mathjax</li> <li><code>date</code>要使用如上的格式，记得加引号，保证时间正确</li></ul></div> <hr> <ul><li>列表页<code>frontmatter</code>比较重要的几个属性</li></ul> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> <span class="token string">'xx'</span>
+<span class="token key atrule">comments</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token punctuation">---</span>
+
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">参数解释</p> <ul><li><code>kind</code>对应单页面的 categories，这里使用字符串来连接上关系</li> <li><code>comments</code>开启评论，不过好像没生效，列表页应该不需要单独的评论界面</li></ul></div> <ul><li><code>frontmatter</code>大概需要注意的就是以上几点</li></ul> <hr> <h4 id="_6-其他操作"><a href="#_6-其他操作" class="header-anchor">#</a> 6. 其他操作</h4> <ul><li>要想在<code>md</code>里直接使用自己编写的组件，方法是自己在<code>docs(我的主目录下)</code>创建<code>components</code>编写 vue 组件，名字就是到时候你在<code>md</code>里引用时要写的名字</li> <li>目前的话只尝试了列表页和时间线页面，没有传递<code>props</code>，因为在组件里都能直接获取到页面的<code>frontmatter</code>，有需要的话直接写在<code>frontmatter</code>里到时候改起来也方便</li></ul> <p>  暂时的话需要注意这些内容，后续的话有更新会及时更新文档，希望大家多多支持和提优化意见，谢谢</p> <p style="color:#409eff;text-align:center;">————未完待续————</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/73.759d36c6.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

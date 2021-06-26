@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>计算机网络 【附录】 | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/css/17.styles.19c3616f.css" as="style"><link rel="preload" href="/assets/js/17.19c3616f.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/17.styles.19c3616f.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-9406" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>计算机网络 【附录】</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2020-01-06</span> <span>文章字数：1428</span> <span>预计用时：7分8秒</span></p></div></div> <section><div class="theme-default-content content__default"><h4 style="font-size:18px;text-align:center;"><b>A</b></h4> <ul class="network"><li><span>ACK (ACKnowledgement)</span><span>确认</span></li> <li><span>ADSL (Asymmetric Digital Subscriber Line) </span><span>非对称数字用户线</span></li> <li><span>AES (Advanced Encryption Standard) </span><span>先进的加密标准</span></li> <li><span>AF PHB (Assured Forwarding PerHop Behavior)  </span><span>确保转发每跳行为</span></li> <li><span>AH (Authntication Header) </span><span>鉴别首部</span></li> <li><span>AIMD (Additive Increase Multiplicative Decrease)</span><span>加法增大乘法减小</span></li> <li><span>AN (Access Network) </span><span>接入网</span></li> <li><span>ANSI (American National Standards Institute) </span><span>美国国家标准协会</span></li> <li><span>AP (Access Point) </span><span>接入点</span></li> <li><span>AP (Application) </span><span>应用程序</span></li> <li><span>API (Applicatin Programming Interface) </span><span>应用编程接口</span></li> <li><span>APNIC (Asia Pacific Network Information Center) </span><span>亚太网络信息中心</span></li> <li><span>ARIN (American Registry for Internet Numbers)</span><span>美国因特网好码注册机构</span></li> <li><span>ARP (Address Resolution Protocol) </span><span>地址解析协议</span></li> <li><span>ARPA (Advanced Research Project Agency)</span><span>美国国防部远景研究规划局</span></li> <li><span>ARQ (Automatic Repeat reQuest) </span><span>自动重传请求</span></li> <li><span>AS (Authentication System) </span><span>自治系统</span></li> <li><span>AS (Authentication Server) </span><span>鉴别服务器</span></li> <li><span>ASCII (American Standard Code for Information Interchange)</span><span>美国信息交换标准码</span></li> <li><span>ASN (Autonomous System Number) </span><span>自治系统号</span></li> <li><span>ASN.I (Abstract Syntax Notation One) </span><span>抽象语法记法 1</span></li> <li><span>ATM (Asynchronous Transfer Node) </span><span>异步传递发式</span></li> <li><span>ATU (Access Termination Unit) </span><span>接入端接单元</span></li> <li><span>ATUC(Access Termination Unit Central Office) </span><span>端局接入端接单元</span></li> <li><span>ATUR(Access Termination Unit Remote) </span><span>远端接入端接单元</span></li> <li><span>AVT WG (Audio/Video Transport Working Group) </span><span>音频/视频运输工作组</span></li> <li><span>AWT (Abstract Window Toolkit) </span><span>抽象窗口工具箱</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>B</b></h4> <ul class="network"><li><span>BER (Bit Error Rate)</span><span>误码率</span></li> <li><span>BER (Basic Encoding Rule) </span><span>基本编码规则</span></li> <li><span>BGP (Border Gateway Protocol) </span><span>边界网关协议</span></li> <li><span>BOOTP (BOOTstrap Protocol) </span><span>引导程序协议</span></li> <li><span>BSA (Basic Service Area ) </span><span>基本服务区</span></li> <li><span>BSS (Basic Service Set) </span><span>基本服务集</span></li> <li><span>BSSID (Basic Service Set ID) </span><span>基本服务集标识符</span></li> <li><span>BT (Bit Torrent) </span><span>一种 P2P 程序</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>C</b></h4> <ul class="network"><li><span>CA(Certification Authority)</span><span>认证中心</span></li> <li><span>CA(Collision Avoidance)</span><span>碰撞避免</span></li> <li><span>CATV(Community Antenna TV,Cable TV)</span><span>有线电视</span></li> <li><span>CBT(Core Based Tree)</span><span>基于核心的转发树</span></li> <li><span>CCIR(Consultative Committee ,InternationalRadio)</span><span>国际无线电咨询委员会</span></li> <li><span>CCITT(Consutative Committee, International Telegraph andTelephone)</span><span>国际电报电话咨询委员会</span></li> <li><span>CDM(Code Division Multiplexing)</span><span>码分复用</span></li> <li><span>CDMA(Code Division Multiplex Access)</span><span>码分多址</span></li> <li><span>CE(Consumer Electronics)</span><span>消费电子设备</span></li> <li><span>CFI(Canonical Format Indicator)</span><span>规范格式指示符</span></li> <li><span>CGI(Common Gateway Interface)</span><span>通用网关接口</span></li> <li><span>CHAP(ChallengeHandshake Authentication Protocol)</span><span>口令握手鉴别协议</span></li> <li><span>CIDR(Classless InterDomain Routing)</span><span>无分类域间路由选择</span></li> <li><span>CNAME(Canonical NAME)</span><span>规范名</span></li> <li><span>CNNIC(Network Information Center of China)</span><span>中国互联网络信息中心</span></li> <li><span>CRC(Cyclic Redundancy Check)</span><span>循环冗余检查</span></li> <li><span>CSACELP(ConjugateStructure AlgebraicCodeExcited LinearPrediction)</span><span>共轭结构代数码激励线性预测(声码器)</span></li> <li><span>CSMA/CD(Carrier Sense Multiple Access/CollisionDetection) </span><span>载波监听多点接入/冲突检测</span></li> <li><span>CSMA/CA(Carrier Sense Multiple Access/CollisionAvoidance) </span><span>载波监听多点接入/冲突避免</span></li> <li><span>CSRC(Contributing SouRCe identifier) </span><span>参与源标知符</span></li> <li><span>CTS(Clear To Send) </span><span>允许发送</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>D</b></h4> <ul class="network"><li><span>DACS(Digital Access and Crossconnect System)</span><span>数字交接系统</span></li> <li><span>DARPA(Defense Advanced Research ProjectAgency)</span><span>美国国防部远景规划局(高级研究署)</span></li> <li><span>DCF(Distributed Coordination Function)</span><span>分布协调功能</span></li> <li><span>DDoS(Distributed Denial of Service)</span><span>分布式拒绝服务</span></li> <li><span>DES(Date Encryption Standard)</span><span>数据加密标准</span></li> <li><span>DF(Don’t Fragment)</span><span>不能分片</span></li> <li><span>DHCP(Dynamic Host Configuration Protocol)</span><span>动态主机配置协议</span></li> <li><span>DiffServ(Distributed Coordination Identifier)</span><span>数据链路连接标知符</span></li> <li><span>DIFS(Distributed Coordination Function IFS)</span><span>分布协调功能祯间间隔</span></li> <li><span>DLCI(Data Link Connection Identifier)</span><span>数据链路连接标知符</span></li> <li><span>DMT(Discrete MultiTone)</span><span>离散多音(调制)</span></li> <li><span>DNS(Domain Name System)</span><span>域名系统</span></li> <li><span>DOCSIS(Data Over Cable Service InterfaceSpecifications)</span><span>电缆数据服务接口规约</span></li> <li><span>DoS(Denial of Service)</span><span>拒绝服务</span></li> <li><span>DS(Distribution System)</span><span>分配系统</span></li> <li><span>DS(Differentiated Services)</span><span>区分服务(也写作 DiffServ)</span></li> <li><span>DSCP(Differentiated Services CodePoint)</span><span>区分服务码点</span></li> <li><span>DSL(Digital Subscriber Line)</span><span>数字用户线</span></li> <li><span>DSLAM(DSL Access Multiplexer)</span><span>数字用户线接入复用器</span></li> <li><span>DSSS(Direct Sequence Spread Spectrum)</span><span>直接序列扩展</span></li> <li><span>DVMRP(Distance Vector Multicast RoutingProtocol)</span><span>距离向量多播路由选择协议</span></li> <li><span>DWDM(Dense WDM)</span><span>密集波分复用</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>E</b></h4> <ul class="network"><li><span>EBCDIC(Extended BinaryCoded Decimal InterchangfeCode)</span><span>扩充的二、十进制交换码</span></li> <li><span>EDFA(Erbirm Dooped Fiber Amplifier)</span><span>掺铒光纤放大器</span></li> <li><span>EFM(Ethernet in the First Mile)</span><span>第一英里的以太网</span></li> <li><span>EFPHB(Expedited Forwarding PerHop Behavior)</span><span>迅速转发每跳行为</span></li> <li><span>EGP(External Gateway Protocol)</span><span>外部网关协议</span></li> <li><span>EIA(Electronic Industries Association)</span><span>美国工业协会</span></li> <li><span>EOT（End Of Transmission）</span><span>传输结束</span></li> <li><span>ESP(Encapsulating Security Payload)</span><span>封装完全有效载荷</span></li> <li><span>ESS(Extended Servic Set)</span><span>扩展的服务集</span></li> <li><span>ETSI(European Telecommunications StandrardsInstitute)</span><span>欧洲电信标准协会</span></li> <li><span>EUI(Extended Unique Identifier)</span><span>扩展的唯一标识符</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>F</b></h4> <ul class="network"><li><span>FC(Fibre Channel)</span><span>光纤通道</span></li> <li><span>FCS(Frame Check Sequence)</span><span>帧检验列</span></li> <li><span>FDDI(Fiber Distributed Data Interface)</span><span>光纤分布式数据</span></li> <li><span>FDM(Frequency Division Multiplexing) </span><span>频分复用</span></li> <li><span>FEC(Forwarding Equivalence Class) </span><span>转发等价类</span></li> <li><span>FFD(FullFunction Device) </span><span>全功能设备</span></li> <li><span>FHSS(Frequency Hopping Spread Spectrum) </span><span>跳频扩频</span></li> <li><span>FIFO(First In First Out) </span><span>先进先出</span></li> <li><span>FQ(Fair Queuing) </span><span>公平排队</span></li> <li><span>FTP(File Transfer Protocol) </span><span>文件传送协议</span></li> <li><span>FTTB(Fiber To The Building) </span><span>光纤到大楼</span></li> <li><span>FTTC(Fiber To The Curb) </span><span>光纤到路边</span></li> <li><span>FTTD(Fiber To The Door) </span><span>光纤到门户</span></li> <li><span>FTTF(Fiber To The Floor) </span><span>光纤到楼层</span></li> <li><span>FTTH(Fiber To The Home) </span><span>光纤到家</span></li> <li><span>FTTN(Fiber To The Neighbor) </span><span>光纤到邻居</span></li> <li><span>FTTO(Fiber To The Office) </span><span>光纤到办公室</span></li> <li><span>FTTZ(Fiber To The Zone) </span><span>光纤到小区</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>G</b></h4> <ul class="network"><li><span>GIF(Graphics Interchange Format) </span><span>图形交换格式</span></li> <li><span>GSM(Graphics System for Mobile) </span><span>全球移动通信系统，GSM 体制</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>H</b></h4> <ul class="network"><li><span>HDLC(Highlevel Data Link Control) </span><span>高级数据链路控制</span></li> <li><span>HDSL(High speed DSL) </span><span>高速数字用户线</span></li> <li><span>HFC(Hybrid Fiber Coax) </span><span>光纤同轴混合（网）</span></li> <li><span>HIPPI(HighPerformance Parallel Interface)</span><span>高性能并行接口</span></li> <li><span>HRDSSS(High Rate Direct Sequence Spread Spectrum)</span><span>高速直接序列扩频</span></li> <li><span>HSSG(High Speed Study Group)</span><span>高速研究组</span></li> <li><span>HTML(HyperText Markup Language)</span><span>超文本标记语言</span></li> <li><span>HTTP(HyperText Transfer Protocol)</span><span>超文本传送协议</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>I</b></h4> <ul class="network"><li><span>IAB(Internet Assigned Numbers Authority)</span><span>因特网体系结构委员会</span></li> <li><span>IANA(Internet Corporation for Assigned Names andNumbers)</span><span>因特网赋号管理局</span></li> <li><span>ICANN(Internet Corporation for Assigned Names and Numbers )</span><span>因特网名字与号码指派公司</span></li> <li><span>ICMP（Internet Control Message Protocol）</span><span>国际控制报文协议</span></li> <li><span>IDEA（Internet Data Encryption Algorithm）</span><span>国际数据加密算法</span></li> <li><span>IEEE（Institute of Electrical and ElectronicEngineering）</span><span>(美国)电气和电子工程师学会</span></li> <li><span>IESG（Internet Engineering Steering Group）</span><span>因特网工程指导小组</span></li> <li><span>IETF(Internet Engineering Task Force)</span><span>因特网工程部</span></li> <li><span>IFS(InternetFrame Space)</span><span>桢间间隔</span></li> <li><span>IGMP(Internet Group Management Protocol)</span><span>网际组管理协议</span></li> <li><span>IGP(Interior Gateway Protocol)</span><span>内部网关协议</span></li> <li><span>IM(Instant Messaging)</span><span>即时传信</span></li> <li><span>IMAP(Internet Message Access Protocol)</span><span>因特网报文存取协议</span></li> <li><span>IntServ(Integrated Services)</span><span>综合服务</span></li> <li><span>IP(Internet Protocol)</span><span>网际协议</span></li> <li><span>IPCP(IP Control Protocol)</span><span>IP 控制协议</span></li> <li><span>IPng(IP Next Generation)</span><span>下一代的 IP</span></li> <li><span>IPRA(Intenet Policy Registration Authorrity)</span><span>因特网政策登记管理机构</span></li> <li><span>IPsec(IP security)</span><span>IP 安全协议</span></li> <li><span>IPX(Internet Packet Exchange）</span><span>Novel 公司的一种联网协议</span></li> <li><span>IR(InfraRed)</span><span>红外技术</span></li> <li><span>IRSG(Internet Reseach Seering Group)</span><span>因特网研究指导小组</span></li> <li><span>IRTF(Internet Reaserch Task Force)</span><span>因特网研究部</span></li> <li><span>ISDN(Integrated Services Digital Network)</span><span>综合业务数字网</span></li> <li><span>ISO(International Organization forStandardization)</span><span>国际标准化组织</span></li> <li><span>ISOC(Internet Society)</span><span>因特网协会</span></li> <li><span>ISM（Industrial,Scientific,and Medical）</span><span>工业、科学与医药（频段）</span></li> <li><span>ISP(Internet Service Provider)</span><span>因特网服务提供者</span></li> <li><span>ITU（Internation Telecommunication Union）</span><span>国际电信联盟</span></li> <li><span>ITUT(ITU Telecommunication StandardizationSector)</span><span>国际电信联盟电信标准化部门</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>J</b></h4> <ul class="network"><li><span>JPEG(Joint Photographic Expert Group)</span><span>联合图像专家</span></li> <li><span>JVM(java Virtual Machine)</span><span>java 虚拟机</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>K</b></h4> <ul class="network"><li><span>KDC（Key Distributio Center）</span><span>密钥分配中心</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>L</b></h4> <ul class="network"><li><span>LACNIC(Latin American&amp;Caribbean NetworkInternetCenter)</span><span>拉美与加勒比海网络信息中心</span></li> <li><span>LAN(Local Arae Network)</span><span>局域网</span></li> <li><span>LCP（Link Control Protocol）</span><span>链路控制协议</span></li> <li><span>LDP(Lable Distribution Protocol)</span><span>标记分配协议</span></li> <li><span>LED（Light Emitting Diode）</span><span>发光二极管</span></li> <li><span>LMDS(Local Multipoint Distribution System)</span><span>本地多点分配系统</span></li> <li><span>LLC(Logical Link Control)</span><span>逻辑链路控制</span></li> <li><span>LoS(Line of Sight)</span><span>视距</span></li> <li><span>LPC(linear Prediction Coding)</span><span>线性预测编码</span></li> <li><span>LSP(Label Switched Path)</span><span>标记交换路径</span></li> <li><span>LSR(Label Switching Router)</span><span>标记交换路由器</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>M</b></h4> <ul class="network"><li><span>MAC(Medium Access Control)</span><span>媒体接入控制</span></li> <li><span>MACA(Multiple Access with CollisionAvoidance)</span><span>具有碰撞避免的多点接入</span></li> <li>MAGIC(Mobile multimedia,Anytime/anywhere,Global mobilitysupport,Integrated wireless and Customized personalservice)     移动多媒体、任何时间/地点、支持全球移动性、综合无线和定制的个人服务</li> <li><span>MAN(Metropolitan Area Network)</span><span>城域网</span></li> <li><span>MANET(Mobile Adhoc NETworks)</span><span>移动自组网络的工作组</span></li> <li><span>MBONE(Multicast Backbone On the InterNEt)</span><span>多播主干网</span></li> <li><span>MCU(Multipoint Control Unit)</span><span>多点控制单元</span></li> <li><span>MD(Message Digest)</span><span>报文摘要</span></li> <li><span>MF(More Fragment)</span><span>还有分片</span></li> <li><span>MFTP(Multisource File Transfer Protocol)</span><span>多源文件传输协议</span></li> <li><span>MIB(Management Information Base)</span><span>管理信息库</span></li> <li><span>MIME(Multipurpose Internet Mail Extensions)</span><span>通用因特网邮件扩充</span></li> <li><span>MIPS(Million Instructions Per Second)</span><span>百万指令每秒</span></li> <li><span>MMUSIC(Multiparty MUltimedia SessIon Control)</span><span>多参与者多媒体会话控制</span></li> <li><span>MOSPF(Multicast extensions to OSPF)</span><span>开放最短通路优先的多播扩展</span></li> <li><span>MP3(Mpeg1 Audio layer3)</span><span>一种音频压缩标准</span></li> <li><span>MPEG(Motion Picture Experts Group)</span><span>活动图像专家组</span></li> <li><span>MPLS(MultiProtocol Label Switching)</span><span>多协议标记交换</span></li> <li><span>MPPS(Million Packets Per Second)</span><span>百万分组每秒</span></li> <li><span>MRU(Maximum Receive Unit)</span><span>最大接收单元</span></li> <li><span>MSL(Maximum Segment Lifetime)</span><span>最长报文段寿命</span></li> <li><span>MSS(Maximum Segment Size)</span><span>最长报文段</span></li> <li><span>MTU(Maximum Transfer Unit)</span><span>最大传送单元</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>N</b></h4> <ul class="network"><li><span>NAP(Network Access Point)</span><span>网络接入点</span></li> <li><span>NAT(Network Address Translation)</span><span>网络地址转换</span></li> <li><span>NAV(Network Allocation Vector)</span><span>网络分配向量</span></li> <li><span>NCP(Network Control Protocol)</span><span>网络控制协议</span></li> <li><span>NFS(Network File System)</span><span>网络文件系统</span></li> <li><span>NGI(Next Generation Internet)</span><span>下一代因特网</span></li> <li><span>NGN(Next Generation Network)</span><span>下一代电信网</span></li> <li><span>NIC(Network Interface Card)</span><span>网络接口卡、网卡</span></li> <li><span>NLA(NextLevel Aggregation)</span><span>下一级聚合</span></li> <li><span>NLRI(Network Layer Reachability Information) </span><span>网络层可达性信息</span></li> <li><span>NOC(Network Operations Center) </span><span>网络运行中心</span></li> <li><span>NSAP(Network Service Access Point) </span><span>网络层服务访问点</span></li> <li><span>NSF(Nationnal) </span><span>（美国）国家科学基金会</span></li> <li><span>NVT(Network Virtual Terminal)</span><span> 网络虚拟终端</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>O</b></h4> <ul class="network"><li><span>OC (Optical Carrier) </span><span>光载波</span></li> <li><span>ODN (Optical Distribution Node) </span><span>光分配结点</span></li> <li><span>OFDM (Orthogonal Frequency Division Multiplexing) </span><span>正交频分复用</span></li> <li><span>OSI/RM (Open Systems Interconnection Reference Model)</span><span>开放系统互连基本参考模型</span></li> <li><span>OSPF (Open Shortest Path First)</span><span>开放最短通路优先</span></li> <li><span>OUI (Organizationally Unique Identifier)</span><span> 机构唯一标识符</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>P</b></h4> <ul class="network"><li><span>P2P (PeertoPeer) </span><span>对等方式</span></li> <li><span>PAN(Personal Area Network) </span><span>个人区域网</span></li> <li><span>PAP(Password Authentication Protocol) </span><span>口令鉴别协议</span></li> <li><span>PARC(Polo Alto Research Center) </span><span>（美国施乐公司(XEROX)的）PARC研究中心</span></li> <li><span>PAWS(Protect Against Wrapped Sequence numbers) </span><span>防止序号绕回</span></li> <li><span>PCA(Policy Certification Authority) </span><span>政策认证中心</span></li> <li><span>PCF(Point Coordination Function) </span><span>点协调功能</span></li> <li><span>PCM(Pulse Code Modulation)</span><span>脉码调制</span></li> <li><span>PCMCIA(Personal Computer Memory Card Interface Adapter)</span><span>个人计算机存储器卡接口适配器</span></li> <li><span>PDA(Personal Digital Assistant) </span><span>个人数字助理</span></li> <li><span>PDU(Protocol Data Unit) </span><span>协议数据单元</span></li> <li><span>PEM(Privacy Enhanced Mail) </span><span>因特网的正式邮件加密技术</span></li> <li><span>PGP(Pretty Good Privacy) </span><span>一种电子邮件加密技术</span></li> <li><span>PHB(PerHop Behavior) </span><span>每跳行为</span></li> <li><span>PIFS (Point Coordination Function IFS) </span><span>点协调功能桢间间隔</span></li> <li><span>PIMDM(Protocol Independent MulticastDense Mode)</span><span>协议无关多播密集方式</span></li> <li><span>PIMSM(Protocol Independent MulticastSparse Mode)</span><span>协议无关多播稀疏方式</span></li> <li><span>PING(Packet InterNet Groper) </span><span>分组网间探测，乒程序，ICMP 的一种应用</span></li> <li><span>PK(public key) </span><span>公钥，公开密钥</span></li> <li><span>PKI(Public Key Infrastructure) </span><span>公钥基础结构</span></li> <li><span>PoP(Post Office Protocol) </span><span>汇接点</span></li> <li><span>POP(Post Office Protocol) </span><span>邮局协议</span></li> <li><span>POTS(Plain Old Telephone Service) </span><span>传统电话</span></li> <li><span>PPP(PointtoPoint Protocol over Ethernet) </span><span>点对点协议</span></li> <li><span>PPPoE（PointtoPoint Protocol over Ethernet）</span><span>以太网上的点对点协议</span></li> <li><span>PS(POTS Splitter) </span><span>电话分离器</span></li> <li><span>PTE(Path Terminating Element) </span><span>路径端接设备</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>Q</b></h4> <ul class="network"><li><span>QAM (Quadrature Amplitude Modulation)</span><span> 正交幅度调制</span></li> <li><span>QoS (Quality of Service) </span><span>服务质量</span></li> <li><span>QPSK(Quarternary Phase Shift Keying)</span><span>正交相移键控</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>R</b></h4> <ul class="network"><li><span>RA（Registration Authority）</span><span>注册管理机构</span></li> <li><span>RARP(Reverse Address Resolution Protocol)</span><span>逆地址解析协议</span></li> <li><span>RAS(Registration/Adminssion/Status)</span><span>登记/接纳/状态</span></li> <li><span>RED(Random Early Detection)</span><span>随机早期检测</span></li> <li><span>RED(Random Early Discard,Randomm Early Drop)</span><span>随机早期丢弃</span></li> <li><span>RFC(Request For Comments)</span><span>请求评论</span></li> <li><span>RG（Research Group）</span><span>研究组</span></li> <li><span>RIP(Routing Information Protocol)</span><span>路由信息协议</span></li> <li><span>RIPE(法文表示的European IP Network)</span><span>欧洲的 IP 网络</span></li> <li><span>RPB(Reverse Path Broadcasting )</span><span>反向路由广播</span></li> <li><span>RSA(Rivest,Shamir and Adleman)</span><span>用三个人名表示的一种公开密钥算法的名称</span></li> <li><span>RSVP(Resource reservation Protocol)</span><span>实时传送控制协议</span></li> <li><span>RTCP(Realtime Transfer Protocol)</span><span>实时传输协议</span></li> <li><span>RTO(RetransmissionTimeOut)</span><span>超时重传时间</span></li> <li><span>RTP(Realtime Transfer Protocol)</span><span>实时传送协议</span></li> <li><span>RTS(Request To Send)</span><span>请求发送</span></li> <li><span>RTSP(Realtime Streaming Protocol)</span><span>实时流式协议</span></li> <li><span>RTT(RoundTrip TIme)</span><span>往返时间</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>S</b></h4> <ul class="network"><li><span>SA(Security Association)</span><span>安全关联</span></li> <li><span>SACK(Selective ACK)</span><span>选择确认</span></li> <li><span>SCTP(Stream Control Transmission Protocol)</span><span>流控制传输协议</span></li> <li><span>SDH(Synchronous Digital Hierarchy)</span><span>同步数字系列</span></li> <li><span>SDSL(Singleline DSL)</span><span>对线的数字用户线</span></li> <li><span>SDU(Service Data Unit)</span><span>服务数据单元</span></li> <li><span>SET(Secure Electronic Transaction)</span><span>安全电子交易</span></li> <li><span>SHA(Secure Hash Algorithm)</span><span>安全散列算法</span></li> <li><span>SIFS(Short IFS)</span><span>短帧间间隔</span></li> <li><span>SIP(Session Initiation Protocol)</span><span>会话发起协议</span></li> <li><span>SK（Secret Key）</span><span>密钥</span></li> <li><span>SLA（Service Level Agreement）</span><span>服务等级协议</span></li> <li><span>SMI（Structure of Management Information）</span><span>管理信息结构</span></li> <li><span>SMTP(Simple Mail Transfer Protocol)</span><span>简单邮件传送协议</span></li> <li><span>SNA（System Network Archiecture）</span><span>系统网络体系结构</span></li> <li><span>SNMP(Simple Network Management Protocol)</span><span>简单网络管理协议</span></li> <li><span>SOH(Start Of Header)</span><span>首部开始</span></li> <li><span>SONET(Synchronous Optical Network)</span><span>同步光纤网</span></li> <li><span>SPI(Security Parameter Index) </span><span>安全指数索引</span></li> <li><span>SRA(Seamless Rate Adaptation) </span><span>无缝速率自适应技术</span></li> <li><span>SSID(Service Set IDentifier) </span><span>服务集标识符</span></li> <li><span>SSL(Secure Socket Layer) </span><span>安全插口层，或安全套接层</span></li> <li><span>SSRC(Synchronous SouRce identifier)</span><span>同步源标实符</span></li> <li><span>STDM(Statistic TDM ) </span><span>统计时分复用</span></li> <li><span>STM(Synchronous Transfer Module)</span><span>同步传输模块</span></li> <li><span>STP(Shielder Teisted Pair)</span><span>屏蔽双绞线</span></li> <li><span>STS(Synchronous Transport Signal) </span><span>同步传送信号</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>T</b></h4> <ul class="network"><li><span>TAG(TAG Swithcing) </span><span>标记交换</span></li> <li><span>TCB(Transmission Control Protocol) </span><span>传输控制程序块</span></li> <li><span>TCP(Transmission Control Protocol) </span><span>传输控制协议</span></li> <li><span>TDM(Time Division Multiplexing) </span><span>时分复用</span></li> <li><span>TELNET(TELetype NETwork) </span><span>电传机网络，一种因特网的应用程序</span></li> <li><span>TFTP(Trivial File Transfer Protocol) </span><span>简单文件传送协议</span></li> <li><span>TIA(Telecommunications Industries Association) </span><span>电信行业协会</span></li> <li><span>TLA(TopLevel Aggergation) </span><span>顶级聚合</span></li> <li><span>TLD(Top Level Domain) </span><span>顶级域名</span></li> <li><span>TLI(Transport Layer Interface) </span><span>运输层接口</span></li> <li><span>TLS(Transport Layer Security)</span><span>运输层安全协议</span></li> <li><span>TLV(Type Length Value)</span><span>类型长度值</span></li> <li><span>TPDU(Transport Protocol Data Unit) </span><span>运输协议数据单元</span></li> <li><span>TSS(Telecommunication Standardization Sector) </span><span>电信标准化部门</span></li> <li><span>TTL(Time to Live)</span><span>生存时间，或寿命</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>U</b></h4> <ul class="network"><li><span>UA(User Agent) </span><span>用户代理</span></li> <li><span>UAC(User Agent Client) </span><span>用户代理客户</span></li> <li><span>UAS(User Agent Server) </span><span>用户代理服务器</span></li> <li><span>UDP(User Datagram Protocol) </span><span>用户数据报协议</span></li> <li><span>UIB(User Interface Box) </span><span>用户接口盒</span></li> <li><span>URL(Uniform Resource Locator) </span><span>统一资源定位符</span></li> <li><span>UTP(Unshielder Twisted Pair) </span><span>无屏蔽双绞线</span></li> <li><span>UWB( UltraWideBand) </span><span>超宽带</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>V</b></h4> <ul class="network"><li><span>VC(Virtual Circuit) </span><span>虚电路</span></li> <li><span>VCI( Virtual Channel Identifier)</span><span>虚拟路标识</span></li> <li><span>VDSL( Very high speed DSL)</span><span> 甚高速数字用户线</span></li> <li><span>VID(VLAN ID) </span><span>标识符</span></li> <li><span>VLAN(Virtual LAN) </span><span>虚拟局域网</span></li> <li><span>VLSM(Variable Length Subner Mask) </span><span>变长子网掩码</span></li> <li><span>VoIP(Voice over IP) </span><span>在 IP 上的话音</span></li> <li><span>VON(Voice On the Net) </span><span>在因特网上的话音</span></li> <li><span>VIP(Virtual Path Identifier)</span><span>虚拟道标识符</span></li> <li><span>VPN (Virtual Private Network) </span><span>虚拟专用网</span></li> <li><span>VSAT (Very Small Aperture Terminal)</span><span>甚小孔径地球站</span></li></ul> <hr> <h4 style="font-size:18px;text-align:center;"><b>W</b></h4> <ul class="network"><li><span>WAN (Wide Area Network)</span><span> 广域网</span></li> <li><span>WDM (Wavelength Division Multiplexing) </span><span>波分复用</span></li> <li><span>WEP (Wired Equivalent Privacy)</span><span> 有线等效保密字段</span></li> <li><span>WFQ (Weighted Fair Queuing)</span><span>加权公平排队</span></li> <li><span>WG (Working Group)</span><span>工作组</span></li> <li><span>WiFi(WirelessFidelity)</span><span>无线保真度（无线局域网的同义词）</span></li> <li><span>WIMAX(Worldwide interoperability for Microwave Access)</span><span>全球微波接入的互操作性，即 WMAN。</span></li> <li><span>WISP(Wireless Local Area Network) </span><span>无线因特网服务提供者</span></li> <li><span>WMAN( Wireless Metropolitan Area Network) </span><span>无线局域网</span></li> <li><span>WPAN( Wireless Personal Area Network) </span><span>无线个人局域网</span></li> <li><span>WSM(Wireless Sensor Network) </span><span>无线传感器网络</span></li> <li><span>WWW(World Wide Web) </span><span>万维网</span></li></ul> <hr></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/17.19c3616f.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

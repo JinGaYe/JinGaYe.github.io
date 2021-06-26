@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>概率统计知识总结 (一) | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/43.aa02c761.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-5439" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>概率统计知识总结 (一)</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2019-12-09</span> <span>文章字数：1810</span> <span>预计用时：9分3秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#一、随机事件与概率">一、随机事件与概率</a><ul><li><a href="#_1-事件的关系与运算">1. 事件的关系与运算</a></li><li><a href="#_2-事件的运算性质">2. 事件的运算性质</a></li><li><a href="#_3-概率的定义及性质">3. 概率的定义及性质</a><ul><li><a href="#_1-概率的定义">(1) 概率的定义</a></li><li><a href="#_2-概率的基本性质">(2) 概率的基本性质</a></li></ul></li><li><a href="#_4-概率公式">4. 概率公式</a><ul><li><a href="#_1-条件概率">(1) 条件概率</a></li><li><a href="#_2-乘法公式">(2) 乘法公式</a></li><li><a href="#_3-全概率公式">(3) 全概率公式</a></li><li><a href="#_4-贝叶斯-bayes-公式">(4) 贝叶斯(Bayes)公式</a></li></ul></li></ul></li><li><a href="#二、一维随机变量及其概率分布">二、一维随机变量及其概率分布</a><ul><li><a href="#_1-分布函数">1. 分布函数</a></li><li><a href="#_2-离散型随机变量">2. 离散型随机变量</a></li><li><a href="#_3-连续型随机变量">3. 连续型随机变量</a></li><li><a href="#_4-常见的重要分布">4. 常见的重要分布</a></li><li><a href="#_5-随机变量函数的分布">5. 随机变量函数的分布</a></li></ul></li><li><a href="#三、二维随机变量及其概率分布">三、二维随机变量及其概率分布</a><ul><li><a href="#_1-二维随机变量的联合分布函数">1. 二维随机变量的联合分布函数</a><ul><li><a href="#_1-定义">(1). 定义</a></li><li><a href="#_2-联合分布函数的性质">(2). 联合分布函数的性质</a></li></ul></li><li><a href="#_2-二维离散型随机变量">2. 二维离散型随机变量</a><ul><li><a href="#_1-定义">(1). 定义</a></li><li><a href="#_2-联合概率分布">(2). 联合概率分布</a></li><li><a href="#_3-联合分布律的性质">(3). 联合分布律的性质</a></li><li><a href="#_4-边缘分布">(4). 边缘分布</a></li><li><a href="#_5-条件分布">(5). 条件分布</a></li></ul></li><li><a href="#_3-二维连续型随机变量">3. 二维连续型随机变量</a><ul><li><a href="#_1-定义">(1). 定义</a></li><li><a href="#_2-联合密度函数的性质">(2). 联合密度函数的性质</a></li><li><a href="#_3-二维连续型随机变量的性质">(3). 二维连续型随机变量的性质</a></li><li><a href="#_4-边缘分布">(4). 边缘分布</a></li></ul></li><li><a href="#_4-随机变量的独立性">4. 随机变量的独立性</a><ul><li><a href="#_1-定义">(1). 定义</a></li><li><a href="#_2-独立性的判定条件">(2). 独立性的判定条件</a></li></ul></li><li><a href="#_5-随机变量函数的分布">5. 随机变量函数的分布</a><ul><li><a href="#_1-一般情形">(1). 一般情形</a></li><li><a href="#_2-离散型情形">(2). 离散型情形</a></li><li><a href="#_3-连续型情形">(3). 连续型情形</a></li><li><a href="#_4-x-与-y-的和、商与极值的分布">(4). $X$与$Y$的和、商与极值的分布</a></li></ul></li><li><a href="#_6-两个常见的二维分布">6. 两个常见的二维分布</a><ul><li><a href="#_1-二维均匀分布">(1). 二维均匀分布</a></li><li><a href="#_2-二维正态分布">(2). 二维正态分布</a></li></ul></li></ul></li></ul></div><p></p> <p style="font-size:18px;">  除了高等数学、线性代数和补充的部分，剩下的也就是概率统计了。三门课是大学数学要掌握的，也是以后学习其他东西的基础，更是<b style="color:blue;">考研数学[^1]</b>的内容。<br>
+  概率统计相比前两门，知识点比较杂，公式也比较多，主要是能看懂题意，再联系起公式定理才能很好的解决问题，所以需要好好的总结一番。</p> <h3 id="一、随机事件与概率"><a href="#一、随机事件与概率" class="header-anchor">#</a> 一、随机事件与概率</h3> <h4 id="_1-事件的关系与运算"><a href="#_1-事件的关系与运算" class="header-anchor">#</a> 1. 事件的关系与运算</h4> <p style="font-size:16px;">  ①<b>包含</b> 若事件A发生必然导致事件B发生，则称$B$事件包含$A$事件，记为$A \subset B$<br>
+    ②<b>相等</b> 若$A \subset B$ 且$B \subset A$，则称$A$与$B$相等，记为$A = B$<br>
+    ③<b>和(并)</b> 事件$A, \, B$中至少有一个发生的事件称为$A$与$B$的和(并)，记作$A \cup B$<br>
+    ④<b>积(交)</b> 事件$A$与$B$同时发生的事件称为$A$与$B$的积(交)，记为$A \cap B$(或$AB$)<br>
+    ⑤<b>差</b> 事件$A$发生但$B$不发生的事件称为$A$与$B$的差，记作$A-B$<br>
+    ⑥<b>互不相容(互斥)</b> 若事件$A$与$B$不能同时发生，则称$A$与$B$互不相容(或互斥)，记作$A \cap B = \varnothing$<br>
+    ⑦<b>事件的独立性</b> 若事件$A, \, B$满足$P(AB) = P(A)P(B)$，则称事件$A, \, B$独立。<br>
+    若事件$A, \, B, \, C$同时满足<br>
+    $P(AB) = P(A)P(B)$,<br>
+  $P(BC)=P(B)P(C)$,<br>
+  $P(AC) = P(A)P(C)$,<br>
+  $P(ABC) = P(A)P(B)P(C)$,<br>
+则称事件$A, \, B, \, C$相互独立<br>
+    ⑧<b>对立(互逆)</b> 若事件$A$与$B$不能同时发生，且必有一个发生，即$A$与$B$满足$AB = \varnothing$且$A \cup B = \Omega$，则称$A$与$B$互为对立事件(或互逆事件)，记为$A = \overline{B}$或$B = \overline{A}$<br>
+    ⑨<b>完全(完备)事件组</b> 若有限个或可列个事件$A_1, \, A_2, \, \cdots, \, A_n, \, \cdots$满足$A_i A_j = \varnothing(i \neq j)$，且$\bigcup_{i=1}^{\infty}A_i = \Omega$，则$A_1, \, A_2, \, \cdots, \, A_n, \, \cdots$称构成一个完全事件组(或完备事件组).</p> <h4 id="_2-事件的运算性质"><a href="#_2-事件的运算性质" class="header-anchor">#</a> 2. 事件的运算性质</h4> <p style="font-size:16px;">  ①<b>交换律</b> $A \cup B = B \cup A, \, AB = BA$.<br>
+    ②<b>结合律</b> $$(AB)C = A(BC) = ABC, \, (A \cup B) \cup C = A \cup (B \cup C) = A \cup B \cup C. $$
+    ③<b>分配律</b> $$\begin{align} A(B \cup C) = AB \cup AC, \, A \cup (BC) = (A \cup B)(A \cup C) \\ A(B-C) = AB - AC , \, A (\bigcup_{i=1}^{n} A_i) = \bigcup_{i=1}^{n} AA_i . \end{align}$$
+    ④<b>对偶律(De Morgan律)</b>$$\overline{A \cup B} = \overline{A} \cap \overline{B}, \, \overline{AB} = \overline{A} \cup \overline{B}, \\ \overline{\bigcup_i A_i} = \bigcap_i \overline{A_i}, \, \overline{\bigcap_i A_i} = \bigcup_i \overline{A_i}, \, (i \geqslant 1).$$
+    ⑤<b>吸收律</b> $A \cap (A \cup B) = A, \, A \cup (A \cap B) = A.$ <br>
+    ⑥<b>双重否定律</b>  $\overline{\overline{A}} = A.$<br>
+    ⑦<b>排中律</b> $A \cup \overline{A} = \Omega, \, A\overline{A} = \varnothing $.<br>
+    ⑧<b>差积转换律</b> $A - B = A \overline{B}$.</p> <h4 id="_3-概率的定义及性质"><a href="#_3-概率的定义及性质" class="header-anchor">#</a> 3. 概率的定义及性质</h4> <h5 id="_1-概率的定义"><a href="#_1-概率的定义" class="header-anchor">#</a> (1) 概率的定义</h5> <p style="font-size:16px;">  设试验$E$的样本空间为$\Omega$，对$E$的任意一个事件$A$，规定一个实数$P(A)$与之对应，若集合函数$P( \cdot )$满足下列条件：<br>
+  ①非负性：对任意事件$A$，有$P(A) \geqslant 0$; <br>
+  ②规范性：$P(\Omega) = 1$;<br>
+  ③可列可加性：对任意两两互不相容的事件列$A_1, \ , A_2, \, \cdots, \, A_n , \, \cdots ,$有$$P( \bigcup_{i=1}^{\infty} ) = \sum_{i=1}^{\infty} P(A_i)$$，则称$P(A)$为事件$A$的概率.</p> <h5 id="_2-概率的基本性质"><a href="#_2-概率的基本性质" class="header-anchor">#</a> (2) 概率的基本性质</h5> <p style="font-size:16px;">  ①$P(\varnothing ) = 0, \, P(\Omega) = 1$.
+  ②若$A_1, \, A_2, \, \cdots, \, A_n$两两互斥，则有$$P(\bigcap_{i=1}^n A_i) = \sum_{i=1}^n P(A_i).$$
+  ③$P(\overline{A}) = 1 - P(A)$.<br>
+  ④$P(A \cup B) = P(A) + P(B) - P(AB)$
+  $$⑤P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC)$$.
+   ⑥$P(A-B) = P(A) - P(AB)$.<br>
+    当 $B \subset A$时，有$P(A-B) = P(A) - P(B)$，从而$P(B) \leqslant P(A)$
+</p> <h4 id="_4-概率公式"><a href="#_4-概率公式" class="header-anchor">#</a> 4. 概率公式</h4> <h5 id="_1-条件概率"><a href="#_1-条件概率" class="header-anchor">#</a> (1) 条件概率</h5> <p style="font-size:16px;">  $P(B | A) = \frac{P(AB)}{P(A)}$对于固定的事件$A$，条件概率$P(B | A)$具有(无条件)概率的一切性质. </p> <h5 id="_2-乘法公式"><a href="#_2-乘法公式" class="header-anchor">#</a> (2) 乘法公式</h5> <p style="font-size:16px;">  设两个事件$A, \, B$，若$P(A) &gt; 0$，则有$P(AB) = P(B)P(A | B)$<br>
+  一般地，若$P(A_1 A_2 \cdots A_{n-1}) &gt; 0$，则$$P(A_1 A_2 \cdots A_n) = P(A_1)P(A_2 | A_1)P(A_3 | A_2 A_1) \cdots P(A_n | A_1 A_2 \cdots A_{n-1}).$$</p> <h5 id="_3-全概率公式"><a href="#_3-全概率公式" class="header-anchor">#</a> (3) 全概率公式</h5> <p style="font-size:16px;">  设$A_1, \, A_2, \, \cdots, \, A_n$为一个完全事件组，且$P(A_i) &gt; 0, i=1, \, 2, \, \cdots, \, n$，则对任意概率不为零的事件$B$，有$P(B) = \sum_{i=1}^{n} P(B | A_i) P(A_i)$.</p> <h5 id="_4-贝叶斯-bayes-公式"><a href="#_4-贝叶斯-bayes-公式" class="header-anchor">#</a> (4) 贝叶斯(Bayes)公式</h5> <p style="font-size:16px;">  设$A_1, \, A_2, \, \cdots, \, A_n$为一完全事件组，且$P(A_i) &gt; 0, i=1, \, 2, \, \cdots , \, n, P(B) &gt; 0$，则有$$P(A_j | B) = \frac{P(A_j)P(B|A_j)}{\sum_{i=1}^nP(A_i)P(B|A_i)}, j=1, \, 2, \, \cdots, \, n.$$</p> <hr> <h3 id="二、一维随机变量及其概率分布"><a href="#二、一维随机变量及其概率分布" class="header-anchor">#</a> 二、一维随机变量及其概率分布</h3> <h4 id="_1-分布函数"><a href="#_1-分布函数" class="header-anchor">#</a> 1. 分布函数</h4> <p style="font-size:16px;">  <b>定义</b> 设$X$为随机变量，则称定义在全体实数上的函数$$F(x) = P( X \leqslant x) , \, -\infty &lt; x &lt; +\infty, $$为$X$的分布函数，显然任何随机变量都有分布函数。<br>
+    <b>性质</b> ①$0 \leqslant F(x) \leqslant 1$; <br>
+  ②单调不减，即对于任何$x_1 &lt; x_2$，有$F(x_1) \leqslant F(x_2)$;<br>
+  ③右连续，对任何实数$x$，有$F(x+0) = F(x)$;<br>
+  ④$F(- \infty) = 0, \, F(+ \infty) = 1.$</p> <h4 id="_2-离散型随机变量"><a href="#_2-离散型随机变量" class="header-anchor">#</a> 2. 离散型随机变量</h4> <p style="font-size:16px;">  <b>定义</b> 若随机变量$X$的所有可能取值只有有限个或可列个，则称为离散型随机变量.<br>
+    <b>分布律</b> 设$X$的所有可能取值为$x_1, \, x_2, \, \cdots , \, x_n, \, \cdots$，则称$P(X = x_i) = p_i, \, i=1, \, 2, \, \cdots$为$X$的分布律.<br>
+  显然，分布律满足：<br>
+  ①$p_i \geqslant 0, \, i=1, \, 2, \, \cdots$;<br>
+  ②$\sum_i p_i = 1$;<br>
+  ③离散型分布函数为$F(x) = P(X \leqslant x) = \sum_{x_i \leqslant x} P(X = x_i), \, -\infty &lt; x &lt; +\infty$.</p> <h4 id="_3-连续型随机变量"><a href="#_3-连续型随机变量" class="header-anchor">#</a> 3. 连续型随机变量</h4> <p style="font-size:16px;">  <b>定义</b> 若随机变量$X$的分布函数$F(x)$可以表示成非负可积函数$f(x)$的下列积分形式：$$F(x) = \int_{-\infty}^x f(t)dt , \, -\infty &lt; x &lt; +\infty,$$则称$X$为连续型随机变量，$F(x)$为连续型分布，$f(x)$为$X$的概率密度函数，有时简称为密度。<br>
+    <b>概率密度函数的性质</b> <br>
+  ①$f(x) \geqslant 0$;<br>
+  ②$\int_{-\infty}^{+\infty} f(x)dx = 1$</p> <h4 id="_4-常见的重要分布"><a href="#_4-常见的重要分布" class="header-anchor">#</a> 4. 常见的重要分布</h4> <p style="font-size:16px;">  ①<b>0—1分布$B(1, \, p)$</b> 分布律为
+  <table><tr><td>$X$</td> <td>0</td> <td>1</td></tr> <tr><td>$P$</td> <td>$1-p$</td> <td>$p$</td></tr></table></p> <p style="font-size:16px;">
+    ②<b>二项分布$B(n, \, p)$</b> 分布律为$P(X = k) = C_n^k p^k(1-p)^{n-k}, k= 0, \, 1, \, 2, \, \cdots, \, n, \, 0 &lt; p &lt; 1$<br>
+    ③<b>泊松(Poisson)分布$P(\lambda)$</b> 分布律为$P(x = k) = \frac{\lambda^k}{k!}e^{- \lambda}, \, k = 0, \, 1, \, 2, \, \cdots, \lambda &gt; 0$<br>
+    ④<b>超几何分布$H(N, \, M, \, n)$</b> 分布律为$$P(X = k) = \frac{C_M^k C_{N-M}^{n-k}}{C_N^n}, \, k=l, \, l+1, \, \cdots, \, min \left \{n , \, M \right \}$$其中$l = max \left \{ 0, \, n-(N-M) \right \}$.<br>
+    ⑤<b>几何分布$G(p)$</b> 分布律为$P(X = k) = (1-p)^{k-1}p, \, k=1, \, 2, \, \cdots , \, 0 &lt; p &lt; 1$.<br>
+    ⑥<b>均匀分布$U(a, \, b)$</b> 密度函数为$$f(x) = \begin{cases}
+ \frac{1}{b-a}&amp; a &lt; x &lt; b \\ 
+ 0 &amp; \text{ 其他 }  
+\end{cases}$$分布函数为$$F(x) = \begin{cases}
+0 &amp; x &lt; a \\ 
+\frac{x-a}{b-a} &amp; a \leqslant x &lt; b\\ 
+1 &amp; x \geqslant b 
+\end{cases}$$
+    ⑦<b>指数分布$E(\lambda)$</b> 密度函数为$$f(x) = \begin{cases}
+\lambda e^{-\lambda x} &amp; x &gt; 0 \\ 
+0 &amp; \text{其他}
+\end{cases}$$其中$\lambda &gt; 0$，分布函数为$$F(x) = \begin{cases}
+1 - e^{-\lambda x} &amp; x &gt; 0 \\ 
+0 &amp; \text{其他}
+\end{cases}$$
+    ⑧<b>正态分布$N(\mu , \, \sigma^2)$</b> 密度函数为$$f(x) = \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{(x- \mu)^2}{2 \sigma^2}}, \, -\infty &lt; x &lt; +\infty,$$其中$\sigma &gt; 0, \, -\infty &lt; x &lt; +\infty$，分布函数为$$\Phi (x) = \int_{-\infty}^x \frac{1}{\sqrt{2 \pi}} e ^{-\frac{(t- \mu)^2}{2 \sigma^2}}dt, \, -\infty &lt; x &lt; +\infty.$$标准正态分布$N(0, \, 1)$的密度函数为$$\varphi (x) = \frac{1}{\sqrt{2 \pi}} e ^ {- \frac{x^2}{2}} , \, -\infty &lt; x &lt; +\infty.$$
+</p> <h4 id="_5-随机变量函数的分布"><a href="#_5-随机变量函数的分布" class="header-anchor">#</a> 5. 随机变量函数的分布</h4> <p style="font-size:16px;">  g(x)为连续函数或分段函数，则$Y = g(X)$的概率分布分三种情形：<br>
+    <b>X为离散型</b> 设$X$的分布律为$P(X = x_i) = p_i, \, i=1, \, 2, \, \cdots$，则$Y = g(X)$的分布律为$$P(Y = y_i) = P(g(X) = y_i) = \sum_{g(x_i) = y_i} P(X = x_i)$$
+    <b>X为连续型</b> 设$X$的密度函数为$f_X(x)$，则$Y$的密度函数(若存在)可按下列两种方法求得：<br>
+    ①<b>公式法</b> 若$y=g(x)$严格单调，其反函数$x=h(y)$有一阶连续导数，则$Y = g(X)$也是连续型随机变量，且密度函数为$$f_Y(y) = \begin{cases}
+f_X([h(y)])|h^{'}(y)| &amp; \alpha &lt; y &lt; \beta \\ 
+0 &amp; \text{ 其他 }  
+\end{cases}$$其中$(\alpha ,\, \beta)$为$y=g(x)$的值域.<br>
+    ②<b>分布函数法</b> 首先按照分布函数的定义求得$Y$的分布函数，再通过求导得到密度函数，即$$F_Y(y) = P(Y \leqslant y) = P(g(X) \leqslant y) = \int_{g(x) \leqslant y}f_X(x)dx$$ $$f_Y(y) = F_Y^{'}(y)$$
+    <b>X为一般的随机变量</b> 设$X$的分布函数为$F_X(x)$，则$y$的分布函数可按照分布函数的定义求得$$F_Y(y) = P(Y \leqslant y) = P(g(X) \leqslant y).$$</p> <hr> <h3 id="三、二维随机变量及其概率分布"><a href="#三、二维随机变量及其概率分布" class="header-anchor">#</a> 三、二维随机变量及其概率分布</h3> <h4 id="_1-二维随机变量的联合分布函数"><a href="#_1-二维随机变量的联合分布函数" class="header-anchor">#</a> 1. 二维随机变量的联合分布函数</h4> <h5 id="_1-定义"><a href="#_1-定义" class="header-anchor">#</a> (1). 定义</h5> <p style="font-size:16px;">  二维随机变量$(X, \, Y)$，其联合分布函数为$$F(x, \, y) = P( X \leqslant x, \, Y \leqslant y) \, , \, (x, \, y) \in R^2 , $$其中$P(X \leqslant x, \, Y \leqslant y)$表示积事件$(X \leqslant x) \cap ( Y \leqslant y)$发生的概率</p> <h5 id="_2-联合分布函数的性质"><a href="#_2-联合分布函数的性质" class="header-anchor">#</a> (2). 联合分布函数的性质</h5> <p style="font-size:16px;">  ①$0 \leqslant F(x, \, y) \leqslant 1$.<br>
+  ②$F(x, \, y)$分别关于$x$和$y$单调不减.<br>
+  ③$F(x, \, y)$分别关于$x$和$y$右连续.<br>
+  ④$F(x, \, -\infty) = F(-\infty, \, y) = 0, \, F(+\infty, +\infty) = 1.$<br>
+  ⑤对于任意实数$x_1 &lt; x_2, \, y_1 &lt; y_2$，有$$F(x_2, \, y_2) - F(x_2, \, y_1) - F(x_1, \, y_2) + F(x_1, \, y_1) \geqslant 0.$$</p> <h4 id="_2-二维离散型随机变量"><a href="#_2-二维离散型随机变量" class="header-anchor">#</a> 2. 二维离散型随机变量</h4> <h5 id="_1-定义-2"><a href="#_1-定义-2" class="header-anchor">#</a> (1). 定义</h5> <p style="font-size:16px;">  若二维随机变量$(X, \, Y)$的每一个分量$X$和$Y$都是离散型的，则称$(X, \, Y)$为二维离散型随机变量.</p> <h5 id="_2-联合概率分布"><a href="#_2-联合概率分布" class="header-anchor">#</a> (2). 联合概率分布</h5> <p style="font-size:16px;">  设$(X, \, Y)$的一切可能取值为$(x_i, \, y_i)$，则称$p_{ij} = P(X = x_i, \, Y = y_i), i, \, j = 1, \, 2, \, \cdots$为$(X, \, Y)$的联合分布律，或称联合概率分布.</p> <h5 id="_3-联合分布律的性质"><a href="#_3-联合分布律的性质" class="header-anchor">#</a> (3). 联合分布律的性质</h5> <p style="font-size:16px;">  ①$p_{ij} \geqslant 0$,<br>
+  ②$\sum_i \sum_j p_{ij} = 1$.</p> <h5 id="_4-边缘分布"><a href="#_4-边缘分布" class="header-anchor">#</a> (4). 边缘分布</h5> <p style="font-size:16px;">  $(X, \, Y)$的分量$X$和$Y$的分布律为边缘分布律。它与联合分布律的关系为$$p_{i \cdot} = P(X = x_i) = \sum_j P(X = x_i, \, Y = y_j) = \sum_j p_{ij},$$ $$p_{\cdot j} = P(Y = y_j) = \sum_i P(X = x_i , \, Y=y_j) = \sum_i p_{ij}.$$</p> <h5 id="_5-条件分布"><a href="#_5-条件分布" class="header-anchor">#</a> (5). 条件分布</h5> <p style="font-size:16px;">  对于固定的$j$，若$p_j &gt; 0$，则称$$p_{i | j } = P(X = x_i | Y = y_j ) = \frac{p_{ij}}{p_{\cdot j}}, \, i=1, \, 2, \, \cdots$$为$X$关于$Y=y_i$的条件分布，类似地，若$p_i &gt; 0$，则称$$p_{j|i} = P(Y = y_j | X = x_i) = \frac{p_{ij}}{p_{i \cdot}}, j = 1, \, 2, \, \cdots$$为$Y$关于$X = x_i$的条件分布.</p> <h4 id="_3-二维连续型随机变量"><a href="#_3-二维连续型随机变量" class="header-anchor">#</a> 3. 二维连续型随机变量</h4> <h5 id="_1-定义-3"><a href="#_1-定义-3" class="header-anchor">#</a> (1). 定义</h5> <p style="font-size:16px;">  设$(X, \, Y)$的联合分布函数为$F(x, \, y)$，如果存在非负可积函数$f(x, \, y)$，使得对任意实数$x, \, y$，有$F(x, \, y) = \int_{-\infty}^{x} \int_{-\infty}^{y}f(u, \, v)dudv$，则称$(X, \, Y)$为二维连续型随机变量，$f(x, \, y)$为联合密度函数，常记为$(X, \, Y) \sim f(x, \, y).$</p> <h5 id="_2-联合密度函数的性质"><a href="#_2-联合密度函数的性质" class="header-anchor">#</a> (2). 联合密度函数的性质</h5> <p style="font-size:16px;">  ①$f(x, \, y) \geqslant 0$,<br>
+  ②$\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f(x, \, y)dxdy = 1$.<br>
+  反之，任意满足上述两条性质的二元函数$f(x, \, y)$必定可作为某二维随机变量的联合密度函数。</p> <h5 id="_3-二维连续型随机变量的性质"><a href="#_3-二维连续型随机变量的性质" class="header-anchor">#</a> (3). 二维连续型随机变量的性质</h5> <p style="font-size:16px;">  ①$F(x, \, y)$为二元函数. <br>
+  ②对于任意平面曲线$L$，有$P \left \{ (X, \, Y) \in L \right \} = 0$.<br>
+  ③对于平面区域$D$，有$P \left \{ (X, \, Y) \in D \right \} = \iint_D f(x, \, y)dxdy$.<br>
+  ④对于$f(x, \, y)$的连续点$(x, \, y)$，有$\frac{\partial^2 F(x, \, y)}{\partial x \partial y} = f(x, \, y)$.</p> <h5 id="_4-边缘分布-2"><a href="#_4-边缘分布-2" class="header-anchor">#</a> (4). 边缘分布</h5> <p style="font-size:16px;">  设$(X, \, Y) \sim f(x, \, y)$，则$X, \, Y$的分布函数可分别表示为$$F_X(x) = \int_{-\infty}^x (\int_{-\infty}^{+\infty} f(x, \, y)dy) dx, $$ $$F_Y(y) = \int_{-\infty}^y (\int_{-\infty}^{+\infty} f(x, \, y)dx) dy$$它们分别称为$(X, \, Y)$关于$X, \, Y$的边缘分布函数，而$$f_X(x) = \int_{-\infty}^{+\infty}f(x, \, y)dy, \, f_Y(y) = \int_{-\infty}^{+\infty}f(x, \, y)dx$$分别称为$(X, \, Y)$关于$X, \, Y$的边缘密度函数. </p> <h4 id="_4-随机变量的独立性"><a href="#_4-随机变量的独立性" class="header-anchor">#</a> 4. 随机变量的独立性</h4> <h5 id="_1-定义-4"><a href="#_1-定义-4" class="header-anchor">#</a> (1). 定义</h5> <p style="font-size:16px;">  若对任意实数$x, \, y$有$P \left \{ X \leqslant x, \, Y \leqslant y \right \} = P \left \{ X \leqslant x \right \} P \left \{ Y \leqslant y \right \}$，则称随机变量$X$和$Y$相互独立. </p> <h5 id="_2-独立性的判定条件"><a href="#_2-独立性的判定条件" class="header-anchor">#</a> (2). 独立性的判定条件</h5> <p style="font-size:16px;">  ①<b>离散型</b><br>
+  对于二维离散型随机变量$(X, \, Y)$，$X$与$Y$相互独立的充要条件为$p_{ij} = p_{i \cdot} \times p_{\cdot j}, \, i, \, j = 1, \, 2, \, \cdots$.<br>
+    ②<b>连续型</b><br>
+  对于二维连续型随机变量$(X, \, Y)$，$X$与$Y$相互独立的充要条件为：对任意实数$x, \, y, \, f(x, \, y) = f_X(x)f_Y(y)$.</p> <h4 id="_5-随机变量函数的分布-2"><a href="#_5-随机变量函数的分布-2" class="header-anchor">#</a> 5. 随机变量函数的分布</h4> <h5 id="_1-一般情形"><a href="#_1-一般情形" class="header-anchor">#</a> (1). 一般情形</h5> <p style="font-size:16px;">  已知二维随机变量$(X, \, Y)$的概率分布，而随机变量$Z$为$X$与$Y$的函数，即$Z = g(X, \, Y)$，则$Z$的分布函数为$$F_Z(z) = P(Z \leqslant z ) = P(g(X, \, Y) \leqslant z) , \, -\infty &lt; z &lt; +\infty. $$</p> <h5 id="_2-离散型情形"><a href="#_2-离散型情形" class="header-anchor">#</a> (2). 离散型情形</h5> <p style="font-size:16px;">  已知$P(X = x_i,  \, Y = y_j) = p_{ij}, \, Z = g(X, \, Y)$，则$Z$的分布律为$$\begin{align} P(Z = z_k) &amp;= P(g(X, \, Y) = z_k) \\ &amp;= \sum_{g(x_i, \, y_j) = z_k}P(X= x_i , \, Y=y_j). \end{align}$$</p> <h5 id="_3-连续型情形"><a href="#_3-连续型情形" class="header-anchor">#</a> (3). 连续型情形</h5> <p style="font-size:16px;">  已知$(X, \, Y) \sim f(x, \, y), \, Z = g(X, \, Y)$，则$Z$的分布函数为$$\begin{align}F_Z(z) &amp;= P(Z \leqslant z) = P(g(X, \, Y) \leqslant z ) \\ &amp;= \iint_{g(x, \, y) \leqslant z } f(x, \, y)dxdy  \end{align}$$  若$Z$仍为连续型随机变量，则$Z$的密度函数为$f_Z(z) = F_Z^{'}(z).$</p> <h5 id="_4-x-与-y-的和、商与极值的分布"><a href="#_4-x-与-y-的和、商与极值的分布" class="header-anchor">#</a> (4). $X$与$Y$的和、商与极值的分布</h5> <p style="font-size:16px;">  ①<b>和的分布</b><br>
+  设$(X, \, Y) \sim f(x, \, y)$，则$Z = X+Y$的密度函数为$$f_Z(z) = \int_{-\infty}^{+\infty}f(x, \, z-x)dx = \int_{-\infty}^{+\infty}f(z-y, \, y)dy.$$当$X$与$Y$独立式，有卷积公式$$f_Z(z) = \int_{-\infty}^{+\infty}f_X(x)f_Y(z-x)dx = \int_{-\infty}^{+\infty}f_X(z-y)f_Y(y)dy$$.<br>
+    ②<b>商的分布</b><br>
+  设$(X, \, Y) \sim f(x, \, y)$，则$Z = \frac{X}{Y}$的密度函数为$$f_Z(z) = \int_{-\infty}^{+\infty} |y| f(yz, y)dy.$$当$X$与$Y$独立时，有$$f_Z(z) = \int_{-\infty}^{+\infty} | y| f_X(yz)f_Y(y)dy$$
+    ③<b>极值的分布</b><br>
+  设$X$与$Y$独立，其分布函数分别为$F_X(x) ,\, F_Y(y)$，则$Z_1 = max \left \{ X, \, Y \right \}, \, Z_2 = min \left \{ X, \, Y \right \}$的分布函数分别为：$$\begin{align} F_{Z_1} (z) &amp;= P(Z_1 \leqslant z) = P(max \left \{ X, \, Y \right \} \leqslant z ) \\ &amp;= P(X \leqslant z, \, Y \leqslant z ) = F_X (z)F_Y (z), \end{align}$$ $$\begin{align} F_{Z_2} (z) &amp;= P(Z_2 \leqslant z ) = P(min \left \{ X ,\, Y \right \} \leqslant z) \\ &amp;= 1- P(min \left \{ X, \, Y \right \} &gt; z ) \\ &amp;= 1 - P(X &gt; z , \, Y &gt; z) \\ &amp;= 1- [1-F_X (z)][1-F_Y (z)]. \end{align}$$</p> <h4 id="_6-两个常见的二维分布"><a href="#_6-两个常见的二维分布" class="header-anchor">#</a> 6. 两个常见的二维分布</h4> <h5 id="_1-二维均匀分布"><a href="#_1-二维均匀分布" class="header-anchor">#</a> (1). 二维均匀分布</h5> <p style="font-size:16px;">  若$(X, \, Y)$的联合密度函数为$$f(x,y) = \begin{cases}
+\frac{1}{S(D)}, &amp; (x,y) \in D, \\ 
+0, &amp; \text{ 其他 },
+\end{cases}$$其中$D$为平面有界区域，$S(D)$为$D$的面积，则称$(X, \, Y)$服从二维均匀分布. </p> <h5 id="_2-二维正态分布"><a href="#_2-二维正态分布" class="header-anchor">#</a> (2). 二维正态分布</h5> <p style="font-size:16px;">  若$(X, \, Y)$的联合密度函数为
+  $$ f(x, \, y) =  \frac{1}{2 \pi \sigma_1 \sigma_2 \sqrt{1- \rho^2}} \times  exp \left \{ -\frac{1}{ 2 (1 -  \rho )^2} \cdot [ \frac{(x- \mu_1)^2}{\sigma_1^2} -  \frac{2 \rho (x- \mu_1)(y - \mu_2) }{\sigma_1 \sigma_2} + \frac{(y- \mu_2)^2}{\sigma_2^2} ] \right \} $$
+  其中$-\infty &lt; \mu_1, \, \mu_2 &lt; +\infty, \, \sigma_1 &gt; 0, \, \sigma_2 &gt; 0, | \rho | &lt; 1$，则称$(X, \, Y)$服从二维正态分布，常记为$(X, Y) \sim N(\mu_1, \, \mu_2, \, \sigma_1^2, \, \sigma_2^2, \rho).$<br>
+  注：(1)若$(X, \, Y) \sim N(\mu_1, \, \mu_2, \, \sigma_1^2, \, \sigma_2^2, \, \rho )$，则$X \sim N(\mu_1, \sigma_1^2), \, Y \sim N(\mu_2, \, \sigma_2^2)$. 反之，若$X$与$Y$都是正态变量，且相互独立，则$(X, \, Y)$是二维正态变量.<br>
+  (2)若$(X, \, Y) \sim N(\mu_1, \, \mu_2, \, \sigma_1^2, \, \sigma_2^2, \, \rho )$，则$X$与$Y$相互独立的充要条件是$\rho = 0$.<br>
+  (3)二维随机变量$(X, \, Y)$服从二维正态分布的充要条件是$X, \, Y$的任意非零线性组合服从一维正态分布.<br>
+  (4)若$(X, \, Y)$服从二维正态分布，设$Z_1, \, Z_2$是$X, \, Y$的线性函数，则$(Z_1, \, Z_2)$也服从二维正态分布.</p> <br></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/43.aa02c761.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>高等数学知识总结 (三) | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/40.4a244a79.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-3424" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>高等数学知识总结 (三)</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2020-01-10</span> <span>文章字数：917</span> <span>预计用时：4分35秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#十二、常微分方程与差分方程">十二、常微分方程与差分方程</a><ul><li><a href="#_1-一阶微分方程">1. 一阶微分方程</a></li><li><a href="#_2-可降阶的高阶微分方程">2. 可降阶的高阶微分方程</a><ul><li><a href="#_1-y-n-f-x-型">(1). $y^{(n)} = f(x)$型</a></li><li><a href="#_2-y-f-x-y-型-方程中不显含-y">(2). $y^{&quot;} = f(x,y^{'})$型(方程中不显含$y$)</a></li><li><a href="#_3-y-f-y-y-型-方程中不显含-x">(3). $y^{&quot;} = f(y,y^{'})$型(方程中不显含$x$)</a></li></ul></li><li><a href="#_3-二阶线性微分方程解的结构">3. 二阶线性微分方程解的结构</a></li><li><a href="#_4-二阶常系数线性微分方程">4. 二阶常系数线性微分方程</a><ul><li><a href="#_1-二阶常系数齐次线性微分方程的通解">(1). 二阶常系数齐次线性微分方程的通解</a></li><li><a href="#_2-二阶常系数非齐次线性微分方程的特解">(2). 二阶常系数非齐次线性微分方程的特解</a></li></ul></li><li><a href="#_5-n-阶常系数齐次线性微分方程">5. n 阶常系数齐次线性微分方程</a></li><li><a href="#_6-欧拉方程-1">6. 欧拉方程[^1]</a></li><li><a href="#_7-差分方程及其应用-3">7. 差分方程及其应用[^3]</a><ul><li><a href="#_1-差分的概念">(1) 差分的概念</a></li><li><a href="#_2-差分方程的概念">(2) 差分方程的概念</a></li><li><a href="#_3-齐次差分方程的通解">(3) 齐次差分方程的通解</a></li><li><a href="#_4-非齐次差分方程-y-t-1-ay-t-f-t-的通解">(4) 非齐次差分方程$y{t+1}+ay{t}=f(t)$的通解</a></li></ul></li></ul></li><li><a href="#十三、多元函数微分学">十三、多元函数微分学</a><ul><li><a href="#_1-多元函数偏导数和全微分的概念">1. 多元函数偏导数和全微分的概念</a><ul><li><a href="#_1-偏导数">(1) 偏导数</a></li><li><a href="#_2-全微分">(2) 全微分</a></li><li><a href="#_3-可微的必要条件">(3) 可微的必要条件</a></li><li><a href="#_4-可微的充分条件">(4) 可微的充分条件</a></li></ul></li><li><a href="#_2-多元函数几个概念间的关系">2. 多元函数几个概念间的关系</a></li><li><a href="#_3-方向导数和梯度-1">3. 方向导数和梯度[^1]</a></li><li><a href="#_4-二元函数的泰勒公式">4. 二元函数的泰勒公式</a></li><li><a href="#_5-多元函数的极值和条件极值">5. 多元函数的极值和条件极值</a><ul><li><a href="#_1-二元函数极值">(1) 二元函数极值</a></li><li><a href="#_2-条件极值">(2) 条件极值</a></li></ul></li><li><a href="#_6-复合函数微分法">6. 复合函数微分法</a></li><li><a href="#_7-隐函数求导法">7. 隐函数求导法</a></li></ul></li><li><a href="#十四、重积分">十四、重积分</a><ul><li><a href="#_1-二重积分">1. 二重积分</a><ul><li><a href="#_1-二重积分的定义">(1) 二重积分的定义</a></li><li><a href="#_2-二重积分的性质">(2) 二重积分的性质</a></li><li><a href="#_3-二重积分的计算">(3) 二重积分的计算</a></li></ul></li></ul></li></ul></div><p></p> <p style="font-size:18px;">  同样地，继上一篇比较长的总结之后，剩下的内容也不是很多了，今天把高数剩下的几章总结完，后续的话再补上数学其他略过的部分。<br>
+  这一部分除了微分方程比较巧之外，其他部分相对来说是很考计算能力，需要好好记忆一些常用的公式。</p> <h3 id="十二、常微分方程与差分方程"><a href="#十二、常微分方程与差分方程" class="header-anchor">#</a> 十二、常微分方程与差分方程</h3> <h4 id="_1-一阶微分方程"><a href="#_1-一阶微分方程" class="header-anchor">#</a> 1. 一阶微分方程</h4> <table><thead><tr><th>方程类型</th> <th>通解及其求法</th></tr></thead> <tbody><tr><td>(1)变量可分离方程$$f_{1}(x)g_{1}(y)dx+f_{2}(x)g_{2}(y)dy=0$$</td> <td>两边同除$$f_{2}(x)g_{1}(y)$$,再两边积分，<br>可得通解为$$\int \frac{f_{1}(x)}{f_{2}(x)}dx = -\int \frac{g_{2}(y)}{g_{1}(y)}dy+C$$其中 C 为任意常数</td></tr> <tr><td>(2)齐次方程$$\frac{dy}{dx}=F(\frac{y}{x})$$</td> <td>首先作变换$$u=\frac{y}{x}$$，把方程化为变量可分离方程$$xdu-[F(u)-u]dx = 0$$再用变量分离法进行求解.</td></tr> <tr><td>(3)一阶线性微分方程<br>$$\frac{dy}{dx}+P(x)y = Q(x)$$</td> <td>通解为$$y=e^{-\int P(x)dx}\left [\int Q(x) e^{\int P(x)dx}dx+C \right ]$$其中 C 为任意常数</td></tr> <tr><td>(4)伯努利方程<br>$$\frac{dy}{dx}+P(x)y=Q(x)y^{n},(n \neq 0,1)$$</td> <td>令$$z=y^{1-n}$$,方程可化为$$\frac{dz}{dx}+(1-n)P(x)z = (1-n)Q(x)$$利用线性方程的方法求解</td></tr> <tr><td>(5)全微分方程$$P(x,y)dx+Q(x,y)dy = 0$$且满足$$\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}$$</td> <td>通解为$$\int_{x_{0}}^{x}P(x,y_{0})dx + \int_{y_{0}}^{y}Q(x,y)dy = C$$</td></tr></tbody></table> <h4 id="_2-可降阶的高阶微分方程"><a href="#_2-可降阶的高阶微分方程" class="header-anchor">#</a> 2. 可降阶的高阶微分方程</h4> <h5 id="_1-y-n-f-x-型"><a href="#_1-y-n-f-x-型" class="header-anchor">#</a> (1). $y^{(n)} = f(x)$型</h5> <p><span style="font-size:16px;">  这种方程通过 n 次积分可得到一般解(通解).</span></p> <h5 id="_2-y-f-x-y-型-方程中不显含-y"><a href="#_2-y-f-x-y-型-方程中不显含-y" class="header-anchor">#</a> (2). $y^{&quot;} = f(x,y^{'})$型(方程中不显含$y$)</h5> <p style="font-size:16px;">  作变换$ y^{'}=p(x) $，则$ y^{&quot;}=\frac{dp}{dx} $，代入原方程可得$ \frac{dp}{dx} = f(x,p) $，变为关于x的一阶方程.</p> <h5 id="_3-y-f-y-y-型-方程中不显含-x"><a href="#_3-y-f-y-y-型-方程中不显含-x" class="header-anchor">#</a> (3). $y^{&quot;} = f(y,y^{'})$型(方程中不显含$x$)</h5> <p style="font-size:16px;">  作变换$ y^{'}=p(y) $，则 $ y^{&quot;}=\frac{dp}{dx}=\frac{dp}{dy} \cdot \frac{dy}{dx} $,即$ y^{&quot;}= p \frac{dp}{dy} $，代入原方程可得 $p \frac{dp}{dy} = f(y,p) $,变为关于p,y的一阶方程.</p> <h4 id="_3-二阶线性微分方程解的结构"><a href="#_3-二阶线性微分方程解的结构" class="header-anchor">#</a> 3. 二阶线性微分方程解的结构</h4> <p style="font-size:16px;">  二阶线性微分方程的一般形式为<br>
+   $y^{&quot;}+P(x)y^{'}+Q(x)y = f(x)$  ①<br>
+  当$f(x)=0$时，方程化为<br>
+   $y^{&quot;}+P(x)y^{'}+Q(x)y = 0$  ②<br>
+称为对应的齐次方程.<br>
+  <b>定理1</b> 设$y_{1}(x),y_{2}(x)$是②的两个线性无关的特解(即$y_{1}(x) \neq ky_{2}(x)$),则$y=C_{1}y_{1}(x)+C_{2}y_{2}(x)$是②的通解，其中$C_{1},C_{2}$是任意常数.<br>
+  <b>定理2</b> 设$y^{*}(x)$是①的特解，$Y(x)$是②的通解，那么$y=y^{*}(x)+Y(x)$是①的通解.<br>
+  <b>定理3</b> 设$y_{1}(x),y_{2}(x)$是①的两个不同的特解，则$y=y_{1}(x)-y_{2}(x)$是②的一个特解.<br>
+    <b>定理4(叠加原理)</b> 设$y_{1}(x),y_{2}(x)$分别是方程$$y^{&quot;}+P(x)y^{'}+Q(x)y=f_{1}(x) \quad y^{&quot;}+P(x)y^{'}+Q(x)y = f_{2}(x)$$的特解，则$y=y_{1}(x)+y_{2}(x)$是方程$y^{&quot;}+P(x)y^{'}+Q(x)y=f_{1}(x)+f_{2}(x)$的特解.</p> <h4 id="_4-二阶常系数线性微分方程"><a href="#_4-二阶常系数线性微分方程" class="header-anchor">#</a> 4. 二阶常系数线性微分方程</h4> <h5 id="_1-二阶常系数齐次线性微分方程的通解"><a href="#_1-二阶常系数齐次线性微分方程的通解" class="header-anchor">#</a> (1). 二阶常系数齐次线性微分方程的通解</h5> <p style="font-size:16px;">  若$y^{&quot;}+py^{'}+qy=0$的特征方程$r^{2}+pr+q=0$的两个根为$r_{1},r_{2}$，则<br>  ①若$r_{1} \neq r_{2}$，为两个实根，则通解为$y=C_{1}e^{r_{1}x}+C_{2}e^{r_{2}x}$;<br>  ②若$r_{1}=r_{2}$，则通解为$y=(C_{1}+C_{2}x)e^{r_{1}x}$;<br>  ③若$r_{1,2} = \alpha \pm i \beta$,则通解为$$y=e^{\alpha x}(C_{1}cos\beta x + C_{2}sin\beta x).$$</p> <h5 id="_2-二阶常系数非齐次线性微分方程的特解"><a href="#_2-二阶常系数非齐次线性微分方程的特解" class="header-anchor">#</a> (2). 二阶常系数非齐次线性微分方程的特解</h5> <table style="width:100%;"><tr><td>$$f(x)$$</td> <td>特解形式</td></tr> <tr><td>$f(x)=e^{\lambda x}P_{m}(x)$</td> <td>$y^{* }=x^{k}Q_{m}e^{\lambda x}$，其中$Q_{m}(x)$与$P_{m}(x)$是同次多项式，$k$按$\lambda$不是特征方程的根、是特征方程的单根或是特征方程的重根依次取为0、1或2.</td></tr> <tr><td>$$\begin{align} f(x) &amp;= e^{\lambda x} [ p_{l}(x)cos\omega x \\ &amp;
+      +p_{n}(x)sin\omega x  ] \end{align}$$</td> <td>$$\begin{align} y^{* } &amp;= x^{k}e^{\lambda x}[R_{m}^{(1)}(x)cos\omega x \\ &amp;+R_{m}^{(2)}(x)sin\omega x ] \end{align}$$,其中$R_{m}^{(1)}(x), \, R_{m}^{(2)}(x)$是m次多项式，$m=max \left \{ l,n \right \} $ , $k$按$\lambda+i\omega $ (或$\lambda-i\omega$) 不是特征方程的根或是特征方程的单根依次取0或1.</td></tr></table> <h4 id="_5-n-阶常系数齐次线性微分方程"><a href="#_5-n-阶常系数齐次线性微分方程" class="header-anchor">#</a> 5. n 阶常系数齐次线性微分方程</h4> <p style="font-size:16px;">  $$y^{(n)}+p_{1}y^{(n-1)}+\cdots +p_{n-1}y^{'}+p_{n}y = 0$$的特征方程为$$\lambda^{n}+p_{1}\lambda^{n-1}+\cdots +p_{n-1}\lambda+p_{n} = 0$$
+  ①当特征根r是单根时，通解中对应的项为$Ce^{rx}$;<br>
+  ②当特征根是一对单复根$r_{1,2}=\alpha+\beta i$时，通解中对应的项为$e^{\alpha x}(C_{1}cos\beta x+C_{2}sin\beta x)$;<br>
+  ③当特征根是k重实根r(k为正整数)时，通解中对应的项为($C_{1}+C_{2}x+...+C_{k}x^{k-1})e^{rx}$;<br>
+  ④当特征根是一对k重复根$r_{1,2} = \alpha \pm \beta i$时，通解中对应的项为$$e^{\alpha x}[(C_{1}+C_{2}x+...+C_{k}x^{k-1})cos\beta x+(D_{1}+D_{2}x+...+D_{k}x^{k-1})sin\beta x].$$</p> <h4 id="_6-欧拉方程-1"><a href="#_6-欧拉方程-1" class="header-anchor">#</a> 6. 欧拉方程<a href="%E6%95%B0%E5%AD%A6%E4%B8%80%E5%86%85%E5%AE%B9">^1</a></h4> <p style="font-size:16px;">  形如$$x^{n}y^{(n)}+p_{1}x^{n-1}y^{(n-1)}+\cdots+p_{n-1}xy^{'}+p_{n}y=f(x)$$的方程，称为欧拉方程.可通过欧拉变换$x=e^{t}$，将方程转化为常系数方程来求解</p> <h4 id="_7-差分方程及其应用-3"><a href="#_7-差分方程及其应用-3" class="header-anchor">#</a> 7. 差分方程及其应用<a href="%E6%95%B0%E5%AD%A6%E4%B8%89%E5%86%85%E5%AE%B9">^3</a></h4> <h5 id="_1-差分的概念"><a href="#_1-差分的概念" class="header-anchor">#</a> (1) 差分的概念</h5> <p style="font-size:16px;">  <b>定义1</b> 设函数$y_{t} = y(t)$，称改变量$y_{t+1}-y_{t}$为函数$y_{t}$的差分，也称为函数$y_{t}$的一阶差分，记为$\Delta y_{t}$，即$\Delta y_{t} = y_{t+1} - y_{t}$，一阶差分的差分称为二阶差分$\Delta^{2} y_{t}$，即
+   $$\Delta^{2}y_{t} = \Delta(\Delta y_{t}) = \Delta y_{t+1}-\Delta y_{t} = y_{t+2} - 2y_{t+1} + y_{t}.$$</p> <h5 id="_2-差分方程的概念"><a href="#_2-差分方程的概念" class="header-anchor">#</a> (2) 差分方程的概念</h5> <p style="font-size:16px;">  <b>定义1</b> 含有未知函数$y_{t}$的差分的方程称为差分方程.差分方程中所含未知函数差分的最高阶数称为该差分方程的阶.<br>
+    <b>定义2</b> 满足差分方程的函数称为该差分方程的解，如果差分方程的解中含有相互独立的任意常数的个数恰好等于方程的阶数，则称这个解为该差分方程的通解.</p> <h5 id="_3-齐次差分方程的通解"><a href="#_3-齐次差分方程的通解" class="header-anchor">#</a> (3) 齐次差分方程的通解</h5> <p style="font-size:16px;">  齐次差分方程$y_{t+1}+ay_{t}=0$的通解为$y_{t}=C(-a)^{t}$.</p> <h5 id="_4-非齐次差分方程-y-t-1-ay-t-f-t-的通解"><a href="#_4-非齐次差分方程-y-t-1-ay-t-f-t-的通解" class="header-anchor">#</a> (4) 非齐次差分方程$y_{t+1}+ay_{t}=f(t)$的通解</h5> <p style="font-size:16px;">  ①$f(t)=b$为常数
+  $$4y_{t} = \begin{cases}
+ &amp; C(-a)^{t}+\frac{b}{1+a} \quad a \neq -1 \\ 
+ &amp; C+bt \quad  a = -1 
+\end{cases}$$
+  ②$f(t)$为一般情况
+  $$y_{t} = C(-a)^{t}+\sum_{k=0}^{t-1} (-a)^{k} f(t-k-1).$$</p> <hr> <h3 id="十三、多元函数微分学"><a href="#十三、多元函数微分学" class="header-anchor">#</a> 十三、多元函数微分学</h3> <h4 id="_1-多元函数偏导数和全微分的概念"><a href="#_1-多元函数偏导数和全微分的概念" class="header-anchor">#</a> 1. 多元函数偏导数和全微分的概念</h4> <h5 id="_1-偏导数"><a href="#_1-偏导数" class="header-anchor">#</a> (1) 偏导数</h5> <p style="font-size:16px;">  设$z=f(x,y)$，则偏导数定义为
+   $$ f_{x}^{'}(x_{0},y_{0}) = \lim_{\Delta x \to 0}\frac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x}. $$
+   $$ f_{y}^{'}(x_{0},y_{0}) = \lim_{\Delta y \to 0}\frac{f(x_{0},y_{0}+\Delta y)-f(x_{0},y_{0})}{\Delta y}. $$</p> <h5 id="_2-全微分"><a href="#_2-全微分" class="header-anchor">#</a> (2) 全微分</h5> <p style="font-size:16px;">  $$若 \Delta z = f(x_{0}+\Delta x,y_{0}+\Delta y)-f(x_{0},y_{0}) = A\Delta x+B\Delta y+o(\rho),$$其中$\rho = \sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$,则称$f(x,y)$在点($x_{0},y_{0}$)处可微，且$A\Delta x+B\Delta y$称为$z=f(x,y)$在点($x_{0},y_{0}$)的全微分，记为$dz$，即$dz=A\Delta x+B\Delta y$，而且$f_{x}^{'}(x_{0},y_{0}) = A, f_{y}^{'}(x_{0},y_{0})=B$.</p> <h5 id="_3-可微的必要条件"><a href="#_3-可微的必要条件" class="header-anchor">#</a> (3) 可微的必要条件</h5> <p style="font-size:16px;">  如果$z=f(x,y)$在点($x_{0},y_{0}$)可微，则在点($x_{0},y_{0}$)处的两个偏导数$f_{x}^{'}(x_{0},y_{0})$,$f_{y}^{'}(x_{0},y_{0})$都存在，并且全微分表达式中的$A,B$为<br>
+   $A=f_{x}^{'}(x_{0},y_{0}),B = f_{y}^{'}(x_{0},y_{0})$</p> <h5 id="_4-可微的充分条件"><a href="#_4-可微的充分条件" class="header-anchor">#</a> (4) 可微的充分条件</h5> <p style="font-size:16px;">  <b>定理</b> 如果$f(x,y)$的两个偏导函数$f_{x}^{'}(x,y)$,$f_{y}^{'}(x,y)$在点($x_{0},y_{0}$)连续，则必在点($x_{0},y_{0}$)处可微</p> <h4 id="_2-多元函数几个概念间的关系"><a href="#_2-多元函数几个概念间的关系" class="header-anchor">#</a> 2. 多元函数几个概念间的关系</h4> <p style="font-size:16px;">  偏导数连续$\Rightarrow $函数可微$\Rightarrow  \begin{cases}
+ &amp; \text{ 函数连续 } \\ 
+ &amp; \text{ 偏导数存在 }  
+\end{cases}$</p> <h4 id="_3-方向导数和梯度-1"><a href="#_3-方向导数和梯度-1" class="header-anchor">#</a> 3. 方向导数和梯度<a href="%E6%95%B0%E5%AD%A6%E4%B8%80%E5%86%85%E5%AE%B9">^1</a></h4> <p style="font-size:16px;">  ①<b>方向导数</b> $z=f(x,y)$沿$l$的方向导数为   $$\frac{\partial f}{\partial l}=\frac{\partial f}{\partial x}cos\alpha + \frac{\partial f}{\partial y}cos\beta$$
+其中$cos\alpha,cos\beta$为$l$的方向余弦.<br>
+  ②<b>梯度</b> $u=f(x,y,z)$在$P(x,y,z)$的梯度为$$gradf(x,y,z)= \left \{ \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right \} = \frac{\partial f}{\partial x} i+\frac{\partial f}{\partial y} j+\frac{\partial f}{\partial z} k. $$</p> <h4 id="_4-二元函数的泰勒公式"><a href="#_4-二元函数的泰勒公式" class="header-anchor">#</a> 4. 二元函数的泰勒公式</h4> <p style="font-size:16px;">  设$z=f(x,y)$在点($x_{0},y_{0}$)的某一邻域内有直到三阶的连续偏导数，($x_{0}+h,y_{0}+k$)为此邻域内任一点，则$z=f(x,y)$在点($x_{0},y_{0}$)的二阶泰勒公式为
+  $$\begin{align} f(x_{0}+h,y_{0}+k) &amp;= f(x_{0},y_{0})+(h\frac{\partial}{\partial x}+k\frac{\partial}{\partial y})f(x_{0},y_{0})+\frac{1}{2!}(h\frac{\partial}{\partial x}+k\frac{\partial}{\partial y})^{2}f(x_{0},y_{0}) \\ &amp;+ \frac{1}{3!}(h\frac{\partial}{\partial x}+k\frac{\partial}{\partial y})^{3}f(x_{0}+\theta h,y_{0}+\theta k)(0 &lt; \theta &lt; 1) . \end{align}$$</p> <h4 id="_5-多元函数的极值和条件极值"><a href="#_5-多元函数的极值和条件极值" class="header-anchor">#</a> 5. 多元函数的极值和条件极值</h4> <h5 id="_1-二元函数极值"><a href="#_1-二元函数极值" class="header-anchor">#</a> (1) 二元函数极值</h5> <p style="font-size:16px;">  <b>定义</b> 设函数$z=f(x,y)$在点($x_{0},y_{0}$)的某邻域内有定义，如果对该邻域内的任何异于($x_{0},y_{0}$)的点$(x,y)$，都有不等式$f(x,y) &lt; f(x_{0},y_{0})$($f(x,y) &gt; f(x_{0},y_{0})$),则称函数有极大值$f(x_{0},y_{0})$(极小值$f(x_{0},y_{0})$).极大值、极小值统称为极值，使函数取得极值的点称为极值点.<br>
+    <b>定理1</b> 设$z=f(x,y)$在点($x_{0},y_{0}$)取得极值，且$f(x,y)$在点($x_{0},y_{0}$)存在偏导数，则必有$f_{x}^{'}(x_{0},y_{0})=0,f_{y}^{'}(x_{0},y_{0})=0$.<br>
+    <b>定理2</b> 设$f(x,y)$在点($x_{0},y_{0}$)具有连续二阶偏导数，并设($x_{0},y_{0}$)是$f(x,y)$的驻点，记$$A=f_{xx}^{&quot;}(x_{0},y_{0}) \quad B=f_{xy}^{&quot;}(x_{0},y_{0}) \quad C=f_{yy}^{&quot;}(x_{0},y_{0}),$$则<br>
+    当$B^{2}-AC &lt; 0, A &gt; 0$时，$f(x_{0},y_{0})$为极小值;<br>
+    当$B^{2}-AC &lt; 0, A &lt; 0$时，$f(x_{0},y_{0})$为极大值;<br>
+    当$B^{2}-AC &gt; 0$时，$f(x_{0},y_{0})$不是极值;<br>
+    当$B^{2}-AC = 0$时，$f(x_{0},y_{0})$不能确定是否为极值;</p> <h5 id="_2-条件极值"><a href="#_2-条件极值" class="header-anchor">#</a> (2) 条件极值</h5> <p style="font-size:16px;">  ①<b>一个约束条件的极值</b><br>
+  求$z=f(x,y)$在条件$\varphi(x,y) = 0$下的极值.<br>
+   i)构造拉格朗日函数$F(x,y,\lambda) = f(x,y)+\lambda \varphi(x,y)$;<br>
+   ii)将$F(x,y,\lambda)$分别对$x,y,\lambda$求偏导数，构造下列方程组<br>
+   $$\begin{cases}
+ &amp; F_{x}^{'}=f_{x}^{'}(x,y)+\lambda \varphi_{x}^{'}(x,y) = 0, \\ 
+ &amp; F_{y}^{'}=f_{y}^{'}(x,y)+\lambda \varphi_{y}^{'}(x,y) = 0, \\ 
+ &amp; F_{\lambda}^{'}=\varphi(x,y) = 0, 
+\end{cases}$$
+解出$(x,y)$，这是可能极值点的坐标；<br>
+   iii)判定上述点是否为极值点，如果是，求出该点的函数值$f(x,y)$.<br>
+    ②<b>两个约束条件的极值</b><br>
+  求$u=f(x,y,z)$在条件$\varphi_{1}(x,y,z) = 0, \varphi_{2}(x,y,z) = 0$下的极值.<br>
+   i)构造拉格朗日函数$$F(x,y,z,\lambda,\mu) = f(x,y,z)+\lambda \varphi_{1}(x,y,z)+\mu \varphi_{2}(x,y,z);$$
+   ii)将$F(x,y,z,\lambda,\mu)$分别对$x,y,z,\lambda,\mu$求偏导数，构造下列方程组<br>
+   $$\begin{cases}
+ &amp;  F_{x}^{'}=f_{x}^{'}(x,y,z)+\lambda \varphi_{1x}^{'}(x,y,z)+ \mu \varphi_{2x}^{'}(x,y,z) = 0, \\ 
+ &amp;  F_{y}^{'}=f_{y}^{'}(x,y,z)+\lambda \varphi_{1y}^{'}(x,y,z)+ \mu \varphi_{2y}^{'}(x,y,z) = 0, \\ 
+ &amp;  F_{z}^{'}=f_{z}^{'}(x,y,z)+\lambda \varphi_{1y}^{'}(x,y,z)+ \mu \varphi_{2z}^{'}(x,y,z) = 0,  \\
+ &amp;  F_{\lambda}^{'}=\varphi_{1}(x,y,z) = 0,  \\ 
+ &amp;  F_{\mu}^{'}=\varphi_{2}(x,y,z) = 0,
+\end{cases}$$
+解出$(x,y,z)$，这是可能极值点的坐标；<br>
+   iii)判定上述点是否为极值点，如果是，求出该点的函数值$f(x,y,z)$.</p> <h4 id="_6-复合函数微分法"><a href="#_6-复合函数微分法" class="header-anchor">#</a> 6. 复合函数微分法</h4> <p style="font-size:16px;">  <b>定理</b> 设函数$z=f(u,v)$可微,$u=u(x,y)$,$v=v(x,y)$具有一阶偏导数，并且它们可以构成$z$关于$(x,y)$在某区域$D$内的复合函数，则在$D$内含有复合函数求导法则
+   $$\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u}\cdot \frac{\partial u}{\partial x}+\frac{\partial z}{\partial v}\cdot \frac{\partial v}{\partial x}.$$
+   $$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u}\cdot \frac{\partial u}{\partial y} + \frac{\partial z}{\partial v} \cdot \frac{\partial v}{\partial y}.$$</p> <h4 id="_7-隐函数求导法"><a href="#_7-隐函数求导法" class="header-anchor">#</a> 7. 隐函数求导法</h4> <p style="font-size:16px;">  <b>定理(二元隐函数存在定理)</b> 设函数$F(x,y,z)$在点$P_{0}(x_{0},y_{0},z_{0})$的某邻域内有连续偏导数，并且$F(x_{0},y_{0},z_{0})=0,F_{z}^{'}(x_{0},y_{0},z_{0}) \neq 0$,则方程$F(x,y,z)=0$在点$P_{0}(x_{0},y_{0},z_{0})$的某一邻域内恒能确定唯一的连续函数$z=f(x,y)$，满足<br>
+  ①$z_{0} = f(x_{0},y_{0})$;<br>
+  ②$F(x,y,f(x,y)) \equiv 0$;<br>
+  ③$z=f(x,y)$具有连续偏导数，且$$\frac{\partial z}{\partial x} = -\frac{F_{x}^{'}(x,y,z)}{F_{z}^{'}(x,y,z)} \quad \frac{\partial z}{\partial y} = -\frac{F_{y}^{'}(x,y,z)}{F_{z}^{'}(x,y,z)}.$$
+    <b>定理</b> 设函数$F(x,y,u,v),G(x,y,u,v)$在点$P_{0}(x_{0},y_{0},u_{0},v_{0})$的某邻域内有连续偏导数，又$F(x_{0},y_{0},u_{0},v_{0})=0,G(x_{0},y_{0},u_{0},v_{0})=0$.且$$\begin{vmatrix}
+F_{u}^{'} &amp; F_{v}^{'}\\ 
+G_{u}^{'} &amp; G_{v}^{'}
+\end{vmatrix}_{P_{0}} \neq 0$$，则方程组$$\begin{cases}
+ &amp; F(x,y,u,v) = 0\\ 
+ &amp; G(x,y,u,v) = 0
+\end{cases}$$在点$P_{0}(x_{0},y_{0},u_{0},v_{0})$的某一邻域内恒能确定唯一的一组连续函数$u=u(x,y),v=v(x,y)$，满足
+  $$①u=u(x_{0},y_{0}),v=v(x_{0},y_{0});$$
+  $$②F(x,y,u(x,y),v(x,y)) \equiv 0,G(x,y,u(x,y),v(x,y)) \equiv 0;$$
+  ③$u=u(x,y),v=v(x,y)$具有连续偏导数，并有
+  $$\frac{\partial u}{\partial x} = \frac{\begin{vmatrix}
+F_{u}^{'} &amp; F_{x}^{'}\\ 
+G_{u}^{'} &amp; G_{x}^{'}
+\end{vmatrix}}{\begin{vmatrix}
+F_{u}^{'} &amp; F_{v}^{'}\\ 
+G_{u}^{'} &amp; G_{v}^{'}
+\end{vmatrix}} \quad \frac{\partial u}{\partial y} = \frac{\begin{vmatrix}
+F_{v}^{'} &amp; F_{y}^{'}\\ 
+G_{v}^{'} &amp; G_{y}^{'}
+\end{vmatrix}}{\begin{vmatrix}
+F_{u}^{'} &amp; F_{v}^{'}\\ 
+G_{u}^{'} &amp; G_{v}^{'}
+\end{vmatrix}}$$
+  $$\frac{\partial v}{\partial x} = \frac{\begin{vmatrix}
+F_{x}^{'} &amp; F_{u}^{'}\\ 
+G_{x}^{'} &amp; G_{u}^{'}
+\end{vmatrix}}{\begin{vmatrix}
+F_{u}^{'} &amp; F_{v}^{'}\\ 
+G_{u}^{'} &amp; G_{v}^{'}
+\end{vmatrix}} \quad \frac{\partial v}{\partial y} = \frac{\begin{vmatrix}
+F_{y}^{'} &amp; F_{u}^{'}\\ 
+G_{y}^{'} &amp; G_{u}^{'}
+\end{vmatrix}}{\begin{vmatrix}
+F_{u}^{'} &amp; F_{v}^{'}\\ 
+G_{u}^{'} &amp; G_{v}^{'}
+\end{vmatrix}}$$</p> <hr> <h3 id="十四、重积分"><a href="#十四、重积分" class="header-anchor">#</a> 十四、重积分</h3> <h4 id="_1-二重积分"><a href="#_1-二重积分" class="header-anchor">#</a> 1. 二重积分</h4> <h5 id="_1-二重积分的定义"><a href="#_1-二重积分的定义" class="header-anchor">#</a> (1) 二重积分的定义</h5> <p style="font-size:16px;">  在有界闭区域D上的有界函数$f(x,y)$的二重积分为$$\iint_{D}f(x,y)d\sigma = \lim_{\lambda \to 0}\sum_{i=1}^{n}f(\xi_{i},\eta_{i})\Delta \sigma_{i},$$其中$\lambda$为各小区域直径中的最大值.<br>
+    <span style="font-size:14px;">注:若$f(x,y)$在有界闭区域上连续，则二重积分一定存在</span><br>
+  几何意义：当连续函数$z=f(x,y) \geqslant 0$时，二重积分$\iint_{D}f(x,y)d\sigma $表示曲顶柱体的体积.</p> <h5 id="_2-二重积分的性质"><a href="#_2-二重积分的性质" class="header-anchor">#</a> (2) 二重积分的性质</h5> <p style="font-size:16px;">  $$①\iint_{D}[kf(x,y) \pm lg(x,y)]d\sigma = k\iint_{D}f(x,y)d\sigma + l\iint_{D}g(x,y)d\sigma (其中k,l为常数)$$
+  ②若D可分为两个区域$D_{1}$和$D_{2}$，则$$\iint_{D}f(x,y)d\sigma = \iint_{D_{1}}f(x,y)d\sigma + \iint_{D_{2}}f(x,y)d\sigma.$$
+  ③$\iint_{D}d\sigma = \sigma$，其中$\sigma$为区域D的面积，由此可求平面图形的面积.
+  ④若在D上, $f(x,y) \leqslant g(x,y)$，则
+   $$\iint_{D}f(x,y)d\sigma \leqslant \iint_{D}g(x,y)d\sigma. $$
+  $$⑤|\iint_{D}f(x,y)d\sigma | \leqslant \iint_{D}|f(x,y)|d\sigma$$
+  ⑥设$M,m$分别是$f(x,y)$在闭区域$D$上的最大和最小值，$\sigma$是D的面积，则有
+   $$m\sigma \leqslant \iint_{D}f(x,y)d\sigma \leqslant M\sigma . $$
+    ⑦<b>中值定理</b> 设函数$f(x,y)$在闭区域D上连续，$\sigma$是D的面积，则在D上至少存在一点($\xi,\eta$)，使$$\iint_{D}f(x,y)d\sigma = f(\xi,\eta)\cdot \sigma .$$</p> <h5 id="_3-二重积分的计算"><a href="#_3-二重积分的计算" class="header-anchor">#</a> (3) 二重积分的计算</h5> <p style="font-size:16px;">  ①<b>利用直角坐标计算二重积分</b><br>
+  i)若D为X-型区域，则D可用不等式组表示为:$a \leqslant x \leqslant b, \varphi_{1}(x) \leqslant y \leqslant \varphi_{2}(x)$，则
+   $$\iint_{D}f(x,y)d\sigma = \int_{a}^{b}dx\int_{\varphi_{1}(x)}^{\varphi_{2}(x)}f(x,y)dy;$$
+  ii)若D为Y-型区域，则D可用不等式组表示为:$c \leqslant y \leqslant d, \psi_{1}(y) \leqslant x \leqslant \psi_{2}(y)$，则
+   $$\iint_{D}f(x,y)d\sigma = \int_{c}^{d}dy\int_{\psi_{1}(y)}^{\psi_{2}(y)}f(x,y)dx.$$
+  ②<b>利用极坐标计算二重积分</b><br>
+  i)若极点在D内，即D可用不等式组表示为:$0 \leqslant \theta \leqslant 2\pi, 0 \leqslant r \leqslant r(\theta)$，则
+   $$\iint_{D}f(x,y)d\sigma = \int_{0}^{2\pi}d\theta \int_{0}^{r(\theta)}f(rcos\theta,rsin\theta)rdr;$$
+  ii)若极点在D的边界线上，即D可用不等式组表示为:$\alpha \leqslant \theta \leqslant \beta, 0 \leqslant r \leqslant r(\theta)$，则
+   $$\iint_{D}f(x,y)d\sigma = \int_{\alpha}^{\beta}d\theta \int_{0}^{r(\theta)}f(rcos\theta,rsin\theta)rdr;$$
+  iii)若极点在D外，即D可用不等式组表示为:$\alpha \leqslant \theta \leqslant \beta, r_{1}(\theta) \leqslant r \leqslant r_{2}(\theta)$，则
+   $$\iint_{D}f(x,y)d\sigma = \int_{\alpha}^{\beta}d\theta \int_{r_{1}(\theta)}^{r_{2}(\theta)}f(rcos\theta,rsin\theta)rdr.$$</p> <hr></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/40.4a244a79.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

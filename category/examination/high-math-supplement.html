@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>高等数学知识补充 | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/39.971864e6.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-2404" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>高等数学知识补充</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2020-01-18</span> <span>文章字数：3082</span> <span>预计用时：15分25秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#一、无穷级数-1-3">一、无穷级数[^1][^3]</a><ul><li><a href="#_1-级数的概念与性质">1. 级数的概念与性质</a></li><li><a href="#_2-级数的收敛准则">2. 级数的收敛准则</a><ul><li><a href="#_1-正项级数-sum-n-1-infty-u-n-u-n-geqslant-0">(1) 正项级数$\sum{n=1}^{\infty} un \, ( u_n \geqslant 0)$</a></li><li><a href="#_2-交错级数-sum-n-1-infty-1-n-1-u-n-u-n-0">(2) 交错级数$\sum{n=1}^{\infty} (-1)^{n-1} un \, (u_n &gt; 0)$</a></li><li><a href="#_3-任意项级数-sum-n-1-infty-u-n-u-n为任意实数">(3) 任意项级数$\sum{n=1}^{\infty} un (u_n为任意实数)$</a></li></ul></li><li><a href="#_3-函数项级数和幂级数">3. 函数项级数和幂级数</a><ul><li><a href="#_1-函数项级数、收敛域与和函数">(1) 函数项级数、收敛域与和函数</a></li><li><a href="#_2-幂级数的收敛半径、收敛区间与收敛域">(2) 幂级数的收敛半径、收敛区间与收敛域</a></li></ul></li><li><a href="#_4-幂级数的性质">4. 幂级数的性质</a><ul><li><a href="#_1-运算性质">(1) 运算性质</a></li><li><a href="#_2-和函数的性质">(2) 和函数的性质</a></li></ul></li><li><a href="#_5-函数的幂级数展开式">5. 函数的幂级数展开式</a><ul><li><a href="#_1-泰勒级数">(1) 泰勒级数</a></li><li><a href="#_2-麦克劳林级数">(2) 麦克劳林级数</a></li><li><a href="#_3-泰勒级数的收敛定理">(3) 泰勒级数的收敛定理</a></li><li><a href="#_4-常用的麦克劳林展开式">(4) 常用的麦克劳林展开式</a></li></ul></li><li><a href="#_6-傅里叶级数-1">6. 傅里叶级数[^1]</a></li></ul></li><li><a href="#二、空间解析几何与向量代数-1">二、空间解析几何与向量代数[^1]</a><ul><li><a href="#_1-向量运算及其性质">1. 向量运算及其性质</a><ul><li><a href="#_1-向量的运算">(1) 向量的运算</a></li><li><a href="#_2-运算性质">(2) 运算性质</a></li></ul></li><li><a href="#_2-向量之间的关系">2. 向量之间的关系</a></li><li><a href="#_3-平面方程">3. 平面方程</a></li><li><a href="#_4-直线方程">4. 直线方程</a></li></ul></li><li><a href="#三、三重积分-1">三、三重积分[^1]</a><ul><li><a href="#_1-三重积分的定义">1. 三重积分的定义</a></li><li><a href="#_2-三重积分的计算">2. 三重积分的计算</a><ul><li><a href="#_1-利用直角坐标计算三重积分">① 利用直角坐标计算三重积分</a></li><li><a href="#_2-利用柱坐标计算三重积分">② 利用柱坐标计算三重积分</a></li><li><a href="#_3-利用球面坐标计算三重积分">③ 利用球面坐标计算三重积分</a></li></ul></li></ul></li><li><a href="#四、重积分的应用">四、重积分的应用</a><ul><li><a href="#_1-重积分的几何应用">1. 重积分的几何应用</a><ul><li><a href="#_1-平面图形面积">① 平面图形面积</a></li><li><a href="#_2-曲面面积">② 曲面面积</a></li><li><a href="#_3-空间立体的体积">③ 空间立体的体积</a></li></ul></li><li><a href="#_2-重积分的物理应用">2. 重积分的物理应用</a><ul><li><a href="#_1-质量">① 质量</a></li><li><a href="#_2-物体的重心坐标">② 物体的重心坐标</a></li><li><a href="#_3-转动惯量">③ 转动惯量</a></li><li><a href="#_4-物体对质点的引力">④ 物体对质点的引力</a></li></ul></li></ul></li><li><a href="#五、曲线积分与曲面积分-1">五、曲线积分与曲面积分[^1]</a><ul><li><a href="#_1-曲线积分">1. 曲线积分</a><ul><li><a href="#_1-对弧长的曲线积分的定义及性质">(1) 对弧长的曲线积分的定义及性质</a></li><li><a href="#_2-对坐标的曲线积分的定义及性质">(2) 对坐标的曲线积分的定义及性质</a></li><li><a href="#_3-两类曲线积分的关系">(3) 两类曲线积分的关系</a></li><li><a href="#_4-曲线积分的计算">(4) 曲线积分的计算</a></li></ul></li><li><a href="#_2-曲面积分">2. 曲面积分</a><ul><li><a href="#_1-对面积的曲面积分">(1) 对面积的曲面积分</a></li><li><a href="#_2-对坐标的曲面积分">(2) 对坐标的曲面积分</a></li><li><a href="#_3-两类曲面积分的关系">(3) 两类曲面积分的关系</a></li><li><a href="#_4-曲面积分的计算">(4) 曲面积分的计算</a></li><li><a href="#_5-高斯公式及其应用">(5) 高斯公式及其应用</a></li><li><a href="#_6-斯托克斯公式及其应用">(6) 斯托克斯公式及其应用</a></li><li><a href="#_7-曲面形物体的转动惯量和引力">(7) 曲面形物体的转动惯量和引力</a></li></ul></li></ul></li></ul></div><p></p> <p style="font-size:18px;">  在前面的一波总结后，今天，主要是针对高数余下的部分，包括三重积分，无穷级数，曲线积分，曲面积分以及空间解析几何与向量代数这几个部分。其中三重积分结合重积分的几何应用和物理应用，本不是一章，因内容较多也单独一章出来。这几个部分知识点那是除了空间解析几何与向量代数相对简单一点，剩下的均是又难算又复杂，尤其积分那部分还需要把图画准确咯。因此，这部分更加需要好好额外的总结一下。</p> <h3 id="一、无穷级数-1"><a href="#一、无穷级数-1" class="header-anchor">#</a> 一、无穷级数<a href="%E6%95%B0%E5%AD%A6%E4%B8%89%E8%A6%81%E6%B1%82%E6%8E%8C%E6%8F%A1">^1</a></h3> <h4 id="_1-级数的概念与性质"><a href="#_1-级数的概念与性质" class="header-anchor">#</a> 1. 级数的概念与性质</h4> <p style="font-size:16px;">  <b>定义</b> 数列$\left \{ u_n \right \}$所构成的表达式$u_1+u_2+\cdots+u_n+\cdots$称为无穷级数，记为$\sum_{n=1}^{\infty} u_n$，$u_n$称为级数的一般项，$s_n=\sum_{i=1}^n u_i$称为技术的部分和。若$\lim\limits_{n \to \infty} s_n = s$，则称级数收敛，且$s$为级数的和，若$\left \{ s_n \right \}$没有极限，则称级数发散.<br>
+    <b>性质1</b> 设$k \neq 0$，则$\sum_{n=1}^{\infty} u_n$与$\sum_{n=1}^{\infty} ku_n$同收敛。<br>
+    <b>性质2</b> ①若$\sum_{n=1}^{\infty} u_n , \quad \sum_{n=1}^{\infty} v_n$分别收敛于$S, \, \sigma, $，则$\sum_{n=1}^{\infty}(u_n \pm v_n)$收敛于$S \pm \sigma$。<br>
+   ②若$\sum_{n=1}^{\infty} u_n$和$\sum_{n=1}^{\infty} v_n$都发散，则$\sum_{n=1}^{\infty}(u_n + v_n)$可能收敛，也可能发散。<br>
+    <span style="font-size:14px;">注：若一个收敛，一个发散，则和一定发散。</span><br>
+    <b>性质3</b> 改变前有限项不影响级数的敛散性。<br>
+    <b>性质4</b> 收敛级数加括号仍收敛，且和不变。<br>
+    <span style="font-size:14px;">注：一个级数加括号后收敛，原级数不一定收敛；一个级数加括号后发散，则原级数一定发散。</span><br>
+    <b>性质5</b> $\sum_{n=1}^{\infty} u_n$收敛的必要条件是$\lim\limits_{n \to \infty} u_n = 0$。<br>
+    <b>推论</b> 若$\lim\limits_{n \to \infty} u_n \neq 0$，则$\sum_{n=1}^{\infty} u_n$一定发散。</p> <h4 id="_2-级数的收敛准则"><a href="#_2-级数的收敛准则" class="header-anchor">#</a> 2. 级数的收敛准则</h4> <h5 id="_1-正项级数-sum-n-1-infty-u-n-u-n-geqslant-0"><a href="#_1-正项级数-sum-n-1-infty-u-n-u-n-geqslant-0" class="header-anchor">#</a> (1) 正项级数$\sum_{n=1}^{\infty} u_n , ( u_n \geqslant 0)$</h5> <p style="font-size:16px;">  <b>定理1</b> 正项级数$\sum_{n=1}^{\infty} u_n$收敛$\Leftrightarrow $部分和数列有上界。<br>
+    <b>定理2(比较判别法)</b> 若$0 \leqslant u_n \leqslant v_n$，则$$\sum_{n=1}^{\infty} v_n 收敛 \Rightarrow \sum_{n=1}^{\infty} u_n 收敛;$$
+$$\sum_{n=1}^{\infty} u_n 发散 \Rightarrow \sum_{n=1}^{\infty} v_n 发散.$$
+    <b>定理3(比较判别法的极限形式)</b> 设$\sum_{n=1}^{\infty} u_n$和$\sum_{n=1}^{\infty} v_n$都是正项级数，且$\lim\limits_{n \to \infty} \frac{u_n}{v_n} = l ( 0 \leqslant l \leqslant +\infty)$，则有<br>
+  ①若$0 &lt; l &lt; +\infty$，则$\sum_{n=1}^{\infty} u_n$与$\sum_{n=1}^{\infty} v_n$同敛散;<br>
+  ②若$l = 0$，则$$\sum_{n=1}^{\infty} u_n发散 \Rightarrow \sum_{n=1}^{\infty} v_n 发散; \quad \sum_{n=1}^{\infty} v_n收敛 \Rightarrow \sum_{n=1}^{\infty} u_n 收敛$$
+  ③若$l = +\infty$，则$$\sum_{n=1}^{\infty} u_n收敛 \Rightarrow \sum_{n=1}^{\infty} v_n 收敛; \quad \sum_{n=1}^{\infty} v_n发散 \Rightarrow \sum_{n=1}^{\infty} u_n 发散$$
+    <b>定理4(比值判别法)</b> 设$\sum_{n=1}^{\infty} u_n$为正项级数，若$\lim\limits_{n \to \infty} \frac{u_{n+1}}{u_n} = \rho$，则$\sum_{n=1}^{\infty} u_n$，当$\rho &lt; 1$时收敛，$\rho &gt; 1$时发散，$\rho = 1$时不确定。<br>
+    <b>定理5(根值判别法)</b> 设$\sum_{n=1}^{\infty} u_n$为正项级数，若$\lim\limits_{n \to \infty} \sqrt[n]{u_n} = \rho$，则$\sum_{n=1}^{\infty} u_n$，当$\rho &lt; 1$时收敛，$\rho &gt; 1$时发散，$\rho = 1$时不确定。</p> <h5 id="_2-交错级数-sum-n-1-infty-1-n-1-u-n-u-n-0"><a href="#_2-交错级数-sum-n-1-infty-1-n-1-u-n-u-n-0" class="header-anchor">#</a> (2) 交错级数$\sum_{n=1}^{\infty} (-1)^{n-1} u_n , (u_n &gt; 0)$</h5> <p style="font-size:16px;">  <b>定理(莱布尼茨判别法)</b> 若$u_n \geqslant u_{n+1} \quad (n=1,2, \cdots)$，$\lim\limits_{n \to \infty} u_n = 0$，则级数$\lim\limits_{n \to \infty} (-1)^{n+1} u_n$收敛。<br></p><p style="font-size:14px;">  注：莱布尼茨判别法是一个充分条件，即若$\sum_{n=1}^{\infty}(-1)^{n-1} u_n , \quad u_n &gt; 0$收敛，但不一定有$u_n \geqslant u_{n+1} \quad (n=1,2,\cdots)$成立；<br>
+    用莱布尼茨判别法判定$\sum_{n=1}^{\infty}(-1)^{n-1} u_n$是否收敛时，说明$u_n \geqslant u_{n+1}$通常有下列三种方法：<br>
+   ①利用$\frac{u_{n+1}}{u_n} \leqslant 1$<br>
+   ②利用$u_{n+1} - u_{n} \leqslant 0$<br>
+  ③求出一个可导函数$f(x)$，使得$f(x) = u_n$，并由$f^{'}(x) &lt; 0$说明$u_n$是单调递减的，在考察$\lim\limits_{n \to \infty} u_n = 0$时，也可以用这种方法，即考察$\lim\limits_{x \to \infty}$</p><p></p> <h5 id="_3-任意项级数-sum-n-1-infty-u-n-u-n为任意实数"><a href="#_3-任意项级数-sum-n-1-infty-u-n-u-n为任意实数" class="header-anchor">#</a> (3) 任意项级数$\sum_{n=1}^{\infty} u_n (u_n为任意实数)$</h5> <p style="font-size:16px;">  ①<b>绝对收敛与条件收敛</b><br>
+    <b>定义</b> 若$\sum_{n=1}^{\infty} |u_n|$收敛，则称$\sum_{n=1}^{\infty} u_n$绝对收敛；若$\sum_{n=1}^{\infty} u_n$收敛，而$\sum_{n=1}^{\infty} |u_n|$发散，则称$\sum_{n=1}^{\infty} u_n$条件收敛.<br>
+    ②<b>绝对收敛和条件收敛的一些基本结论</b><br>
+    绝对收敛的级数一定收敛，即$\sum_{n=1}^{\infty} |u_n| \quad 收敛 \Rightarrow \sum_{n=1}^{\infty} u_n \quad 收敛$;<br>
+    条件收敛的级数的所有正项(或负项)构成的级数一定发散，即若$\sum_{n=1}^{\infty} u_n$条件收敛，则$\sum_{n=1}^{\infty} \frac{u_n + |u_n|}{2}$和$\sum_{n=1}^{\infty} \frac{u_n - |u_n|}{2}$都发散.</p> <h4 id="_3-函数项级数和幂级数"><a href="#_3-函数项级数和幂级数" class="header-anchor">#</a> 3. 函数项级数和幂级数</h4> <h5 id="_1-函数项级数、收敛域与和函数"><a href="#_1-函数项级数、收敛域与和函数" class="header-anchor">#</a> (1) 函数项级数、收敛域与和函数</h5> <p style="font-size:16px;">  <b>定义1</b> 设$u_1(x), \, u_2(x), \, \cdots , \, u_n(x)$是定义在区间$I$的函数列，则称$$u_1(x) + u_2(x) + \cdots + u_n(x) + \cdots = \sum_{n=1}^{\infty} u_n(x)$$为定义在区间$I$上的函数项级数。<br>
+  若$x_0 \in I$，常数项级数$\sum_{n=1}^{\infty} u_n(x_0)$收敛，则称$x_0$为$\sum_{n=1}^{\infty} u_n(x)$的收敛点，否则称为发散点，所有收敛点构成的集合称为收敛域。<br>
+    <b>定义2</b> 函数项级数在收敛域内有和，其值与收敛点$x$有关，记为$S(x), \quad S(x)$称为级数$\sum_{n=1}^{\infty} u_n(x)$的和函数，即$S(x) = \sum_{n=1}^{\infty} u_n(x)$。</p> <h5 id="_2-幂级数的收敛半径、收敛区间与收敛域"><a href="#_2-幂级数的收敛半径、收敛区间与收敛域" class="header-anchor">#</a> (2) 幂级数的收敛半径、收敛区间与收敛域</h5> <p style="font-size:16px;">  <b>定义1</b> 形如$\sum_{n = 0}^{\infty} a_n(x-x_0)^n$的函数项级数称为幂级数，特别地，当$x_0 = 0$时，有$\sum_{n=0}^{\infty}a_n x^n$。<br>
+    <b>定理1(阿贝尔定理)</b> 如果$\sum_{n=0}^{\infty}a_n x^n$当$x = x_0 \, (x_0 \neq 0)$时收敛，则当$|x| &lt; |x_0|$时，$\sum_{n=0}^{\infty}a_n x^n$绝对收敛；如果当$x=x_0$时发散，则当$|x| &gt; |x_0|$时，$\sum_{n=0}^{\infty}a_n x^n$发散。<br>
+    <b>定义2</b> 若存在$R$，使得$\sum_{n=0}^{\infty}a_n x^n$在($-R, \, R$)内收敛，而当$|x| &gt; R$时，$\sum_{n=0}^{\infty}a_n x^n$发散，则称$R$为幂级数$\sum_{n=0}^{\infty}a_n x^n$的收敛半径，($-R, \, R$)称为$\sum_{n=0}^{\infty}a_n x^n$的收敛区间。<br>
+    <b>定理2</b> 如果$\lim\limits_{n \to +\infty} | \frac{a_{n+1}}{a_n} | = \rho$，则$R = \frac{1}{\rho}$。<br>
+    <b>定理3</b> 如果$\lim\limits_{n \to +\infty} \sqrt[n]{|a_n|} = \rho$，则$R = \frac{1}{\rho}$。
+ </p> <h4 id="_4-幂级数的性质"><a href="#_4-幂级数的性质" class="header-anchor">#</a> 4. 幂级数的性质</h4> <h5 id="_1-运算性质"><a href="#_1-运算性质" class="header-anchor">#</a> (1) 运算性质</h5> <p style="font-size:16px;">  设幂级数$\sum_{n=0}^{\infty}a_n x^n$的收敛半径为$R_1$，和函数为$S_1(x)$，而幂级数$\sum_{n=0}^{\infty}b_n x^n$的收敛半径为$R_2$，和函数为$S_2(x)$，令$R = min \left \{ R_1, R_2 \right \}$，则有：
+$$\begin{align}① \sum_{n=0}^{\infty}a_n x^n \pm \sum_{n=0}^{\infty}b_n x^n &amp;= \sum_{n=0}^{\infty} (a_n \pm b_n)x^n \\ &amp;= S_1(x) \pm S_2(x), \quad x \in (-R, \, R).\end{align}$$
+$$\begin{align}② (\sum_{n=0}^{\infty}a_n x^n)(\sum_{n=0}^{\infty}b_n x^n) &amp;= \sum_{n=0}^{\infty}(a_0 b_n + a_1 b_{n-1} + \cdots + a_n b_0)x^n \\ &amp;= S_1(x) S_2(x), \quad x \in (-R, \, R) .\end{align}$$</p> <h5 id="_2-和函数的性质"><a href="#_2-和函数的性质" class="header-anchor">#</a> (2) 和函数的性质</h5> <p style="font-size:16px;">  设$\sum_{n=0}^{\infty}a_n x^n$的收敛半径为$R$，和函数为$S(x)$，则<br>
+  ①$S(x)$在$(-R, \, R)$上连续；<br>
+  ②$S(x)$在$(-R, \, R)$上可导，且可逐项求导，即$$S^{'}(x) = \sum_{n=1}^{\infty} na_n x^{n-1}; $$
+  ③$S(x)$在$(-R, \, R)$内可积，且逐项可积，即$$\int_{0}^{x} S(x) dx = \sum_{n=0}^{\infty} \int_{0}^{x} a_n x^n dx = \sum_{n=0}^{\infty} \frac{a_n x^{n+1}}{n+1}.$$
+</p><p style="font-size:14px;">  注：若$\sum_{n=0}^{\infty}a_n x^n$在$x = -R$处收敛，则$S(x)$在$x = -R$处右连续；若$\sum_{n=0}^{\infty}a_n x^n$在$x = R$处收敛，则$S(x)$在$x = R$处左连续。</p> <p></p> <h4 id="_5-函数的幂级数展开式"><a href="#_5-函数的幂级数展开式" class="header-anchor">#</a> 5. 函数的幂级数展开式</h4> <h5 id="_1-泰勒级数"><a href="#_1-泰勒级数" class="header-anchor">#</a> (1) 泰勒级数</h5> <p style="font-size:16px;">  设$f(x)$在$x = x_0$处任意阶可导，则幂级数$$\begin{align}    \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n &amp;= f(x_0) + f^{'}(x_0)(x-x_0) \\ &amp;+ \cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n + \cdots \end{align}$$ 称为$f(x)$在$x=x_0$处的泰勒级数。</p> <h5 id="_2-麦克劳林级数"><a href="#_2-麦克劳林级数" class="header-anchor">#</a> (2) 麦克劳林级数</h5> <p style="font-size:16px;">  当$x_0 = 0$时，级数$$\begin{align} \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n &amp;= f(0) + f^{'}(0)x + \cdots \\ &amp;+ \frac{f^{(n)}(0)}{n!} x^n + \cdots \end{align}$$称为$f(x)$的麦克劳林级数。</p> <h5 id="_3-泰勒级数的收敛定理"><a href="#_3-泰勒级数的收敛定理" class="header-anchor">#</a> (3) 泰勒级数的收敛定理</h5> <p style="font-size:16px;">  <b>定理</b> 设$f(x)$在$x=x_0$处任意阶可导，则泰勒级数$\sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n $收敛于$f(x)$的充要条件是$\lim\limits_{n \to \infty} R_n(x) = 0$，其中$$R(x) = \frac{f^{(n+1)}[x_0 + \theta ( x- x_0 ) ]}{(n+1)!}(x-x_0)^{n+1} , \quad 0 &lt; \theta &lt; 1.$$</p> <h5 id="_4-常用的麦克劳林展开式"><a href="#_4-常用的麦克劳林展开式" class="header-anchor">#</a> (4) 常用的麦克劳林展开式</h5> <p style="font-size:16px;">$$① \frac{1}{1-x} = 1 + x + \cdots + x^n + \cdots , \quad x \in (-1,1)$$
+$$② \frac{1}{1+x} = 1 - x + x^2 + \cdots + (-1)^n x^n + \cdots, \quad x \in (-1,1)$$
+$$③e^x = 1 + x + \cdots + \frac{x^n}{n!} + \cdots, \quad x \in (-\infty, +\infty)$$
+$$④sinx = x - \frac{x^3}{3!} + \cdots + \frac{(-1)^n x^{2n+1}}{(2n+1)!} + \cdots, \quad x \in (-\infty, +\infty)$$
+$$⑤cosx = 1 - \frac{x^2}{2!} + \cdots + \frac{(-1)^n x^{2n}}{(2n)!} + \cdots, \quad x \in (-\infty, +\infty)$$
+$$⑥ln(1+x) = x - \frac{x^2}{2} + \cdots + \frac{(-1)^{n-1} x^n}{n} + \cdots, \quad x \in (-1, 1]$$
+$$⑦\begin{align} (1+x)^{\alpha} &amp;= 1+ \alpha x + \frac{\alpha (\alpha - 1)}{2!}x^2 + \cdots + \\ &amp; \frac{\alpha (\alpha - 1) \cdots (\alpha - n + 1)}{n!}x^n + \cdots, \quad x \in (-1,1) \end{align}$$</p> <h4 id="_6-傅里叶级数-1"><a href="#_6-傅里叶级数-1" class="header-anchor">#</a> 6. 傅里叶级数<a href="%E6%95%B0%E5%AD%A6%E4%B8%80%E8%A6%81%E6%B1%82%E6%8E%8C%E6%8F%A1">^1</a></h4> <p style="font-size:16px;">  <b>以$2l$为周期的傅里叶级数</b>
+$$f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty}(a_n cos \frac{n \pi x}{l} + b_n sin \frac{n \pi x}{l})$$
+    <b>傅里叶系数</b>
+$$a_n = \frac{1}{l} \int_{-l}^{l} f(x) cos \frac{n \pi x}{l} dx, \quad n=0,1,2,\cdots$$
+$$b_n = \frac{1}{l} \int_{-l}^{l} f(x) sin \frac{n \pi x}{l} dx, \quad n=1,2,\cdots$$
+    <b>定理(收敛定理)</b> 设$f(x)$是周期为$2l$的周期函数，若①在一个周期内连续或只有有限个第一类间断点，②在一个周期内至多只有有限个极值点，则$f(x)$的傅里叶级数收敛，并且<br>
+  当$x$是$f(x)$的连续点时，级数收敛于$f(x)$;<br>
+  当$x$是$f(x)$的间断点时，级数收敛于$\frac{1}{2}[ f(x^-) + f(x^+)]$.</p> <hr> <h3 id="二、空间解析几何与向量代数-1"><a href="#二、空间解析几何与向量代数-1" class="header-anchor">#</a> 二、空间解析几何与向量代数<a href="%E6%95%B0%E5%AD%A6%E4%B8%80%E8%A6%81%E6%B1%82%E6%8E%8C%E6%8F%A1">^1</a></h3> <h4 id="_1-向量运算及其性质"><a href="#_1-向量运算及其性质" class="header-anchor">#</a> 1. 向量运算及其性质</h4> <h5 id="_1-向量的运算"><a href="#_1-向量的运算" class="header-anchor">#</a> (1) 向量的运算</h5> <p style="font-size:16px;">$$设 \alpha = \left \{ x_1, \, y_1, \, z_1 \right \} , \quad b = \left \{ x_2, \, y_2, \, z_2 \right \}, \quad c = \left \{ x_3, \, y_3, \, z_3 \right \}.$$
+  ①$a \pm b = \left \{ x_1 \pm x_2, \, y_1 \pm y_2, \, z_1 \pm z_2 \right \}$;<br>
+  ②$k \alpha = \left \{ kx_1, \, ky_1, \, kz_1 \right \}$;<br>
+  ③$a \cdot b = | a | | b | cos ( \widehat{a, \, b} ) = x_1 x_2 + y_1 y_2 + z_1 z_2$<br>
+  ④$c = a \times b$ 满足右手法则，垂直于$a$与$b$所确定的平面。$$a \times b = \begin{vmatrix}
+i &amp; j &amp; k \\ 
+x_1 &amp; y_1 &amp; z_1\\ 
+x_2 &amp; y_2 &amp; z_2
+\end{vmatrix},$$
+$$ |c| = |a \times b| = |a| |b| sin ( \widehat{a, \, b} );$$
+  ⑤$(a, \, b, \, c) = (a \times b) \cdot c = \begin{vmatrix}
+x_1 &amp; y_1 &amp; z_1 \\ 
+x_2 &amp; y_2 &amp; z_2\\ 
+x_3 &amp; y_3 &amp; z_3
+\end{vmatrix}.$</p> <h5 id="_2-运算性质"><a href="#_2-运算性质" class="header-anchor">#</a> (2) 运算性质</h5> <ul style="font-size:16px;"><li>①$a \cdot b = b \cdot a$(交换律);</li> <li>②$a \cdot (b + c) = a \cdot b + a \cdot c$(分配律);</li> <li>③$\lambda (a \cdot b) = (\lambda a) \cdot b = a \cdot (\lambda b)$;</li> <li>④$a \times b = -b \times a$(反交换律);</li> <li>⑤$a \times (b+ c) = a \times b + a \times c$(分配律);</li> <li>⑥$\lambda a \times b = (\lambda a) \times b = a \times (\lambda b)$;</li> <li>⑦$(a, \, b, \, c) = (b, \, c, \, a) = (c, \, a, \, b)$(轮换对称性);</li> <li>$$⑧(a, \, b, \, c) = -(a, \, c, \, b) = -(c , \, b, \, a) = -(b, \, a, \, c)$$(两向量互换，混合积变号).</li></ul> <h4 id="_2-向量之间的关系"><a href="#_2-向量之间的关系" class="header-anchor">#</a> 2. 向量之间的关系</h4> <p style="font-size:16px;">$$设 \alpha = \left \{ x_1, \, y_1, \, z_1 \right \} , \quad b = \left \{ x_2, \, y_2, \, z_2 \right \}, \quad c = \left \{ x_3, \, y_3, \, z_3 \right \}, \, 则$$
+  $$①a \perp b \Leftrightarrow a \cdot b = 0 \Leftrightarrow x_1 x_2 + y_1 y_2 + z_1 z_2 = 0;$$
+  $$②a // b \Leftrightarrow a \times b = 0 \Leftrightarrow \frac{x_1}{x_2} = \frac{y_1}{y_2} = \frac{z_1}{z_2}; $$
+  $$③a , \, b共线 \Leftrightarrow \exists 不全为零的数 \lambda, \mu, 使\lambda a + \mu b = 0;$$
+  $$④a, \, b, \, c共面 \Leftrightarrow \exists 不全为零的数 \lambda, \mu , \gamma, 使 \lambda a + \mu b + \gamma c = 0或(a, \, b, \, c) = 0;$$
+  ⑤$a, \, b$的夹角余弦$$cos (\widehat{a, \, b}) = \frac{a \cdot b}{|a| |b| } = \frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{\sqrt{x_1^2 + y_1^2 + z_1^2} \cdot \sqrt{x_2^2 + y_2^2 + z_2^2}}.$$</p> <h4 id="_3-平面方程"><a href="#_3-平面方程" class="header-anchor">#</a> 3. 平面方程</h4> <ul style="font-size:16px;"><li>①一般式：$Ax + By + Cz + D = 0$;</li> <li>②点法式：$A(x-x_0) + B(y-y_0) + C(z-z_0) = 0$，过点$M(x_0, \, y_0, \, z_0)$，且法向量为$n = \left \{ A , \, B , \, C \right \}$;</li> <li>③三点式：
+  $$\begin{vmatrix}
+x-x_1 &amp; y-y_1 &amp; z-z_1 \\ 
+x_1 - x_2 &amp; y_1 - y_2 &amp; z_1 - z_2\\ 
+x_2 - x_3 &amp; y_2 - y_3 &amp; z_2 - z_3
+\end{vmatrix};$$</li> <li>④截距式：$\frac{x}{a}+ \frac{y}{b} + \frac{z}{c} = 1$.</li></ul> <h4 id="_4-直线方程"><a href="#_4-直线方程" class="header-anchor">#</a> 4. 直线方程</h4> <ul style="font-size:16px;"><li>①一般式(两平面的交线)：
+  $$\begin{cases}
+ A_1 x + B_1 y + C_1 z + D_1 = 0, \\ 
+ A_2 x + B_2 y + C_2 z + D_2 = 0 ,
+\end{cases}$$
+  $n_1 = \left \{ A_1, \, B_1, \, C_1 \right \}, \, n_2 = \left \{ A_2, \, B_2, \, C_2 \right \}$，直线的方向向量为$s = n_1 \times n_2$;</li> <li>②标准式：
+  $$\frac{x-x_0}{l} = \frac{y-y_0}{m} = \frac{z-z_0}{n}.$$
+  过点$M(x_0, \, y_0, \, z_0)$，且方向向量为$s = \left \{ l, \, m, \, n \right \}$;</li> <li>③两点式：
+  $$\frac{x-x_0}{x_1-x_0} = \frac{y-y_0}{y_1-y_0} = \frac{z-z_0}{z_1-z_0},$$
+  过点$M(x_0, \, y_0, \, z_0), \quad M_1(x_1, \, y_1, \, z_1)$;</li> <li>④参数式：
+  $$\begin{cases}
+ x = x_0 + lt, \\ 
+ y = y_0 + mt, \\
+ z = z_0 + nt,
+ \end{cases}$$
+ 过点$M(x_0 , \, y_0, \, z_0)$，且方向向量为$s = \left \{l, \, m, \, n \right \}$.</li></ul> <hr> <h3 id="三、三重积分-1"><a href="#三、三重积分-1" class="header-anchor">#</a> 三、三重积分<a href="%E6%95%B0%E5%AD%A6%E4%B8%80%E8%A6%81%E6%B1%82%E6%8E%8C%E6%8F%A1">^1</a></h3> <h4 id="_1-三重积分的定义"><a href="#_1-三重积分的定义" class="header-anchor">#</a> 1. 三重积分的定义</h4> <p style="font-size:16px;">  空间有界闭区域$\Omega$上的有界函数$f(x, \, y, \, z)$的三重积分为
+$$\iiint_{\Omega}f(x, \, y, \, z)dv = \lim_{\lambda \to 0}\sum_{i=1}^{n} f(\xi_i, \, \eta_i, \, \zeta_i) \Delta v_i,$$
+  其中$\lambda$为各小闭区域直径中的最大值。<br>
+  注：若$f(x, \, y, \, z)$在空间有界闭区域$\Omega$上连续，则三重积分$\iiint_{\Omega} f(x, \, y, \, z)dv$一定存在。<br>
+  几何意义：假设一物体在空间闭区域$\Omega$中有密度函数$\rho(x, \, y, \, z)$，且$\rho(x, \, y, \, z)$在$\Omega$上连续，则$M = \iiint_{\Omega} \rho(x, \, y, \, z)dv$表示此物体的质量。</p> <h4 id="_2-三重积分的计算"><a href="#_2-三重积分的计算" class="header-anchor">#</a> 2. 三重积分的计算</h4> <h5 id="_1-利用直角坐标计算三重积分"><a href="#_1-利用直角坐标计算三重积分" class="header-anchor">#</a> ① 利用直角坐标计算三重积分</h5> <p style="font-size:16px;">  i)若$\Omega$可表示为$z_1(x, \, y) \leqslant z \leqslant z_2(x, \, y)$，$(x, \, y) \in D_{xy}$，其中$D_{xy} = \left \{ (x, \, y) | y_1(x) \leqslant y \leqslant y_2(x), \, a \leqslant x \leqslant b \right \}$为$\Omega$在$xOy$面上的投影，则
+$$\iiint_{\Omega} f(x, \, y, \, z)dv = \int_a^b dx \int_{y_1 (x)}^{y_2(x)} dy \int_{z_1 (x,y)}^{z_2 (x,y)}f(x, \, y, \, z)dz;$$
+  ii)若$\Omega$可表示为$\Omega = \left \{ (x, \, y, \, z) | (x, \, y) \in D, c_1 \leqslant z \leqslant c_2 \right \}$，其中$D_z$是平行于$xOy$平面，竖坐标为$z$的平面截闭区域$\Omega$所得的一个平面闭区域，则
+$$\iiint_{\Omega} f(x, \, y, \, z)dv = \int_{c_1}^{c_2} dz \iint_{D_z} f(x, \, y, \, z)dxdy.$$</p> <h5 id="_2-利用柱坐标计算三重积分"><a href="#_2-利用柱坐标计算三重积分" class="header-anchor">#</a> ② 利用柱坐标计算三重积分</h5> <p style="font-size:16px;">  若柱面坐标变换为$$\begin{cases}
+x = rcos \theta , \\ 
+y = rsin \theta , \\ 
+z = z,  
+\end{cases}$$，则
+$$\iiint_{\Omega} f(x, \, y, \, z)dv = \iiint_{\Omega} f(rcos \theta, \, rsin \theta , \, z)rdrd \theta .$$
+</p> <h5 id="_3-利用球面坐标计算三重积分"><a href="#_3-利用球面坐标计算三重积分" class="header-anchor">#</a> ③ 利用球面坐标计算三重积分</h5> <p style="font-size:16px;">  若球面坐标变换为$$\begin{cases}
+x = r sin \varphi cos \theta , \\ 
+y = r sin \varphi sin \theta , \\ 
+z = r cos \varphi,  
+\end{cases}$$，则
+$$\iiint_{\Omega} f(x, \, y, \, z)dv = \iiint_{\Omega} f(r sin \varphi cos \theta, \, r sin \varphi sin \theta , \, r cos \varphi) \times r^2 sin \varphi dr d \varphi d \theta.$$</p> <h3 id="四、重积分的应用"><a href="#四、重积分的应用" class="header-anchor">#</a> 四、重积分的应用</h3> <h4 id="_1-重积分的几何应用"><a href="#_1-重积分的几何应用" class="header-anchor">#</a> 1. 重积分的几何应用</h4> <h5 id="_1-平面图形面积"><a href="#_1-平面图形面积" class="header-anchor">#</a> ① 平面图形面积</h5> <p style="font-size:16px;">  $\sigma = \iint_{D} d\sigma$.</p> <h5 id="_2-曲面面积"><a href="#_2-曲面面积" class="header-anchor">#</a> ② 曲面面积</h5> <p style="font-size:16px;">  由方程$z = z(x, \, y)$确定的单值光滑曲面$\sum$的面积为$$S = \iint_{D_{xy}} \sqrt{1 + (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2 }dxdy,$$其中$D_{xy}$是该曲面在$xOy$平面上的投影区域。
+</p><p style="font-size:14px;">  注意：当曲面$\sum$的方程为$x = x(y , \, z), (y, \, z) \in D_{yz}$或$y = y(x, \, z), (x, \, z) \in D_{xz}$时，可得该曲面的面积公式
+$$S = \iint_{D_{yz}} \sqrt{1 + (\frac{\partial x}{\partial y})^2 + (\frac{\partial x}{\partial z})^2 } dydz,$$
+$$S = \iint_{D_{xz}} \sqrt{1 + (\frac{\partial y}{\partial x})^2 + (\frac{\partial y}{\partial z})^2} dxdz.$$</p><p></p> <h5 id="_3-空间立体的体积"><a href="#_3-空间立体的体积" class="header-anchor">#</a> ③ 空间立体的体积</h5> <p style="font-size:16px;">  i)曲顶柱体的体积<br>
+  若$f(x, \, y) \geqslant g(x, \, y)$，$(x, \, y) \in D$，则以$z = f(x, \, y)$为顶，以$z = g(x, \, y)$为底，且在$xOy$平面上投影区域为$D$的曲顶柱体体积为$$V = \iint_{D} [f(x, \, y) - g(x, \, y)] dxdy;$$
+  ii)$V = \iiint_{\Omega} dv.$</p> <h4 id="_2-重积分的物理应用"><a href="#_2-重积分的物理应用" class="header-anchor">#</a> 2. 重积分的物理应用</h4> <h5 id="_1-质量"><a href="#_1-质量" class="header-anchor">#</a> ① 质量</h5> <p style="font-size:16px;">  i)设平面薄片$D$的面密度为$\rho(x, \, y)$，则平面薄片$D$的质量为$M = \iint_{D} \rho(x, \, y) d\sigma;$<br>
+  ii)设$\rho(x, \, y, \, z )$是空间物体$\Omega$在点$(x, \, y, \, z)$处的体密度，$\Omega$的质量为
+$$M = \iiint_{\Omega} \rho(x, \, y, \, z)dv.$$</p> <h5 id="_2-物体的重心坐标"><a href="#_2-物体的重心坐标" class="header-anchor">#</a> ② 物体的重心坐标</h5> <p style="font-size:16px;">  i)设平面薄片$D$的面密度为$\rho(x, \, y)$，则$D$的重心坐标为
+$$\overline{x} = \frac{\iint_D x \rho(x, \, y)d\sigma}{\iint_D \rho(x, \, y)d\sigma}, \quad \overline{y} = \frac{\iint_D y \rho(x, \, y) d\sigma}{\iint_D \rho(x, \, y) d\sigma};$$
+  ii)设空间物体$\Omega$的体密度为$\rho(x, \, y, \, z)$，则$\Omega$的重心坐标为
+$$\overline{x} = \frac{\iiint_\Omega x \rho(x, \, y, \, z)dv}{\iiint_\Omega \rho(x, \, y, \, z)dv}, \quad \overline{y} = \frac{\iiint_\Omega y \rho(x, \, y, \, z) dv}{\iiint_\Omega \rho(x, \, y, \, z) dv}, \quad \overline{z} = \frac{\iiint_\Omega z \rho(x, \, y, \, z)dv}{\iiint_\Omega \rho(x, \, y, \, z)dv}.$$</p> <h5 id="_3-转动惯量"><a href="#_3-转动惯量" class="header-anchor">#</a> ③ 转动惯量</h5> <p style="font-size:16px;">  用$I_x, \, I_y, \, I_z, \, I_o$分别表示对$x$轴，$y$轴，$z$轴和原点的转动惯量。<br>
+  i)$\rho(x, \, y)$为平面薄片$D$的面密度，则
+$$I_x = \iint_D y^2 \rho(x, \, y)d\sigma , \quad I_y = \iint_D x^2 \rho(x, \, y)d\sigma , \quad I_o = \iint_D (x^2 + y^2) \rho(x, \, y) d\sigma;$$
+  ii)若空间物体$\Omega$的体密度为$\rho(x, \, y, \,z)$，则
+$$I_x = \iiint_\Omega (y^2 + z^2) \rho dv, \quad I_y = \iiint_\Omega (x^2 + z^2) \rho dv,$$
+$$I_z = \iiint_\Omega (x^2 + y^2) \rho dv, \quad I_o = \iiint_\Omega (x^2 + y^2 + z^2) \rho dv = \frac{1}{2}(I_x + I_y + I_z),$$
+关于$xOy$面的转动惯量为$I_{xy} = \iiint_{\Omega} z^2 \rho dv$</p> <h5 id="_4-物体对质点的引力"><a href="#_4-物体对质点的引力" class="header-anchor">#</a> ④ 物体对质点的引力</h5> <p style="font-size:16px;">  i)设平面薄片$D$的面密度$\rho(x, \, y)$在$D$上连续，则薄片对位于$z$轴上的点$M_0(0, \, 0, \, a)$处单位质量的质点的引力为$F = \left \{ F_x, \, F_y, \, F_z \right \}$，其中
+$$F_x = G \iint_D x \frac{\rho(x, \, y) d\sigma}{(x^2 + y^2 + a^2)^\frac{3}{2}}, \quad F_y = G \iint_D y \frac{\rho(x, \, y) d\sigma}{(x^2 + y^2 + a^2)^\frac{3}{2}}$$
+$$F_z = -G \iint_D \frac{\alpha \rho(x, \, y) d\sigma}{(x^2 + y^2 + a^2)^\frac{3}{2}};$$
+  ii)设空间物体$\Omega$的体密度$\rho(x, \, y, \, z)$在$\Omega$上连续，$\Omega$外一质量为$m_0$的质点$M_0(x_0, \, y_0, \, z_0)$，则物体对质点的引力为$F = \left \{ F_x, \, F_y, \, F_z \right \}$，其中
+$$F_x = \iiint_\Omega \frac{Gm_0 (x-x_0) \rho(x, \, y, \, z)dv}{[(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2]^\frac{3}{2}}, $$
+$$F_y = \iiint_\Omega \frac{Gm_0 (y-y_0) \rho(x, \, y, \, z)dv}{[(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2]^\frac{3}{2}}, $$
+$$F_z = \iiint_\Omega \frac{Gm_0 (z-z_0) \rho(x, \, y, \, z)dv}{[(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2]^\frac{3}{2}}, $$</p> <hr> <h3 id="五、曲线积分与曲面积分-1"><a href="#五、曲线积分与曲面积分-1" class="header-anchor">#</a> 五、曲线积分与曲面积分<a href="%E6%95%B0%E5%AD%A6%E4%B8%80%E8%A6%81%E6%B1%82%E6%8E%8C%E6%8F%A1">^1</a></h3> <h4 id="_1-曲线积分"><a href="#_1-曲线积分" class="header-anchor">#</a> 1. 曲线积分</h4> <h5 id="_1-对弧长的曲线积分的定义及性质"><a href="#_1-对弧长的曲线积分的定义及性质" class="header-anchor">#</a> (1) 对弧长的曲线积分的定义及性质</h5> <p style="font-size:16px;">  <b>定义</b> $$\int_L f(x,y) ds = \lim_{\lambda \to 0} \sum_{i=1}^n f(\xi_i, \eta_i) \Delta s_i$$，其中$\lambda = max_{1 \leqslant i \leqslant n } \left \{ \Delta s_i \right \} $.<br>
+    <b>性质</b>
+$$①\int_L [ k_1 f_1(x,y) \pm k_2 f_2(x,y) ] ds = k_1 \int_L f_1(x,y)ds \pm k_2 \int_L f_2(x,y) ds \quad (k_1, \, k_2为常数).$$
+$$②\int_L f(x,y) ds = \int_{L_1} f(x,y)ds + \int_{L_2} f(x,y)ds \quad (L = L_1 + L_2).$$
+  ③设在$L$上$f(x,y) \leqslant g(x,y)$，则
+			$$\int_Lf(x,y)ds \leqslant \int_L g(x,y)ds,$$
+特别地，有$| \int_L f(x,y)ds | \leqslant \int_L | f(x,y) | ds.$</p> <h5 id="_2-对坐标的曲线积分的定义及性质"><a href="#_2-对坐标的曲线积分的定义及性质" class="header-anchor">#</a> (2) 对坐标的曲线积分的定义及性质</h5> <p style="font-size:16px;">  <b>定义</b> 函数$P(x, \, y)$在有向曲线弧$L$上对$x$的曲线积分$$\int_L P(x, \, y)dx = \lim_{\lambda \to 0} \sum_{i=1}^{n} P(\xi_i, \, \eta_i) \Delta x_i;$$同样地，对$y$的曲线积分为$$\int_L Q(x, \, y)dy = \lim_{\lambda \to 0} \sum_{i=1}^{n} Q(\xi_i, \, \eta_i) \Delta y_i.$$
+  一般地，$$\int_L P(x, \, y)dx + Q(x, \, y) dy = \int_L P(x, \, y)dx + \int_L Q(x, \, y)dy.$$
+    <b>性质</b> ①设$k_1, \, k_2$为常数，则
+$$\int_L (k_1 P_1 \pm k_2 P_2) dx = k_1 \int_L P_1 dx \pm k_2 \int_L P_2 dx,$$
+$$\int_L (k_1 Q_1 \pm k_2 Q_2) dy = k_1 \int_L Q_1 dy \pm k_2 \int_L Q_2 dy.$$
+  ②若$L = L_1 + L_2$，则
+$$\int_L Pdx + Qdy = \int_{L_1} Pdx + Qdy + \int_{L_2} Pdx + Qdy.$$
+  ③设$L$是有向弧段，$-L$是与$L$方向相反的有向弧段，则有
+$$\int_{-L}Pdx + Qdy = -\int_L Pdx + Qdy.$$</p> <h5 id="_3-两类曲线积分的关系"><a href="#_3-两类曲线积分的关系" class="header-anchor">#</a> (3) 两类曲线积分的关系</h5> <p style="font-size:16px;">  ①对弧长的曲线积分与路径$L$的方向无关，而对坐标的曲线积分与路径的方向有关，即
+$$\int_{\widehat{AB}}f(x, \, y)ds = \int_{\widehat{BA}}f(x, \, y)ds,$$
+$$\int_{\widehat{AB}}Pdx + Qdy = -\int_{\widehat{BA}} Pdx + Qdy.$$
+  ②设$L$是平面$xOy$内的一条有向光滑曲线弧，则$$\int_L Pdx + Qdy = \int_L (P cos \alpha + Q cos \beta )ds,$$其中$cos \alpha, \, cos \beta$为有向曲线$L$上点$(x, \, y)$处切线向量的方向余弦。
+</p><p style="font-size:14px;">
+	  注：对空间曲线$\Gamma$，有$$\int_\Gamma Pdx + Qdy + Rdz = \int_\Gamma (Pcos \alpha + Qcos \beta + R cos \gamma)ds，$$其中$cos \alpha, \, cos \beta, \, cos \beta$为有向曲线$\Gamma$上点$(x, \, y, \, z)$处切线向量的方向余弦。
+</p> <p></p> <h5 id="_4-曲线积分的计算"><a href="#_4-曲线积分的计算" class="header-anchor">#</a> (4) 曲线积分的计算</h5> <p style="font-size:16px;">  ①<b>对弧长的曲线积分</b> 设$L$的参数方程为$\begin{cases}
+ x = \varphi(t), \\
+ y = \psi(t)
+\end{cases} (\alpha \leqslant t \leqslant \beta)$，$f(x, \, y)$在$L$上有定义且连续，$\varphi(t), \, \psi(t)$在$[\alpha, \, \beta]$上具有一阶连续导数，$\varphi^{'2}(t) + \psi^{'2}(t) \neq 0$，则$$\int_L f(x, \, y)ds = \int_\alpha^\beta f[\varphi(t) , \, \psi(t)] \sqrt{\varphi^{'2}(t) + \psi^{'2}(t)} dt$$
+  注：定积分的下限$\alpha$一定要小于上限$\beta$。<br>
+    ②<b>对坐标的曲线积分</b> 设$L$的参数方程为$\begin{cases}
+ x = \varphi(t), \\
+ y = \psi(t)
+\end{cases}$，$P(x, \, y), Q(x, \, y)$在有向曲线弧$L$上有定义且连续，当$t$单调地从$\alpha$变到$\beta$时，$M(x, \, y)$从$L$的起点$A$沿$L$运动到终点$B$, $\varphi(t), \, \psi(t)$在以$\alpha$及$\beta$为端点的闭区间上一阶连续可导，且$\varphi^{'2}(t) + \psi^{'2}(t) \neq 0$，则
+$$\int_L P(x, \, y) dx + Q(x, \, y)dy = \int_{\alpha}^{\beta} \left \{ P[\varphi(t), \, \psi(t) ] \varphi^{'} (t) + Q[ \varphi(t), \, \psi(t) ] \psi^{'} (t) \right \} dt.$$
+  注：下限$\alpha$对应于$L$的起点，上限$\beta$对应于$L$的终点，$\alpha$不一定小于$\beta$.</p> <h4 id="_2-曲面积分"><a href="#_2-曲面积分" class="header-anchor">#</a> 2. 曲面积分</h4> <h5 id="_1-对面积的曲面积分"><a href="#_1-对面积的曲面积分" class="header-anchor">#</a> (1) 对面积的曲面积分</h5> <p style="font-size:16px;">  ①<b>对面积的曲面积分的定义</b>
+$$\iint_{\sum}f(x,y,z)dS = \lim_{\lambda \to 0} \sum_{i=1}^{n} f(\xi_i, \eta_i, \zeta_i) \Delta S_i,$$
+其中$\lambda$为各小块曲面直径的最大值。<br>
+    ②<b>对面积的曲面积分的性质</b><br>
+   类似于对弧长的曲线积分的性质。</p> <h5 id="_2-对坐标的曲面积分"><a href="#_2-对坐标的曲面积分" class="header-anchor">#</a> (2) 对坐标的曲面积分</h5> <p style="font-size:16px;">  ①<b>对坐标的曲面积分的定义</b>
+$$\iint_\sum R(x, \, y, \, z)dxdy = \lim_{\lambda \to 0} \sum_{i=1}^n R(\xi_i, \, \eta_i, \, \zeta_i)(\Delta S_i)_{xy},$$
+其中$R(x, \, y, \, z)$称为被积函数，$\sum$称为积分曲面，类似地，可定义
+$$\iint_\sum P(x, \, y, \, z)dydz = \lim_{\lambda \to 0} \sum_{i=1}^n P(\xi_i, \, \eta_i, \, \zeta_i)(\Delta S_i)_{yz},$$
+$$\iint_\sum Q(x, \, y, \, z)dydz = \lim_{\lambda \to 0} \sum_{i=1}^n Q(\xi_i, \, \eta_i, \, \zeta_i)(\Delta S_i)_{zx},$$
+  一般地，有
+$$\iint_\sum Pdydz + Qdzdx + Rdxdy = \iint_\sum Pdydz + \iint_\sum Qdzdx + \iint_\sum Rdxdy.$$
+    ②<b>对坐标的曲面积分的性质</b><br>
+  类似于对坐标的曲线积分，例如：<br>
+  i)若有$\sum = \sum_1 + \sum_2$，则
+$$\begin{align} \iint_\sum Pdydz + Qdzdx + Rdxdy &amp;= \iint_{\sum_1} Pdydz + Qdzdx + Rdxdy \\ &amp; + \iint_{\sum_2} Pdydz + Qdzdx + Rdxdy; \end{align}$$
+  ii)若$\sum$是有向曲面，$-\sum$是与$\sum$取相反侧的有向曲面，则
+$$\iint_{-\sum} Pdydz + Qdzdx + Rdxdy = -\iint_\sum Pdydz + Qdzdx + Rdxdy.$$</p> <h5 id="_3-两类曲面积分的关系"><a href="#_3-两类曲面积分的关系" class="header-anchor">#</a> (3) 两类曲面积分的关系</h5> <p style="font-size:16px;">  ①对面积的曲面积分与曲面的侧无关，对坐标的曲面积分与曲面的侧有关。
+  $$②\iint_{\sum} Pdydz + Qdzdx + Rdxdy = \iint_{\sum} (P cos \alpha + Q cos \beta + Rcos \gamma) dS,$$其中$cos \alpha, \, cos \beta, \, cos \gamma$是有向曲面$\sum$上点$(x, \, y, \, z)$处的法线向量的方向余弦。</p> <h5 id="_4-曲面积分的计算"><a href="#_4-曲面积分的计算" class="header-anchor">#</a> (4) 曲面积分的计算</h5> <p style="font-size:16px;">  ①<b>对面积的曲面积分的计算</b><br>
+  设函数$f(x, \, y, \, z)$在光滑曲面$\sum$上连续，若曲面$\sum$的方程为$z = z(x, \, y)$，它在$xOy$平面上的投影区域为$D_{xy}$，则
+$$\begin{align} \iint_{\sum} f(x, \, y, \, z)dS &amp;= \iint_{D_{xy}} f[x, \, y, \, z(x, \, y)] \\ &amp; \cdot \sqrt{1+ (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2}dxdy, \end{align}$$
+若曲面$\sum$由方程$x = x(y, \, z)$或$y = y(z, \, x)$给出，也可类似将对面积的曲面积分化为相应的二重积分。<br>
+    ②<b>对坐标的曲面积分的计算</b>
+$$\iint_{\sum} Pdydz + Qdzdx + Rdxdy = \pm \iint_{D_{yz}} Pdydz \pm \iint_{D_{zx}} Qdzdx \pm \iint_{D_{xy}}Rdxdy,$$
+如果$\sum$是曲面的前侧、右侧、上侧，应取正号；反之取负号。</p> <h5 id="_5-高斯公式及其应用"><a href="#_5-高斯公式及其应用" class="header-anchor">#</a> (5) 高斯公式及其应用</h5> <p style="font-size:16px;">  ①<b>高斯公式</b><br>
+  设空间闭区域$\Omega$由分片光滑的闭曲面$\sum$围成，函数$P(x, \, y, \, z), Q(x, \, y, \, z), R(x, \, y, \, z)$在$\Omega$上具有一阶连续偏导数，则
+$$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y}+ \frac{\partial R}{\partial z}dv = \oint\oint_{\sum} Pdydz + Qdzdx + Rdxdy,$$
+  <span style="font-size:14px;color:#0cc;">ps:这里的$\oint\oint$是因为找不到对应的符号，知道意思即可，不钻牛角尖，下同</span><br>
+其中$\sum$是$\Omega$的整个边界曲面取外侧，特别地，当取$P = x, \, Q = y, \, R = z$时，空间区域的体积为
+  $$V = \frac{1}{3} \oint \oint_{\sum} xdydz + ydzdx + zdxdy$$
+    ②<b>散度</b><br>
+  向量场$A = \left \{ P(x, \, y, \, z), Q(x, \, y, \, z), R(x, \, y, \, z) \right \}$的散度为$$divA = \frac{\partial P}{\partial x}+ \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}.$$
+    ③<b>高斯公式的向量形式</b><br>
+  $\iiint_{\Omega} divA dv = \oint \oint_{\sum} A dS$，其中$\sum$是空间区域$\Omega$的边界曲面，$dS = (dydz, \, dzdx, \, dxdy)$</p> <h5 id="_6-斯托克斯公式及其应用"><a href="#_6-斯托克斯公式及其应用" class="header-anchor">#</a> (6) 斯托克斯公式及其应用</h5> <p style="font-size:16px;">  ①<b>斯托克斯公式</b><br>
+  设$\Gamma$为分段光滑的空间有向闭曲线，$\sum$是以$\Gamma$为边界的分片光滑有向曲面，$\Gamma$的正向与$\sum$的侧符合右手法则，函数$P, \, Q, \, R$在包含$\sum$在内的一个空间区域内具有一阶连续偏导数，则有
+$$\oint_\Gamma Pdx + Qdy + Rdz = \iint_{\sum} \begin{vmatrix}
+dydz &amp; dzdx &amp; dxdy \\ 
+\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\ 
+P &amp; Q &amp; R
+\end{vmatrix}.$$
+    ②<b>旋度</b><br>
+  向量场$A = \left \{ P(x, \, y, \, z), Q(x, \, y, \, z), R(x, \, y, \, z) \right \}$的旋度为
+$$\begin{align} rotA &amp;= (\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z})i + (\frac{\partial P}{\partial z} - \frac{\partial R}{\partial x})j + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})k \\ &amp;= \begin{vmatrix}
+dydz &amp; dzdx &amp; dxdy \\ 
+\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\ 
+P &amp; Q &amp; R
+\end{vmatrix}. \end{align}$$
+    ③<b>斯托克斯公式的向量形式</b>
+$$\oint_\Gamma A \cdot dr = \iint_\sum rotA \cdot dS.$$
+其中$dr = (dx, \, dy, \, dz), \quad dS = (dydz, \, dzdx, \, dxdy)$.</p> <h5 id="_7-曲面形物体的转动惯量和引力"><a href="#_7-曲面形物体的转动惯量和引力" class="header-anchor">#</a> (7) 曲面形物体的转动惯量和引力</h5> <p style="font-size:16px;">  ①面密度为$\rho(x,y,z)$的空间曲面$\sum$的质量$M = \iint_{\sum} \rho dS$，重心$$(\overline{x},\overline{y},\overline{z}) = (\frac{1}{M}\iint_{\sum} x \rho dS, \frac{1}{M}\iint_{\sum} y\rho dS, \frac{1}{M} \iint_{\sum} z \rho dS).$$
+关于$x, y, z$轴和原点的转动惯量
+$$I_x = \iint_{\sum}(y^2 + z^2) \rho dS, \quad I_y = \iint_{\sum} (x^2 + z^2) \rho dS,$$
+$$I_z = \iint_{\sum}(x^2 + y^2) \rho dS, \quad I_o = \iint_{\sum} (x^2 + y^2 + z^2) \rho dS.$$
+  ②面密度为$\rho(x,y,z)$的空间曲面$\sum$对位于点$(x_0,y_0,z_0)$处质量为$m_0$的质点的引力为$F = \left \{ F_x , F_y , F_z \right \}$，其中$$F_x = G\iint_{\sum} \frac{\rho \cdot m_0 (x-x_0)}{r^3} dS,$$
+$$F_y = G\iint_{\sum} \frac{\rho \cdot m_0 (y-y_0)}{r^3}dS,$$
+$$F_z = G\iint_{\sum} \frac{\rho \cdot m_0 (z-z_0)}{r^3}dS,$$
+其中$r = \sqrt{(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2}, \quad G$为引力常数。</p> <hr></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/39.971864e6.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

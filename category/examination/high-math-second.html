@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>高等数学知识总结 (二) | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/38.f6127f8f.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-6175" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>高等数学知识总结 (二)</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2019-11-22</span> <span>文章字数：1162</span> <span>预计用时：5分49秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#六-导数与微分">六. 导数与微分</a><ul><li><a href="#_1-导数的定义">1. 导数的定义</a></li><li><a href="#_2-微分的定义">2. 微分的定义</a></li><li><a href="#_3-可导、可微与连续三者之间的关系">3. 可导、可微与连续三者之间的关系</a></li><li><a href="#_4-导数的计算">4. 导数的计算</a><ul><li><a href="#_1-基本初等函数的导数公式">(1). 基本初等函数的导数公式</a></li><li><a href="#_2-函数的和、差、积、商的求导法则">(2). 函数的和、差、积、商的求导法则</a></li><li><a href="#_3-反函数的求导法则">(3). 反函数的求导法则</a></li><li><a href="#_4-复合函数的求导法则">(4). 复合函数的求导法则</a></li></ul></li><li><a href="#_5-高阶求导公式">5. 高阶求导公式</a></li></ul></li><li><a href="#七-中值定理">七. 中值定理</a><ul><li><a href="#_1-罗尔-rolle-定理">1. 罗尔(Rolle)定理</a></li><li><a href="#_2-拉格朗日-lagrange-中值定理">2. 拉格朗日(Lagrange)中值定理</a></li><li><a href="#_3-柯西-cauchy-定理">3. 柯西(Cauchy)定理</a></li><li><a href="#_4-洛必达法则">4. 洛必达法则</a></li><li><a href="#_5-泰勒-taylor-定理">5. 泰勒(Taylor)定理</a><ul><li><a href="#_1-泰勒定理">(1). 泰勒定理</a></li><li><a href="#_2-麦克劳林公式">(2). 麦克劳林公式</a></li><li><a href="#_3-一些初等函数的麦克劳林公式">(3). 一些初等函数的麦克劳林公式</a></li><li><a href="#_4-四个中值定理之间的关系">(4). 四个中值定理之间的关系</a></li></ul></li></ul></li><li><a href="#八-函数单调性与凹凸性">八. 函数单调性与凹凸性</a><ul><li><a href="#_1-函数单调性与极值">1. 函数单调性与极值</a></li><li><a href="#_2-函数的凹凸性与拐点">2. 函数的凹凸性与拐点</a></li></ul></li><li><a href="#九-渐近线与曲率">九. 渐近线与曲率</a><ul><li><a href="#_1-渐近线">1. 渐近线</a></li><li><a href="#_2-曲率">2. 曲率</a></li></ul></li><li><a href="#十-不定积分">十. 不定积分</a><ul><li><a href="#_1-不定积分的基本性质">1. 不定积分的基本性质</a></li><li><a href="#_2-基本积分公式">2. 基本积分公式</a></li><li><a href="#_3-不定积分法">3. 不定积分法</a><ul><li><a href="#_1-第一换元法-凑微分">(1). 第一换元法(凑微分)</a></li><li><a href="#_2-第二换元法">(2). 第二换元法</a></li><li><a href="#_3-分部积分法">(3). 分部积分法</a></li></ul></li></ul></li><li><a href="#十一-定积分">十一. 定积分</a><ul><li><a href="#_1-定积分的定义">1. 定积分的定义</a></li><li><a href="#_2-定积分的性质">2. 定积分的性质</a></li><li><a href="#_3-重要定理、公式、关系">3. 重要定理、公式、关系</a></li><li><a href="#_4-换元积分公式与分部积分公式">4. 换元积分公式与分部积分公式</a></li><li><a href="#_5-广义积分的概念与计算">5. 广义积分的概念与计算</a><ul><li><a href="#_1-无穷限的广义积分">(1). 无穷限的广义积分</a></li><li><a href="#_2-无界函数的广义积分">(2). 无界函数的广义积分</a></li><li><a href="#_3-gamma-函数">(3). $\Gamma$函数</a></li></ul></li><li><a href="#_6-定积分的几何应用">6. 定积分的几何应用</a><ul><li><a href="#_1-平面图形的面积">(1). 平面图形的面积</a></li><li><a href="#_2-平面曲线的弧长">(2). 平面曲线的弧长</a></li><li><a href="#_3-旋转体的体积">(3). 旋转体的体积</a></li><li><a href="#_4-旋转体的侧面积">(4). 旋转体的侧面积</a></li><li><a href="#_5-平行截面面积已知的立体体积">(5). 平行截面面积已知的立体体积</a></li></ul></li></ul></li></ul></div><p></p> <p style="font-size:18px;">  由于内容较多，需要断成几篇进行整理。紧随着上一篇，这一次主要总结的是导数和积分的内容。这里技巧多，公式也多，特别是积分部分，需要把基本的公式记住，才能去做好那些比较巧的题目</p> <h3 id="六-导数与微分"><a href="#六-导数与微分" class="header-anchor">#</a> 六. 导数与微分</h3> <h4 id="_1-导数的定义"><a href="#_1-导数的定义" class="header-anchor">#</a> 1. 导数的定义</h4> <p style="font-size:16px;">$f^{'}(x_{0}) = \lim\limits_{\Delta x \to 0 }\frac{\Delta y}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{f(x_{0}+\Delta x) - f(x_{0})}{\Delta x}$，也可记作$y^{'}|_{x=x_{0}}，\frac{dy}{dx}|_{x=x_{0}}$或$\frac{df(x)}{dx}|_{x=x_{0}}$</p> <h4 id="_2-微分的定义"><a href="#_2-微分的定义" class="header-anchor">#</a> 2. 微分的定义</h4> <p style="font-size:16px;">若$\Delta y = A \Delta x + o(\Delta x)$，则$dy = A \Delta x$.</p> <h4 id="_3-可导、可微与连续三者之间的关系"><a href="#_3-可导、可微与连续三者之间的关系" class="header-anchor">#</a> 3. 可导、可微与连续三者之间的关系</h4> <p style="font-size:16px;">$f(x)$在$x_{0}$可导$\Leftrightarrow f(x)$在$x_{0}$可微$\Rightarrow f(x)$在$x_{0}$连续.</p> <h4 id="_4-导数的计算"><a href="#_4-导数的计算" class="header-anchor">#</a> 4. 导数的计算</h4> <h5 id="_1-基本初等函数的导数公式"><a href="#_1-基本初等函数的导数公式" class="header-anchor">#</a> (1). 基本初等函数的导数公式</h5> <p style="font-size:16px;">$(tanx)^{'} = sec^{2}x$ <br>
+  $(cotx)^{'} = -csc^{2}x$ <br>
+  $(secx)^{'} = secxtanx$  <br>
+  $(cscx)^{'} = -cscxcotx$	<br>
+  $(a^{x})^{'} = a^{x}lna$	<br>
+  $(log_{a}x)^{'} = \frac{1}{xlna}$	<br>
+  $(arcsinx)^{'} = \frac{1}{\sqrt{1-x^{2}}}$ <br>
+  $(arccosx)^{'} = -\frac{1}{\sqrt{1-x^{2}}}$  <br>
+  $(arctanx)^{'} = \frac{1}{1+x^{2}}$ <br>
+  $(arccotx)^{'} = -\frac{1}{1+x^{2}}$</p> <h5 id="_2-函数的和、差、积、商的求导法则"><a href="#_2-函数的和、差、积、商的求导法则" class="header-anchor">#</a> (2). 函数的和、差、积、商的求导法则</h5> <p style="font-size:16px;">  设$u=u(x),v=v(x)$都可导，则<br>
+$(u \pm v)^{'} = u^{'} \pm v^{'}$， $(Cu)^{'} = Cu^{'}$(C是常数)<br>
+$(uv)^{'} = u^{'}v+uv^{'}$， $(\frac{u}{v})^{'} = \frac{u^{'}v-uv^{'}}{v^{2}}(v \neq 0)$</p> <h5 id="_3-反函数的求导法则"><a href="#_3-反函数的求导法则" class="header-anchor">#</a> (3). 反函数的求导法则</h5> <p style="font-size:16px;">  设$x=f(y)$在区间$I_{y}$内单调、可导且$f^{'}(y) \neq 0$，则它的反函数$y=f^{-1}(x)$在区间$I_{x}=f(I_{y})$内也可导，且$[f^{-1}(x)]^{'}=\frac{1}{f^{'}(y)}$，或$\frac{dy}{dx} = \frac{1}{dx/dy}$.</p> <h5 id="_4-复合函数的求导法则"><a href="#_4-复合函数的求导法则" class="header-anchor">#</a> (4). 复合函数的求导法则</h5> <p style="font-size:16px;">  设$y=f(u),u=g(x)$,且$f(u)$及$g(x)$都可导，则复合函数$y=f(g(x))$的导数为<br>
+  $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$或$y^{'}(x) = f^{'}(u) \cdot g^{'}(x)$.</p> <h4 id="_5-高阶求导公式"><a href="#_5-高阶求导公式" class="header-anchor">#</a> 5. 高阶求导公式</h4> <p style="font-size:16px;">
+  $$①(a^{x})^{(n)} = a^{x}(lna)^{n}(a&gt;0) \quad (e^{x})^{(n)} = e^{x};$$
+  $$②(sinkx)^{(n)} = k^{n}sin(\frac{n \pi}{2}+kx);$$
+  $$③(coskx)^{(n)} = k^{n}cos(\frac{n \pi}{2}+kx);$$
+  $$④[ln(1+x)]^{(n)} = (-1)^{n-1}\frac{(n-1)!}{(1+x)^{n}};$$
+  $$⑤(x^{m})^{(n)} = m(m-1)\cdots \cdots (m-n+1)x^{m-n}；$$
+  ⑥莱布尼茨(Leibniz)公式：若$u(x)$，$v(x)$均n阶可导，则
+	$$(uv)^{(n)} = \sum_{k=0}^{n}C_{n}^{k}u^{(n-k)}v^{(k)}.$$</p> <hr> <h3 id="七-中值定理"><a href="#七-中值定理" class="header-anchor">#</a> 七. 中值定理</h3> <h4 id="_1-罗尔-rolle-定理"><a href="#_1-罗尔-rolle-定理" class="header-anchor">#</a> 1. 罗尔(Rolle)定理</h4> <p><span style="font-size:16px;">  若$y=f(x)$满足以下条件</span></p> <p style="font-size:16px;">①在$[a,b]$上连续；<br>
+  ②在$(a,b)$内可导；<br>
+  ③$f(b) = f(a)$，则在$(a,b)$内至少存在一点$\xi$，使得$f^{'}(\xi)=0$.</p> <h4 id="_2-拉格朗日-lagrange-中值定理"><a href="#_2-拉格朗日-lagrange-中值定理" class="header-anchor">#</a> 2. 拉格朗日(Lagrange)中值定理</h4> <p><span style="font-size:16px;">  若$y=f(x)$满足以下条件</span></p><p style="font-size:16px;">①在$[a,b]$上连续；<br>
+②在$(a,b)$内可导，则在$(a,b)$内至少存在一点$\xi$，使得<br>
+    $\frac{f(b)-f(a)}{b-a}=f^{'}(\xi)$<br> <span style="font-size:14px;">  注：$\xi \in (a,b)$，$\xi$也可表示为$\xi=a+\theta(b-a)(0 &lt; \theta &lt; 1)$.若$\xi \in (0,x)$，则$\xi = \theta (x)\cdot x(0 &lt; \theta(x) &lt; 1)$.</span></p><p></p> <h4 id="_3-柯西-cauchy-定理"><a href="#_3-柯西-cauchy-定理" class="header-anchor">#</a> 3. 柯西(Cauchy)定理</h4> <p><span style="font-size:16px;">  若$f(x)$，$g(x)$满足以下条件：</span></p><p style="font-size:16px;">①在$[a,b]$上连续<br>
+②在$(a,b)$内可导<br>
+③$g^{'}(x) \neq 0$<br>
+则在$(a,b)$内至少存在一点$\xi$，使得
+   $$\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f^{'}(\xi)}{g^{'}(\xi)}.$$</p><p></p> <h4 id="_4-洛必达法则"><a href="#_4-洛必达法则" class="header-anchor">#</a> 4. 洛必达法则</h4> <p><span>设$x \to x_{0}$($x \to \infty$,或单侧极限)时，</span></p><p style="font-size:16px;">
+①$f(x)$与$g(x)$均为无穷小量(或无穷大量)；<br>
+②在$x_{0}$的某去心邻域内(或$|x| &gt; N$)，$f^{'}(x)$与$g^{'}(x)$都存在且$g^{'}(x)\neq 0$；<br>
+③$\lim\limits_{x \to x_{0}}\frac{f^{'}(x)}{g^{'}(x)}$或$\lim\limits_{x \to \infty}\frac{f^{'}(x)}{g^{'}(x)}$存在(或为无穷大),则$\lim\limits_{x \to x_{0}}\frac{f(x)}{g(x)}=\lim\limits_{x \to x_{0}}\frac{f^{'}(x)}{g^{'}(x)}$或$\lim\limits_{x \to \infty}\frac{f(x)}{g(x)}=\lim\limits_{x \to \infty}\frac{f^{'}(x)}{g^{'}(x)}$.</p><p></p> <p style="font-size:14px;">  注：求$1^{\infty}$,$0^{0}$,$\infty^{0}$这三种类型的极限，可引入对数先化为&quot;$0 \cdot \infty$&quot;型的极限，再化为&quot;$\frac{0}{0}$&quot;型或&quot;$\frac{\infty}{\infty}$&quot;型的极限<br>
+  例如：①$$limf(x)^{g(x)}=e^{limg(x)lnf(x)} \quad ( \lim g(x)lnf(x)是 &quot; 0 \cdot \infty &quot; 型的极限)；$$
+  ②对于&quot;$1^{\infty}$&quot;型，有$$limf(x)^{g(x)}=e^{limg(x)lnf(x)}=e^{limg(x)[f(x)-1]}.$$</p> <h4 id="_5-泰勒-taylor-定理"><a href="#_5-泰勒-taylor-定理" class="header-anchor">#</a> 5. 泰勒(Taylor)定理</h4> <h5 id="_1-泰勒定理"><a href="#_1-泰勒定理" class="header-anchor">#</a> (1). 泰勒定理</h5> <p style="font-size:16px;">设$f(x)$在含有$x_{0}$的某个开区间$I$内有直到$(n+1)$阶导数，则对任意$x \in I$，有
+ $$\begin{align} f(x) &amp;= f(x_{0}) + f^{'}(x_{0})(x-x_{0}) + \frac{f^{&quot;}(x_{0})}{2!}\cdot(x-x_{0})^{2}+ \\ &amp; \cdots +\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n}+R_{n}(x), \end{align}$$
+其中$R_{n}(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_{0})^{n+1}(\xi$在$x_{0}$与$x$之间).<br>
+上式称为$f(x)$在$x_{0}$处带有拉格朗日余项的n阶泰勒公式.(ps:证明题)<br>
+  若$R_{n}(x)=o((x-x_{0})^{n})$，则称为$f(x)$在$x_{0}$处带有佩亚诺余项的n阶泰勒公式(ps:极限计算题)</p> <h5 id="_2-麦克劳林公式"><a href="#_2-麦克劳林公式" class="header-anchor">#</a> (2). 麦克劳林公式</h5> <p style="font-size:16px;">设$f(x)$在含$x=0$的区间$I$上有$(n+1)$阶导数，则
+  $$\begin{align} f(x) &amp;= f(0) + f^{'}(0)x+ \frac{f^{&quot;}(0)}{2!}x^{2} + \cdots \\ &amp; + \frac{f^{(n)}(0)}{n!}x^{n} + \frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}(\xi在0与x之间) \end{align}$$
+称为$f(x)$的n阶麦克劳林公式</p> <h5 id="_3-一些初等函数的麦克劳林公式"><a href="#_3-一些初等函数的麦克劳林公式" class="header-anchor">#</a> (3). 一些初等函数的麦克劳林公式</h5> <p style="font-size:16px;">$$\begin{align} e^{x} &amp;= 1+x+\frac{x^{2}}{2!}+\cdots \\ &amp;+\frac{x^{n}}{n!}+\frac{e^{\theta x}}{(n+1)!}x^{n+1}. \end{align}$$
+$$\begin{align} sinx &amp;= x - \frac{1}{3!}x^{3}+\cdots+ \\ &amp; \frac{(-1)^{k-1}}{(2k-1)!}x^{2k-1}+(-1)^{k}\frac{cos\theta x}{(2k+1)!}x^{2k+1}. \end{align}$$
+$$\begin{align} cosx &amp;= 1-\frac{1}{2!}x^{2}+\cdots+\frac{(-1)^{k}}{(2k)!}x^{2k} \\ &amp; +(-1)^{k+1}\cdot \frac{cos\theta x}{(2k+2)!}x^{2k+2}. \end{align}$$
+$$\begin{align} (1+x)^{m} &amp;= 1+mx+\frac{m(m-1)}{2!}x^{2}+\cdots+\frac{m(m-1)\cdots (m-k+1)}{k!}x^{k}+ \\ &amp; \frac{m(m-1)\cdots (m-k)}{(k+1)!}(1+\theta x)^{m-k-1}x^{k+1}. \end{align} $$
+以上公式中$0 &lt; \theta &lt; 1 .$$</p> <h5 id="_4-四个中值定理之间的关系"><a href="#_4-四个中值定理之间的关系" class="header-anchor">#</a> (4). 四个中值定理之间的关系</h5> <p style="font-size:16px;">
+  罗尔定理$\rightleftharpoons $拉格朗日定理($\rightharpoonup $推广, $\leftharpoonup$为当$f(a)=f(b)$时的特例)<br>
+  拉格朗日定理$\rightleftharpoons $柯西定理($\rightharpoonup $推广, $\leftharpoonup
+  $为当$g(x)=x$时的特例)<br>
+  拉格朗日定理$\rightleftharpoons $泰勒定理($\rightharpoonup $推广, $\leftharpoonup
+  $为当$n=0$时的特例)</p> <hr> <h3 id="八-函数单调性与凹凸性"><a href="#八-函数单调性与凹凸性" class="header-anchor">#</a> 八. 函数单调性与凹凸性</h3> <h4 id="_1-函数单调性与极值"><a href="#_1-函数单调性与极值" class="header-anchor">#</a> 1. 函数单调性与极值</h4> <p style="font-size:16px;"><b>定义1</b> 设$f(x)$在$x_{0}$的邻域内有定义，那么对$x_{0}$某空心邻域内的任意x,<br>
+  若$f(x) &lt; f(x_{0})$,则称$x_{0}$是$f(x)$的极大值点；<br>
+  若$f(x) &gt; f(x_{0})$,则称$x_{0}$是$f(x)$的极小值点. <br> <b>定义2</b> 若$f^{'}(x_{0}) = 0$，则$x_{0}$是$f(x)$的驻点.<br> <b>定理1(第一充分判别定理)</b> 设连续函数在$x_{0}$的去心邻域内可导，若$x \in (x_{0}-\delta,x_{0})$时，$f^{'}(x)&gt;0(&lt;0)$;$x \in (x_{0}, x_{0}+\delta)$时，$f^{'}(x)&lt;0(&gt;0)$，则$f(x)$在$x_{0}$处取得极大(小)值(点$x = x_{0}$可以是$f(x)$的不可导点).<br> <b>定理2(第二充分判别定理)</b> 设$f^{'}(x_{0})=0$,$f(x)$在$x_{0}$处二阶可导，当$f^{&quot;}(x_{0})&lt;0$时，$f(x_{0})$为极大值；当$f^{&quot;}(x_{0})&gt;0$时,$f(x_{0})$为极小值.<br> <b>推论</b> $$设 f^{'}(x_{0}) = f^{&quot;}(x_{0}) = ... = f^{(n-1)}(x_{0}) = 0,f^{(n)}(x_{0}) \neq 0(n = 1,2,3,...),$$
+①当n为偶数时，若$f^{(n)}(x_{0})&lt;0$，则$f(x_{0})$是$f(x)$的极大值；若$f^{(n)}(x_{0})&gt;0$,则$f(x_{0})$是$f(x)$的极小值.<br>
+②当n为奇数时，$f(x_{0})$不是$f(x)$的极值.</p> <h4 id="_2-函数的凹凸性与拐点"><a href="#_2-函数的凹凸性与拐点" class="header-anchor">#</a> 2. 函数的凹凸性与拐点</h4> <p style="font-size:16px;"><b>定义1</b> 对于可导函数$f(x)$的图形：<br>
+①若在区间$[a,b]$中，$f(x)$都位于它每一点切线的上侧，即$f(x+\Delta x) &gt; f(x) + f^{'}(x)\cdot \Delta x$，则称曲线$f(x)$在$[a,b]$中是(向上)凹的.<br>
+②若在区间$[a,b]$中，$f(x)$都位于它每一点切线的下侧，即$f(x+\Delta x) &lt; f(x) + f^{'}(x)\cdot \Delta x$，则称曲线$f(x)$在$[a,b]$中是(向上)凸的.<br> <b>定理1</b> 若在$[a,b]$中$f^{&quot;}(x)&gt;0$，则曲线$f(x)$在$[a,b]$中是凹的；若在$[a,b]$中$f^{&quot;}(x)&lt;0$，则曲线$f(x)$在$[a,b]$中是凸的.<br> <b>定义2</b> 设曲线$y=f(x)$连续且处处有切线，则其凹与凸的分界点称为此曲线的拐点.<br> <b>定理2</b> 设连续函数$f(x)$在$x_{0}$的去心邻域内二阶可导，则<br>
+ ①若$f^{&quot;}(x)$在$x_{0}$的左、右邻域内异号，则点$(x_{0},f(x_{0}))$是$y=f(x)$的拐点;<br>
+ ②若$f^{&quot;}(x)$在$x_{0}$的左、右邻域内都为正(或负)，则$y=f(x)$在$x_{0}$的邻域内凹(凸).<br> <b>定理3</b> 设$f(x)$在$x_{0}$处三阶可导，且$f^{&quot;}(x_{0}) = 0,f^{(3)}(x_{0}) \neq 0$,则点$(x_{0},f(x_{0}))$是$y=f(x)$的拐点.<br> <b>推论</b> 设$f(x)$在$x_{0}$处n阶可导，且$$f^{&quot;}(x_{0}) = f^{(3)}(x_{0}) = ... = f^{(n-1)}(x_{0}) = 0, f^{(n)}(x_{0}) \neq 0 (n = 3,4,...),$$
+①当n为奇数时，$(x_{0},f(x_{0}))$是$y=f(x)$的拐点；<br>
+②当n为偶数时，$(x_{0},f(x_{0}))$不是$y=f(x)$的拐点.</p> <hr> <h3 id="九-渐近线与曲率"><a href="#九-渐近线与曲率" class="header-anchor">#</a> 九. 渐近线与曲率</h3> <h4 id="_1-渐近线"><a href="#_1-渐近线" class="header-anchor">#</a> 1. 渐近线</h4> <p style="font-size:16px;"><b>定义</b>  如果存在直线$L$：$y=kx+b$，使得当$x \to \infty $(或$x \to +\infty, x \to -\infty$)时，曲线$y=f(x)$上的动点$M(x,y)$到直线L的距离$d(M,L) \to 0$，则称L为曲线$y=f(x)$的渐近线.<br> <b>斜渐近线</b> 若$\lim\limits_{x \to \infty} \frac{f(x)}{x} = k \neq 0$，$b = \lim\limits_{x \to \infty}[f(x)-kx]$，则$y=kx+b$是$y=f(x)$的斜渐近线.<br> <b>水平渐近线</b> 若$\lim\limits_{x \to \infty} f(x) = b$，则$y=b$是$y=f(x)$的水平渐近线.<br> <b>垂直渐近线</b> 若$\lim\limits_{x \to x_{0}} f(x) = \infty$，则$x=x_{0}$是$y=f(x)$的垂直渐近线.</p> <h4 id="_2-曲率"><a href="#_2-曲率" class="header-anchor">#</a> 2. 曲率</h4> <p style="font-size:16px;"><b>弧微分公式</b> $ds= \sqrt{1+f^{'2}(x)}dx$<br> <b>曲率</b> 曲线$y=f(x)$在点$(x,y)$处的曲率
+	$K = \frac{|y^{&quot;}|}{(1+y^{'2})^{\frac{3}{2}}}$.当曲线由参数方程$\begin{cases}
+ 	&amp; x = \varphi (t) \\
+ 	&amp; y = \psi (t)
+	\end{cases}$给出时
+	  $$K = \frac{|\varphi^{'}(t) \psi^{&quot;}(t)-\varphi^{&quot;}(t) \psi^{'}(t)|}{[\varphi^{'2}(t)+\psi^{'2}(t)]^{\frac{3}{2}}}$$
+<b>曲率半径</b> $R = \frac{1}{K}(K \neq 0)$.</p> <hr> <h3 id="十-不定积分"><a href="#十-不定积分" class="header-anchor">#</a> 十. 不定积分</h3> <h4 id="_1-不定积分的基本性质"><a href="#_1-不定积分的基本性质" class="header-anchor">#</a> 1. 不定积分的基本性质</h4> <p style="font-size:16px;"> $[\int f(x) dx]^{'} = f(x)$，$d\int f(x) dx = f(x)dx$.<br>
+$\int f^{'}(x)dx = \int df(x) = f(x) + C$.<br>
+$\int kf(x)dx = k\int f(x)dx$ ($k \neq 0$为常数).<br>
+$\int [f(x) \pm g(x)]dx = \int f(x)dx \pm \int g(x)dx$.</p> <h4 id="_2-基本积分公式"><a href="#_2-基本积分公式" class="header-anchor">#</a> 2. 基本积分公式</h4> <p style="font-size:16px;">
+  $$\int \frac{1}{x} dx = ln|x| + C.$$
+  $$\int a^{x} dx = \frac{a^{x}}{lna} + C.$$
+  $$\int sec^{2}x dx = \int \frac{1}{cos^{2}x}dx = tanx + C.$$
+  $$\int csc^{2}x dx = \int \frac{1}{sin^{2}x}dx = -cotx + C.$$
+  $$\int secxtanx dx = secx + C. $$
+  $$\int cscxcotx dx = -cscx + C. $$
+  $$\int secxdx = \int \frac{sec^{2}x+tanxsecx}{secx+tanx}dx = ln|secx + tanx| +C. $$
+  $$\int cscxdx = \int \frac{csc^{2}x-cscxcotx}{cscx-cotx}dx = ln|cscx - cotx| +C. $$
+  $$\int \frac{1}{a^{2}+x^{2}}dx = \int \frac{\frac{1}{a^{2}}}{1+\frac{x^{2}}{a^{2}}}dx = \frac{1}{a} arctan \frac{x}{a}+C. $$
+  $$\int \frac{1}{1+x^{2}}dx = arctanx + C. $$
+  $$\int \frac{1}{\sqrt{a^{2}-x^{2}}} dx= \int \frac{\frac{1}{a}}{\sqrt{1-\frac{x^{2}}{a^{2}}}} dx = arcsin\frac{x}{a} +C .$$
+  $$\int \frac{1}{\sqrt{1-x^{2}}} dx = arcsinx + C .$$
+  $$\int \frac{dx}{a^{2}-x^{2}}dx = \int \frac{1}{2a}(\frac{1}{a+x}-\frac{1}{x-a})dx = \frac{1}{2a}ln |\frac{a+x}{a-x}| + C .$$
+  $$\int \frac{dx}{\sqrt{x^{2} \pm a^{2} }} = ln|x+\sqrt{x^{2} \pm a^{2} } | +C.$$</p> <h4 id="_3-不定积分法"><a href="#_3-不定积分法" class="header-anchor">#</a> 3. 不定积分法</h4> <h5 id="_1-第一换元法-凑微分"><a href="#_1-第一换元法-凑微分" class="header-anchor">#</a> (1). 第一换元法(凑微分)</h5> <p style="font-size:16px;"><b>定理</b> 设$f(u)$具有原函数$F(u)$，$u=\varphi(x)$可导，则有$$\int f[\varphi(x)]\varphi^{'}(x)dx = \int f[\varphi(x)]d\varphi(x) = \int f(u)du = F(u)+C = F[\varphi(x)]+C.$$</p> <h5 id="_2-第二换元法"><a href="#_2-第二换元法" class="header-anchor">#</a> (2). 第二换元法</h5> <p style="font-size:16px;"><b>定理</b> 设函数$x=\varphi (t)$具有连续导数，且$\varphi^{'}(t) \neq 0$，又设$f[\varphi(t)]\varphi^{'}(t)$具有原函数$\phi(t)$.则<br>  $$\int f(x)dx = \int f[\varphi(t)]\varphi^{'}(t)dt = \phi(t)+C = \phi[\varphi^{-1}(x)]+C$$</p> <h5 id="_3-分部积分法"><a href="#_3-分部积分法" class="header-anchor">#</a> (3). 分部积分法</h5> <p style="font-size:16px;"><b>定理</b> 设函数$u=u(x)$,$v=v(x)$具有连续导数，则  $$\int udv = uv - \int vdu. $$</p> <hr> <h3 id="十一-定积分"><a href="#十一-定积分" class="header-anchor">#</a> 十一. 定积分</h3> <h4 id="_1-定积分的定义"><a href="#_1-定积分的定义" class="header-anchor">#</a> 1. 定积分的定义</h4> <p style="font-size:16px;"><b>定义式</b> $\int_{a}^{b}f(x)dx = \lim\limits_{\lambda \to 0}\sum_{i=1}^{n}f(\xi_{i})\Delta x_{i}$，<br>特别当$f(x)$在$[a,b]$上可积时有$\int_{a}^{b}f(x)dx = \lim\limits_{n \to \infty}\frac{b-a}{n}\sum_{i=1}^{n}f[a+\frac{i}{n}(b-a)]$<br><b>定理1</b> 设$f(x)$在$[a,b]$上连续，则$f(x)$在$[a,b]$上可积<br><b>定理2</b> 设$f(x)$在$[a,b]$上有界，且只有有限个间断点，则$f(x)$在$[a,b]$上可积<br><b>规定</b> $\int_{a}^{a}f(x)dx = 0$,$\int_{b}^{a}f(x)dx = -\int_{a}^{b}f(x)dx $ </p> <h4 id="_2-定积分的性质"><a href="#_2-定积分的性质" class="header-anchor">#</a> 2. 定积分的性质</h4> <p style="font-size:16px;">设$f(x)$,$g(x)$在区间$[a,b]$上可积，则$$①\int_{a}^{b}[f(x) \pm g(x)]dx = \int_{a}^{b}f(x)dx \pm \int_{a}^{b}g(x)dx;$$ ②若$f(x)$在最大的区间上可积，则
+  $$\int_{a}^{b}f(x)dx= \int_{a}^{c}f(x)dx + \int_{c}^{b}f(x)dx;$$
+  ③若在区间$[a,b]$上$f(x) \leqslant g(x)$,则
+    $$\int_{a}^{b}f(x)dx \leqslant \int_{a}^{b}g(x)dx;$$
+  $$④|\int_{a}^{b}f(x)dx| \leqslant \int_{a}^{b}|f(x)|dx (a &lt; b);$$
+  ⑤如果$f(x)$在区间$[a,b]$上的最大值与最小值分别为M,m则
+    $$m(b-a) \leqslant \int_{a}^{b}f(x)dx \leqslant M(b-a).$$ 此性质常称为定积分的估值定理.</p> <h4 id="_3-重要定理、公式、关系"><a href="#_3-重要定理、公式、关系" class="header-anchor">#</a> 3. 重要定理、公式、关系</h4> <p style="font-size:16px;">①<b>牛顿——莱布尼兹公式</b> 如果$f(x)$连续，且$\int f(x)dx = F(x) + C$，则有$\int_{a}^{b}f(x)dx = F(b) - F(a)$成立.<br>
+  ②<b>定积分中值定理</b> 如果$f(x)$在$[a,b]$连续，则至少存在一点$\xi \in [a,b]$，使得$\int_{a}^{b}f(x)dx = f(\xi)(b-a)$成立.<br><span style="font-size:14px;">注：点$\xi$也一定能在$(a,b)$内部取得.</span><br>称$\frac{1}{b-a}\int_{a}^{b}f(x)dx$为函数$y=f(x)$在区间$[a,b]$上的平均值.<br>③<b>变上限定积分及其导数</b> 如果$f(x)$连续，则$\int_{a}^{x}f(t)dt (a \leqslant x \leqslant b)$是上限x的可导函数，且有$\frac{\mathrm{d} }{\mathrm{d} x}\int_{a}^{x}f(t)dt = f(x)$;若$\varphi(x),\psi(x)$可导，则$\frac{\mathrm{d} }{\mathrm{d} x}[\int_{\psi(x)}^{\varphi(x)}f(t)dt]= f(\varphi(x))\varphi^{'}(x) - f(\psi(x))\psi^{'}(x)$.<br>④设$f(x)$在$[-a,a]$上连续，则$$\int_{-a}^{a}f(x)dx = \int_{0}^{a}[f(x)+f(-x)]dx = \begin{cases}
+ &amp; 0 \text{ f(x) 是奇函数}  \\ 
+ &amp; 2\int_{0}^{a}f(x)dx \text{ f(x) 是偶函数}  
+\end{cases}$$
+  ⑤若$f(x)$在$[0,1]$上连续，则<br>  $\int_{0}^{\pi\2}f(sinx)dx = \int_{0}^{\pi\2}f(cosx)dx$<br>  $\int_{0}^{\pi}xf(sinx)dx = \frac{\pi}{2}\int_{0}^{\pi}f(sinx)dx$<br>⑥设$f(x)$是以$T$为周期的连续函数，则$\int_{a}^{a+T}f(x)dx = \int_{0}^{T}f(x)dx$,$\int_{a}^{a+nT}f(x)dx = n \int_{0}^{T}f(x)dx$ $$⑦I_{n}=\int_{0}^{\pi\2}sin^{n}xdx = \int_{0}^{\pi\2}cos^{n}xdx = \frac{n-1}{n}I_{n-2} = \begin{cases}
+ &amp; \frac{n-1}{n} \cdot \frac{n-3}{n-2} ... \frac{1}{2} \cdot \frac{\pi}{2} \text{ n为偶数 }  \\ 
+ &amp; \frac{n-1}{n} \cdot \frac{n-3}{n-2} ... \frac{4}{5} \cdot \frac{2}{3} \text{ n为奇数}  
+\end{cases}$$</p> <h4 id="_4-换元积分公式与分部积分公式"><a href="#_4-换元积分公式与分部积分公式" class="header-anchor">#</a> 4. 换元积分公式与分部积分公式</h4> <p style="font-size:16px;">①设$f(x)$在$[a,b]$上连续，$x=\varphi(t)$单调可导，$\varphi^{'}(t) \neq 0$，则<br>
+   $\int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}f[\varphi(t)]\varphi^{'}(t)dt$,<br>
+其中$\alpha = \varphi^{-1}(a)$,$\beta = \varphi^{-1}(b)$,$\varphi^{-1}(t)$为$\varphi(t)$的反函数.<br>
+②设$u=u(x),v=v(x)$具有连续导数，则$\int_{a}^{b}u(x)v^{'}(x)dx = [ u(x)v(x)]|_{a}^{b} - \int_{a}^{b}v(x)u^{'}(x)dx$.</p> <h4 id="_5-广义积分的概念与计算"><a href="#_5-广义积分的概念与计算" class="header-anchor">#</a> 5. 广义积分的概念与计算</h4> <h5 id="_1-无穷限的广义积分"><a href="#_1-无穷限的广义积分" class="header-anchor">#</a> (1). 无穷限的广义积分</h5> <p style="font-size:16px;">设$f(x)$在$[a,+\infty)$上连续，且$\lim\limits_{b \to +\infty}\int_{a}^{b}f(x)dx$存在，则广义积分$\int_{a}^{+\infty}f(x)dx$收敛，且$\int_{a}^{+\infty}f(x)dx = \lim\limits_{b \to +\infty}\int_{a}^{b}f(x)dx$.<br>
+设$f(x)$在$(-\infty,b]$上连续，且$\lim\limits_{a \to -\infty}\int_{a}^{b}f(x)dx$存在，则广义积分$\int_{-\infty}^{b}f(x)dx$收敛，且$\int_{-\infty}^{b}f(x)dx = \lim\limits_{a \to -\infty}\int_{a}^{b}f(x)dx$.<br>
+设$f(x)$在$(-\infty,+\infty)$上连续，且$\int_{-\infty}^{0}f(x)dx$与$\int_{0}^{+\infty}f(x)dx$收敛，则广义积分$\int_{-\infty}^{+\infty}f(x)dx$收敛，且$\int_{-\infty}^{+\infty}f(x)dx = \int_{-\infty}^{0}f(x)dx + \int_{0}^{+\infty}f(x)dx$.</p> <h5 id="_2-无界函数的广义积分"><a href="#_2-无界函数的广义积分" class="header-anchor">#</a> (2). 无界函数的广义积分</h5> <p style="font-size:16px;">设$f(x)$在$(a,b]$上连续，且在a的右邻域内无界，$\lim\limits_{\varepsilon \to 0^{+}}\int_{a+\varepsilon }^{b}f(x)dx$存在，则广义积分$\int_{a}^{b}f(x)dx$收敛，且$\int_{a}^{b}f(x)dx = \lim\limits_{\varepsilon \to 0^{+}}\int_{a+\varepsilon }^{b}f(x)dx$.<br>
+设$f(x)$在$[a,b)$上连续，且在b的左邻域内无界，$\lim\limits_{\varepsilon \to 0^{+}}\int_{a }^{b -\varepsilon}f(x)dx$存在，则广义积分$\int_{a}^{b}f(x)dx$收敛，且$\int_{a}^{b}f(x)dx= \lim\limits_{\varepsilon \to 0^{+}}\int_{a }^{b -\varepsilon}f(x)dx$.<br>
+设$f(x)$在$[a,b]$上除点$c \in (a,b)$外连续，而在点c的邻域内无界，且广义积分$\int_{a}^{c}f(x)dx$和$\int_{c}^{b}f(x)dx$收敛，则广义积分$\int_{a}^{b}f(x)dx$收敛，且$\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx$.</p> <h5 id="_3-gamma-函数"><a href="#_3-gamma-函数" class="header-anchor">#</a> (3). $\Gamma$函数</h5> <p style="font-size:16px;">$\Gamma(s) = \int_{0}^{+\infty}e^{-x}x^{s-1}dx (s&gt;0)$<br>
+$lim_{s \to 0^{+}}\Gamma(s) = +\infty$，$\Gamma(s+1) = s\Gamma(s)$，$\Gamma(1) = 1$,
+$$\Gamma(\frac{1}{2}) = \int_{0}^{+\infty}e^{-x}x^{-\frac{1}{2}}dx \xrightarrow[x=t^{2}]{ } 2\int_{0}^{+\infty}e^{-t^{2}}dt = \sqrt{\pi},$$
+$\Gamma(n+1) = n!$(n为正整数).</p> <h4 id="_6-定积分的几何应用"><a href="#_6-定积分的几何应用" class="header-anchor">#</a> 6. 定积分的几何应用</h4> <h5 id="_1-平面图形的面积"><a href="#_1-平面图形的面积" class="header-anchor">#</a> (1). 平面图形的面积</h5> <p style="font-size:16px;">①设平面图形D由曲线$y=f(x)$,$y=g(x)$及直线$x=a$,$x=b$所围成，则平面图形D的面积$S=\int_{a}^{b}|f(x)-g(x)|dx$.<br>
+②设平面图形D的边界为曲线$\begin{cases}
+ &amp; x = x(t)\\ 
+ &amp; y = y(t) 
+\end{cases}$，$(\alpha \leqslant t \leqslant \beta)$,其中$x(t)$,$y(t)$连续可导,$y(t) \geqslant 0$,$x(t)$严格单调，则平面图形D的面积$S=\int_{\alpha}^{\beta}y(t)x^{'}(t)dt$.当$x(t) \geqslant 0$,$y(t)$严格单调时，$S=\int_{\alpha}^{\beta}x(t)y^{‘}(t)dt$.<br>
+③设平面图形D的边界为曲线$r=r(\theta)$及射线$\theta = \alpha$,$\theta = \beta$($\alpha &lt; \beta$)，则平面图形D的面积$S=\frac{1}{2}\int_{\alpha}^{\beta}r^{2}(\theta)d\theta$.</p> <h5 id="_2-平面曲线的弧长"><a href="#_2-平面曲线的弧长" class="header-anchor">#</a> (2). 平面曲线的弧长</h5> <p style="font-size:16px;">①曲线由参数方程$\begin{cases}
+ &amp; x = \varphi(t)\\ 
+ &amp; y = \psi(t) 
+\end{cases}$,($\alpha \leqslant t \leqslant \beta$)给出，弧长公式为$s=\int_{\alpha}^{\beta}\sqrt{\varphi^{'2}(t)+\psi^{'2}(t)}dt$.<br>
+②曲线由直角坐标方程$y=f(x)(\alpha \leqslant x \leqslant b)$给出，弧长公式为$s=\int_{a}^{b}\sqrt{1+y^{'2}}dx$.<br>
+③曲线由极坐标方程$\rho = \varrho (\theta)(\alpha \leqslant \theta \leqslant \beta )$给出，弧长公式为$s=\int_{\alpha}^{\beta}\sqrt{\rho^{'2}(\theta)+\rho^{2}(\theta)}d\theta$.</p> <h5 id="_3-旋转体的体积"><a href="#_3-旋转体的体积" class="header-anchor">#</a> (3). 旋转体的体积</h5> <p style="font-size:16px;">①曲边梯形$0 \leqslant y \leqslant f(x)(a \leqslant x \leqslant b)$绕x轴旋转一周所生成的旋转体的体积$V_{x} = \pi \int_{a}^{b}[f(x)]^{2}dx$;当$a \geqslant 0$时，该曲边梯形绕y轴旋转一周所生成的旋转体的体积$V_{y}=2\pi \int_{a}^{b}xf(x)dx$.<br>
+②曲线$r = r(\theta)(0 \leqslant \alpha \leqslant \theta \leqslant \beta \leqslant \pi)$所围平面图形绕极轴旋转一周所生成的旋转体的体积$V=\frac{2}{3}\pi\int_{\alpha}^{\beta}r^{3}(\theta)sin\theta d\theta$.</p> <h5 id="_4-旋转体的侧面积"><a href="#_4-旋转体的侧面积" class="header-anchor">#</a> (4). 旋转体的侧面积</h5> <p style="font-size:16px;">①由$y=f(x)(f(x) \geqslant 0),x=a,x=b(a &lt; b)$,x轴所围成的曲边梯形绕x轴旋转一周所得旋转体的侧面积为$S=2\pi \int_{a}^{b}f(x)\sqrt{1+f^{'2}(x)}dx$.<br>
+②若围成曲边梯形的曲线由参数方程$x=x(t),y=y(t),t\in [\alpha,\beta]$给出，且$y(t) \geqslant 0$,那么旋转体的侧面积为$S= 2\pi \int_{\alpha}^{\beta}y(t)\sqrt{x^{'2}(t)+y^{'2}(t)}dt$.</p> <h5 id="_5-平行截面面积已知的立体体积"><a href="#_5-平行截面面积已知的立体体积" class="header-anchor">#</a> (5). 平行截面面积已知的立体体积</h5> <p style="font-size:16px;">平面$x=a,y=b$之间的立体，若过点x且垂直于x轴的截面面积为$A(x)$，则该立体的体积为$V= \int_{a}^{b} A(x)dx$.</p> <hr></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/38.f6127f8f.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

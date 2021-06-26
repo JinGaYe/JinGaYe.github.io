@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>高等数学知识总结 (一) | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/37.33383829.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-7870" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>高等数学知识总结 (一)</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2019-11-05</span> <span>文章字数：991</span> <span>预计用时：4分57秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#一-初等代数">一.初等代数</a><ul><li><a href="#_1-乘法公式与因式分解">1. 乘法公式与因式分解</a></li><li><a href="#_2-基本不等式">2. 基本不等式</a></li><li><a href="#_3-对数-log-a-n-left-a-0-a-neq-1-n-0-right">3. 对数$log_{a}N \left ( a &gt; 0, a \neq 1, N &gt; 0 \right) $</a></li><li><a href="#_4-数列">4. 数列</a><ul><li><a href="#_1-等差数列">(1). 等差数列</a></li><li><a href="#_2-等比数列">(2). 等比数列</a></li><li><a href="#_3-常用的几种数列的和">(3). 常用的几种数列的和</a></li></ul></li><li><a href="#_5-排列、组合与二项式定理-m-leqslant-n">5. 排列、组合与二项式定理$(m \leqslant n )$</a><ul><li><a href="#_1-排列">(1). 排列</a></li><li><a href="#_2-全排列">(2). 全排列</a></li><li><a href="#_3-组合">(3). 组合</a></li><li><a href="#_4-二项式定理">(4). 二项式定理</a></li></ul></li></ul></li><li><a href="#二-三角函数公式">二. 三角函数公式</a><ul><li><a href="#_1-倍角公式与半角公式">1. 倍角公式与半角公式</a></li><li><a href="#_2-三角函数恒等式">2. 三角函数恒等式</a></li><li><a href="#_3-诱导公式">3. 诱导公式</a></li><li><a href="#_4-两角和差及和差化积、积化和差公式">4. 两角和差及和差化积、积化和差公式</a></li><li><a href="#_5-反三角函数基本关系公式">5. 反三角函数基本关系公式</a></li></ul></li><li><a href="#三-函数">三. 函数</a><ul><li><a href="#_1-函数">1. 函数</a><ul><li><a href="#性质">性质</a></li></ul></li><li><a href="#_2-常用函数">2. 常用函数</a><ul><li><a href="#_1-绝对值函数">① 绝对值函数</a></li><li><a href="#_2-符号函数">② 符号函数</a></li><li><a href="#_3-取整函数">③ 取整函数</a></li><li><a href="#_4-变积分上限函数">④ 变积分上限函数</a></li><li><a href="#_5-双曲函数">⑤ 双曲函数</a></li></ul></li></ul></li><li><a href="#四-极限">四. 极限</a><ul><li><a href="#_1-极限的定义">1. 极限的定义</a></li><li><a href="#_2-数列极限的基本性质">2. 数列极限的基本性质</a></li><li><a href="#_3-函数极限的基本性质">3. 函数极限的基本性质</a></li><li><a href="#_4-无穷小量与无穷大量">4. 无穷小量与无穷大量</a><ul><li><a href="#_1-定义">(1)定义</a></li><li><a href="#_2-性质">(2). 性质</a></li><li><a href="#_3-无穷小量的比较">(3). 无穷小量的比较</a></li><li><a href="#_4-常用等价无穷小">(4). 常用等价无穷小</a></li><li><a href="#_5-极限的四则运算法则">(5). 极限的四则运算法则</a></li><li><a href="#_6-极限存在的判别方法">(6). 极限存在的判别方法</a></li></ul></li></ul></li><li><a href="#五-函数的连续性-1">~~五. 函数的连续性~~[^1]</a></li></ul></div><p></p> <p><span style="font-size:18px;">  倒腾了这么久，可算把数学公式给安排上啦，markdown 的数学公式可是优势呀，比 Latex 轻，渲染起来就跟书里一样，O(∩_∩)O 哈哈~，可以来写一下公式的总结啦~(≧▽≦)/~啦啦啦。本文内容可能比较多，并不是全部都总结出来，而是把不常用的和难以记住的总结出来，将持续更新。<br></span></p> <h3 id="一-初等代数"><a href="#一-初等代数" class="header-anchor">#</a> 一.初等代数</h3> <h4 id="_1-乘法公式与因式分解"><a href="#_1-乘法公式与因式分解" class="header-anchor">#</a> 1. 乘法公式与因式分解</h4> <p style="font-size:16px;">  $a^{3} \pm b^{3} =  ( a \pm b  )  ( a^{2} \mp ab + b^{2}  )$<br>
+  $ ( a \pm b  )^{3} = a^{3} \pm 3ab^{2} + 3ab^{2} \pm b^{3}$<br>
+  引申：$a^{n} - b^{n} =  ( a - b  ) ( a^{n-1} + a^{n-2}b+ \cdots + ab^{n-2} + b^{n-1} )$   </p> <h4 id="_2-基本不等式"><a href="#_2-基本不等式" class="header-anchor">#</a> 2. 基本不等式</h4> <p style="font-size:16px;">  $\frac{a_{1}+a_{2}+ \cdots + a_{n}}{n} \geqslant \sqrt[n]{a_{1}a_{2} \cdots a_{n}}$  <br>
+  $ | a  | -  | b  | \leqslant  |  | a  | -  | b  |  | \leqslant  | a \pm b  | \leqslant  | a  | +  | b  |$ </p> <h4 id="_3-对数-log-a-n-left-a-0-a-neq-1-n-0-right"><a href="#_3-对数-log-a-n-left-a-0-a-neq-1-n-0-right" class="header-anchor">#</a> 3. 对数$log_{a}N \left ( a &gt; 0, a \neq 1, N &gt; 0 \right) $</h4> <p style="font-size:16px;">  $N = a^{log_{a}N}$，更常用$N = e^{lnN}$ <br>
+   换底公式：$log_{a}M = \frac{log_{b}M}{log_{b}a}$ </p> <h4 id="_4-数列"><a href="#_4-数列" class="header-anchor">#</a> 4. 数列</h4> <h5 id="_1-等差数列"><a href="#_1-等差数列" class="header-anchor">#</a> (1). 等差数列</h5> <p style="font-size:16px;">  通项$a_{n} = a_{1} + (n-1)d $ <br>
+  前$n$项和$S_{n} = \frac{n(a_{1}+a_{n})}{2} = na_{1} + \frac{n(n-1)d}{2}$ <br>
+  设$a,b,c$成等差数列，则等差中项$b = \frac{1}{2}( a + c )$</p> <h5 id="_2-等比数列"><a href="#_2-等比数列" class="header-anchor">#</a> (2). 等比数列</h5> <p style="font-size:16px;">  设$a_{1}$为首项,$q$为公比，$a_{n}$为通项，则<br>
+  通项$a_{n} = a_{1}q^{n-1}$ <br>
+  前$n$项和$S_{n} = \frac{a_{1}(1-q^{n})}{1-q} = \frac{a_{1}-a_{n}q}{1-q}$</p> <h5 id="_3-常用的几种数列的和"><a href="#_3-常用的几种数列的和" class="header-anchor">#</a> (3). 常用的几种数列的和</h5> <p style="font-size:16px;">  ①$1+2+3+ \cdots + n = \frac{1}{2}n(n+1)$<br>
+  ②$1^{2}+2^{2}+3^{2}+ \cdots + n^{2} = \frac{1}{6}n(n+1)(2n+1)$<br>
+  ③$1^{3}+2^{3}+3^{3}+ \cdots + n^{3} = [ \frac{1}{2}n(n+1) ]^{2}$</p> <h4 id="_5-排列、组合与二项式定理-m-leqslant-n"><a href="#_5-排列、组合与二项式定理-m-leqslant-n" class="header-anchor">#</a> 5. 排列、组合与二项式定理$(m \leqslant n )$</h4> <h5 id="_1-排列"><a href="#_1-排列" class="header-anchor">#</a> (1). 排列</h5> <p><span style="font-size:16px;">  $P_{n}^{m} = \frac{n!}{(n-m)!}$</span></p> <h5 id="_2-全排列"><a href="#_2-全排列" class="header-anchor">#</a> (2). 全排列</h5> <p><span style="font-size:16px;">  $P_{n}^{n} = n!$</span></p> <h5 id="_3-组合"><a href="#_3-组合" class="header-anchor">#</a> (3). 组合</h5> <p style="font-size:16px;">  $C_{n}^{m} = \frac{P_{n}^{m}}{m!} = \frac{n!}{m!(n-m)!}$ <br>
+  ①$C_{n}^{m} = C_{n}^{n-m}$，特别有$C_{n}^{0} = C_{n}^{n} = 1$ <br>
+  ②$C_{n}^{m} = C_{n-1}^{m} + C_{n-1}^{m-1}$ </p> <h5 id="_4-二项式定理"><a href="#_4-二项式定理" class="header-anchor">#</a> (4). 二项式定理</h5> <p><span style="font-size:16px;">  $$\begin{align}( a + b )^{n} &amp;= a^{n} + na^{n-1}b + \frac{n(n-1)}{2!}a^{n-2}b^{2}+ \cdots \ &amp;+ \frac{n(n-1) \cdots [ n-(k-1) ] }{k!}a^{n-k}b^{k} + \cdots + b^{n} \end{align} $$</span></p> <hr> <h3 id="二-三角函数公式"><a href="#二-三角函数公式" class="header-anchor">#</a> 二. 三角函数公式</h3> <h4 id="_1-倍角公式与半角公式"><a href="#_1-倍角公式与半角公式" class="header-anchor">#</a> 1. 倍角公式与半角公式</h4> <p style="font-size:16px;">  $cos2x = cos^{2}x-sin^{2}x = 2cos^{2}x - 1 = 1 - 2sin^{2}x $ <br>
+  $tan2 \alpha = \frac{2tan \alpha}{1-tan^{2} \alpha}$<br>
+  $cot2 \alpha = \frac{cot^{2} \alpha - 1}{2cot \alpha}$<br>
+  $cos^{2}\frac{x}{2} = \frac{1+cosx}{2}$<br>
+  $sin3 \alpha = 3sin \alpha - 4sin^{3} \alpha$<br>
+  $sin^{2}\frac{x}{2} = \frac{1-cosx}{2}$<br>
+  $tan^{2}\frac{x}{2} = \frac{1-cosx}{1+cosx}$<br>
+  $tan\frac{x}{2} = \frac{1-cosx}{sinx} = \frac{sinx}{1+cosx}$<br>
+  $cos3 \alpha = 4cos^{3} \alpha - 3cos \alpha$<br>
+  $tan3 \alpha = \frac{3tan \alpha - tan^{3} \alpha}{1-3tan^{2} \alpha}$</p> <h4 id="_2-三角函数恒等式"><a href="#_2-三角函数恒等式" class="header-anchor">#</a> 2. 三角函数恒等式</h4> <p style="font-size:16px;">  $sin^{2}x+cos^{2}x = 1$<br>
+   $sec^{2}x-tan^{2}x = 1$<br>
+   $csc^{2}x-cot^{2}x = 1$</p> <h4 id="_3-诱导公式"><a href="#_3-诱导公式" class="header-anchor">#</a> 3. 诱导公式</h4> <p style="font-size:16px;">   $sin(\frac{\pi}{2} \pm \alpha) = cos \alpha $<br>
+   $cos(\frac{\pi}{2} \pm \alpha) = \mp sin \alpha $<br>
+   $tan(\frac{\pi}{2} \pm \alpha) = \mp cot \alpha $<br>
+   $cot(\frac{\pi}{2} \pm \alpha) = \mp tan \alpha $<br>
+   注： $sin(n\pi+ \alpha) = (-1)^{n}sin \alpha $<br>
+   $cos(n\pi + \alpha) = (-1)^{n}cos \alpha $</p> <h4 id="_4-两角和差及和差化积、积化和差公式"><a href="#_4-两角和差及和差化积、积化和差公式" class="header-anchor">#</a> 4. 两角和差及和差化积、积化和差公式</h4> <p style="font-size:16px;">   $tan(\alpha \pm \beta ) = \frac{tan\alpha \pm tan\beta}{1 \mp tan \alpha tan \beta}$<br>
+   $sin\alpha + sin\beta = 2sin\frac{\alpha + \beta}{2}cos\frac{\alpha - \beta}{2}$<br>
+   $sin\alpha - sin\beta = 2cos\frac{\alpha + \beta}{2}sin\frac{\alpha - \beta}{2}$<br>
+   $cos\alpha + cos\beta = 2cos\frac{\alpha + \beta}{2}cos\frac{\alpha - \beta}{2}$<br>
+   $cos\alpha - cos\beta = -2sin\frac{\alpha + \beta}{2}sin\frac{\alpha - \beta}{2}$<br>
+   $sin\alpha cos\beta = \frac{1}{2} [ sin(\alpha + \beta ) + sin(\alpha - \beta ) ]$<br>
+   $cos\alpha cos\beta = \frac{1}{2} [ cos(\alpha + \beta) + cos(\alpha - \beta) ]$<br>
+   $sin\alpha sin\beta = - \frac{1}{2} [ cos(\alpha + \beta) - cos(\alpha - \beta) ]$</p> <h4 id="_5-反三角函数基本关系公式"><a href="#_5-反三角函数基本关系公式" class="header-anchor">#</a> 5. 反三角函数基本关系公式</h4> <p style="font-size:16px;">   $arccos(-x) = \pi - arccosx ( | x | \leqslant 1) $<br>
+   $arccot(-x) = \pi - arccotx ( | x | \leqslant 1) $<br>
+   $arcsinx + arccosx = \frac{\pi}{2} ( | x | \leqslant 1) $<br>
+   $arctanx + arccotx = \frac{\pi}{2} $<br>
+   $arctanx = arccot \frac{1}{x} ( x &gt; 0 ) $<br>
+   $arctanx + arctany = arctan \frac{x+y}{1-xy} $</p> <hr> <h3 id="三-函数"><a href="#三-函数" class="header-anchor">#</a> 三. 函数</h3> <h4 id="_1-函数"><a href="#_1-函数" class="header-anchor">#</a> 1. 函数</h4> <h5 id="性质"><a href="#性质" class="header-anchor">#</a> 性质</h5> <p style="font-size:16px;">  有界性<br>
+  单调性<br>
+  周期性<br>
+  奇偶性</p> <h4 id="_2-常用函数"><a href="#_2-常用函数" class="header-anchor">#</a> 2. 常用函数</h4> <h5 id="_1-绝对值函数"><a href="#_1-绝对值函数" class="header-anchor">#</a> ① 绝对值函数</h5> <p><span style="font-size:16px;">  $y = |x| = \begin{cases}
+x&amp; \text{ if } x \geqslant 0 \
+-x&amp; \text{ if } x &lt; 0
+\end{cases}$ </span></p> <h5 id="_2-符号函数"><a href="#_2-符号函数" class="header-anchor">#</a> ② 符号函数</h5> <p><span style="font-size:16px;">  $y = sgnx = \begin{cases}
+1 &amp; \text{ if } x&gt; 0\
+0 &amp; \text{ if } x= 0\
+-1 &amp; \text{ if } x &lt; 0
+\end{cases}$<br>
+  注： $x = sgnx \cdot |x| $</span></p> <h5 id="_3-取整函数"><a href="#_3-取整函数" class="header-anchor">#</a> ③ 取整函数</h5> <p><span style="font-size:16px;">  $y=[x]$</span></p> <h5 id="_4-变积分上限函数"><a href="#_4-变积分上限函数" class="header-anchor">#</a> ④ 变积分上限函数</h5> <p><span style="font-size:16px;">  $\varphi (x) = \int_{a}^{x}f(t) dt $</span></p> <h5 id="_5-双曲函数"><a href="#_5-双曲函数" class="header-anchor">#</a> ⑤ 双曲函数</h5> <p style="font-size:16px;">  双曲正弦   $y=shx=\frac{e^{x}-e^{-x}}{2}$<br>
+  双曲余弦   $y=chx=\frac{e^{x}+e^{-x}}{2}$<br>
+  双曲正切   $y=thx=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$<br>
+  反双曲正弦   $y=arshx=ln(x + \sqrt{x^{2}+1} )$<br>
+  反双曲余弦   $y=archx=ln(x - \sqrt{x^{2}+1} )$<br>
+  反双曲正切   $y=arthx=\frac{1}{2}ln\frac{1+x}{1-x}$</p> <hr> <h3 id="四-极限"><a href="#四-极限" class="header-anchor">#</a> 四. 极限</h3> <h4 id="_1-极限的定义"><a href="#_1-极限的定义" class="header-anchor">#</a> 1. 极限的定义</h4> <p style="font-size:16px;">   ①数列极限的定义<br>
+   ②当$x \to \infty $时$f(x)$的极限<br>
+   ③当$x \to x_{0}$时($x_{0}$为有限值)$f(x)$的极限<br>
+   ④当$x \to x_{0}$时($x_{0}$为有限值)$f(x)$的左右极限</p> <h4 id="_2-数列极限的基本性质"><a href="#_2-数列极限的基本性质" class="header-anchor">#</a> 2. 数列极限的基本性质</h4> <p style="font-size:16px;">   ①极限的唯一性<br>
+   ②收敛数列的有界性<br>
+   ③收敛数列的保号性</p> <h4 id="_3-函数极限的基本性质"><a href="#_3-函数极限的基本性质" class="header-anchor">#</a> 3. 函数极限的基本性质</h4> <p style="font-size:16px;">   ①极限的唯一性<br>
+   ②函数极限的局部有界性<br>
+   ③函数极限的局部保号性<br>
+   ④函数极限与数列极限的关系<br>
+   ⑤复合函数的极限</p> <h4 id="_4-无穷小量与无穷大量"><a href="#_4-无穷小量与无穷大量" class="header-anchor">#</a> 4. 无穷小量与无穷大量</h4> <h5 id="_1-定义"><a href="#_1-定义" class="header-anchor">#</a> (1)定义</h5> <p style="font-size:16px;">   ①无穷小量：$limf(x) = 0 ( x \to x_{0} $或$ x \to \infty )$<br>
+   ②无穷大量：$limf(x) = \infty ( x \to x_{0} $或$ x \to \infty )$<br>
+  <span style="font-size:14px;"> 注：0是唯一可以作为无穷小量的常数，无穷大量必定是某区间上的无界量，但无界量不一定是无穷大量。</span></p> <h5 id="_2-性质"><a href="#_2-性质" class="header-anchor">#</a> (2). 性质</h5> <p><span style="font-size:16px;">  有限个无穷小量的代数和仍是无穷小量；有限个无穷小量的乘积仍是无穷小量；无穷小量与有界量的乘积仍是无穷小量。</span></p> <h5 id="_3-无穷小量的比较"><a href="#_3-无穷小量的比较" class="header-anchor">#</a> (3). 无穷小量的比较</h5> <p><span style="font-size:16px;">设在自变量$x$的同一变化过程中(如$x \to x_{0} $或$x \to \infty ) $，$\alpha (x)， \beta(x) $都是无穷小：<br>
+  ① 如果$lim\frac{\alpha(x)}{\beta(x)} = 0$，则称$\alpha(x)$是$\beta(x)$的高阶无穷小，记作$\alpha(x) = o(\beta(x))$。<br>
+  ② 如果$lim\frac{\alpha(x)}{\beta(x)} = \infty$，则称$\alpha(x)$是$\beta(x)$的低阶无穷小。<br>
+  ③ 如果$lim\frac{\alpha(x)}{\beta(x)} = c ( c \neq 0 )$，则称$\alpha(x)$与$\beta(x)$是同阶无穷小。<br>
+  ④ 如果$lim\frac{\alpha(x)}{\beta(x)} = 1 ( c \neq 0 )$，则称$\alpha(x)$与$\beta(x)$是等价无穷小，记作$\alpha(x) \sim \beta(x)$。<br>
+  ⑤ 如果$lim\frac{\alpha(x)}{\beta(x)^{k}} = c ( c \neq 0 )$，则 称$\alpha(x)$是$\beta(x)$的$k$阶无穷小。</span></p> <p><span style="font-size:16px;"><b>等价无穷小替换定理</b>  设在自变量$x$的同一变化过程中，$\alpha_{1}(x), \alpha_{2}(x)， \beta_{1}(x)，\beta_{2}(x)$都是无穷小，而且$\alpha_{1}(x) \sim \alpha_{2}(x)，\beta_{1}(x) \sim \beta_{2}(x)，$如果$lim\frac{\alpha_{2}(x)}{\beta_{2}(x)} = A$，则$lim\frac{\alpha_{1}(x)}{\beta_{1}(x)} = lim\frac{\alpha_{2}(x)}{\beta_{2}(x)} = A$</span></p> <h5 id="_4-常用等价无穷小"><a href="#_4-常用等价无穷小" class="header-anchor">#</a> (4). 常用等价无穷小</h5> <p><span style="font-size:16px;">当$x \to 0$时，有<br>$sinx \sim tanx \sim arcsinx \sim arctanx \sim e^{x}-1 \sim ln(1+x) \sim x$<br>$a^{x} - 1 \sim xlna$，$(1+x)^{m}-1 \sim mx$，$1-cosx \sim \frac{1}{2}x^{2}$</span></p> <h5 id="_5-极限的四则运算法则"><a href="#_5-极限的四则运算法则" class="header-anchor">#</a> (5). 极限的四则运算法则</h5> <p><span style="font-size:16px;">如果$limf(x)=A$，$limg(x)=B$，则有<br>
+  $lim[f(x) \pm g(x) ] = A \pm B$<br>
+  $lim[f(x) \cdot g(x) ] = A \cdot B$<br>
+  $lim\frac{f(x)}{g(x)} = \frac{A}{B} ( B \neq 0)$<br>
+  $limf(x)^{g(x)} = A^{B} ( A &gt; 0 )$<br>
+注：极限运算法则成立的前提条件是$limf(x)，limg(x)$均存在</span></p> <h5 id="_6-极限存在的判别方法"><a href="#_6-极限存在的判别方法" class="header-anchor">#</a> (6). 极限存在的判别方法</h5> <p style="font-size:16px;">   ①单调有界定理：单调增加（或单调减少）且有上界（或有下界）的数列$\left \{ x_{n} \right \}$必有极限。<br>
+  ②夹逼定理：如果数列$\left \{ x_{n} \right \}$，$\left \{ y_{n} \right \}$，$\left \{ z_{n} \right \}$满足下列条件<br>
+	   $y_{n} \leqslant x_{n} \leqslant z_{n} ( n = 1,2, \cdots) $<br>
+       $\lim{n \to \infty} y_{n} = a$，$\lim{n \to \infty} z_{n} = a$，<br>
+  那么数列$\left \{x_{n} \right \}$的极限存在，且$\lim{n \to \infty} x_{n} = a$</p> <hr> <h3 id="五-函数的连续性-1"><a href="#五-函数的连续性-1" class="header-anchor">#</a> <s>五. 函数的连续性</s><a href="%E5%86%85%E5%AE%B9%E8%BE%83%E5%A4%9A%EF%BC%8C%E5%BE%85%E5%90%8E%E7%BB%AD%E6%9B%B4%E6%96%B0">^1</a></h3></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/37.33383829.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

@@ -1,0 +1,1 @@
+.network{font-size:16px;list-style-type:decimal}.network li{width:100%;display:flex}.network li span:nth-child(odd){display:block;white-space:nowrap;text-overflow:ellipsis;overflow-x:hidden}.network li span:nth-child(2n){flex:1;display:block;text-align:right;white-space:nowrap;text-overflow:ellipsis}h4 b{color:#5f9cef}

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Hexo 框架搭建博客 | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/65.e0740105.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-2297" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>Hexo 框架搭建博客</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2019-11-01</span> <span>文章字数：690</span> <span>预计用时：3分27秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#_1-安装-nodejs-1">1. 安装 nodejs[^1]</a></li><li><a href="#_2-安装-git-2">2. 安装 git[^2]</a></li><li><a href="#_3-hexo-cli">3. hexo-cli</a><ul><li><a href="#_1-安装-hexo-cli">(1). 安装 hexo-cli</a></li><li><a href="#_2-配置-hexo-3">(2). 配置 hexo[^3]</a></li></ul></li><li><a href="#_4-添加一些功能">4. 添加一些功能</a></li><li><a href="#_5-部署到服务器上">5. 部署到服务器上</a><ul><li><a href="#_1-安装-nginx">(1). 安装 nginx</a></li><li><a href="#_2-配置-nginx">(2). 配置 nginx</a></li><li><a href="#_3-安装-pm2-模块">(3). 安装 pm2 模块</a></li><li><a href="#_4-安装-hexo-admin">(4). 安装 hexo-admin</a></li></ul></li><li><a href="#_6-部署到-github-5">6. 部署到 github[^5]</a><ul><li><a href="#_1-安装插件并配置">(1). 安装插件并配置</a></li><li><a href="#_2-配置-github-并部署">(2). 配置 github 并部署</a></li></ul></li><li><a href="#_7-提交给搜索引擎-以下是各搜索引擎对应的站点提交入口】">7. 提交给搜索引擎 [^ 以下是各搜索引擎对应的站点提交入口】</a></li></ul></div><p></p> <p style="font-size:18px;">  小伙伴们，大家好丫，经过几天的折腾，总算把我的博客页面弄得差不多啦。虽然加载速度还是有点抱歉，但整体上已经有模有样啦，O(∩_∩)O。今天的话，就来梳理一下从无到有如何搭出来一个博客，技术有限，也请大家多多指正哈。<br>
+   如果你没有自己服务器的话，而且只是弄着玩玩，不怎么经常性去维护的话，可以考虑部署到 github 或者 coding 呢，这里暂时只讲部署到 github，coding 类似。如果你有自己的服务器，并且想更多推广出去的话，那可就要好好多打理啦。本文采用的主要是 hexo 来搭建。</p> <table><thead><tr><th>内容</th> <th>版本</th></tr></thead> <tbody><tr><td>本地系统</td> <td>ubuntu 18.04 LTS</td></tr> <tr><td>服务器</td> <td>腾讯云 ( 已转至 github.io )</td></tr> <tr><td>服务器系统</td> <td>ubuntu 16.04 LTS</td></tr> <tr><td>域名</td> <td>jarrychen.xyz（已备案）</td></tr> <tr><td>nginx</td> <td>1.10.3</td></tr> <tr><td>nodejs</td> <td>10.16.3</td></tr> <tr><td>npm</td> <td>6.12.1</td></tr> <tr><td>提交搜索引擎</td> <td><a href="https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=2&amp;tn=baiduhome_pg&amp;wd=site%3Ajarrychen.xyz&amp;rsv_spt=1&amp;oq=%25E7%2599%25BE%25E5%25BA%25A6%25E7%25BB%259F%25E8%25AE%25A1&amp;rsv_pq=9dafc3aa0002fca4&amp;rsv_t=0ddfkHzIqhl3%2BN6V5qV0gls%2FPDVK7DLgl30oIz8osUy0R6VaMYD%2BahaD8BTP2VAqjmbx&amp;rqlang=cn&amp;rsv_enter=1&amp;rsv_dl=tb&amp;rsv_sug3=18&amp;rsv_sug1=5&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;inputT=3364&amp;rsv_sug4=3365" target="_blank" rel="noopener noreferrer">Baidu<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，<a href="https://www.google.com/search?hl=zh_CN&amp;sxsrf=ACYBGNQRECzMx236Pn9JF5wagOvNoygYzA%3A1576169416386&amp;source=hp&amp;ei=yG_yXZK5FYXr-Qa95a6wCQ&amp;q=site%3Ajarrychen.xyz&amp;oq=s&amp;gs_l=psy-ab.3.0.35i39l3j0j0i131l3j0l3.300.1476..2236...3.0..0.138.276.0j2......0....1..gws-wiz.....10..35i362i39j0i67.FlsqzFyOQII" target="_blank" rel="noopener noreferrer">Google<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，搜狗，360，<a href="https://search.naver.com/search.naver?sm=top_hty&amp;fbm=1&amp;ie=utf8&amp;query=site%3Ajarrychen.xyz" target="_blank" rel="noopener noreferrer">Naver<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，<a href="https://cn.bing.com/search?q=site%3Ajarrychen.xyz&amp;qs=n&amp;form=QBRE&amp;sp=-1&amp;pq=site%3Ajarrychen.xyz&amp;sc=1-18&amp;sk=&amp;cvid=895351CDF043429D8A5A753123E178F3" target="_blank" rel="noopener noreferrer">Bing<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，<a href="https://yandex.com/search/?text=site%3Ajarrychen.xyz&amp;lr=21098" target="_blank" rel="noopener noreferrer">Yandex<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，神马</td></tr></tbody></table> <p style="font-size:16px;color:blue;">  以下内容如果是用sudo apt-get install的话，缺少依赖时应先运行sudo apt-get update，其他的内容后续想到再补充。</p> <h3 id="_1-安装-nodejs-1"><a href="#_1-安装-nodejs-1" class="header-anchor">#</a> 1. 安装 nodejs[^1]</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>// 此处采用的是源码安装，需要时间较久
+<span class="token builtin class-name">cd</span> /data
+<span class="token function">mkdir</span> nodejs
+<span class="token builtin class-name">cd</span> nodejs	//进入到你要放nodejs压缩包的地方，eg: /data/nodejs
+<span class="token function">wget</span> https://nodejs.org/dist/v10.14.2/node-v10.14.2.tar.gz
+//版本号详细可上官网看，建议下载最近且稳定的版本，可以避免不少坑
+<span class="token function">tar</span> -zxvf node-v10.14.2.tar.gz
+<span class="token builtin class-name">cd</span> node-v10.14.2
+./configure
+<span class="token function">make</span>
+<span class="token function">make</span> <span class="token function">install</span>	//较久
+node -v
+<span class="token function">npm</span> -v		//此为验证是否安装成功
+// 若要npm比较稳定
+// <span class="token function">npm</span> <span class="token function">install</span> -g n
+// <span class="token function">sudo</span> n stable
+</code></pre></div><h3 id="_2-安装-git-2"><a href="#_2-安装-git-2" class="header-anchor">#</a> 2. 安装 git[^2]</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">git</span>  //一句命令即可
+</code></pre></div><h3 id="_3-hexo-cli"><a href="#_3-hexo-cli" class="header-anchor">#</a> 3. hexo-cli</h3> <h4 id="_1-安装-hexo-cli"><a href="#_1-安装-hexo-cli" class="header-anchor">#</a> (1). 安装 hexo-cli</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>//需要使用npm来安装该模块
+//但npm有时安装包可能卡住或者因为被墙了下载不下来，推荐换成国内的镜像
+//此处采用的是taobao的
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org
+
+<span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli	//安装hexo脚手架
+hexo -v //验证是否安装成功
+
+//然后找一个你喜欢的文件夹
+hexo init yourBlog
+
+<span class="token builtin class-name">cd</span> yourBlog
+<span class="token function">npm</span> <span class="token function">install</span>	//先安装一些初始必要的依赖
+
+hexo clean	//清除已经生成的页面
+hexo g	//生成静态页面
+hexo s	//运行hexo
+hexo d	//部署，需先配置好部署地方
+</code></pre></div><ul style="font-size:16px;"><li>node_modules: 依赖包</li> <li>scaffolds：生成文章的一些模板 </li> <li>source：用来存放你的文章  </li> <li>themes：主题  </li> <li>_config.yml: 框架的配置文件</li></ul> <h4 id="_2-配置-hexo-3"><a href="#_2-配置-hexo-3" class="header-anchor">#</a> (2). 配置 hexo[^3]</h4> <p style="font-size:16px;">  安装完毕后的主题默认是landscape，如果你不喜欢的话，可以上<a href="https://hexo.io/themes/" target="_blank" rel="external nofollow"><b style="color:#0cc;">这里</b></a>查阅有什么主题，我采用的是Sakura主题。<br>
+   基础的配置可以查看下方主题设计者的文档</p> <p><ul style="font-size:16px;"><li>Sakura中文文档[^4]</li></ul></p> <hr> <h3 id="_4-添加一些功能"><a href="#_4-添加一些功能" class="header-anchor">#</a> 4. 添加一些功能</h3> <p><ul style="font-size:16px;list-style-type:decimal;"><li>标签云</li> <li>播放器</li> <li>访问统计</li> <li>计算字数与阅读时间</li> <li>live2d</li> <li>推荐阅读</li> <li>mathjax支持数学公式</li> <li>打赏</li></ul></p> <hr> <h3 id="_5-部署到服务器上"><a href="#_5-部署到服务器上" class="header-anchor">#</a> 5. 部署到服务器上</h3> <h4 id="_1-安装-nginx"><a href="#_1-安装-nginx" class="header-anchor">#</a> (1). 安装 nginx</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>//为了方便和快一点，这里采用的是apt-get安装，不采取源码安装
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> nginx
+
+//按y执行安装过程，若报缺少依赖，则
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> nginx
+
+//即可
+//安装完毕后，浏览器输入云主机ip看到nginx欢迎页面即成功
+</code></pre></div><h4 id="_2-配置-nginx"><a href="#_2-配置-nginx" class="header-anchor">#</a> (2). 配置 nginx</h4> <p style="font-size:16px;">  这一步比较琐碎，包括设置项目的根目录，配置http跳转https，自定义404页面，gzip压缩提高加载速度等等。不过在进行这些之前，最关键的前置步骤是需要有一个可以用的域名，指已备案，且添加解析记录到你的云主机，并且申请ssl证书上传到服务器中。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>//进行了前面这些操作后
+<span class="token builtin class-name">cd</span> /etc/nginx  //进入nginx的安装目录
+
+<span class="token builtin class-name">cd</span> conf.d	//在此处创建ssl.conf配置http跳转https
+<span class="token function">touch</span> ssl.conf
+<span class="token function">vim</span> ssl.conf  //此处根据自己的域名证书所在的路径，对下面eg进行替换
+
+e.g：
+server<span class="token punctuation">{</span>
+	listen <span class="token number">80</span><span class="token punctuation">;</span>
+	server_name domainname<span class="token punctuation">;</span>
+	rewrite ^<span class="token punctuation">(</span>.*<span class="token punctuation">)</span>$ https://<span class="token variable">${server_name}</span><span class="token variable">$1</span> permanent<span class="token punctuation">;</span>
+    //这里是设置跳转最重要的地方，重定向到https上
+<span class="token punctuation">}</span>
+
+server<span class="token punctuation">{</span>		//https的配置
+	listen <span class="token number">443</span> ssl http2<span class="token punctuation">;</span>
+    server_name domainname<span class="token punctuation">;</span>
+    ssl on<span class="token punctuation">;</span>
+    ssl_certificate 1_domainname_bundle.crt<span class="token punctuation">;</span>
+    ssl_certificate_key 2_domainname.key<span class="token punctuation">;</span>
+    ssl_session_timeout 5m<span class="token punctuation">;</span>
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2<span class="token punctuation">;</span>
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:<span class="token operator">!</span>aNULL:<span class="token operator">!</span>MD5:<span class="token operator">!</span>RC4:<span class="token operator">!</span>DHE<span class="token punctuation">;</span>
+    ssl_prefer_server_ciphers on<span class="token punctuation">;</span>
+    location / <span class="token punctuation">{</span>	//指向项目根目录
+        proxy_redirect off<span class="token punctuation">;</span>
+		proxy_set_header REMOTE-HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+        proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+        proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+        proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+        proxy_pass http://localhost:4000/<span class="token punctuation">;</span>	//hexo是在4000端口上运行
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <div class="language-bash extra-class"><pre class="language-bash"><code>//https的跳转上面配置完还不可以，还需要配置一处地方
+//在nginx目录中
+<span class="token builtin class-name">cd</span> site-available
+<span class="token function">vim</span> default
+
+//在server中添加
+server_name localhost<span class="token punctuation">;</span>
+location / <span class="token punctuation">{</span>
+        root webapproot<span class="token punctuation">;</span>	//你的webapp的路径
+        index index.html index.htm index.nginx-debian.html<span class="token punctuation">;</span>
+		try_files <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ <span class="token operator">=</span> <span class="token number">404</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//然后
+nginx -t  //查看是否配置出错
+//没有的话
+nginx -s reload
+<span class="token function">service</span> nginx restart	//输入域名访问即可跳到安全的https
+
+//搞定这个后，剩下的是配置自定义404页面和开启gzip压缩了
+//404这个看个人喜好了，开启gzip压缩是很有必要的，多少能提高加载速度
+<span class="token builtin class-name">cd</span> /etc/nginx
+<span class="token function">vim</span> nginx.conf
+
+//配置404,在默认的配置文件中的http里添加这一段
+server_tokens off<span class="token punctuation">;</span>
+proxy_intercept_errors on<span class="token punctuation">;</span>
+//这里偷懒把所有错误码都定位到404页面了
+error_page <span class="token number">403</span> <span class="token number">404</span> <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span> /404.html<span class="token punctuation">;</span>
+server <span class="token punctuation">{</span>
+
+	location /404.html <span class="token punctuation">{</span>
+		root <span class="token number">404</span>页面的路径<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+//开启gzip压缩
+<span class="token comment">### Gzip Settings ##</span>
+
+	<span class="token function">gzip</span> on<span class="token punctuation">;</span>	//开启gzip压缩
+	gzip_disable <span class="token string">&quot;msie6&quot;</span><span class="token punctuation">;</span>	//针对ie浏览器要设置的
+	gzip_min_length 1k<span class="token punctuation">;</span>	//最小被压缩长度，小于这个大小的不会被压缩
+	gzip_vary on<span class="token punctuation">;</span>
+	<span class="token comment"># gzip_proxied any;</span>
+	gzip_comp_level <span class="token number">2</span><span class="token punctuation">;</span>	//压缩力度，越大压缩越厉害但耗性能，这里够用了
+	gzip_buffers <span class="token number">4</span> 16k<span class="token punctuation">;</span>
+	gzip_http_version <span class="token number">1.1</span><span class="token punctuation">;</span>
+	gzip_types  text/plain text/css application/json
+    application/x-javascript text/xml application/xml
+    application/xml+rss text/javascript image/jpeg
+    image/gif image/png video/mp4 audio/webm video/ogg<span class="token punctuation">;</span>	//要压缩的文件格式
+
+</code></pre></div><h4 id="_3-安装-pm2-模块"><a href="#_3-安装-pm2-模块" class="header-anchor">#</a> (3). 安装 pm2 模块</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>//这里安装pm2模块的目的是为了让你的项目持久化运行
+//正常的hexo server，关掉窗口后也就停止运行了
+//所以需要它来帮助运行
+
+<span class="token function">npm</span> <span class="token function">install</span> -g pm2	//全局安装
+
+//写一个运行的脚本
+const <span class="token punctuation">{</span>exec<span class="token punctuation">}</span> <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'child_process'</span><span class="token punctuation">)</span>
+exec<span class="token punctuation">(</span><span class="token string">'hexo s'</span>,<span class="token punctuation">(</span>error,stdout,stderr<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+	if<span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	    console.log<span class="token punctuation">(</span><span class="token string">'exec error:<span class="token variable">${error}</span>'</span><span class="token punctuation">)</span>
+	    <span class="token builtin class-name">return</span>
+	<span class="token punctuation">}</span>
+	console.log<span class="token punctuation">(</span><span class="token string">'stdout:<span class="token variable">${stdout}</span>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	console.log<span class="token punctuation">(</span><span class="token string">'stderr:<span class="token variable">${stderr}</span>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+//保存为xx.js到你的根目录
+//运行
+pm2 start xx.js
+
+//会发现把窗口关掉，去浏览器还是能照常访问
+
+//这里每次运行hexo的几句命令都好麻烦，有没有方法可以减少呢？
+//答案是有的
+//编辑根目录的package.json，修改里面<span class="token string">&quot;script&quot;</span>部分
+//在其中添加<span class="token string">&quot;build&quot;</span>字段
+//内容写上
+
+hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> gulp<span class="token punctuation">(</span>可选<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> hexo d <span class="token operator">&amp;&amp;</span> pm2 restart xx.js
+//其中gulp是压缩代码，即把你那些html，js，css代码“丑化”，图片压缩大小
+//分别表示清除已生成，重新生成，压缩，部署，持久化运行
+</code></pre></div><h4 id="_4-安装-hexo-admin"><a href="#_4-安装-hexo-admin" class="header-anchor">#</a> (4). 安装 hexo-admin</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>//如果你是部署到服务器上，每次上去黑窗口写或者写完再上传都比较麻烦
+//自己懒得做管理端的话，是否有方便的方法来写文呢
+//答案是有的，就是hexo-admin插件
+
+<span class="token builtin class-name">cd</span> yourBlog
+<span class="token function">npm</span> <span class="token function">install</span> hexo-admin --save
+
+hexo s
+//输入根目录地址+/admin/即可登录，首次无需输入账号密码
+//这毕竟是一个管理端，总不能让人随便访问
+//找到页面中的settings
+
+//点击下面的 Setup authentification here 。
+//填写用户名，密码，和加密串
+
+//然后把生成的账号，密码，和加密串等信息写到_config.yml配置文件中
+//即在_config.yml中添加
+admin:
+  username: yourusername
+  password_hash: yourpassword_hash
+  secret: your secret
+  command: <span class="token string">'./admin_script/hexo-generate.sh'</span>
+
+//然后再次运行打开相同路径即可触发登录
+//为了更愉快的写文章
+//可以给配置中再加个command,里面写上hexo clean <span class="token operator">&amp;&amp;</span> hexo g
+//即每次写完总是重新生成静态文件，方便一些
+</code></pre></div><hr> <h3 id="_6-部署到-github-5"><a href="#_6-部署到-github-5" class="header-anchor">#</a> 6. 部署到 github[^5]</h3> <h4 id="_1-安装插件并配置"><a href="#_1-安装插件并配置" class="header-anchor">#</a> (1). 安装插件并配置</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>//先安装部署到github上所需要的插件
+<span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save
+
+//进入根目录修改__config.yml文件
+deploy:
+  type: <span class="token function">git</span>
+  repo: git@github.com:OwnerName/OwnerName.github.io.git
+  branch: master
+</code></pre></div><h4 id="_2-配置-github-并部署"><a href="#_2-配置-github-并部署" class="header-anchor">#</a> (2). 配置 github 并部署</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>//生成ssh keys
+ssh-add ~/.ssh/id_rsa
+
+//然后
+<span class="token builtin class-name">cd</span> ~/.ssh
+<span class="token function">sudo</span> gedit id_rsa.pub
+
+//将内容复制下来后，登陆github，右上角进入settings
+//选择SSH and GPG keys
+//然后new SSH key，将复制的内容粘贴上去，保存
+
+//新建一个respository
+//命名为OwnerName.github.io
+
+<span class="token function">ssh</span> -T git@github.com	//测试连接是否成功
+
+//出现下列语句则表明已经连上
+Hi wispyoureyes<span class="token operator">!</span> You've successfully authenticated,
+but GitHub does not provide shell access.
+
+//接下来
+hexo clean
+hexo g
+hexo d	//即可部署上去，之所以hexo clean，hexo g，是重新生成防止有坑
+</code></pre></div><hr> <h3 id="_7-提交给搜索引擎-以下是各搜索引擎对应的站点提交入口】"><a href="#_7-提交给搜索引擎-以下是各搜索引擎对应的站点提交入口】" class="header-anchor">#</a> 7. 提交给搜索引擎 [^ 以下是各搜索引擎对应的站点提交入口】</h3> <ul style="font-size:16px;list-style-type:decimal;"><li><a href="https://zn.baidu.com/site/index#/" target="_blank" rel="external nofollow">百度站长平台</a></li> <li><a href="https://search.google.com/search-console?resource_id=sc-domain%3Ajarrychen.xyz" target="_blank" rel="external nofollow">Google站长平台</a></li> <li><a href="https://www.bing.com/webmaster/home/mysites" target="_blank" rel="external nofollow">Bing站长平台</a></li> <li><a href="http://zhanzhang.so.com/sitetool/site_manage" target="_blank" rel="external nofollow">360站长平台</a></li> <li><a href="http://zhanzhang.sogou.com/index.php/statistics/index" target="_blank" rel="external nofollow">搜狗站长平台</a></li> <li><a href="https://searchadvisor.naver.com/console/wmt/board" target="_blank" rel="external nofollow">Naver站长平台(韩)</a></li> <li><a href="https://webmaster.yandex.ru/sites/?noRedirect=yes&amp;hostnameFilter=" target="_blank" rel="external nofollow">Yandex站长平台(俄)</a></li> <li><a href="https://zhanzhang.sm.cn/open/detialPage" target="_blank" rel="external nofollow">神马站长平台</a></li></ul> <br> <p>[^1]: <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">nodejs 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+[^2]: <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">git 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+[^3]: <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">hexo 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+[^4]: <a href="https://github.com/honjun/hexo-theme-sakura/blob/master/README-zh_cn.md" target="_blank" rel="noopener noreferrer">Sakura 中文文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+[^5]: <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/65.e0740105.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>线性代数知识总结 (二) | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/42.bce35ce6.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-5780" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>线性代数知识总结 (二)</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2019-12-03</span> <span>文章字数：820</span> <span>预计用时：4分6秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#四、线性方程组">四、线性方程组</a><ul><li><a href="#_1-线性方程组解的性质">1. 线性方程组解的性质</a><ul><li><a href="#_1-齐次线性方程组解的性质">(1) 齐次线性方程组解的性质</a></li><li><a href="#_2-非齐次线性方程组解的性质">(2) 非齐次线性方程组解的性质</a></li></ul></li><li><a href="#_2-齐次线性方程组有非零解的条件">2. 齐次线性方程组有非零解的条件</a></li><li><a href="#_3-非齐次线性方程组的有解条件">3. 非齐次线性方程组的有解条件</a></li></ul></li><li><a href="#五、特征值与特征向量">五、特征值与特征向量</a><ul><li><a href="#_1-特征值与特征向量定义">1. 特征值与特征向量定义</a></li><li><a href="#_2-特征值与特征向量性质">2. 特征值与特征向量性质</a></li><li><a href="#_3-相似矩阵">3. 相似矩阵</a></li><li><a href="#_4-矩阵与对角矩阵相似的条件">4. 矩阵与对角矩阵相似的条件</a></li><li><a href="#_5-实对称矩阵的性质">5. 实对称矩阵的性质</a></li></ul></li><li><a href="#六、二次型">六、二次型</a><ul><li><a href="#_1-二次型的概念">1. 二次型的概念</a></li><li><a href="#_2-二次型的矩阵形式">2. 二次型的矩阵形式</a></li><li><a href="#_3-化二次型为标准型">3. 化二次型为标准型</a></li><li><a href="#_4-矩阵的合同">4. 矩阵的合同</a><ul><li><a href="#_1-合同矩阵">(1) 合同矩阵</a></li><li><a href="#_2-矩阵合同的充要条件">(2) 矩阵合同的充要条件</a></li><li><a href="#_3-等价、相似、合同之间的关系">(3) 等价、相似、合同之间的关系</a></li></ul></li><li><a href="#_5-正定二次型与正定矩阵">5. 正定二次型与正定矩阵</a><ul><li><a href="#_1-定义">(1) 定义</a></li><li><a href="#_2-正定矩阵的判别法">(2) 正定矩阵的判别法</a></li></ul></li></ul></li></ul></div><p></p> <p style="font-size:18px;">  继上一次线性代数知识总结之后，剩下的内容也不多了. 本文主要针对线性方程组，特征值与特征向量以及二次型这三章，概念定义比起前边三章会相对少一些，但计算会比较复杂，需要好好掌握.</p> <h3 id="四、线性方程组"><a href="#四、线性方程组" class="header-anchor">#</a> 四、线性方程组</h3> <h4 id="_1-线性方程组解的性质"><a href="#_1-线性方程组解的性质" class="header-anchor">#</a> 1. 线性方程组解的性质</h4> <h5 id="_1-齐次线性方程组解的性质"><a href="#_1-齐次线性方程组解的性质" class="header-anchor">#</a> (1) 齐次线性方程组解的性质</h5> <p style="font-size:16px;">  ①若$\xi_{1} \, , \xi_{2}$为$Ax = 0$的解，则$\xi_{1} + \xi_{2}$也是该方程组的解.<br>
+  ②若$\xi_{1}$为$Ax = 0$的解，$k$为实数，则$k\xi_{1}$也是$Ax = 0$的解.</p> <h5 id="_2-非齐次线性方程组解的性质"><a href="#_2-非齐次线性方程组解的性质" class="header-anchor">#</a> (2) 非齐次线性方程组解的性质</h5> <p style="font-size:16px;">  ①设$\eta_{1} \, , \eta_{2}$是$Ax = b$的解，则$\eta_{1} - \eta_{2}$是$Ax = 0$的解.<br>
+  ②设$\eta$是$Ax = b$的解，$\xi$为$Ax = 0$的解，则$\eta + \xi$是$Ax = b$的解.<br>
+  ③设$\eta^{* }$是$Ax = b$的一个解，$\xi$是$Ax = 0$的通解，则$x = \eta^{* }+\xi$是$Ax = b$的通解.</p> <h4 id="_2-齐次线性方程组有非零解的条件"><a href="#_2-齐次线性方程组有非零解的条件" class="header-anchor">#</a> 2. 齐次线性方程组有非零解的条件</h4> <p style="font-size:16px;">  ①当$r(A) = n$时，方程组$Ax = 0$只有零解，此时解空间只含有一个零向量.<br>
+  ②当$r(A) = r &lt; n$时，方程组$Ax = 0$必有含$n-r$个解向量的基础解系$\eta_{1}$, $\eta_{2}$, $\cdots$, $\eta_{n-r}$，此时方程组的任一解可表示为$x=c_{1}\eta_{1}+c_{2}\eta_{2}+\cdots+c_{n-r}\eta_{n-r}$，其中$c_{1}$,$c_{2}$,$\cdots$,$c_{n-r}$为任意实数</p> <h4 id="_3-非齐次线性方程组的有解条件"><a href="#_3-非齐次线性方程组的有解条件" class="header-anchor">#</a> 3. 非齐次线性方程组的有解条件</h4> <p style="font-size:16px;">  <b>定理</b> $Ax = b$有解的充分必要条件是它的系数矩阵$A$与增广矩阵$B$的秩相等，当$r(A) = r(B) = n$(未知量个数)时有唯一解，当$r(A) = r(B) &lt; n$时有无穷多组解，此时通解的结构为：$Ax = b$的一个特解$+ Ax = 0$的通解.<br>
+  下面四个命题是等价的(设$A$的列向量组为$\alpha_{1}$,$\alpha_{2}$,$\cdots$, $\alpha_{n}$);<br>
+   ①$Ax = b$有解.<br>
+   ②向量$b$能由向量组$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{n}$线性表示.<br>
+   ③向量组$\alpha_{1} , \, \alpha_{2} , \, \cdots , \, \alpha_{n}$与向量组$b , \, \alpha_{1} , \, \alpha_{2} , \, \cdots , \, \alpha_{n}$等价.<br>
+   ④$r(A) = r(B)$.<br>
+    <b>克拉默法则</b>  若方程组$Ax = b$的系数行列式$D = |A| \neq 0$,则它有唯一解$x_{j} = \frac{D_{j}}{D}$($j = 1, \, 2, \, \cdots, \, n$)，其中$D_{j}$为$D$的第j列由$b$代替后所得行列式.</p> <hr> <h3 id="五、特征值与特征向量"><a href="#五、特征值与特征向量" class="header-anchor">#</a> 五、特征值与特征向量</h3> <h4 id="_1-特征值与特征向量定义"><a href="#_1-特征值与特征向量定义" class="header-anchor">#</a> 1. 特征值与特征向量定义</h4> <p style="font-size:16px;">  设$A$是n阶方阵，如果数$\lambda$和n维非零向量$x$使$Ax = \lambda x$成立，则称数$\lambda$为方阵A的特征值，非零向量$x$称为A的对应特征值$\lambda$的特征向量(或称为A的属于特征值$\lambda$的特征向量).</p> <h4 id="_2-特征值与特征向量性质"><a href="#_2-特征值与特征向量性质" class="header-anchor">#</a> 2. 特征值与特征向量性质</h4> <p style="font-size:16px;">  ①$n$阶矩阵$A$与它的转置矩阵$A^T$有相同的特征值。<br>
+  ②设$A = (a_{ij})$是$n$阶方阵，则$$\begin{align} f(\lambda) &amp;= |\lambda E - A| = \begin{vmatrix}
+\lambda-a_{11} &amp; -a_{12} &amp; \cdots &amp; -a_{1n}\\ 
+-a_{21} &amp; \lambda-a_{22} &amp; \cdots &amp; -a_{2n}\\ 
+\vdots &amp; \vdots &amp;  &amp; \vdots \\ 
+-a_{n1} &amp; -a_{n2} &amp; \cdots &amp; \lambda-a_{nn}
+\end{vmatrix} \\ &amp;= \lambda^n - (\sum_{i=1}^{n}a_{ii}) \lambda^{n-1} + \cdots + (-1)^k S_k \lambda^{n-k} + \cdots + (-1)^n |A| \end{align}$$，其中$S_k$是$A$的全体$k$阶主子式的和。设$\lambda_1 , \, \lambda_2 , \, \cdots , \, \lambda_n$是$A$的$n$个特征值，则由$n$次代数方程的根与系数的关系有$$\lambda_1+ \lambda_2+ \cdots + \lambda_n = a_{11}+a_{22} + \cdots + a_{nn}$$ $$\lambda_1 \lambda_2 \cdots \lambda_n = |A| $$，其中$A$的主对角线元素之和$a_{11}+a_{22}+\cdots+a_{nn}$称为矩阵$A$的迹，记为$tr(A)$.<br>
+  ③设$A = (a_{ij})$是$n$阶方阵，如果$\sum_{j=1}^{n}|a_{ij}| &lt; 1(i=1, \, 2, \, \cdots , \, n)$或$\sum_{i=1}^{n}|a_{ij}| &lt; 1(j=1, \, 2, \, \cdots , \, n)$有一个成立，则矩阵$A$的所有特征值$\lambda_i$的模小于1，即$|\lambda_i| &lt; 1(i=1, \, 2 , \, \cdots, \, n)$.<br>
+  ④$n$阶矩阵$A$的互不相等的特征值$\lambda_1 , \, \lambda_2 , \, \cdots , \, \lambda_{m}$对应的特征向量$\alpha_1, \, \alpha_2 , \, \cdots , \, \alpha_m$线性无关。
+    </p><p style="font-size:14px;">注：(1)属于不同特征值的特征向量是线性无关的；<br>
+    (2) 属于同一特征值的特征向量的非零线性组合仍是属于这个特征值的特征向量；<br>
+   (3) 矩阵的特征向量总是相对于矩阵的特征值而言的，一个特征值对应的特征向量不唯一，一个特征向量不能属于不同的特征值；<br>
+  (4) 若$\lambda_1$为$n$阶矩阵$A$的$k_i$重特征值，则属于特征值的线性无关特征向量个数不超过其特征值的重数$k_i$，即$r = n-k_i$<br>
+  (5) 若$\lambda$是$A$的特征值，则$f(\lambda)$为$A$的多项式$f(A)$的特征值，$\lambda$也是$A^T$的特征值，当$\lambda \neq 0$时，$\lambda^{-1}$是$A^{-1}$的特征值；$\frac{|A|}{\lambda}$是$A^{ * }$的特征值。</p> <p></p> <h4 id="_3-相似矩阵"><a href="#_3-相似矩阵" class="header-anchor">#</a> 3. 相似矩阵</h4> <p style="font-size:16px;">  <b>定义</b> 设$A$,$B$都是n阶矩阵，若存在可逆矩阵$P$，使$P^{-1}AP = B$，则称$B$是$A$的相似矩阵，并称矩阵$A$与$B$相似，记为$A \sim B$.<br>
+    <b>性质</b><br>
+   ①相似矩阵有相同的特征多项式与特征值.<br>
+   ②相似矩阵的秩相等.<br>
+   ③相似矩阵的行列式相等.<br>
+   ④相似矩阵具有相同的可逆性，当它们可逆时，它们的逆矩阵也相似.</p> <h4 id="_4-矩阵与对角矩阵相似的条件"><a href="#_4-矩阵与对角矩阵相似的条件" class="header-anchor">#</a> 4. 矩阵与对角矩阵相似的条件</h4> <p style="font-size:16px;">  ①$n$阶矩阵$A$与对角矩阵$A=\begin{pmatrix}
+\lambda_1 &amp;  &amp;  &amp; \\ 
+ &amp; \lambda_2 &amp;  &amp; \\ 
+ &amp;  &amp; \ddots &amp; \\ 
+ &amp;  &amp;  &amp; \lambda_n
+\end{pmatrix}$相似的充要条件是矩阵$A$有$n$个线性无关的特征向量。<br>
+  ②若$n$阶矩阵$A$有$n$个不同的特征值$\lambda_1, \, \lambda_2 , \, \cdots , \, \lambda_n$，则$A$与对角矩阵$A$相似，对于$n$阶方阵$A$，若存在可逆矩阵$P$，使$P^{-1}AP = \Lambda $为对角阵，则称方阵$A$可对角化。<br>
+  ③$n$阶矩阵$A$可对角化的充要条件使对应于$A$的每个特征值的线性无关的特征向量的个数恰好等于该特征值的重数，即设$\lambda_i$使矩阵$A$的$n_i$重特征值，则<br>
+    $A$与$B$相似$\Leftrightarrow r(A - \lambda_i E) = n - n_i (i = 1, \, 2, \, \cdots , \, n)$.
+</p> <h4 id="_5-实对称矩阵的性质"><a href="#_5-实对称矩阵的性质" class="header-anchor">#</a> 5. 实对称矩阵的性质</h4> <p style="font-size:16px;">  ①实对称矩阵的特征值都为实数.<br>
+  ②设$\lambda_{1}$,$\lambda_{2}$是实对称矩阵A的两个特征值，$\alpha_{1}$,$\alpha_{2}$是对应的特征向量，若$\lambda_{1} \neq \lambda_{2}$，则$\alpha_{1}$与$\alpha_{2}$正交.<br>
+  ③设$A$为n阶实对称矩阵，$\lambda$是$A$的特征方程的k重根，则$r(A-\lambda E) = n-k$,从而对应特征值$\lambda$恰有k个线性无关的特征向量.<br>
+  ④设$A$为n阶实对称矩阵，则必有正交矩阵$P$，使$P^{-1}AP = B$(即实对称矩阵必可正交对角化).</p> <hr> <h3 id="六、二次型"><a href="#六、二次型" class="header-anchor">#</a> 六、二次型</h3> <h4 id="_1-二次型的概念"><a href="#_1-二次型的概念" class="header-anchor">#</a> 1. 二次型的概念</h4> <p style="font-size:16px;">  称含有$n$个变量$x_1, \, x_2, \, \cdots , \, x_n$的二次齐次函数$$\begin{align} f(x_1, \, x_2, \, \cdots , \, x_n) &amp;= a_{11} x_1^2+a_{22} x_2^2+ \cdots+a_{nn} x_n^2+ 2a_{12} x_1 x_2 + \cdots \\ &amp;+ 2a_{1n} x_1 x_n + 2a_{23} x_2 x_3 + \cdots + 2a_{2n} x_2 x_n + \cdots + 2a_{n-1,n}x_{n-1} x_n \end{align}$$为二次型.<br>
+  只含有平方项的二次型$f = k_1 y_1^2 + k_2 y_2^2 + \cdots + k_n y_n^2$称为二次型的标准型。若标准型的系数只在1，-1，0三个数值中取值，则称其为二次型的规范型。</p> <h4 id="_2-二次型的矩阵形式"><a href="#_2-二次型的矩阵形式" class="header-anchor">#</a> 2. 二次型的矩阵形式</h4> <p style="font-size:16px;">  设$$x = \begin{pmatrix}
+x_1\\ 
+x_2\\ 
+\vdots \\ 
+x_n
+\end{pmatrix}, \, A = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ 
+a_{21} &amp; a_{22} &amp; \cdots &amp;  a_{2n}\\ 
+\vdots &amp; \vdots &amp;  &amp; \vdots \\ 
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{pmatrix}, $$称$f(x) = x^T A x$为二次型的矩阵形式。其中实对称矩阵$A$称为该二次型的矩阵。二次型$f$称为实对称矩阵$A$的二次型。实对称矩阵$A$的秩称为二次型的秩。</p> <h4 id="_3-化二次型为标准型"><a href="#_3-化二次型为标准型" class="header-anchor">#</a> 3. 化二次型为标准型</h4> <p style="font-size:16px;">  任给二次型$f = \sum_{i,j=1}^n a_{ij}x_i x_j ( a_{ij} = a_{ji} )$，总有正交变换$x = Py$使$f$化为标准型$f= \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2$，其中$\lambda_1 , \, \lambda_2 , \, \cdots, \, \lambda_n$是$f$的矩阵$A = (a_{ij})$的特征值。<br>
+  用正交变换化二次型为标准型的步骤：<br>
+  ①将二次型表成矩阵形式$f=x^T A x$;<br>
+  ②求出$A$的所有特征值$\lambda_1 , \, \lambda_2 , \, \cdots , \, \lambda_n$;<br>
+  ③求出对应于特征值的特征向量$\xi_1 , \, \xi_2 , \, \cdots , \, \xi_n$;<br>
+  ④将特征向量$\xi_1 , \, \xi_2 , \, \cdots , \, \xi_n$正交化，单位化，得$\eta_1 , \, \eta_2 , \, \cdots , \, \eta_n$，记$C = (\eta_1 , \, \eta_2 , \, \cdots , \, \eta_n)$;<br>
+  ⑤作正交变换$x = Cy$，则得$f$的标准型$$f = \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2$$.</p> <h4 id="_4-矩阵的合同"><a href="#_4-矩阵的合同" class="header-anchor">#</a> 4. 矩阵的合同</h4> <h5 id="_1-合同矩阵"><a href="#_1-合同矩阵" class="header-anchor">#</a> (1) 合同矩阵</h5> <p style="font-size:16px;">  两个$n$阶方阵$A , \, B$，若存在可逆矩阵$P$，使得$P^T AP = B$成立，则称$A, \, B$合同，记为$A \simeq B$.</p> <h5 id="_2-矩阵合同的充要条件"><a href="#_2-矩阵合同的充要条件" class="header-anchor">#</a> (2) 矩阵合同的充要条件</h5> <p style="font-size:16px;">  矩阵$A, \, B$均为实对称矩阵，则$A \simeq B \Leftrightarrow$二次型$x^T Ax $与$x^T Bx $有相同的正负惯性指数，即有相同的规范型。</p> <h5 id="_3-等价、相似、合同之间的关系"><a href="#_3-等价、相似、合同之间的关系" class="header-anchor">#</a> (3) 等价、相似、合同之间的关系</h5> <p style="font-size:16px;">  ①<b>相似$\Rightarrow $等价</b><br>
+   $A \sim B \Rightarrow A, \, B$同型且$r(A) = r(B) \Rightarrow A \cong B$.<br>
+    ②<b>合同$\Rightarrow $等价</b><br>
+   $A \simeq B \Rightarrow A, \, B$同型且$r(A) = r(B) \Rightarrow A \cong B$.<br>
+    ③<b>相似与合同之间一般情况不能递推，但有以下附加条件时可以</b><br>
+    i) 若$A , \, B$均为实对称矩阵，则有$A, \, B$一定可以合同于对角矩阵，则$A \sim B \Rightarrow A \simeq B \Rightarrow A \cong B$.<br>
+    ii)存在一个正交矩阵$P$，使得$P^T AP = B$，即$A \simeq B$，则有$A \simeq B \Rightarrow A \sim B$.<br>
+    iii) 若$A, \, B$均为实对称矩阵，且存在一个正交矩阵$P$，使$A \sim B$时有$A \sim B \Leftrightarrow A \simeq B \Leftrightarrow A \cong B$.<br>
+    iv) $A \sim B \Rightarrow r(A) = r(B) , \,  A \simeq B \Rightarrow r(A) = r(B), \, A \cong B \Rightarrow r(A) = r(B)$.</p> <h4 id="_5-正定二次型与正定矩阵"><a href="#_5-正定二次型与正定矩阵" class="header-anchor">#</a> 5. 正定二次型与正定矩阵</h4> <h5 id="_1-定义"><a href="#_1-定义" class="header-anchor">#</a> (1) 定义</h5> <p style="font-size:16px;">  如果对任何非零向量$x$，都有$x^{T}Ax &gt; 0$(或$x^{T}Ax &lt; 0$)成立，则称$f = x^{T}Ax$为正定(负定)二次型，矩阵$A$称为正定矩阵(负定矩阵).</p> <h5 id="_2-正定矩阵的判别法"><a href="#_2-正定矩阵的判别法" class="header-anchor">#</a> (2) 正定矩阵的判别法</h5> <p style="font-size:16px;">  ①设$A$为正定矩阵，若$A$与$B$合同，则$B$也是正定矩阵.<br>
+  ②对角矩阵$A = diag(d_1, \, d_2, \, \cdots d_n)$正定的充要条件是$d_i &gt; 0 , \, i = 1, \, 2, \, 3, \, \cdots , \, n$.<br>
+  ③对称矩阵$A$为正定的充要条件是它的特征值全大于零。<br>
+  ④$A$为正定矩阵的充要条件是$A$的正惯性指数$p=n$. <br>
+  ⑤矩阵$A$为正定矩阵的充要条件是：存在非奇异矩阵$C$，使$A = C^T C$，即$A$与$E$合同。<br>
+  ⑥n阶矩阵$A = (a_{ij})$为正定矩阵的充要条件是$A$的所有顺序主子式均为正。<br>
+    <b>推论</b> 若$A$为正定矩阵，则$| A  | &gt; 0 $.</p> <hr></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/42.bce35ce6.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

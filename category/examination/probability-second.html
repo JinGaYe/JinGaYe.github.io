@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>概率统计知识总结 (二) | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/44.b6f6bd0c.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-2310" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>概率统计知识总结 (二)</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2019-12-12</span> <span>文章字数：1174</span> <span>预计用时：5分52秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#四、随机变量的数字特征">四、随机变量的数字特征</a><ul><li><a href="#_1-数学期望">1. 数学期望</a><ul><li><a href="#_1-定义">(1) 定义</a></li><li><a href="#_2-性质">(2) 性质</a></li></ul></li><li><a href="#_2-方差">2. 方差</a><ul><li><a href="#_1-定义">(1) 定义</a></li><li><a href="#_2-计算">(2) 计算</a></li><li><a href="#_3-性质">(3) 性质</a></li></ul></li><li><a href="#_3-协方差与相关系数">3. 协方差与相关系数</a><ul><li><a href="#_1-协方差">(1) 协方差</a></li><li><a href="#_2-相关系数">(2) 相关系数</a></li><li><a href="#_3-协方差与相关系数的性质">(3) 协方差与相关系数的性质</a></li></ul></li><li><a href="#_4-常见分布的数学期望与方差">4. 常见分布的数学期望与方差</a></li></ul></li><li><a href="#五、大数定律和中心极限定理">五、大数定律和中心极限定理</a><ul><li><a href="#_1-切比雪夫不等式">1. 切比雪夫不等式</a></li><li><a href="#_2-大数定律">2. 大数定律</a><ul><li><a href="#_1-切比雪夫大数定律">(1) 切比雪夫大数定律</a></li><li><a href="#_2-伯努利大数定律">(2) 伯努利大数定律</a></li><li><a href="#_3-辛钦大数定律">(3) 辛钦大数定律</a></li></ul></li><li><a href="#_3-中心极限定理">3. 中心极限定理</a><ul><li><a href="#_1-列维-林德伯格定理">(1) 列维——林德伯格定理</a></li><li><a href="#_2-棣莫弗-拉普拉斯定理">(2) 棣莫弗——拉普拉斯定理</a></li></ul></li></ul></li><li><a href="#六、数理统计的基本概念">六、数理统计的基本概念</a><ul><li><a href="#_1-总体和样本">1. 总体和样本</a><ul><li><a href="#_1-总体">(1) 总体</a></li><li><a href="#_2-样本">(2) 样本</a></li><li><a href="#_3-简单随机样本">(3) 简单随机样本</a></li><li><a href="#_4-样本-x-1-x-2-cdots-x-n-的联合分布函数">(4) 样本($X1, \, X2, \, \cdots, \, X_n$)的联合分布函数</a></li></ul></li><li><a href="#_2-统计量">2. 统计量</a><ul><li><a href="#_1-定义">(1) 定义</a></li><li><a href="#_2-常用统计量">(2) 常用统计量</a></li></ul></li><li><a href="#_3-常用抽样分布">3. 常用抽样分布</a><ul><li><a href="#_1-chi-2-分布">(1) $\chi^2$分布</a></li><li><a href="#_2-t-分布">(2) $t$分布</a></li><li><a href="#_3-f-分布">(3) $F$分布</a></li></ul></li><li><a href="#_4-正态总体的常用统计量分布">4. 正态总体的常用统计量分布</a><ul><li><a href="#_1-单个正态总体的抽样分布">(1) 单个正态总体的抽样分布</a></li><li><a href="#_2-两个正态总体的抽样分布">(2) 两个正态总体的抽样分布</a></li></ul></li></ul></li></ul></div><p></p> <p style="font-size:18px;">  概率统计总的是有八章内容，相比线性代数多一点，且七八章主要是统计部分的内容，表格类描述的较多，故单独把七八章放到第三部分。本文主要总结数字特征、大数定理、中心极限定理和数理统计的基本概念。内容上是较多较杂，需要好好梳理才能掌握好。</p> <h3 id="四、随机变量的数字特征"><a href="#四、随机变量的数字特征" class="header-anchor">#</a> 四、随机变量的数字特征</h3> <h4 id="_1-数学期望"><a href="#_1-数学期望" class="header-anchor">#</a> 1. 数学期望</h4> <h5 id="_1-定义"><a href="#_1-定义" class="header-anchor">#</a> (1) 定义</h5> <p style="font-size:16px;">  ①<b>离散型</b><br>
+  设$P \left \{ X = x_k \right \} = p_k , \, k=1, \, 2, \, \cdots $，若$\sum_k x_k p_k$绝对收敛，则称$\sum_k x_k p_k$的和为随机变量$X$的数学期望，即$E(X) = \sum_k x_k p_k$.<br>
+    ②<b>连续型</b><br>
+  设$X$的概率密度函数为$f(x)$，若积分$\int_{-\infty}^{+\infty}xf(x)dx$绝对收敛，则称$\int_{-\infty}^{+\infty}xf(x)dx$为随机变量$X$的数学期望，即$E(X) = \int_{-\infty}^{+\infty}xf(x)dx$.</p> <h5 id="_2-性质"><a href="#_2-性质" class="header-anchor">#</a> (2) 性质</h5> <p style="font-size:16px;">  ①$E(C） = C$，$C$为任意常数；$E[E(X)] = E(X)$.<br>
+  ②$E(CX) = CE(X)$. <br>
+  ③$E(X+Y) = E(X) + E(Y)$; <br>
+   $E(aX+b) = aE(X) + b$.<br>
+  ④若$X$与$Y$相互独立，则$E(XY)=E(X)E(Y)$.一般地，若$X_1 , \, X_2 , \, \cdots , \, X_n$相互独立，则$E(X_1 X_2 \cdots X_n) = E(X_1)E(X_2) \cdots E(X_n)$.<br>
+  ⑤$[E(XY)]^2 \leqslant E^2(X)E^2(Y)$</p> <h4 id="_2-方差"><a href="#_2-方差" class="header-anchor">#</a> 2. 方差</h4> <h5 id="_1-定义-2"><a href="#_1-定义-2" class="header-anchor">#</a> (1) 定义</h5> <p style="font-size:16px;">  设$X$是一个随机变量，若$E \left \{ [X - E(X)]^2 \right \}$存在，则称$E \left \{ [X - E(X)]^2 \right \}$为$X$的方差，记为$D(X)$或$Var(X)$，即$D(X) = E \left \{ [X - E(X)]^2 \right \}$. $\sigma(X) = \sqrt{D(X)}$称为标准差或均方差.</p> <h5 id="_2-计算"><a href="#_2-计算" class="header-anchor">#</a> (2) 计算</h5> <p style="font-size:16px;">  ①若X为离散型随机变量，$P \left \{ X = x_k \right \} = p_k, \, k=1, \, 2 , \, \cdots$，则$$D(X) = \sum_k [ x_k - E(X) ] ^2 p_k$$
+  ②若$X$是连续型随机变量，其密度函数为$f(x)$，则$D(X) = \int_{-\infty}^{+ \infty}[x - E(X)]^2 f(x)dx$.<br>
+  ③常用计算公式$D(X) = E(X^2) - E^2(X) $</p> <h5 id="_3-性质"><a href="#_3-性质" class="header-anchor">#</a> (3) 性质</h5> <p style="font-size:16px;">  ①$D(C) = 0$，$C$为任意常数; $D[D(X)] = 0$. <br>
+  ②$D(aX+b) = a^2D(X)$，$a, \, b$为常数.<br>
+  ③若$X$与$Y$相互独立，则$D(X \pm Y) = D(X) + D(Y)$. <br>
+  ④$D(X \pm Y) = D(X) + D(Y) \pm 2Cov(X, \, Y)$. <br>
+  ⑤$D(X) &lt; E(X-C)^2 , C \neq E(X)$. <br>
+  ⑥$D(X) = 0 \Leftrightarrow P(X=C) = 1$.</p> <h4 id="_3-协方差与相关系数"><a href="#_3-协方差与相关系数" class="header-anchor">#</a> 3. 协方差与相关系数</h4> <h5 id="_1-协方差"><a href="#_1-协方差" class="header-anchor">#</a> (1) 协方差</h5> <p style="font-size:16px;">  对于随机变量$X, \, Y$，如果$E \left \{[X - E(X) ][Y - E(Y)] \right \}$存在，则称其为随机变量$X, \, Y$的协方差，记为$Cov(X, \, Y)$，即<br>
+  $Cov(X, \, Y) = E \left \{[X - E(X)][Y - E(Y)] \right \}$</p> <h5 id="_2-相关系数"><a href="#_2-相关系数" class="header-anchor">#</a> (2) 相关系数</h5> <p style="font-size:16px;">  对于随机变量$X, \, Y$，如果$D(X) \neq 0, \, D(Y) \neq 0$，则称$\frac{Cov(X, \, Y)}{\sqrt{D(X)} \sqrt{D(Y)}}$为随机变量$XX, \, Y$的相关系数，记为$$\rho_{XY} = \rho(X, \, Y) = \frac{Cov(X, \, Y)}{\sqrt{D(X)} \sqrt{D(Y)}}$$<span style="font-size:14px;">注：$\rho_{XY}$表征随机变量$X, \, Y$之间的线性关系紧密程度，当$| \rho_{XY} |$较大时，说明$X$与$Y$线性相关程度较强；当$| \rho_{XY} |$较小时，说明$X$与$Y$线性相关程度较弱，当$| \rho_{XY} | = 0$时，称$X$与$Y$不相关。</span></p> <h5 id="_3-协方差与相关系数的性质"><a href="#_3-协方差与相关系数的性质" class="header-anchor">#</a> (3) 协方差与相关系数的性质</h5> <p style="font-size:16px;">  ①$Cov(X, \, X) = D(X)$.<br>
+  ②$Cov(X, \, Y) = Cov(Y, \, X)$.<br>
+  ③$Cov(X_1+ X_2, \, Y) = Cov(X_1, \, Y) + Cov(X_2, \, Y)$.<br>
+  ④$Cov(aX+c, \, bY+d) = abCov(X, \, Y), \, a, \, b, \, c, \, d$是常数.<br>
+  ⑤$| \rho_{XY} | \leqslant 1$.<br>
+  ⑥$| \rho_{XY} | = 1 \Leftrightarrow X$与$Y$以概率1线性相关，即存在$a, \, b$且$a \neq 0$，使$P(Y = aX+ b) = 1$. </p> <h4 id="_4-常见分布的数学期望与方差"><a href="#_4-常见分布的数学期望与方差" class="header-anchor">#</a> 4. 常见分布的数学期望与方差</h4> <table><thead><tr><th>分布</th> <th>数学期望</th> <th>方差</th></tr></thead> <tbody><tr><td>0 — 1 分布$B(1, , p)$</td> <td>$p$</td> <td>$p(1-p)$</td></tr> <tr><td>二项分布 $B(n, , p)$</td> <td>$np$</td> <td>$np(1-p)$</td></tr> <tr><td>泊松分布 $P(\lambda)$</td> <td>$\lambda$</td> <td>$\lambda$</td></tr> <tr><td>几何分布 $G(p)$</td> <td>$\frac{1}{p}$</td> <td>$\frac{1-p}{p^2}$</td></tr> <tr><td>超几何分布 $H(N, , M , , n)$</td> <td>$n \cdot \frac{M}{N}$</td> <td>$n \cdot \frac{M}{N}(1 - \frac{M}{N}) \cdot \frac{N-n}{N-1}$</td></tr> <tr><td>均匀分布 $U(a, , b)$</td> <td>$\frac{a+b}{2}$</td> <td>$\frac{(b-a)^2}{12}$</td></tr> <tr><td>正态分布 $N(\mu , , \sigma^2)$</td> <td>$\mu$</td> <td>$\sigma^2$</td></tr> <tr><td>指数分布 $E(\lambda)$</td> <td>$\frac{1}{\lambda}$</td> <td>$\frac{1}{\lambda^2}$</td></tr></tbody></table> <hr> <h3 id="五、大数定律和中心极限定理"><a href="#五、大数定律和中心极限定理" class="header-anchor">#</a> 五、大数定律和中心极限定理</h3> <h4 id="_1-切比雪夫不等式"><a href="#_1-切比雪夫不等式" class="header-anchor">#</a> 1. 切比雪夫不等式</h4> <p style="font-size:16px;">  设$X$是一个随机变量，且有有限方差，则对任意$\varepsilon &gt; 0$，有$$P \left \{ |X - E(X) | \geqslant \varepsilon \right \} \leqslant \frac{D(X)}{\varepsilon ^2}$$或$P \left \{ |X - E(X) | &lt; \varepsilon \right \} \geqslant \frac{D(X)}{\varepsilon ^2}$.</p> <h4 id="_2-大数定律"><a href="#_2-大数定律" class="header-anchor">#</a> 2. 大数定律</h4> <h5 id="_1-切比雪夫大数定律"><a href="#_1-切比雪夫大数定律" class="header-anchor">#</a> (1) 切比雪夫大数定律</h5> <p style="font-size:16px;">  设随机变量$X_1 , \, X_2 , \, \cdots , \, X_n , \, \cdots$相互独立，每个$X_k$的方差存在，且一致有界，即存在常数$c$使得$D(X_k) \leqslant c (k = 1, \, 2, \, \cdots)$.令$$\overline{X} = \frac{1}{n}\sum_{k=1}^{n}X_k$$，$\mu = E(\overline{X})$，则对任意正数$\varepsilon$，有$$\lim_{n \to \infty}P \left \{ | \overline(X) - \mu | &lt; \varepsilon \right \} = 1$$或$\lim\limits_{n \to \infty}P \left \{ | \overline(X) - \mu | \geqslant \varepsilon \right \} = 0$.</p> <h5 id="_2-伯努利大数定律"><a href="#_2-伯努利大数定律" class="header-anchor">#</a> (2) 伯努利大数定律</h5> <p style="font-size:16px;">  设事件$A$在每次试验中发生的概率为$p , \, n$此重复独立试验中事件$A$发生的次数为$n_A$，则对任意正数$\varepsilon$，有$\lim\limits_{n \to \infty}P \left \{ |\frac{n_A}{n} - p| &lt; \varepsilon \right \} = 1$或$\lim\limits_{n \to \infty}P \left \{ |\frac{n_A}{n} - p| \geqslant \varepsilon \right \} = 0$</p> <h5 id="_3-辛钦大数定律"><a href="#_3-辛钦大数定律" class="header-anchor">#</a> (3) 辛钦大数定律</h5> <p style="font-size:16px;">  设随机变量$X_1, \, X_2, \, \cdots , \, X_n , \, \cdots$相互独立，服从同一分布，且具有相同的数学期望$E(X_k) = \mu (k= 1 , \, 2 , \, \cdots)$，则对任意正数$\varepsilon$，有$$\lim_{n \to \infty} P \left \{ | \frac{1}{n}\sum_{k=1}^{n}X_k - \mu | \right \} = 1$$或   $\lim\limits_{n \to \infty}P \left \{ | \frac{1}{n} \sum_{k=1}^{n}X_k - \mu | \right \} = 0$.</p> <h4 id="_3-中心极限定理"><a href="#_3-中心极限定理" class="header-anchor">#</a> 3. 中心极限定理</h4> <h5 id="_1-列维-林德伯格定理"><a href="#_1-列维-林德伯格定理" class="header-anchor">#</a> (1) 列维——林德伯格定理</h5> <p style="font-size:16px;">  设随机变量$X_1, \, X_2, \, \cdots , \, X_n , \, \cdots $相互独立，服从同一分布，且具有相同的数学期望和方差$E(X_k) = \mu, \, D(X_k) = \sigma  ^2(k = 1, \, 2, \, \cdots)$，则随机变量$Y_n = \frac{\sum_{k=1}^{n}X_k - n\mu }{\sqrt{n}\sigma}$的分布函数$F_n(x)$收敛到标准正态分布，即对任意$x$满足$$\lim_{n \to \infty}F_n(x) = \int_{-\infty}^{x}\frac{1}{\sqrt{2 \pi}}e^{-\frac{t^2}{2}}dt$$.</p> <h5 id="_2-棣莫弗-拉普拉斯定理"><a href="#_2-棣莫弗-拉普拉斯定理" class="header-anchor">#</a> (2) 棣莫弗——拉普拉斯定理</h5> <p style="font-size:16px;">  设随机变量$\eta_n(n = 1, \, 2, \, \cdots) \, \sim \, B(n, \, p)(0 &lt; p &lt; 1)$，则对任意$x$，有$$\lim_{n \to \infty}P \left \{ \frac{\eta_{n}-np}{\sqrt{np(1-p)}} \leqslant x \right \} = \int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}}e^{-\frac{t^2}{2}}dt$$.显然$\eta_n = \sum_{k=1}^{n}X_k$，其中$X_1 , \, X_2 , \, \cdots , \, X_n$独立同服从$B(1 , \, p)$分布.</p> <hr> <h3 id="六、数理统计的基本概念"><a href="#六、数理统计的基本概念" class="header-anchor">#</a> 六、数理统计的基本概念</h3> <h4 id="_1-总体和样本"><a href="#_1-总体和样本" class="header-anchor">#</a> 1. 总体和样本</h4> <h5 id="_1-总体"><a href="#_1-总体" class="header-anchor">#</a> (1) 总体</h5> <p style="font-size:16px;">  把研究对象的全体所构成的一个集合称为总体，总体是一个随机变量，记作$X$. 而把组成总体的每一个元素称为个体.</p> <h5 id="_2-样本"><a href="#_2-样本" class="header-anchor">#</a> (2) 样本</h5> <p style="font-size:16px;">  从总体中按照某种方式抽取若干个个体所组成的集合称为样本，个体的个数$n$称为样本容量，容量为$n$的样本记为($X_1, \, X_2, \, \cdots, \, X_n$).</p> <h5 id="_3-简单随机样本"><a href="#_3-简单随机样本" class="header-anchor">#</a> (3) 简单随机样本</h5> <p style="font-size:16px;">  总体$X$中的$n$个相互独立且与总体$X$同分布的随机变量$X_1, \, X_2, \, \cdots, \, X_n$称为容量为$n$的简单随机样本，简称样本.</p> <h5 id="_4-样本-x-1-x-2-cdots-x-n-的联合分布函数"><a href="#_4-样本-x-1-x-2-cdots-x-n-的联合分布函数" class="header-anchor">#</a> (4) 样本($X_1, , X_2, , \cdots, , X_n$)的联合分布函数</h5> <p style="font-size:16px;"></p> <h4 id="_2-统计量"><a href="#_2-统计量" class="header-anchor">#</a> 2. 统计量</h4> <h5 id="_1-定义-3"><a href="#_1-定义-3" class="header-anchor">#</a> (1) 定义</h5> <p style="font-size:16px;">  不含总体分布中任何未知参数的样本$X_1, \, X_2, \, \cdots, \, X_n$的任意函数$g(X_1, \, X_2, \, \cdots, \, X_n)$称为统计量.若$x_1, \, x_2, \, \cdots, \, x_n$是样本($X_1, \, X_2, \, \cdots, \, X_n$)的一个观察值，则称$g(x_1, \, x_2, \, \cdots, \, x_n)$是$g(X_1, \, X_2, \, \cdots, \, X_n)$的观察值.</p> <h5 id="_2-常用统计量"><a href="#_2-常用统计量" class="header-anchor">#</a> (2) 常用统计量</h5> <p style="font-size:16px;">  设$X_1, \, X_2, \, \cdots, \, X_n$是来自总体$X$的一个样本，$x_1, \, x_2, \, \cdots, \, x_n$是这一样本的观察值。<br>
+    ①<b>样本均值</b> $\overline{X} = \frac{1}{n}\sum_{i=1}^n X_i$;<br>
+    ②<b>样本方差</b>$$\begin{align}S^2 &amp;= \frac{1}{n-1}\sum_{i=1}^n(X_i - \overline{X})^2 \\ &amp;= \frac{1}{n-1}(\sum_{i=1}^n X_i^2 - n \overline{X}^2 );  \end{align}$$ <br>
+    ③<b>样本标准差</b>$S = \sqrt{\frac{1}{n-1}} \sum_{i=1}^n(X_i - \overline{X})^2$;<br>
+    ④<b>样本$k$阶原点矩</b>$A_k = \frac{1}{n}\sum_{i=1}^n X_i^k, 
+, k=1, \, 2, \, \cdots $;<br>
+    ⑤<b>样本$k$阶中心距</b>$B_k = \frac{1}{n}\sum_{i=1}^n (X_i - \overline{X})^k , \, k=1, \, 2, \, \cdots$。</p> <h4 id="_3-常用抽样分布"><a href="#_3-常用抽样分布" class="header-anchor">#</a> 3. 常用抽样分布</h4> <h5 id="_1-chi-2-分布"><a href="#_1-chi-2-分布" class="header-anchor">#</a> (1) $\chi^2$分布</h5> <p style="font-size:16px;">  ①<b>定义</b> 设随机变量$X_1, \, X_2, \, \cdots, \, X_n$相互独立，且都服从标准正态分布$N(0, \, 1)$，则随机变量$\chi^2 = X_1^2 + X_2^2 + \cdots + X_n^2$所服从的分布称为自由度为$n$的$\chi^2$分布，记为$\chi^2 \sim \chi^2(n)$。<br>
+    ②<b>性质</b><br>
+  i)若$X \sim \chi^2(n) , \, Y \sim \chi^2(m)$且$X$与$Y$独立，则$X+Y \sim \chi^2(m+n)$。<br>
+  ii)$E(\chi^2(n)) = n , \, D(\chi^2(n)) = 2n$。</p> <h5 id="_2-t-分布"><a href="#_2-t-分布" class="header-anchor">#</a> (2) $t$分布</h5> <p style="font-size:16px;">  ①<b>定义</b> 设$X \sim N(0, \, 1), \, Y \sim \chi^2(n), \, X$与$Y$独立，则随机变量$T= \frac{X}{\sqrt{Y/n}}$所服从的分布称为自由度为$n$的$t$分布，记为$T \sim t(n)$。<br>
+    ②<b>性质</b><br>
+  i)$E(T) = 0, \, n &gt; 1, \, D(T) = \frac{n}{n-2} , \, n &gt; 2.$<br>
+  ii)$\lim\limits_{n \to \infty}f(x) = \frac{1}{\sqrt{2 \pi}}e^{-\frac{x^2}{2}} = \varphi(x), \,$即当$n$足够大时，$t(n)$近似服从$N(0, \, 1)$</p> <h5 id="_3-f-分布"><a href="#_3-f-分布" class="header-anchor">#</a> (3) $F$分布</h5> <p style="font-size:16px;">  ①<b>定义</b> 设随机变量$U \sim \chi^2(n_1), \, V \sim \chi^2(n_2), \,$且$U$与$V$独立，则随机变量$F(n_1, \, n_2) = \frac{U/n_1}{V/n_2}$所服从的分布称为自由度为$(n_1, \, n_2)$的$F$分布，记作$F \sim F(n_1, \, n_2)$。<br>
+    ②<b>性质</b><br>
+  i)若$F \sim F(n_1, \, n_2)$，则$\frac{1}{F} \sim F(n_2, \, n_1)$<br>
+  ii)若$X \sim t(n), \,$则$X^2 \sim F(1,n)$。</p> <h4 id="_4-正态总体的常用统计量分布"><a href="#_4-正态总体的常用统计量分布" class="header-anchor">#</a> 4. 正态总体的常用统计量分布</h4> <h5 id="_1-单个正态总体的抽样分布"><a href="#_1-单个正态总体的抽样分布" class="header-anchor">#</a> (1) 单个正态总体的抽样分布</h5> <p style="font-size:16px;">  设$X_1, \, X_2, \, \cdots, \, X_n$是来自总体$N(\mu, \, \sigma^2)$的样本，$\overline{X}, \, S^2$分别是样本均值与样本方差，则<br>
+  ①$\overline{X} \sim N(\mu, \, \frac{\sigma^2}{n}, \, \frac{\overline{X} - \mu}{\sigma/ \sqrt{n}} \sim N(0, \, 1)$;<br>
+  ②$\overline{X}$与$S^2$相互独立，且$E(\overline{X}) = \mu, \, E(S^2) = \sigma^2$;
+  ③$$\begin{align} \frac{(n-1)S^2}{\sigma^2} &amp;= \frac{1}{\sigma^2}\sum_{i=1}^n (X_i - \overline{X})^2 \\ &amp; \sim \chi^2(n-1); \end{align}$$
+  ④$\frac{1}{\sigma^2}\sum_{i=1}^n(X_i - \overline{X})^2 \sim \chi^2(n)$;<br>
+  ⑤$\frac{\overline{X}- \mu}{S/ \sqrt{n}} \sim t(n-1)$。</p> <h5 id="_2-两个正态总体的抽样分布"><a href="#_2-两个正态总体的抽样分布" class="header-anchor">#</a> (2) 两个正态总体的抽样分布</h5> <p style="font-size:16px;">  设$X_1, \, X_2, \, \cdots, \, X_{n_1}$和$Y_1, \, Y_2, \, \cdots , \, Y_{n_2}$分别是来自正态总体$N(\mu_1, \, \sigma_1^2), \, N(\mu_2, \, \sigma_2^2)$的样本，且这两个样本相互独立，设$$\overline{X} = \frac{1}{n_1}\sum_{i=1}^{n_1}Xi , \, S_1^2 = \frac{1}{n_1-1}\sum_{i=1}^{n_1}(X_i-\overline{X})^2$$
+$$\overline{Y} = \frac{1}{n_2}\sum_{i=1}^{n_2}Y_i , \, S_2^2 = \frac{1}{n_2-1}\sum_{i=1}^{n_2}(Y_i-\overline{Y})^2$$分别是这两个样本的样本均值与样本方差，则①$$\begin{align} &amp; \overline{X} \pm \overline{Y} \sim N(\mu_1 \pm \mu_2, \frac{\sigma_1^2}{n_1}+ \frac{\sigma_2^2}{n_2}), \\ &amp; \frac{(\overline{X}-\overline{Y})-(\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1}+ \frac{\sigma_2^2}{n_2}}} \sim N(0, \, 1) \end{align}$$
+②$$\frac{(n_1-1)S_1^2}{\sigma_1^2}+\frac{(n_2-1)S_2^2}{\sigma_2^2} \sim \chi^2(n_1+n_2-2)$$
+③$$\frac{\sum_{i=1}^{n_1}(X_i-\mu_1)^2/n_1 \sigma_1^2}{\sum_{i=1}^{n_2}(Y_i-\mu_2)^2/n_2 \sigma_2^2} \sim F(n_1, \, n_2)$$
+④$$\frac{S_1^2/S_2^2}{\sigma_1^2/ \sigma_2^2} = \frac{S_1^2/ \sigma_1^2}{S_2^2/ \sigma_2^2} \sim F(n_1-1, \, n_2-1)$$
+⑤当$\sigma_1^2 = \sigma_2^2 = \sigma^2$时，$$\frac{(\overline{X}-\overline{Y})-(\mu_1-\mu_2)}{S_\omega \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t(n_1+n_2-2)$$
+其中$$S_\omega^2 = \frac{(n_1-1)S_1^2 + (n_2-1)S_2^2}{n_1+n_2-2}$$</p> <hr></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/44.b6f6bd0c.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

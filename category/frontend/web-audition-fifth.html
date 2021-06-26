@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>web 前端面试题 [Vue基础] | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="收集 web 前端常见面试题，包括 web基础, html,css,js,vue,react,webpack 等">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/74.1d183506.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-6533" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>web 前端面试题 [Vue基础]</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2020-09-10</span> <span>文章字数：717</span> <span>预计用时：3分35秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#_1-vue3-0-功能-改进的地方">1. vue3.0 功能/改进的地方</a></li><li><a href="#_2-vue-模板语法使用的-web-模板引擎">2. vue 模板语法使用的 web 模板引擎</a></li><li><a href="#_3-v-model">3. v-model</a></li><li><a href="#_4-computed-与-data">4. computed 与 data</a></li><li><a href="#_5-methods-与-data">5. methods 与 data</a></li><li><a href="#_6-vue-定义全局的方法">6. vue 定义全局的方法</a></li><li><a href="#_7-vue2-0-不再支持-v-html-中使用过滤器">7. vue2.0 不再支持 v-html 中使用过滤器</a></li><li><a href="#_8-vue-打包后静态资源图片失效的问题">8. vue 打包后静态资源图片失效的问题</a></li><li><a href="#_9-vue-动态设置-img-的-src-不生效的问题">9. vue 动态设置 img 的 src 不生效的问题</a></li><li><a href="#_10-vue-针对搜索引擎-seo-优化">10. vue 针对搜索引擎 SEO 优化</a></li><li><a href="#_11-keep-alive-有关的生命周期">11. keep-alive 有关的生命周期</a></li><li><a href="#_12-vue-推荐的风格指南">12. vue 推荐的风格指南</a></li><li><a href="#_13-vue1-x-与-vue2-x-的区别">13. vue1.x 与 vue2.x 的区别</a></li><li><a href="#_14-vue-中-key-的原理">14. vue 中 key 的原理</a></li><li><a href="#_15-vue-中怎么重置-data">15. vue 中怎么重置 data</a></li><li><a href="#_16-vue-渲染模板怎么保留-html-注释">16. vue 渲染模板怎么保留 HTML 注释</a></li><li><a href="#_17-vue-observable">17. Vue.observable</a></li><li><a href="#_18-style-加-scoped-属性的用途和原理">18. style 加 scoped 属性的用途和原理</a></li><li><a href="#_19-vue-边界情况">19. vue 边界情况</a></li><li><a href="#_20-子组件怎么访问父组件的实例">20. 子组件怎么访问父组件的实例</a></li><li><a href="#_21-watch-属性用箭头函数定义结果怎么样">21. watch 属性用箭头函数定义结果怎么样？</a></li><li><a href="#_22-methods-方法用箭头函数定义结果怎么样">22. methods 方法用箭头函数定义结果怎么样？</a></li><li><a href="#_23-vue-如何配置-favicon">23. vue 如何配置 favicon</a></li><li><a href="#_24-babel-polyfill-模块">24. babel-polyfill 模块</a></li><li><a href="#_25-vue-的错误处理">25. vue 的错误处理</a></li><li><a href="#_26-vue-传入-event-e-target-与-e-currenttarget-区别">26. vue 传入\$event，e.target 与 e.currentTarget 区别</a></li><li><a href="#_27-vue-中-style-必须-script-必须">27. vue 中 style 必须？script 必须？</a></li><li><a href="#_28-vue-中强制刷新组件">28. vue 中强制刷新组件</a></li><li><a href="#_29-vue-自定义事件中父组件怎么接受子组件的多个参数">29. vue 自定义事件中父组件怎么接受子组件的多个参数</a></li><li><a href="#_30-vue-组件怎么处理绑定自定义事件无效">30. vue 组件怎么处理绑定自定义事件无效</a></li><li><a href="#_31-vue-变量名如果以-、-开头的属性会发生什么问题-怎么访问到它们的值">31. vue 变量名如果以_、\$开头的属性会发生什么问题？怎么访问到它们的值？</a></li><li><a href="#_32-vue-使用-v-for-遍历对象时-是按什么顺序遍历的-如何保证顺序">32. vue 使用 v-for 遍历对象时，是按什么顺序遍历的？如何保证顺序？</a></li><li><a href="#_33-vue-如果想扩展某个现有的组件时-怎么做呢">33. vue 如果想扩展某个现有的组件时，怎么做呢？</a></li><li><a href="#_34-attrs-与-listeners">34. attrs 与 listeners</a></li><li><a href="#_35-v-once-的使用场景">35. v-once 的使用场景</a></li><li><a href="#_36-vue-项目本地开发完成后部署到服务器后报-404">36. vue 项目本地开发完成后部署到服务器后报 404</a></li><li><a href="#_37-表单修饰符和事件修饰符">37. 表单修饰符和事件修饰符</a></li><li><a href="#_38-vue-为什么要求组件模板只能有一个根元素">38. vue 为什么要求组件模板只能有一个根元素?</a></li><li><a href="#_39-怎么解决-eventbus-注册在全局上时-路由切换时会重复触发事件">39. 怎么解决 EventBus 注册在全局上时，路由切换时会重复触发事件</a></li><li><a href="#_40-怎么修改-vue-打包后生成文件路径">40. 怎么修改 vue 打包后生成文件路径？</a></li><li><a href="#_41-vue-中什么是递归组件-举个例子说明下">41. vue 中什么是递归组件？举个例子说明下？</a></li><li><a href="#_42-怎么访问到子组件的实例或者子元素">42. 怎么访问到子组件的实例或者子元素？</a></li><li><a href="#_43-在子组件中怎么访问到父组件的实例">43. 在子组件中怎么访问到父组件的实例？</a></li><li><a href="#_44-在组件中怎么访问到根实例">44. 在组件中怎么访问到根实例？</a></li><li><a href="#_45-说说你对-object-defineproperty-的理解">45. 说说你对 Object.defineProperty 的理解</a></li><li><a href="#_46-vue-组件里写的原生-addeventlisteners-监听事件-要手动去销毁吗-为什么">46. vue 组件里写的原生 addEventListeners 监听事件，要手动去销毁吗？为什么？</a></li><li><a href="#_47-vue-组件里的定时器要怎么销毁">47. vue 组件里的定时器要怎么销毁？</a></li><li><a href="#_48-vue-组件会在什么时候下被销毁">48. vue 组件会在什么时候下被销毁？</a></li><li><a href="#_49-使用-vue-渲染大量数据时应该怎么优化-说下你的思路">49. 使用 vue 渲染大量数据时应该怎么优化？说下你的思路！</a></li><li><a href="#_50-在-vue-中使用-this-应该注意哪些问题">50. 在 vue 中使用 this 应该注意哪些问题？</a></li><li><a href="#_51-你有使用过-jsx-吗-说说你对-jsx-的理解">51. 你有使用过 JSX 吗？说说你对 JSX 的理解</a></li><li><a href="#_52-说说组件的命名规范">52. 说说组件的命名规范</a></li><li><a href="#_53-怎么配置使-vue2-0-支持-typescript-写法">53. 怎么配置使 vue2.0+支持 TypeScript 写法？</a></li><li><a href="#_54-template-template-有什么用">54. &lt; template &gt; &lt; /template &gt; 有什么用？</a></li><li><a href="#_55-vue-的-is-这个特性你有用过吗-主要用在哪些方面">55. vue 的 is 这个特性你有用过吗？主要用在哪些方面？</a></li><li><a href="#_56-vue-的-class-和-style-有几种表示方式">56. vue 的:class 和:style 有几种表示方式？</a></li><li><a href="#_57-函数式组件">57. 函数式组件</a></li><li><a href="#_58-vue-怎么改变插入模板的分隔符">58. vue 怎么改变插入模板的分隔符？</a></li><li><a href="#_59-组件中写-name-选项有什么作用">59. 组件中写 name 选项有什么作用？</a></li><li><a href="#_60-说说你对-provide-和-inject-的理解">60. 说说你对 provide 和 inject 的理解</a></li><li><a href="#_61-vue-devtools">61. vue-devtools</a></li><li><a href="#_62-slot-的理解-slot-使用场景有哪些">62. slot 的理解？slot 使用场景有哪些？</a></li><li><a href="#_63-你有使用过动态组件吗-说说你对它的理解">63. 你有使用过动态组件吗？说说你对它的理解</a></li><li><a href="#_64-prop-验证的-type-类型有哪几种">64. prop 验证的 type 类型有哪几种？</a></li><li><a href="#_65-prop-是怎么做验证的-可以设置默认值吗">65. prop 是怎么做验证的？可以设置默认值吗？</a></li><li><a href="#_66-怎么缓存当前打开的路由组件-缓存后想更新当前组件怎么办呢">66. 怎么缓存当前打开的路由组件，缓存后想更新当前组件怎么办呢？</a></li><li><a href="#_67-说说你对-vue-组件的设计原则的理解">67. 说说你对 vue 组件的设计原则的理解</a></li><li><a href="#_68-vue-的-diff-算法">68. vue 的 diff 算法</a></li><li><a href="#_69-vue-如何优化首页的加载速度">69. vue 如何优化首页的加载速度？</a></li><li><a href="#_70-vue-打包成最终的文件有哪些">70. vue 打包成最终的文件有哪些？</a></li><li><a href="#_71-ajax、fetch、axios-这三都有什么区别">71. ajax、fetch、axios 这三都有什么区别？</a></li><li><a href="#_72-vue-能监听到数组变化的方法有哪些-为什么这些方法能监听到呢">72. vue 能监听到数组变化的方法有哪些？为什么这些方法能监听到呢？</a></li><li><a href="#_73-vue-中是如何使用-event-对象的">73. vue 中是如何使用 event 对象的？</a></li><li><a href="#_74-vue-首页白屏是什么问题引起的-如何解决呢">74. vue 首页白屏是什么问题引起的？如何解决呢？</a></li><li><a href="#_75-单向数据流和双向数据流">75. 单向数据流和双向数据流</a></li><li><a href="#_76-移动端-ui-你用的是哪个-ui-库-有遇到过什么问题吗">76. 移动端 ui 你用的是哪个 ui 库？有遇到过什么问题吗？</a></li><li><a href="#_77-nexttick-的原理">77. nextTick 的原理</a></li><li><a href="#_78-v-clock-和-v-pre-指令的理解">78. v-clock 和 v-pre 指令的理解</a></li><li><a href="#_79-proxy-的理解">79. proxy 的理解</a></li><li><a href="#_80-vue-怎么实现一个换肤的功能">80. vue 怎么实现一个换肤的功能</a></li><li><a href="#_81-vue-性能的优化的方法">81. vue 性能的优化的方法</a></li><li><a href="#_82-ssr-解决了什么问题-有做过-ssr-吗-你是怎么做的">82. SSR 解决了什么问题？有做过 SSR 吗？你是怎么做的？</a></li></ul></div><p></p> <div class="el-carousel el-carousel--horizontal"><div class="el-carousel__container" style="height:100vh;"><!----><!----><div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_1-vue3-0-功能-改进的地方"><a href="#_1-vue3-0-功能-改进的地方" class="header-anchor">#</a> 1. vue3.0 功能/改进的地方</h4> <h4 id="_2-vue-模板语法使用的-web-模板引擎"><a href="#_2-vue-模板语法使用的-web-模板引擎" class="header-anchor">#</a> 2. vue 模板语法使用的 web 模板引擎</h4> <h4 id="_3-v-model"><a href="#_3-v-model" class="header-anchor">#</a> 3. v-model</h4> <ul><li><code>v-model</code>可以用在
+<ul><li>输入框，文本域，单选框，多选框，下拉单选框，下拉多选框，上传，组件，第三方组件，组件级别封装普通元素（实现双向绑绑定直接更改父组件）</li></ul></li> <li><code>v-model</code> 在内部为不同的输入元素使用不同的 property 并抛出不同的事件：
+<ul><li>text 和 textarea 元素使用 <code>value</code> <code>property</code> 和 <code>input</code> 事件；</li> <li>checkbox 和 radio 使用 <code>checked</code> <code>property</code> 和 <code>change</code> 事件；</li> <li>select 字段将 <code>value</code> 作为 prop 并将 <code>change</code> 作为事件。</li></ul></li> <li><code>v-model</code> 在自定义组件中的使用</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>custom-component</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>custom<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>和这种用法是一样的:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>custom-component</span> <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>custom<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@input</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>val =&gt; custom = val<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>在 2.2.0+ 的版本中可以使用 model 属性在自定义组件中来实现属性和事件的自定义：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'custom-component'</span><span class="token punctuation">,</span>
+  model<span class="token operator">:</span> <span class="token punctuation">{</span>
+    prop<span class="token operator">:</span> <span class="token string">'customVal'</span><span class="token punctuation">,</span>
+    event<span class="token operator">:</span> <span class="token string">'customEvent'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>v-model 将会查询所有的属性来替代 value 属性，并使用 prop 中来替代 input 事件的监听。
+因此上面的那个 custom-component 组件被改写为</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>custom-component</span> <span class="token attr-name">:customVal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>custom<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@customEvent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>val =&gt; custom = val<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><h4 id="_4-computed-与-data"><a href="#_4-computed-与-data" class="header-anchor">#</a> 4. computed 与 data</h4> <ul><li>data 和 computed 最核心的区别在于 data 中的属性不会随赋值变量的改动而改动，而 computed 会。</li></ul> <ol><li>父组件改变 props，子组件如果直接使用 props，会触发子组件更新。</li> <li>父组件改变 props，子组件如果将 props 放进 data 中使用，不会触发子组件更新。</li> <li>父组件改变 props，子组件如果将 props 放进 computed 中再使用，会触发子组件更新。</li></ol> <ul><li>computed 与 data 中数据不可以同名，因为初始化 vm 的过程，会先把 data 绑定到 vm，再把 computed 的值绑定到 vm，会把 data 同名数据覆盖。</li></ul></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_5-methods-与-data"><a href="#_5-methods-与-data" class="header-anchor">#</a> 5. methods 与 data</h4> <div class="custom-block tip"><p>Vue 实例在渲染的时候数据解析的顺序是<code>props-&gt;methods-&gt;data-&gt;computed-&gt;watch-&gt;created</code></p></div> <hr> <h4 id="_6-vue-定义全局的方法"><a href="#_6-vue-定义全局的方法" class="header-anchor">#</a> 6. vue 定义全局的方法</h4> <ul><li>通过 prototype 原型，即<code>Vue.prototype.$xxx = xxx</code>，带$是为了防止和我们组件里定义的变量名相同</li></ul> <div class="custom-block tip"><p>更方便的做法为方法全写到一个文件
+全局调用使用</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> xxx <span class="token keyword">from</span> <span class="token string">'xxx'</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>xxx<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">[</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">$</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>item<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">]</span> <span class="token operator">=</span> xxx<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <ul><li><p>通过使用插件的方式引入，即<code>Vue.use(plugin)</code></p></li> <li><p>通过 mixin 混入，即<code>Vue.mixin(mixin)</code>,这样做的优点是调用这个方法的时候有提示</p></li></ul> <hr> <h4 id="_7-vue2-0-不再支持-v-html-中使用过滤器"><a href="#_7-vue2-0-不再支持-v-html-中使用过滤器" class="header-anchor">#</a> 7. vue2.0 不再支持 v-html 中使用过滤器</h4> <h4 id="_8-vue-打包后静态资源图片失效的问题"><a href="#_8-vue-打包后静态资源图片失效的问题" class="header-anchor">#</a> 8. vue 打包后静态资源图片失效的问题</h4> <h4 id="_9-vue-动态设置-img-的-src-不生效的问题"><a href="#_9-vue-动态设置-img-的-src-不生效的问题" class="header-anchor">#</a> 9. vue 动态设置 img 的 src 不生效的问题</h4> <h4 id="_10-vue-针对搜索引擎-seo-优化"><a href="#_10-vue-针对搜索引擎-seo-优化" class="header-anchor">#</a> 10. vue 针对搜索引擎 SEO 优化</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_11-keep-alive-有关的生命周期"><a href="#_11-keep-alive-有关的生命周期" class="header-anchor">#</a> 11. keep-alive 有关的生命周期</h4> <h4 id="_12-vue-推荐的风格指南"><a href="#_12-vue-推荐的风格指南" class="header-anchor">#</a> 12. vue 推荐的风格指南</h4> <h4 id="_13-vue1-x-与-vue2-x-的区别"><a href="#_13-vue1-x-与-vue2-x-的区别" class="header-anchor">#</a> 13. vue1.x 与 vue2.x 的区别</h4> <h4 id="_14-vue-中-key-的原理"><a href="#_14-vue-中-key-的原理" class="header-anchor">#</a> 14. vue 中 key 的原理</h4> <h4 id="_15-vue-中怎么重置-data"><a href="#_15-vue-中怎么重置-data" class="header-anchor">#</a> 15. vue 中怎么重置 data</h4> <h4 id="_16-vue-渲染模板怎么保留-html-注释"><a href="#_16-vue-渲染模板怎么保留-html-注释" class="header-anchor">#</a> 16. vue 渲染模板怎么保留 HTML 注释</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_17-vue-observable"><a href="#_17-vue-observable" class="header-anchor">#</a> 17. Vue.observable</h4> <h4 id="_18-style-加-scoped-属性的用途和原理"><a href="#_18-style-加-scoped-属性的用途和原理" class="header-anchor">#</a> 18. style 加 scoped 属性的用途和原理</h4> <h4 id="_19-vue-边界情况"><a href="#_19-vue-边界情况" class="header-anchor">#</a> 19. vue 边界情况</h4> <h4 id="_20-子组件怎么访问父组件的实例"><a href="#_20-子组件怎么访问父组件的实例" class="header-anchor">#</a> 20. 子组件怎么访问父组件的实例</h4> <h4 id="_21-watch-属性用箭头函数定义结果怎么样"><a href="#_21-watch-属性用箭头函数定义结果怎么样" class="header-anchor">#</a> 21. watch 属性用箭头函数定义结果怎么样？</h4> <h4 id="_22-methods-方法用箭头函数定义结果怎么样"><a href="#_22-methods-方法用箭头函数定义结果怎么样" class="header-anchor">#</a> 22. methods 方法用箭头函数定义结果怎么样？</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_23-vue-如何配置-favicon"><a href="#_23-vue-如何配置-favicon" class="header-anchor">#</a> 23. vue 如何配置 favicon</h4> <h4 id="_24-babel-polyfill-模块"><a href="#_24-babel-polyfill-模块" class="header-anchor">#</a> 24. babel-polyfill 模块</h4> <h4 id="_25-vue-的错误处理"><a href="#_25-vue-的错误处理" class="header-anchor">#</a> 25. vue 的错误处理</h4> <h4 id="_26-vue-传入-event-e-target-与-e-currenttarget-区别"><a href="#_26-vue-传入-event-e-target-与-e-currenttarget-区别" class="header-anchor">#</a> 26. vue 传入$event，e.target 与 e.currentTarget 区别</h4> <h4 id="_27-vue-中-style-必须-script-必须"><a href="#_27-vue-中-style-必须-script-必须" class="header-anchor">#</a> 27. vue 中 style 必须？script 必须？</h4> <h4 id="_28-vue-中强制刷新组件"><a href="#_28-vue-中强制刷新组件" class="header-anchor">#</a> 28. vue 中强制刷新组件</h4> <ul><li>简单粗暴的方式：重新加载整个页面 <code>window.location.reload()</code></li> <li>不妥的方式：使用 v-if</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>my-component</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>render<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        render<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">forceRender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>render <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">//nextTick是dom更新后，再重新设置显示</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>render <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li><p>较好的方法：使用 Vue 的内置 forceUpdate 方法，即<code>this.$forceUpdate()</code>，但该方法会将当前组件的视图全部刷新。</p></li> <li><p>最好的方法：在组件上进行 key 更改</p></li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component-to-render</span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>componentKey<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            componentKey<span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">forceRender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>componentKey <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_29-vue-自定义事件中父组件怎么接受子组件的多个参数"><a href="#_29-vue-自定义事件中父组件怎么接受子组件的多个参数" class="header-anchor">#</a> 29. vue 自定义事件中父组件怎么接受子组件的多个参数</h4> <h4 id="_30-vue-组件怎么处理绑定自定义事件无效"><a href="#_30-vue-组件怎么处理绑定自定义事件无效" class="header-anchor">#</a> 30. vue 组件怎么处理绑定自定义事件无效</h4> <h4 id="_31-vue-变量名如果以-、-开头的属性会发生什么问题-怎么访问到它们的值"><a href="#_31-vue-变量名如果以-、-开头的属性会发生什么问题-怎么访问到它们的值" class="header-anchor">#</a> 31. vue 变量名如果以_、$开头的属性会发生什么问题？怎么访问到它们的值？</h4> <h4 id="_32-vue-使用-v-for-遍历对象时-是按什么顺序遍历的-如何保证顺序"><a href="#_32-vue-使用-v-for-遍历对象时-是按什么顺序遍历的-如何保证顺序" class="header-anchor">#</a> 32. vue 使用 v-for 遍历对象时，是按什么顺序遍历的？如何保证顺序？</h4> <h4 id="_33-vue-如果想扩展某个现有的组件时-怎么做呢"><a href="#_33-vue-如果想扩展某个现有的组件时-怎么做呢" class="header-anchor">#</a> 33. vue 如果想扩展某个现有的组件时，怎么做呢？</h4> <h4 id="_34-attrs-与-listeners"><a href="#_34-attrs-与-listeners" class="header-anchor">#</a> 34. attrs 与 listeners</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_35-v-once-的使用场景"><a href="#_35-v-once-的使用场景" class="header-anchor">#</a> 35. v-once 的使用场景</h4> <h4 id="_36-vue-项目本地开发完成后部署到服务器后报-404"><a href="#_36-vue-项目本地开发完成后部署到服务器后报-404" class="header-anchor">#</a> 36. vue 项目本地开发完成后部署到服务器后报 404</h4> <h4 id="_37-表单修饰符和事件修饰符"><a href="#_37-表单修饰符和事件修饰符" class="header-anchor">#</a> 37. 表单修饰符和事件修饰符</h4> <h4 id="_38-vue-为什么要求组件模板只能有一个根元素"><a href="#_38-vue-为什么要求组件模板只能有一个根元素" class="header-anchor">#</a> 38. vue 为什么要求组件模板只能有一个根元素?</h4> <h4 id="_39-怎么解决-eventbus-注册在全局上时-路由切换时会重复触发事件"><a href="#_39-怎么解决-eventbus-注册在全局上时-路由切换时会重复触发事件" class="header-anchor">#</a> 39. 怎么解决 EventBus 注册在全局上时，路由切换时会重复触发事件</h4> <h4 id="_40-怎么修改-vue-打包后生成文件路径"><a href="#_40-怎么修改-vue-打包后生成文件路径" class="header-anchor">#</a> 40. 怎么修改 vue 打包后生成文件路径？</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_41-vue-中什么是递归组件-举个例子说明下"><a href="#_41-vue-中什么是递归组件-举个例子说明下" class="header-anchor">#</a> 41. vue 中什么是递归组件？举个例子说明下？</h4> <h4 id="_42-怎么访问到子组件的实例或者子元素"><a href="#_42-怎么访问到子组件的实例或者子元素" class="header-anchor">#</a> 42. 怎么访问到子组件的实例或者子元素？</h4> <h4 id="_43-在子组件中怎么访问到父组件的实例"><a href="#_43-在子组件中怎么访问到父组件的实例" class="header-anchor">#</a> 43. 在子组件中怎么访问到父组件的实例？</h4> <h4 id="_44-在组件中怎么访问到根实例"><a href="#_44-在组件中怎么访问到根实例" class="header-anchor">#</a> 44. 在组件中怎么访问到根实例？</h4> <h4 id="_45-说说你对-object-defineproperty-的理解"><a href="#_45-说说你对-object-defineproperty-的理解" class="header-anchor">#</a> 45. 说说你对 Object.defineProperty 的理解</h4> <h4 id="_46-vue-组件里写的原生-addeventlisteners-监听事件-要手动去销毁吗-为什么"><a href="#_46-vue-组件里写的原生-addeventlisteners-监听事件-要手动去销毁吗-为什么" class="header-anchor">#</a> 46. vue 组件里写的原生 addEventListeners 监听事件，要手动去销毁吗？为什么？</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_47-vue-组件里的定时器要怎么销毁"><a href="#_47-vue-组件里的定时器要怎么销毁" class="header-anchor">#</a> 47. vue 组件里的定时器要怎么销毁？</h4> <h4 id="_48-vue-组件会在什么时候下被销毁"><a href="#_48-vue-组件会在什么时候下被销毁" class="header-anchor">#</a> 48. vue 组件会在什么时候下被销毁？</h4> <h4 id="_49-使用-vue-渲染大量数据时应该怎么优化-说下你的思路"><a href="#_49-使用-vue-渲染大量数据时应该怎么优化-说下你的思路" class="header-anchor">#</a> 49. 使用 vue 渲染大量数据时应该怎么优化？说下你的思路！</h4> <h4 id="_50-在-vue-中使用-this-应该注意哪些问题"><a href="#_50-在-vue-中使用-this-应该注意哪些问题" class="header-anchor">#</a> 50. 在 vue 中使用 this 应该注意哪些问题？</h4> <h4 id="_51-你有使用过-jsx-吗-说说你对-jsx-的理解"><a href="#_51-你有使用过-jsx-吗-说说你对-jsx-的理解" class="header-anchor">#</a> 51. 你有使用过 JSX 吗？说说你对 JSX 的理解</h4> <h4 id="_52-说说组件的命名规范"><a href="#_52-说说组件的命名规范" class="header-anchor">#</a> 52. 说说组件的命名规范</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_53-怎么配置使-vue2-0-支持-typescript-写法"><a href="#_53-怎么配置使-vue2-0-支持-typescript-写法" class="header-anchor">#</a> 53. 怎么配置使 vue2.0+支持 TypeScript 写法？</h4> <h4 id="_54-template-template-有什么用"><a href="#_54-template-template-有什么用" class="header-anchor">#</a> 54. &lt; template &gt; &lt; /template &gt; 有什么用？</h4> <h4 id="_55-vue-的-is-这个特性你有用过吗-主要用在哪些方面"><a href="#_55-vue-的-is-这个特性你有用过吗-主要用在哪些方面" class="header-anchor">#</a> 55. vue 的 is 这个特性你有用过吗？主要用在哪些方面？</h4> <h4 id="_56-vue-的-class-和-style-有几种表示方式"><a href="#_56-vue-的-class-和-style-有几种表示方式" class="header-anchor">#</a> 56. vue 的:class 和:style 有几种表示方式？</h4> <h4 id="_57-函数式组件"><a href="#_57-函数式组件" class="header-anchor">#</a> 57. 函数式组件</h4> <h4 id="_58-vue-怎么改变插入模板的分隔符"><a href="#_58-vue-怎么改变插入模板的分隔符" class="header-anchor">#</a> 58. vue 怎么改变插入模板的分隔符？</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_59-组件中写-name-选项有什么作用"><a href="#_59-组件中写-name-选项有什么作用" class="header-anchor">#</a> 59. 组件中写 name 选项有什么作用？</h4> <h4 id="_60-说说你对-provide-和-inject-的理解"><a href="#_60-说说你对-provide-和-inject-的理解" class="header-anchor">#</a> 60. 说说你对 provide 和 inject 的理解</h4> <h4 id="_61-vue-devtools"><a href="#_61-vue-devtools" class="header-anchor">#</a> 61. vue-devtools</h4> <h4 id="_62-slot-的理解-slot-使用场景有哪些"><a href="#_62-slot-的理解-slot-使用场景有哪些" class="header-anchor">#</a> 62. slot 的理解？slot 使用场景有哪些？</h4> <h4 id="_63-你有使用过动态组件吗-说说你对它的理解"><a href="#_63-你有使用过动态组件吗-说说你对它的理解" class="header-anchor">#</a> 63. 你有使用过动态组件吗？说说你对它的理解</h4> <h4 id="_64-prop-验证的-type-类型有哪几种"><a href="#_64-prop-验证的-type-类型有哪几种" class="header-anchor">#</a> 64. prop 验证的 type 类型有哪几种？</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_65-prop-是怎么做验证的-可以设置默认值吗"><a href="#_65-prop-是怎么做验证的-可以设置默认值吗" class="header-anchor">#</a> 65. prop 是怎么做验证的？可以设置默认值吗？</h4> <h4 id="_66-怎么缓存当前打开的路由组件-缓存后想更新当前组件怎么办呢"><a href="#_66-怎么缓存当前打开的路由组件-缓存后想更新当前组件怎么办呢" class="header-anchor">#</a> 66. 怎么缓存当前打开的路由组件，缓存后想更新当前组件怎么办呢？</h4> <h4 id="_67-说说你对-vue-组件的设计原则的理解"><a href="#_67-说说你对-vue-组件的设计原则的理解" class="header-anchor">#</a> 67. 说说你对 vue 组件的设计原则的理解</h4> <h4 id="_68-vue-的-diff-算法"><a href="#_68-vue-的-diff-算法" class="header-anchor">#</a> 68. vue 的 diff 算法</h4> <h4 id="_69-vue-如何优化首页的加载速度"><a href="#_69-vue-如何优化首页的加载速度" class="header-anchor">#</a> 69. vue 如何优化首页的加载速度？</h4> <h4 id="_70-vue-打包成最终的文件有哪些"><a href="#_70-vue-打包成最终的文件有哪些" class="header-anchor">#</a> 70. vue 打包成最终的文件有哪些？</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_71-ajax、fetch、axios-这三都有什么区别"><a href="#_71-ajax、fetch、axios-这三都有什么区别" class="header-anchor">#</a> 71. ajax、fetch、axios 这三都有什么区别？</h4> <h4 id="_72-vue-能监听到数组变化的方法有哪些-为什么这些方法能监听到呢"><a href="#_72-vue-能监听到数组变化的方法有哪些-为什么这些方法能监听到呢" class="header-anchor">#</a> 72. vue 能监听到数组变化的方法有哪些？为什么这些方法能监听到呢？</h4> <h4 id="_73-vue-中是如何使用-event-对象的"><a href="#_73-vue-中是如何使用-event-对象的" class="header-anchor">#</a> 73. vue 中是如何使用 event 对象的？</h4> <h4 id="_74-vue-首页白屏是什么问题引起的-如何解决呢"><a href="#_74-vue-首页白屏是什么问题引起的-如何解决呢" class="header-anchor">#</a> 74. vue 首页白屏是什么问题引起的？如何解决呢？</h4> <h4 id="_75-单向数据流和双向数据流"><a href="#_75-单向数据流和双向数据流" class="header-anchor">#</a> 75. 单向数据流和双向数据流</h4> <h4 id="_76-移动端-ui-你用的是哪个-ui-库-有遇到过什么问题吗"><a href="#_76-移动端-ui-你用的是哪个-ui-库-有遇到过什么问题吗" class="header-anchor">#</a> 76. 移动端 ui 你用的是哪个 ui 库？有遇到过什么问题吗？</h4></div> <div class="el-carousel__item" style="transform:translateX(0px) scale(1);ms-transform:translateX(0px) scale(1);webkit-transform:translateX(0px) scale(1);display:none;"><!----><h4 id="_77-nexttick-的原理"><a href="#_77-nexttick-的原理" class="header-anchor">#</a> 77. nextTick 的原理</h4> <h4 id="_78-v-clock-和-v-pre-指令的理解"><a href="#_78-v-clock-和-v-pre-指令的理解" class="header-anchor">#</a> 78. v-clock 和 v-pre 指令的理解</h4> <h4 id="_79-proxy-的理解"><a href="#_79-proxy-的理解" class="header-anchor">#</a> 79. proxy 的理解</h4> <h4 id="_80-vue-怎么实现一个换肤的功能"><a href="#_80-vue-怎么实现一个换肤的功能" class="header-anchor">#</a> 80. vue 怎么实现一个换肤的功能</h4> <h4 id="_81-vue-性能的优化的方法"><a href="#_81-vue-性能的优化的方法" class="header-anchor">#</a> 81. vue 性能的优化的方法</h4> <h4 id="_82-ssr-解决了什么问题-有做过-ssr-吗-你是怎么做的"><a href="#_82-ssr-解决了什么问题-有做过-ssr-吗-你是怎么做的" class="header-anchor">#</a> 82. SSR 解决了什么问题？有做过 SSR 吗？你是怎么做的？</h4></div></div><!----></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/74.1d183506.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

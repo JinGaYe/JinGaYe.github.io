@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Git &amp; SVN | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/55.ef90124d.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/41.a5dba266.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-2674" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>Git &amp; SVN</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2020-02-27</span> <span>文章字数：1542</span> <span>预计用时：7分43秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#一、-git">一、 Git</a><ul><li><a href="#_1-git-的安装">1. Git 的安装</a></li><li><a href="#_2-git-的配置及-github">2. Git 的配置及 Github</a></li><li><a href="#_3-git-的常用命令">3. Git 的常用命令</a><ul><li><a href="#_1-第一部分">(1) 第一部分</a></li><li><a href="#_2-第二部分">(2) 第二部分</a></li><li><a href="#_3-第三部分">(3) 第三部分</a></li></ul></li></ul></li><li><a href="#二、-svn">二、 Svn</a><ul><li><a href="#_1-svn-的安装">1. Svn 的安装</a><ul><li><a href="#_1-windows-环境">(1) Windows 环境</a></li><li><a href="#_2-linux-环境">(2) Linux 环境</a></li></ul></li><li><a href="#_2-svn-的配置">2. Svn 的配置</a><ul><li><a href="#_1-客户端的配置">(1) 客户端的配置</a></li><li><a href="#_2-服务端的配置">(2) 服务端的配置</a></li></ul></li><li><a href="#_3-svn-的常用命令">3. Svn 的常用命令</a><ul><li><a href="#_1-将文件-checkout-到本地目录">(1) 将文件 checkout 到本地目录</a></li><li><a href="#_2-往版本库中添加新的文件">(2) 往版本库中添加新的文件</a></li><li><a href="#_3-将改动的文件提交到版本库">(3) 将改动的文件提交到版本库</a></li><li><a href="#_4-加锁-解锁">(4) 加锁 / 解锁</a></li><li><a href="#_5-更新到某个版本">(5) 更新到某个版本</a></li><li><a href="#_6-查看文件或者目录状态">(6) 查看文件或者目录状态</a></li><li><a href="#_7-删除文件">(7) 删除文件</a></li><li><a href="#_8-查看日志">(8) 查看日志</a></li><li><a href="#_9-查看文件详细信息">(9) 查看文件详细信息</a></li><li><a href="#_10-比较差异">(10) 比较差异</a></li><li><a href="#_11-将两个版本之间的差异合并到当前文件">(11) 将两个版本之间的差异合并到当前文件</a></li><li><a href="#_12-svn-帮助">(12) SVN 帮助</a></li><li><a href="#_13-版本库下的文件和目录列表">(13) 版本库下的文件和目录列表</a></li><li><a href="#_14-创建纳入版本控制下的新目录">(14) 创建纳入版本控制下的新目录</a></li><li><a href="#_15-恢复本地修改">(15) 恢复本地修改</a></li><li><a href="#_16-代码库-url-变更">(16) 代码库 URL 变更</a></li><li><a href="#_17-解决冲突">(17) 解决冲突</a></li><li><a href="#_18-忽略掉某些文件">(18) 忽略掉某些文件</a></li></ul></li></ul></li><li><a href="#三、-git-与-svn-的比较">三、 Git 与 Svn 的比较</a></li><li><a href="#四、-结语">四、 结语</a></li></ul></div><p></p> <p style="font-size:18px;">  对于开发者来说，项目的开发最频繁的就是修修补补，改一下这里改一下那里，结构安排得好的话，改错了可能还能改回来，不好的话......，如果保存了下一次开起来可能就忘记改掉哪里了，这时候就需要一个经常帮你备份的，也就是版本管理工具。<br>
+   当然这只要是程序员都应该知道的一件事情，而工具里面，最经常用的也就是以下两个了：Git, Svn，而进一步地，用 git 的程序员们又相对比 Svn 多一些。所以今天也既是总结一下两者的用法，也是对两者进行一个比较。</p> <h3 id="一、-git"><a href="#一、-git" class="header-anchor">#</a> 一、 Git</h3> <h4 id="_1-git-的安装"><a href="#_1-git-的安装" class="header-anchor">#</a> 1. Git 的安装</h4> <p style="font-size:16px;">  关于Git安装，官网已经将其整理得明明白白，自行前往<a target="_blank" href="https://git-scm.com/downloads" rel="external nofollow">这里</a>按照对应系统的版本等，进行下载</p> <h4 id="_2-git-的配置及-github"><a href="#_2-git-的配置及-github" class="header-anchor">#</a> 2. Git 的配置及 Github</h4> <p style="font-size:16px;">  对于Git来说，最重要的就是和github的搭配了，包括一系列操作，最常见也是最常用的就是建repository，然后将自己的代码挂到上面开源。<br>
+   或者是建立一个 gitbook 或者 github.io，挂载上自己写的东西；前者是类似于 markdown 文件挂到网上查看，后者就是可以成为一个网站（如果你想搞一些小型的类似博客这些展示的，可以采用 github.io 的方法进行，省去了需要服务器的烦恼，缺点就是访问可能没法那么快）。<br> <b style="color:green;">常用的配置操作</b></p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ ssh-keygen -t rsa -C <span class="token string">&quot;youremail@example.com&quot;</span>  // 创建SSH Key
+无需设置密码,所以一路回车就好,
+如果顺利会在user下UserName目录中生成一个.ssh目录里面有id_rsa和id_rsa.pub两个文件
+id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥,可以告诉他人还有在github上添加的也是这个公钥
+登陆GitHub，打开“Account settings”，“SSH Keys”页面,点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提交，只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了
+
+
+添加远程库
+做全局的配置
+$ <span class="token function">git</span> config --global user.name <span class="token string">&quot;zhangsan&quot;</span>
+$ <span class="token function">git</span> config --global user.email <span class="token string">&quot;zhangsan@139.com&quot;</span>
+$ <span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:zhangsan/ylez.git // 添加一个远程仓库
+  // <span class="token function">add</span> origin 就是添加一个远程仓库
+  // git@github.com:zhangsan/ylez.git  是远程仓库的地址
+  // git@github.com 主机的地址  我们可以通过GitLab大家自己的git服务器
+  // zhangsan 是你的用户名
+  // /ylez.git 是你的仓库名
+$ <span class="token function">git</span> push -u origin master  // 将本地的master分支推送到远程的master分支中
+$ <span class="token function">git</span> push -u origin dev    // 本地切换到dev分支然后将本地的dev分支推送到远程
+
+
+克隆远程仓库到本地
+Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
+$ <span class="token function">git</span> clone git@192.168.0.8:zhangsan/test.git  // 讲一个远程的仓库克隆到本地
+
+</code></pre></div><h4 id="_3-git-的常用命令"><a href="#_3-git-的常用命令" class="header-anchor">#</a> 3. Git 的常用命令</h4> <h5 id="_1-第一部分"><a href="#_1-第一部分" class="header-anchor">#</a> (1) 第一部分</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> init  // 初始化一个Git仓库
+$ <span class="token function">git</span> status   // 查看仓库的状态
+$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>   // 将所有修改添加到暂存区
+$ <span class="token function">git</span> <span class="token function">add</span> *  // Ant风格添加修改
+$ <span class="token function">git</span> <span class="token function">add</span> *Controller   // 将以Controller结尾的文件的所有修改添加到暂存区
+$ <span class="token function">git</span> <span class="token function">add</span> Hello*   // 将所有以Hello开头的文件的修改添加到暂存区 例如:HelloWorld.txt,Hello.java,HelloGit.txt <span class="token punctuation">..</span>.
+$ <span class="token function">git</span> <span class="token function">add</span> Hello?   // 将以Hello开头后面只有一位的文件的修改提交到暂存区 例如:Hello1.txt,HelloA.java 如果是HelloGit.txt或者Hello.java是不会被添加的
+可以多次添加然后在提交
+$ <span class="token function">git</span> commit -m <span class="token string">&quot;comment&quot;</span>  // 将暂存区的修改提交到仓库 后面添加上有意义的注视信息
+$ <span class="token function">git</span> <span class="token function">diff</span>  <span class="token function">file</span>  // 在file被修改了还未提交的时候查看修改的部分<span class="token punctuation">(</span>和版本库中最新版本的不同 <span class="token function">diff</span> <span class="token operator">==</span> difference 不同<span class="token punctuation">)</span>
+$ <span class="token function">git</span> log  // 查看git的commit信息,每次提交的信息包括注视在内,从最新提交到最久提交
+$ <span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline   // 将commit 信息简化成一行显示
+注意Git的版本号<span class="token punctuation">(</span>commit <span class="token function">id</span><span class="token punctuation">)</span>是SHA1值ea34578d5496d7dd233c827ed32a8cd576c5ee85
+$ <span class="token function">git</span> reset --hard HEAD^   // 退回到相对于当前版本的上一个版本 HEAD 表示当前版本
+$ <span class="token function">git</span> reset --hard HEAD^^  // 退回到相对于当前版本的上上一个版本  HEAD 代表当前版本
+$ <span class="token function">git</span> reset --hard HEAD~100 //退回到相对于当前版本的上 <span class="token number">100</span> 个版本去  HEAD 表示当前版本
+$ <span class="token function">git</span> reset --hard <span class="token number">3628164</span>  // 退回到指定的版本   这里不需要全部写commit <span class="token function">id</span>  Git 回去自动适配
+Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD从指向append GPL
+$ <span class="token function">git</span> reflog   // 在退回到旧版本之后可以查看旧版本之前的提交日志
+当我们想从一个旧版本退回到新版本但是我们关闭了shell窗口,不能查看之前的commit id了,就可以通过
+$ <span class="token function">git</span> reflog 查看到之前的版本的commit <span class="token function">id</span>
+$ <span class="token function">git</span> reset --hard <span class="token number">3628164</span>
+
+修改只能在被add 到暂存区以后才能被提交
+在file 已经修改还未add的时候
+$ <span class="token function">git</span> checkout --file  // 表示丢弃工作区的修改退回原始状态<span class="token punctuation">(</span>不包括以及添加到暂存区的修改<span class="token punctuation">)</span>
+file已经修改和添加到了暂存区,还未commit
+$ <span class="token function">git</span> reset HEAD <span class="token function">file</span>   // 丢弃file已经添加到暂存区的修改  HEAD 表示最新版本
+
+
+如果file修改已经提交到本地仓库
+$ <span class="token function">git</span> reset --hard HEAD^   //退回到上一个版本
+
+
+$ <span class="token function">rm</span> <span class="token function">file</span>  // 从文件系统中删除文件<span class="token punctuation">(</span>Git 中还是有记录<span class="token punctuation">)</span>,
+$ <span class="token function">git</span> status 的时候Git 会告诉你有一个file 被删除了
+$ <span class="token function">git</span> <span class="token function">rm</span> <span class="token function">file</span>  // 从Git版本库中删除文件<span class="token punctuation">(</span>同时从文件系统中删除文件<span class="token punctuation">)</span> $ <span class="token function">git</span> status  正常
+
+
+$ <span class="token function">git</span> <span class="token function">rm</span> <span class="token function">file</span>  // 从git版本库中删除文件
+$ <span class="token function">git</span> commit -m <span class="token string">&quot;delete file&quot;</span> // 提交删除
+$ <span class="token function">git</span> checkout <span class="token function">file</span>  // 想要从git恢复 会出现:error: pathspec <span class="token string">'README.txt'</span> did not match any file<span class="token punctuation">(</span>s<span class="token punctuation">)</span> known to git.
+$ <span class="token function">git</span> reset --hard HEAD^  // 恢复到上一个版本 可以恢复文件
+
+
+$ <span class="token function">rm</span> <span class="token function">file</span>   //在文件系统中删除文件
+$ <span class="token function">git</span> checkout <span class="token function">file</span>  // 由于是通过文件系统删除的所以可以通过checkout恢复
+</code></pre></div><h5 id="_2-第二部分"><a href="#_2-第二部分" class="header-anchor">#</a> (2) 第二部分</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支
+在Git里，默认有一个主分支，即master分支
+HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支
+master分支是一条线，Git用master指向最新的提交，再用HEAD指向master
+每次提交，master分支都会向前移动一步，这样，随着你不断提交，master分支的线也越来越长
+Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，就表示当前分支在dev上
+
+
+$ <span class="token function">git</span> branch   // 查看git的所有分支
+$ <span class="token function">git</span> branch dev  // 创建dev分支
+$ <span class="token function">git</span> checkout dev  // 切换到一个已经存在的分支
+$ <span class="token function">git</span> checkout -b dev  // 创建dev分支,并切换到dev分支
+$ <span class="token function">git</span> branch -d dev  // 删除dev分支
+
+
+$ <span class="token function">git</span> checkout master  // 切换到主分支
+$ <span class="token function">git</span> merge dev   // 将dev分支合并到master分支
+Updating d17efd8<span class="token punctuation">..</span>fec145a
+Fast-forward
+ readme.txt <span class="token operator">|</span>    <span class="token number">1</span> +
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">1</span> insertion<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+Fast-forward信息，Git告诉我们，这次合并是“快进模式”,就是直接把master指向dev的当前提交，所以合并速度非常快
+$ <span class="token function">git</span> branch -d dev  // 删除dev分支
+</code></pre></div><h5 id="_3-第三部分"><a href="#_3-第三部分" class="header-anchor">#</a> (3) 第三部分</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>处理冲突
+$ <span class="token function">git</span> checkout -b feature1
+Switched to a new branch <span class="token string">'feature1'</span>
+
+
+修改readme.txt最后一行，改为：
+Creating a new branch is quick AND simple.
+
+
+$ <span class="token function">git</span> <span class="token function">add</span> readme.txt
+$ <span class="token function">git</span> commit -m <span class="token string">&quot;AND simple&quot;</span>
+<span class="token punctuation">[</span>feature1 75a857c<span class="token punctuation">]</span> AND simple
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">1</span> insertion<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">1</span> deletion<span class="token punctuation">(</span>-<span class="token punctuation">)</span>
+
+
+$ <span class="token function">git</span> checkout master
+Switched to branch <span class="token string">'master'</span>
+Your branch is ahead of <span class="token string">'origin/master'</span> by <span class="token number">1</span> commit.
+Git还会自动提示我们当前master分支比远程的master分支要超前1个提交。
+
+
+在master分支上把readme.txt文件的最后一行改为：
+Creating a new branch is quick <span class="token operator">&amp;</span> simple.
+
+
+$ <span class="token function">git</span> <span class="token function">add</span> readme.txt
+$ <span class="token function">git</span> commit -m <span class="token string">&quot;&amp; simple&quot;</span>
+<span class="token punctuation">[</span>master 400b400<span class="token punctuation">]</span> <span class="token operator">&amp;</span> simple
+<span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">1</span> insertion<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">1</span> deletion<span class="token punctuation">(</span>-<span class="token punctuation">)</span>
+
+
+$ <span class="token function">git</span> merge feature1
+Auto-merging readme.txt
+CONFLICT <span class="token punctuation">(</span>content<span class="token punctuation">)</span>: Merge conflict <span class="token keyword">in</span> readme.txt
+Automatic merge failed<span class="token punctuation">;</span> fix conflicts and <span class="token keyword">then</span> commit the result.
+
+
+$ <span class="token function">git</span> status
+<span class="token comment"># On branch master</span>
+<span class="token comment"># Your branch is ahead of 'origin/master' by 2 commits.</span>
+<span class="token comment">#</span>
+<span class="token comment"># Unmerged paths:</span>
+<span class="token comment">#   (use &quot;git add/rm &lt;file&gt;...&quot; as appropriate to mark resolution)</span>
+<span class="token comment">#</span>
+<span class="token comment">#       both modified:      readme.txt  // 冲突了</span>
+<span class="token comment">#</span>
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">&quot;git add&quot;</span> and/or <span class="token string">&quot;git commit -a&quot;</span><span class="token punctuation">)</span>
+
+
+Git is a distributed version control system.
+Git is <span class="token function">free</span> software distributed under the GPL.
+Git has a mutable index called stage.
+Git tracks changes of files.
+Creating a new branch is quick AND simple.
+
+
+Git用<span class="token operator">&lt;&lt;&lt;</span><span class="token operator">&lt;&lt;&lt;</span><span class="token operator">&lt;</span>，<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>，<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>标记出不同分支的内容，我们修改如下后保存：
+Creating a new branch is quick and simple.
+
+
+再提交：
+$ <span class="token function">git</span> <span class="token function">add</span> readme.txt
+$ <span class="token function">git</span> commit -m <span class="token string">&quot;conflict fixed&quot;</span>
+<span class="token punctuation">[</span>master 59bc1cb<span class="token punctuation">]</span> conflict fixed
+
+
+用带参数的git log也可以看到分支的合并情况:
+$ <span class="token function">git</span> log --graph --pretty<span class="token operator">=</span>oneline --abbrev-commit
+$ <span class="token function">git</span> log --graph --pretty<span class="token operator">=</span>oneline --abbrev-commit
+*   59bc1cb conflict fixed
+<span class="token operator">|</span><span class="token punctuation">\</span>
+<span class="token operator">|</span> * 75a857c AND simple
+* <span class="token operator">|</span> 400b400 <span class="token operator">&amp;</span> simple
+<span class="token operator">|</span>/
+* fec145a branch <span class="token builtin class-name">test</span>
+<span class="token punctuation">..</span>.
+
+
+删除feature1分支：
+$ <span class="token function">git</span> branch -d feature1
+Deleted branch feature1 <span class="token punctuation">(</span>was 75a857c<span class="token punctuation">)</span>.
+
+
+通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
+如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息
+$ <span class="token function">git</span> merge --no-ff -m <span class="token string">&quot;comment&quot;</span> dev  // 准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward
+
+
+$ <span class="token function">git</span> log --graph --pretty<span class="token operator">=</span>oneline --abbrev-commit  //图形化展示分支情况
+*   7825a50 merge with no-ff
+<span class="token operator">|</span><span class="token punctuation">\</span>
+<span class="token operator">|</span> * <span class="token number">6224937</span> <span class="token function">add</span> merge
+<span class="token operator">|</span>/
+*   59bc1cb conflict fixed
+<span class="token punctuation">..</span>.
+
+
+修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它
+在修复bug时候,手里还有工作没有完成但是又不能提交可以将进度冻结
+在你当前的工作区<span class="token punctuation">(</span>分支<span class="token punctuation">)</span>
+$ <span class="token function">git</span> stash  // 冻结当前的分支修改
+
+
+查看所有的stash
+$ <span class="token function">git</span> stash list  // 列出所有的工作现场存储
+$ <span class="token function">git</span> stash list
+stash@<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span>: WIP on dev: <span class="token number">6224937</span> <span class="token function">add</span> merge
+$ <span class="token function">git</span> stash apply <span class="token punctuation">(</span>stash@<span class="token punctuation">{</span>n<span class="token punctuation">}</span><span class="token punctuation">)</span> // 恢复工作现场<span class="token punctuation">(</span>只有一个的时候可以省略后面的,如果有多个可以恢复指定的某一个stash<span class="token punctuation">)</span>但是不删除存储中的stash
+$ <span class="token function">git</span> stash drop <span class="token punctuation">(</span>stash@<span class="token punctuation">{</span>n<span class="token punctuation">}</span><span class="token punctuation">)</span>  // 删除存储的工作现场<span class="token punctuation">(</span>只有一个的时候可以省略后面的,如果又多个就指定删除某一个<span class="token punctuation">)</span>
+$ <span class="token function">git</span> stash pop <span class="token punctuation">(</span>stash@<span class="token punctuation">{</span>n<span class="token punctuation">}</span><span class="token punctuation">)</span>  // 恢复的同时把stash内容也删了<span class="token punctuation">(</span>只有一个的时候可以省略后面的,如果又多个就指定删除某一个<span class="token punctuation">)</span>
+
+
+$ <span class="token function">git</span> branch -d branchName  // 删除某一个分支,前提是在该分支和产生该分支的主分支已经合并了<span class="token punctuation">(</span>merge<span class="token punctuation">)</span>
+$ <span class="token function">git</span> branch -D branchName  // 删除某一个分支,无论是否合并都强制删除
+
+
+
+当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。
+
+
+要查看远程库的信息，用git remote：
+$ <span class="token function">git</span> remote
+
+
+或者，用git remote -v显示更详细的信息：
+$ <span class="token function">git</span> remote -v
+
+
+并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
+  master分支是主分支，因此要时刻与远程同步；
+  dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+  bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+  feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+
+
+推送的时候如果有人在你之前已经推送了,推送失败
+$ <span class="token function">git</span> push origin dev
+  To git@github.com:michaelliao/learngit.git
+   <span class="token operator">!</span> <span class="token punctuation">[</span>rejected<span class="token punctuation">]</span>        dev -<span class="token operator">&gt;</span> dev <span class="token punctuation">(</span>non-fast-forward<span class="token punctuation">)</span>
+  error: failed to push some refs to <span class="token string">'git@github.com:michaelliao/learngit.git'</span>
+  hint: Updates were rejected because the tip of your current branch is behind
+  hint: its remote counterpart. Merge the remote changes <span class="token punctuation">(</span>e.g. <span class="token string">'git pull'</span><span class="token punctuation">)</span>
+  hint: before pushing again.
+  hint: See the <span class="token string">'Note about fast-forwards'</span> <span class="token keyword">in</span> <span class="token string">'git push --help'</span> <span class="token keyword">for</span> details.
+因为你的小伙伴的最新提交和你试图推送的提交有冲突，解决办法也很简单，
+Git已经提示我们，先用git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送
+$ <span class="token function">git</span> pull  //抓去远程的分支的提交到本地
+
+
+没有指定本地dev分支与远程origin/dev分支的链接,推送也会失败,所以首先我们需要建立本地分支和远程分支的联系
+$ <span class="token function">git</span> branch --set-upstream dev origin/dev  // 建立本地dev 分支和远程dev分支的联系
+
+</code></pre></div><p style="font-size:16px;text-align:center;">参考<a target="_blank" href="https://blog.csdn.net/u012556150/article/details/50736896?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" rel="external nofollow"><b style="color:green;">git命令大全（非常齐全）</b></a></p> <hr> <h3 id="二、-svn"><a href="#二、-svn" class="header-anchor">#</a> 二、 Svn</h3> <h4 id="_1-svn-的安装"><a href="#_1-svn-的安装" class="header-anchor">#</a> 1. Svn 的安装</h4> <h5 id="_1-windows-环境"><a href="#_1-windows-环境" class="header-anchor">#</a> (1) Windows 环境</h5> <p style="font-size:16px;">  Window环境下，直接点击<a target="_blank" href="https://tortoisesvn.net/downloads.zh.html" rel="external nofollow">这里</a>下载Svn客户端，然后按正常操作安装即可</p> <h5 id="_2-linux-环境"><a href="#_2-linux-环境" class="header-anchor">#</a> (2) Linux 环境</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>// ubuntu环境下的话直接运行
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> subversion
+</code></pre></div><h4 id="_2-svn-的配置"><a href="#_2-svn-的配置" class="header-anchor">#</a> 2. Svn 的配置</h4> <h5 id="_1-客户端的配置"><a href="#_1-客户端的配置" class="header-anchor">#</a> (1) 客户端的配置</h5> <p style="font-size:16px;">  这个配置其实没有涉及到很多东西，Windows环境直接右键就看到SVN以插件的形式集成到其中，可直接点开界面进行一些基本的配置。<br>
+  Linux 环境则需要记住常见的那几句命令，拉取项目，更新代码，提交代码，添加、删除文件等。</p> <h5 id="_2-服务端的配置"><a href="#_2-服务端的配置" class="header-anchor">#</a> (2) 服务端的配置</h5> <p style="font-size:16px;">  服务端的配置的话一般相对麻烦一点，第一步自然是安装，这里不再赘述</p> <h6 id="_1-安装-svn"><a href="#_1-安装-svn" class="header-anchor">#</a> ① 安装 SVN</h6> <h6 id="_2-在任意目录下-一般是系统目录-linux-为-home-下建立文件夹"><a href="#_2-在任意目录下-一般是系统目录-linux-为-home-下建立文件夹" class="header-anchor">#</a> ② 在任意目录下（一般是系统目录）(linux 为 home) 下建立文件夹</h6> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">mkdir</span> /home/<span class="token punctuation">(</span>yourportfolioName<span class="token punctuation">)</span> etc: svn
+</code></pre></div><h6 id="_3-创建数据仓库-可以根据需要创建多个"><a href="#_3-创建数据仓库-可以根据需要创建多个" class="header-anchor">#</a> ③ 创建数据仓库（可以根据需要创建多个）</h6> <div class="language-bash extra-class"><pre class="language-bash"><code>svnadmin create /home/svn/test   （仓库里面可以放很多项目）
+</code></pre></div><h6 id="_4-启动-svn-网络服务"><a href="#_4-启动-svn-网络服务" class="header-anchor">#</a> ④ 启动 svn 网络服务</h6> <div class="language-bash extra-class"><pre class="language-bash"><code>svnserve -d -r /home/svn    （不要带上版本仓库）
+
+其中 -d 参数让 svnserve 运行在后台，-r 参数限定了数据仓库，在网络上可以访问的地址。
+/home/svn指定svn数据仓库存放的目录位置
+
+
+</code></pre></div><h6 id="_5-设置-svn-方式的访问权限"><a href="#_5-设置-svn-方式的访问权限" class="header-anchor">#</a> ⑤ 设置 svn: 方式的访问权限</h6> <div class="language-bash extra-class"><pre class="language-bash"><code>在每个数据仓库目录下都有一堆目录，进入 conf 并打开 svnserve.conf 这个文件，找到以下几行，
+ 并把前面的注解符号 ‘<span class="token comment">#’ 去掉，注意千万在每行的前面别留任何空格。</span>
+
+anon-access <span class="token operator">=</span> <span class="token builtin class-name">read</span> auth-access <span class="token operator">=</span> <span class="token function">write</span> password-db <span class="token operator">=</span> <span class="token function">passwd</span>
+
+其中 anon-access 和 auth-access 分别为匿名和有权限用户的权限，默认给匿名用户只读的权限。
+
+但如果想拒绝匿名用户的访问，只需把 anon-access的read 改成 none 就能达到目的。
+password-db 后的 <span class="token function">passwd</span> 则为定义用户名及密码的文件路径。这个文件默认跟 snvserve.conf 在
+同一个目录，下面看看怎么配置 passwd文件中的内容。
+
+<span class="token punctuation">[</span>user<span class="token punctuation">]</span> <span class="token comment"># harry = harryssecret # sally = sallyssecret</span>
+harry 和 sally 这两行分别定义了可以对 repo 进行写入的用户的用户名和密码。我们可以在下面加上
+自己的用户名和密码，比如
+
+zhangsan <span class="token operator">=</span> zhangsan
+
+这样就给了用户 testsvn 往 repo 中写的权限。存盘退出后，svn 服务器就算正式可以运行了！
+
+把所有需要管理的项目都放在 /home/svn这个目录下，像正常那样用 svnadmin create 命令建立数据仓库。
+
+这样就可以使用svn客户端通过 “svn co svn://IP地址/数据仓库目录” 的方式把服务器上的数据仓库拉到本地了。
+
+E000061: Unable to connect to a repository at URL 是svn的端口没有打开，svn的默认端口是3690，
+
+在ubuntu里查看端口打开情况，命令是netstat -anp <span class="token operator">|</span><span class="token function">grep</span> <span class="token number">3690</span>，
+
+查看进程的命令：ps -ef <span class="token operator">|</span><span class="token function">grep</span> <span class="token string">&quot;svn&quot;</span>
+
+把svn服务重新启动下就可以了，命令为svnserve -d -r /home/svn
+</code></pre></div><h6 id="_6-用-improt-导入工程"><a href="#_6-用-improt-导入工程" class="header-anchor">#</a> ⑥ 用 improt 导入工程</h6> <div class="language-bash extra-class"><pre class="language-bash"><code>命令为：svn <span class="token function">import</span>  /home/username/myproject   svn://192.168.1.1:3690/test/edusoho  -m  <span class="token string">&quot;我的工程&quot;</span>
+</code></pre></div><h4 id="_3-svn-的常用命令"><a href="#_3-svn-的常用命令" class="header-anchor">#</a> 3. Svn 的常用命令</h4> <h5 id="_1-将文件-checkout-到本地目录"><a href="#_1-将文件-checkout-到本地目录" class="header-anchor">#</a> (1) 将文件 checkout 到本地目录</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn checkout path（path是服务器上的目录）
+例如：svn checkout http://ip地址/路径/项目名
+简写：svn co
+</code></pre></div><h5 id="_2-往版本库中添加新的文件"><a href="#_2-往版本库中添加新的文件" class="header-anchor">#</a> (2) 往版本库中添加新的文件</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn <span class="token function">add</span> <span class="token function">file</span>
+例如：svn <span class="token function">add</span> test.php<span class="token punctuation">(</span>添加test.php<span class="token punctuation">)</span>
+svn <span class="token function">add</span> *.php<span class="token punctuation">(</span>添加当前目录下所有的php文件<span class="token punctuation">)</span>
+//需要add的都是新文件，如果只是在旧文件上改动不需要add，直接commit即可
+</code></pre></div><h5 id="_3-将改动的文件提交到版本库"><a href="#_3-将改动的文件提交到版本库" class="header-anchor">#</a> (3) 将改动的文件提交到版本库</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn commit -m “LogMessage“ <span class="token punctuation">[</span>-N<span class="token punctuation">]</span> <span class="token punctuation">[</span>--no-unlock<span class="token punctuation">]</span> <span class="token environment constant">PATH</span>　　　　　　　　<span class="token punctuation">(</span>如果选择了保持锁，就使用–no-unlock开关<span class="token punctuation">)</span>
+例如：
+　　svn commit -m “add <span class="token builtin class-name">test</span> <span class="token function">file</span> <span class="token keyword">for</span> my test“ test.php
+简写：
+　　svn ci
+//推荐在项目根目录下commit，无需指定是哪个文件，一键上传改动的那些
+</code></pre></div><h5 id="_4-加锁-解锁"><a href="#_4-加锁-解锁" class="header-anchor">#</a> (4) 加锁 / 解锁</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn lock -m “LockMessage“ <span class="token punctuation">[</span>--force<span class="token punctuation">]</span> <span class="token environment constant">PATH</span>
+例如：svn lock -m “lock <span class="token builtin class-name">test</span> file“ test.php
+svn unlock <span class="token environment constant">PATH</span>
+// 不常用
+</code></pre></div><h5 id="_5-更新到某个版本"><a href="#_5-更新到某个版本" class="header-anchor">#</a> (5) 更新到某个版本</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn update -r m path
+例如：
+svn update如果后面没有目录，默认将当前目录以及子目录下的所有文件都更新到最新版本。
+svn update -r <span class="token number">200</span> test.php<span class="token punctuation">(</span>将版本库中的文件test.php还原到版本200<span class="token punctuation">)</span>
+svn update test.php<span class="token punctuation">(</span>更新，于版本库同步。如果在提交的时候提示过期的话，是因为冲突，需要先update，修改文件，然后清除svn resolved，最后再提交commit<span class="token punctuation">)</span>
+简写：svn up
+//在产生了错误，覆盖了原来版本后，可以使用这个恢复到较近正确的版本
+</code></pre></div><h5 id="_6-查看文件或者目录状态"><a href="#_6-查看文件或者目录状态" class="header-anchor">#</a> (6) 查看文件或者目录状态</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn status path（目录下的文件和子目录的状态，正常状态不显示）
+【?：不在svn的控制中；M：内容被修改；C：发生冲突；A：预定加入到版本库；K：被锁定】
+svn status -v path<span class="token punctuation">(</span>显示文件和子目录状态<span class="token punctuation">)</span>
+第一列保持相同，第二列显示工作版本号，第三和第四列显示最后一次修改的版本号和修改人。
+注：svn status、svn diff和 svn revert这三条命令在没有网络的情况下也可以执行的，原因是svn在本地的.svn中保留了本地版本的原始拷贝。
+简写：svn st
+</code></pre></div><h5 id="_7-删除文件"><a href="#_7-删除文件" class="header-anchor">#</a> (7) 删除文件</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn delete path -m “delete <span class="token builtin class-name">test</span> fle“
+例如：svn delete svn://192.168.1.1/pro/domain/test.php -m “delete <span class="token builtin class-name">test</span> file”
+或者直接svn delete test.php 然后再svn ci -m ‘delete <span class="token builtin class-name">test</span> file‘，推荐使用这种
+简写：svn <span class="token punctuation">(</span>del, remove, <span class="token function">rm</span><span class="token punctuation">)</span>
+//推荐删除文件时用svn删，手动删除的话只是本地删除，远程没删除的话容易导致下次拉取时出错
+</code></pre></div><h5 id="_8-查看日志"><a href="#_8-查看日志" class="header-anchor">#</a> (8) 查看日志</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn log path
+例如：svn log test.php 显示这个文件的所有修改记录，及其版本号的变化
+</code></pre></div><h5 id="_9-查看文件详细信息"><a href="#_9-查看文件详细信息" class="header-anchor">#</a> (9) 查看文件详细信息</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn info path
+例如：svn info test.php
+</code></pre></div><h5 id="_10-比较差异"><a href="#_10-比较差异" class="header-anchor">#</a> (10) 比较差异</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn <span class="token function">diff</span> path<span class="token punctuation">(</span>将修改的文件与基础版本比较<span class="token punctuation">)</span>
+例如：svn <span class="token function">diff</span> test.php
+svn <span class="token function">diff</span> -r m:n path<span class="token punctuation">(</span>对版本m和版本n比较差异<span class="token punctuation">)</span>
+例如：svn <span class="token function">diff</span> -r <span class="token number">200</span>:201 test.php
+简写：svn di
+</code></pre></div><h5 id="_11-将两个版本之间的差异合并到当前文件"><a href="#_11-将两个版本之间的差异合并到当前文件" class="header-anchor">#</a> (11) 将两个版本之间的差异合并到当前文件</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn merge -r m:n path
+例如：svn merge -r <span class="token number">200</span>:205 test.php（将版本200与205之间的差异合并到当前文件，但是一般都会产生冲突，需要处理一下）
+</code></pre></div><h5 id="_12-svn-帮助"><a href="#_12-svn-帮助" class="header-anchor">#</a> (12) SVN 帮助</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn <span class="token builtin class-name">help</span>
+svn <span class="token builtin class-name">help</span> ci
+</code></pre></div><h5 id="_13-版本库下的文件和目录列表"><a href="#_13-版本库下的文件和目录列表" class="header-anchor">#</a> (13) 版本库下的文件和目录列表</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn list path
+显示path目录下的所有属于版本库的文件和目录
+简写：svn <span class="token function">ls</span>
+</code></pre></div><h5 id="_14-创建纳入版本控制下的新目录"><a href="#_14-创建纳入版本控制下的新目录" class="header-anchor">#</a> (14) 创建纳入版本控制下的新目录</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn mkdir: 创建纳入版本控制下的新目录。
+用法: <span class="token function">mkdir</span> <span class="token environment constant">PATH</span>…
+<span class="token function">mkdir</span> URL…
+创建版本控制的目录。
+每一个以工作副本 <span class="token environment constant">PATH</span> 指定的目录，都会创建在本地端，并且加入新增
+调度，以待下一次的提交。
+每个以URL指定的目录，都会透过立即提交于仓库中创建。
+在这两个情况下，所有的中间目录都必须事先存在
+</code></pre></div><h5 id="_15-恢复本地修改"><a href="#_15-恢复本地修改" class="header-anchor">#</a> (15) 恢复本地修改</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn revert: 恢复原始未改变的工作副本文件 <span class="token punctuation">(</span>恢复大部份的本地修改<span class="token punctuation">)</span>。revert:
+用法: revert <span class="token environment constant">PATH</span>…
+注意: 本子命令不会存取网络，并且会解除冲突的状况。但是它不会恢复
+被删除的目录
+</code></pre></div><h5 id="_16-代码库-url-变更"><a href="#_16-代码库-url-变更" class="header-anchor">#</a> (16) 代码库 URL 变更</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn switch <span class="token punctuation">(</span>sw<span class="token punctuation">)</span>: 更新工作副本至不同的URL。
+用法: <span class="token number">1</span>、switch URL <span class="token punctuation">[</span><span class="token environment constant">PATH</span><span class="token punctuation">]</span>
+<span class="token number">2</span>、switch –relocate FROM TO <span class="token punctuation">[</span><span class="token environment constant">PATH</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+ <span class="token number">1</span>、更新你的工作副本，映射到一个新的URL，其行为跟“svn update”很像，也会将
+   服务器上文件与本地文件合并。这是将工作副本对应到同一仓库中某个分支或者标记的
+   方法。
+ <span class="token number">2</span>、改写工作副本的URL元数据，以反映单纯的URL上的改变。当仓库的根URL变动
+  <span class="token punctuation">(</span>比如方案名或是主机名称变动<span class="token punctuation">)</span>，但是工作副本仍旧对映到同一仓库的同一目录时使用
+  这个命令更新工作副本与仓库的对应关系。
+</code></pre></div><h5 id="_17-解决冲突"><a href="#_17-解决冲突" class="header-anchor">#</a> (17) 解决冲突</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn resolved: 移除工作副本的目录或文件的“冲突”状态。
+用法: resolved <span class="token environment constant">PATH</span>…
+注意: 本子命令不会依语法来解决冲突或是移除冲突标记；它只是移除冲突的
+相关文件，然后让 <span class="token environment constant">PATH</span> 可以再次提交
+</code></pre></div><h5 id="_18-忽略掉某些文件"><a href="#_18-忽略掉某些文件" class="header-anchor">#</a> (18) 忽略掉某些文件</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>svn propset svn:ignore node_modules <span class="token builtin class-name">.</span>
+
+用法：在根目录下失手使用svn <span class="token function">add</span> * 后的补救措施，忽略掉node_modules文件夹
+注意：语句最后的点不能省略，文件夹目录不能加斜杠
+</code></pre></div><p style="font-size:16px;text-align:center;">参考<a target="_blank" href="https://blog.csdn.net/shixin_0125/article/details/79692733" rel="external nofollow"><b style="color:green;">svn常用命令集合</b></a>，至于Windows用户还是用界面操作，不用记那么多命令吧。</p> <hr> <h3 id="三、-git-与-svn-的比较"><a href="#三、-git-与-svn-的比较" class="header-anchor">#</a> 三、 Git 与 Svn 的比较</h3> <p style="font-size:16px;">  本人水平有限，使用这两个工具时间也还不够长，尤其是在实际接触开发用的还是SVN比较多，无法很好的评判两个工具之间的优缺点。这里找到了一个较为详细的分析，也是比较完整的。<br>
+     详情请参考<a href="https://www.cnblogs.com/Sungeek/p/9152223.html" target="_blank" rel="external nofollow"><b style="color:#0cc;">SVN 与 Git 比较的优缺点差异</b></a></p> <hr> <h3 id="四、-结语"><a href="#四、-结语" class="header-anchor">#</a> 四、 结语</h3> <p style="font-size:16px;color:green;">  写这篇文章的初衷，即是能帮助像我一样对这两个工具不熟悉的人尽快上手，能更好的适应项目开发，将项目的版本更好的进行管理，减少因版本管理的问题导致的做无用功，重复的工作。<br>
+   内容也比较多和长，如果本篇文章对你有帮助，请转发给更多的人儿，谢谢。</p> <hr></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/55.ef90124d.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>

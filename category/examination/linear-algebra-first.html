@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/config.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>线性代数知识总结 (一) | JarryChen&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.4" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json" preload="true">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" preload="true">
+    <link rel="stylesheet" href="/iconfont.css" preload="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" preload="true"> <meta name="description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta property="og:title" content="JarryChen's Blog">
+    <meta property="og:type" content="zone, blog, article">
+    <meta property="og:url" content="https://jarrychen.cn">
+    <meta property="og:image" content="https://jarrychen.cn/home.jpg">
+    <meta property="og:site_name" content="jarrychen.cn">
+    <meta property="og:description" content="This is a blog that contains the subjects of master examination and some technique about frontend and algorithm, which is made by vuepress and some plugins.">
+    <meta name="wlhlauth" content="616c0a7c7e672870db2aa19e09bb4df6">
+    <meta name="baidu-site-verification" content="code-Zd2YxoqroE">
+    <meta name="360-site-verification" content="21bbf00cf405900c74b271c274a2f26b">
+    <meta name="msvalidate.01" content="6BED5B58AFE6BE3D3B7FF760287624FC">
+    <meta name="yandex-verification" content="8e509d56b28690cf">
+    <meta name="sogou_site_verification" content="NSV8Rr6tZl">
+    <meta name="baidu_union_verify" content="13a3b0cf40cc2121ade31df14597fb02"> <link rel="preload" href="/assets/css/styles.3947d7b6.css" as="style"><link rel="preload" href="/assets/js/app.3947d7b6.js" as="script"><link rel="preload" href="/assets/css/1.styles.0fb69fde.css" as="style"><link rel="preload" href="/assets/js/1.0fb69fde.js" as="script"><link rel="preload" href="/assets/css/2.styles.d3ee63c7.css" as="style"><link rel="preload" href="/assets/js/2.d3ee63c7.js" as="script"><link rel="preload" href="/assets/js/41.a5dba266.js" as="script"><link rel="preload" href="/assets/css/12.styles.4c49a5f6.css" as="style"><link rel="preload" href="/assets/js/12.4c49a5f6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.852c6e0d.css"><link rel="prefetch" href="/assets/css/11.styles.fcc11c8b.css"><link rel="prefetch" href="/assets/css/13.styles.28994cd3.css"><link rel="prefetch" href="/assets/css/14.styles.a58c2259.css"><link rel="prefetch" href="/assets/css/15.styles.0679f2ec.css"><link rel="prefetch" href="/assets/css/16.styles.a93c6f98.css"><link rel="prefetch" href="/assets/css/17.styles.19c3616f.css"><link rel="prefetch" href="/assets/css/3.styles.9f816afa.css"><link rel="prefetch" href="/assets/css/4.styles.b3390eec.css"><link rel="prefetch" href="/assets/css/5.styles.d5092305.css"><link rel="prefetch" href="/assets/css/6.styles.615acf57.css"><link rel="prefetch" href="/assets/css/7.styles.51c30650.css"><link rel="prefetch" href="/assets/css/8.styles.4375c83a.css"><link rel="prefetch" href="/assets/css/9.styles.b98f0056.css"><link rel="prefetch" href="/assets/js/10.852c6e0d.js"><link rel="prefetch" href="/assets/js/11.fcc11c8b.js"><link rel="prefetch" href="/assets/js/13.28994cd3.js"><link rel="prefetch" href="/assets/js/14.a58c2259.js"><link rel="prefetch" href="/assets/js/15.0679f2ec.js"><link rel="prefetch" href="/assets/js/16.a93c6f98.js"><link rel="prefetch" href="/assets/js/17.19c3616f.js"><link rel="prefetch" href="/assets/js/18.14cde21a.js"><link rel="prefetch" href="/assets/js/19.e4fc2dca.js"><link rel="prefetch" href="/assets/js/20.5f3b17a2.js"><link rel="prefetch" href="/assets/js/21.7f8e33f6.js"><link rel="prefetch" href="/assets/js/22.00b781a4.js"><link rel="prefetch" href="/assets/js/23.493ff066.js"><link rel="prefetch" href="/assets/js/24.db5fded5.js"><link rel="prefetch" href="/assets/js/25.12c0ae3d.js"><link rel="prefetch" href="/assets/js/26.06c1a262.js"><link rel="prefetch" href="/assets/js/27.afe3c27a.js"><link rel="prefetch" href="/assets/js/28.182dac49.js"><link rel="prefetch" href="/assets/js/29.36dd043c.js"><link rel="prefetch" href="/assets/js/3.9f816afa.js"><link rel="prefetch" href="/assets/js/30.6797eedc.js"><link rel="prefetch" href="/assets/js/31.caad8449.js"><link rel="prefetch" href="/assets/js/32.e19ca739.js"><link rel="prefetch" href="/assets/js/33.5a4b1646.js"><link rel="prefetch" href="/assets/js/34.92cf4196.js"><link rel="prefetch" href="/assets/js/35.6f190759.js"><link rel="prefetch" href="/assets/js/36.b7ac4377.js"><link rel="prefetch" href="/assets/js/37.33383829.js"><link rel="prefetch" href="/assets/js/38.f6127f8f.js"><link rel="prefetch" href="/assets/js/39.971864e6.js"><link rel="prefetch" href="/assets/js/4.b3390eec.js"><link rel="prefetch" href="/assets/js/40.4a244a79.js"><link rel="prefetch" href="/assets/js/42.bce35ce6.js"><link rel="prefetch" href="/assets/js/43.aa02c761.js"><link rel="prefetch" href="/assets/js/44.b6f6bd0c.js"><link rel="prefetch" href="/assets/js/45.edb4cad4.js"><link rel="prefetch" href="/assets/js/46.30c5e0b7.js"><link rel="prefetch" href="/assets/js/47.4a9dc897.js"><link rel="prefetch" href="/assets/js/48.beb9a6c5.js"><link rel="prefetch" href="/assets/js/49.68b526e6.js"><link rel="prefetch" href="/assets/js/5.d5092305.js"><link rel="prefetch" href="/assets/js/50.c4f0a1cd.js"><link rel="prefetch" href="/assets/js/51.f96a068e.js"><link rel="prefetch" href="/assets/js/52.af0928c2.js"><link rel="prefetch" href="/assets/js/53.13ddb093.js"><link rel="prefetch" href="/assets/js/54.aeccf0a7.js"><link rel="prefetch" href="/assets/js/55.ef90124d.js"><link rel="prefetch" href="/assets/js/56.1ee8952b.js"><link rel="prefetch" href="/assets/js/57.0277f530.js"><link rel="prefetch" href="/assets/js/58.7dc0e788.js"><link rel="prefetch" href="/assets/js/59.4c5c3fa7.js"><link rel="prefetch" href="/assets/js/6.615acf57.js"><link rel="prefetch" href="/assets/js/60.575a92c4.js"><link rel="prefetch" href="/assets/js/61.bf3c1ea6.js"><link rel="prefetch" href="/assets/js/62.aacbdfd3.js"><link rel="prefetch" href="/assets/js/63.0298a671.js"><link rel="prefetch" href="/assets/js/64.bc5cfe33.js"><link rel="prefetch" href="/assets/js/65.e0740105.js"><link rel="prefetch" href="/assets/js/66.96d870e9.js"><link rel="prefetch" href="/assets/js/67.5a4573ad.js"><link rel="prefetch" href="/assets/js/68.25758a8d.js"><link rel="prefetch" href="/assets/js/69.e74fae15.js"><link rel="prefetch" href="/assets/js/7.51c30650.js"><link rel="prefetch" href="/assets/js/70.ac989863.js"><link rel="prefetch" href="/assets/js/71.fa54085a.js"><link rel="prefetch" href="/assets/js/72.0c4c1662.js"><link rel="prefetch" href="/assets/js/73.759d36c6.js"><link rel="prefetch" href="/assets/js/74.1d183506.js"><link rel="prefetch" href="/assets/js/75.bfc543b2.js"><link rel="prefetch" href="/assets/js/76.de240d38.js"><link rel="prefetch" href="/assets/js/77.c6e50927.js"><link rel="prefetch" href="/assets/js/78.411e92c9.js"><link rel="prefetch" href="/assets/js/79.370d8e55.js"><link rel="prefetch" href="/assets/js/8.4375c83a.js"><link rel="prefetch" href="/assets/js/80.ce9e1433.js"><link rel="prefetch" href="/assets/js/81.de50c424.js"><link rel="prefetch" href="/assets/js/82.38930dd8.js"><link rel="prefetch" href="/assets/js/83.e58b8990.js"><link rel="prefetch" href="/assets/js/84.04e51a30.js"><link rel="prefetch" href="/assets/js/85.c2106e84.js"><link rel="prefetch" href="/assets/js/86.61576a2b.js"><link rel="prefetch" href="/assets/js/87.291ffcdf.js"><link rel="prefetch" href="/assets/js/88.47850acf.js"><link rel="prefetch" href="/assets/js/89.0583e982.js"><link rel="prefetch" href="/assets/js/9.b98f0056.js"><link rel="prefetch" href="/assets/js/90.35d8ee6d.js"> <link rel="stylesheet" href="/assets/css/styles.3947d7b6.css"><link rel="stylesheet" href="/assets/css/1.styles.0fb69fde.css"><link rel="stylesheet" href="/assets/css/2.styles.d3ee63c7.css"><link rel="stylesheet" href="/assets/css/12.styles.4c49a5f6.css">
+    <style preload>
+      html body {
+        overflow: hidden;
+      }
+
+      #prerender {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0cc;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0cc;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #0cc;
+      }
+
+      .first-loading-wrp {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp {
+        flex: 1;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 64px);
+        grid-template-rows: repeat(auto-fill, 100px);
+        gap: 30px;
+        grid-auto-flow: column dense;
+        place-items: center;
+        outline: none;
+      }
+
+      .first-loading-wrp .home-logos-wrp > .logos {
+        width: 100%;
+        min-height: 75px;
+        border-radius: 8px;
+        outline: none;
+        place-self: center;
+        padding-bottom: 5px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: antRotate 1.2s infinite linear;
+        transform: rotate(45deg);
+        position: relative;
+        display: inline-block;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      .dot i {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        display: block;
+        background-color: #1890ff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .home-bottoms-wrp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          rgb(30, 40, 70),
+          rgb(30, 45, 75),
+          rgb(35, 25, 80),
+          rgb(50, 25, 70),
+          rgb(40, 25, 70),
+          rgb(35, 25, 70)
+        );
+        background-size: 400% 100%;
+        user-select: none;
+        filter: 2px;
+        animation: fade 2s ease infinite;
+      }
+
+      .live-2d-man {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 135px;
+        height: 300px;
+        background-color: #ccc;
+        animation: fade-logo 1.5s ease infinite;
+        border-radius: 12px;
+      }
+
+      @keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @-webkit-keyframes antRotate {
+        to {
+          -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      @keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-logo {
+        from {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .first-loading-wrp .home-logos-wrp {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-flow: row;
+        }
+        .live-2d-man {
+          display: none;
+        }
+        .home-bottoms-wrp {
+          display: none;
+        }
+      }
+    </style>
+    <script async type="text/javascript">
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd1caff3cf77e120ce5d43bb6a496631";
+        hm.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      (function () {
+        let qh360 = document.createElement("script");
+        qh360.src =
+          "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        qh360.async = true;
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(qh360, s);
+      })();
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1 style="display: line; height: 0; margin: 0; padding: 0"></h1>
+    <div id="prerender">
+      <div class="first-loading-wrp">
+        <div class="home-logos-wrp">
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+          <p class="logos"></p>
+        </div>
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div style="display: block">界面正在加载中，请稍后</div>
+        <div class="live-2d-man"></div>
+        <div class="home-bottoms-wrp"></div>
+      </div>
+    </div>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div id="progressbar"></div> <div id="scrollPath"></div> <header class="navbar" style="opacity:0;"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JarryChen's Blog</span></a> <div class="links"><div class="mode-switch"><div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value=" " false-value="dark-mode" class="el-switch__input"><span class="el-switch__label el-switch__label--left"><i class="iconfont icon-moon"></i><!----></span><span class="el-switch__core" style="width:40px;"></span><span class="el-switch__label el-switch__label--right is-active"><i class="iconfont icon-sun"></i><!----></span></div></div> <div class="ai-search"><div aria-haspopup="listbox" role="combobox" aria-owns="el-autocomplete-633" class="el-autocomplete"><div class="el-input el-input--prefix"><!----><input type="text" autocomplete="off" valueKey="title" placeholder="请输入内容" fetchSuggestions="function () { [native code] }" triggerOnFocus="true" debounce="500" placement="bottom" popperAppendToBody="true" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-search"></i></span><!----><!----><!----></div><div role="region" class="el-autocomplete-suggestion el-popper" style="width:;display:none;"><div class="el-scrollbar"><div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-autocomplete-suggestion__list"></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div></div></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont el-icon-s-home"></i>主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.learning" class="dropdown-title"><span class="title"><i class="iconfont icon-archive"></i>学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/frontend.html" class="nav-link"><i class="iconfont"></i>前端
+</a></li><li class="dropdown-item"><!----> <a href="/category/algorithm.html" class="nav-link"><i class="iconfont"></i>算法
+</a></li><li class="dropdown-item"><!----> <a href="/category/examination.html" class="nav-link"><i class="iconfont"></i>考研
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.life" class="dropdown-title"><span class="title"><i class="iconfont icon-life"></i>生活</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/life/video.html" class="nav-link"><i class="iconfont"></i>综艺
+</a></li></ul></div></div><div class="nav-item"><a href="/about/me.html" class="nav-link"><i class="iconfont icon-about"></i>关于
+</a></div><div class="nav-item"><a href="/archive/timeline.html" class="nav-link"><i class="iconfont el-icon-date"></i>时间线
+</a></div><div class="nav-item"><a href="/comment/friendlink.html" class="nav-link"><i class="iconfont icon-comments"></i>友链
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vuepress.sakura.other" class="dropdown-title"><span class="title"><i class="iconfont el-icon-menu"></i>其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://jarrychen.cn/sitemap.xml" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>站点地图</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=Snhyf3l9e3J-fnIKOztkKSUn" target="_blank" rel="noopener noreferrer" class="nav-link external"><!----> <img alt="需要图片的外链" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/RyanChent" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>Github</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.com/jarrychen/" target="_blank" rel="noopener noreferrer" class="nav-link external"><span>力扣</span> <!----> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <!----> <main class="page"><div class="page-top"><div class="el-image" style="width:100%;height:45vmin;"><div class="el-image__placeholder"></div><!----></div> <div class="page-info"><h2>线性代数知识总结 (一)</h2> <p class="detail-info"><span><img src="https://cdn.jsdelivr.net/gh/RyanChent/cdn@1.3/img/custom/avatar.jpg" alt="JarryChen">JarryChen</span> <span>发布时间：2019-12-02</span> <span>文章字数：1465</span> <span>预计用时：7分20秒</span></p></div></div> <section><div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#一、行列式">一、行列式</a><ul><li><a href="#_1-行列式的定义">1. 行列式的定义</a></li><li><a href="#_2-行列式的展开">2. 行列式的展开</a><ul><li><a href="#_1-余子式和代数余子式">(1). 余子式和代数余子式</a></li><li><a href="#_2-行列式按行-列-展开">(2). 行列式按行(列)展开</a></li></ul></li><li><a href="#_3-行列式的性质">3. 行列式的性质</a></li><li><a href="#_4-拉普拉斯定理与范德蒙行列式">4. 拉普拉斯定理与范德蒙行列式</a></li></ul></li><li><a href="#二、矩阵">二、矩阵</a><ul><li><a href="#_1-矩阵的运算">1. 矩阵的运算</a><ul><li><a href="#_1-矩阵的加减">(1). 矩阵的加减</a></li><li><a href="#_2-矩阵的数乘">(2). 矩阵的数乘</a></li><li><a href="#_3-矩阵的乘积">(3). 矩阵的乘积</a></li><li><a href="#_4-矩阵转置的性质">(4). 矩阵转置的性质</a></li><li><a href="#_5-矩阵的逆">(5). 矩阵的逆</a></li><li><a href="#_6-伴随矩阵-a-的性质">(6). 伴随矩阵$A^{* }$的性质</a></li></ul></li><li><a href="#_2-矩阵的初等变换及初等矩阵">2. 矩阵的初等变换及初等矩阵</a><ul><li><a href="#_1-矩阵的初等变换">(1). 矩阵的初等变换</a></li><li><a href="#_2-矩阵的等价">(2). 矩阵的等价</a></li><li><a href="#_3-初等矩阵">(3). 初等矩阵</a></li></ul></li><li><a href="#_3-矩阵的秩">3. 矩阵的秩</a></li><li><a href="#_4-分块矩阵">4. 分块矩阵</a><ul><li><a href="#_1-分块矩阵的概念">(1). 分块矩阵的概念</a></li><li><a href="#_2-分块矩阵的运算">(2). 分块矩阵的运算</a></li></ul></li><li><a href="#_5-一些特殊矩阵">5. 一些特殊矩阵</a></li></ul></li><li><a href="#三、向量">三、向量</a><ul><li><a href="#_1-线性组合与线性表示">1. 线性组合与线性表示</a><ul><li><a href="#_1-线性组合">①. 线性组合</a></li><li><a href="#_2-线性表示">②. 线性表示</a></li><li><a href="#_3-向量组的等价">③. 向量组的等价</a></li></ul></li><li><a href="#_2-线性相关与线性无关">2. 线性相关与线性无关</a></li><li><a href="#_3-向量组的极大无关组与向量组的秩">3. 向量组的极大无关组与向量组的秩</a><ul><li><a href="#_1-向量组的极大线性无关组">①. 向量组的极大线性无关组</a></li><li><a href="#_2-向量组的秩">②. 向量组的秩</a></li></ul></li><li><a href="#_4-向量空间">4. 向量空间</a><ul><li><a href="#_1-向量空间-1">(1). ~~向量空间[^1]~~</a></li><li><a href="#_2-向量的内积与正交化">(2). 向量的内积与正交化</a></li></ul></li></ul></li></ul></div><p></p> <p><span style="font-size:18px;">  继前面将高等数学总结的差不多了，剩下的一些其他部分等另外再统一一起补充。本文主要来总结线性代数的前半部分，即行列式，矩阵和向量。公式倒不是很多，主要是有很多的定理，性质，和复杂繁琐的计算，需要好好理顺一下。</span></p> <h3 id="一、行列式"><a href="#一、行列式" class="header-anchor">#</a> 一、行列式</h3> <h4 id="_1-行列式的定义"><a href="#_1-行列式的定义" class="header-anchor">#</a> 1. 行列式的定义</h4> <p style="font-size:16px;">  n阶行列式
+    $$\begin{vmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ 
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ 
+ \vdots &amp; \vdots  &amp;  &amp;\vdots \\ 
+a_{n1} &amp; a_{n2} &amp; \cdots  &amp; a_{nn} 
+\end{vmatrix} = \sum_{j_{1},j_{2} \cdots j_{n}}(-1)^{\tau (j_{1}j_{2}\cdots j_{n})}a_{1j_{1}}a_{2j_{2}}\cdots a_{nj_{n}},$$
+其中$j_{1}j_{2}\cdots j_{n}$是$1,2,\cdots,n$的一个排列，$\sum_{j_{1}j_{2}\cdots j_{n}}$表示对所有的n级排列求和.</p> <h4 id="_2-行列式的展开"><a href="#_2-行列式的展开" class="header-anchor">#</a> 2. 行列式的展开</h4> <h5 id="_1-余子式和代数余子式"><a href="#_1-余子式和代数余子式" class="header-anchor">#</a> (1). 余子式和代数余子式</h5> <p style="font-size:16px;">  在n阶行列式$D=|a_{ij}|$中划去元素$a_{ij}$所在的第i行与第j列，剩下的元素按原来的排法构成一个n-1阶行列式，称为元素$a_{ij}$的余子式，记为$M_{ij}$，称$A_{ij} = (-1)^{i+j}M_{ij}$为元素$a_{ij}$的代数余子式.</p> <h5 id="_2-行列式按行-列-展开"><a href="#_2-行列式按行-列-展开" class="header-anchor">#</a> (2). 行列式按行(列)展开</h5> <p style="font-size:16px;">$$D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{in}A_{in}(1 \leqslant i \leqslant n),$$
+$$D=a_{1j}A_{1j}+a_{2j}A_{2j}+\cdots+a_{nj}A_{nj}(1 \leqslant i \leqslant n),$$
+$$\sum_{i=1}^{n}a_{ij}A_{ik} = a_{1j}A_{1k}+a_{2j}A_{2k}+\cdots+a_{nj}A_{nk} = \begin{cases}
+ &amp; D,j=k \\ 
+ &amp; 0, j \neq k 
+\end{cases}$$</p> <h4 id="_3-行列式的性质"><a href="#_3-行列式的性质" class="header-anchor">#</a> 3. 行列式的性质</h4> <p style="font-size:16px;">  ①$D=D^{T}$, $D^{T}$为行列式$D$的转置行列式.<br>
+  ②互换行列式的两行(列)，行列式变号.<br>
+  ③行列式某一行(列)中所有元素都乘以数$k$，等于$k$乘以此行列式.<br>
+  ④若行列式某两行(列)元素成比例，则行列式等于零.<br>
+  ⑤若行列式某一行(列)的元素都是两数之和，则行列式等于两个行列式之和.
+$$\begin{vmatrix}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots  &amp; a_{1n} \\ 
+ \vdots &amp;  &amp; \vdots &amp;  &amp; \vdots \\ 
+a_{i1}+a_{i1}^{'} &amp; \cdots &amp; a_{ij}+a_{ij}^{'} &amp; \cdots  &amp;  a_{in}+a_{in}^{'} \\ 
+ \vdots&amp;  &amp; \vdots  &amp;  &amp; \vdots \\ 
+ a_{n1} &amp; \cdots  &amp; a_{nj} &amp; \cdots  &amp; a_{nn} 
+\end{vmatrix} = \begin{vmatrix}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots  &amp; a_{1n} \\ 
+ \vdots &amp;  &amp; \vdots &amp;  &amp; \vdots \\ 
+a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots  &amp;  a_{in} \\ 
+ \vdots&amp;  &amp; \vdots  &amp;  &amp; \vdots \\ 
+ a_{n1} &amp; \cdots  &amp; a_{nj} &amp; \cdots  &amp; a_{nn} 
+\end{vmatrix} + \begin{vmatrix}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots  &amp; a_{1n} \\ 
+ \vdots &amp;  &amp; \vdots &amp;  &amp; \vdots \\ 
+a_{i1}^{'} &amp; \cdots &amp; a_{ij}^{'} &amp; \cdots  &amp;  a_{in}^{'} \\ 
+ \vdots&amp;  &amp; \vdots  &amp;  &amp; \vdots \\ 
+ a_{n1} &amp; \cdots  &amp; a_{nj} &amp; \cdots  &amp; a_{nn} 
+\end{vmatrix} .$$
+  ⑥把行列式的某一行(列)的各元素乘以同一数加到另一行(列)对应元素上去，行列式不变.</p> <h4 id="_4-拉普拉斯定理与范德蒙行列式"><a href="#_4-拉普拉斯定理与范德蒙行列式" class="header-anchor">#</a> 4. 拉普拉斯定理与范德蒙行列式</h4> <p style="font-size:16px;">  <b>拉普拉斯定理</b> 在n阶行列式$D$中任意取定k行($1 \leqslant k \leqslant n$)，由着k行元素组成的所有k阶子式与它们的代数余子式乘积之和等于行列式$D$,即<br>
+   $D = M_{1}A_{1}+ M_{2}A_{2} + \cdots + M_{s}A_{s}$( $s=C_{n}^{k}$)，其中$A_{i}$是子式$M_{i}$( $i=1,2,\cdots,s$)对应的代数余子式.<br>
+    <b>范德蒙行列式</b>
+      $$D_{n} = \begin{vmatrix}
+1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\ 
+a_{1} &amp; a_{2} &amp; a_{3} &amp; \cdots &amp; a_{n}\\ 
+a_{1}^{2} &amp; a_{2}^{2} &amp; a_{3}^{2} &amp; \cdots  &amp; a_{n}^{2} \\ 
+ \vdots &amp; \vdots &amp; \vdots &amp;  &amp; \vdots \\ 
+a_{1}^{n-2} &amp; a_{2}^{n-2} &amp; a_{3}^{n-2}  &amp; \cdots  &amp;  a_{n}^{n-2}\\ 
+a_{1}^{n-1} &amp; a_{2}^{n-1} &amp; a_{3}^{n-1}  &amp; \cdots  &amp;  a_{n}^{n-1}
+    \end{vmatrix}.$$ 
+称为n阶范德蒙行列式. n阶范德蒙行列式等于$a_{1},a_{2},\cdots,a_{n}$这n个数的所有可能的差$a_{i}-a_{j}$($1 \leqslant j &lt; i \leqslant n$)的乘积，即$D_{n} = \prod_{1 \leqslant j &lt; i \leqslant n}(a_{i} - a_{j})$. </p> <hr> <h3 id="二、矩阵"><a href="#二、矩阵" class="header-anchor">#</a> 二、矩阵</h3> <h4 id="_1-矩阵的运算"><a href="#_1-矩阵的运算" class="header-anchor">#</a> 1. 矩阵的运算</h4> <h5 id="_1-矩阵的加减"><a href="#_1-矩阵的加减" class="header-anchor">#</a> (1). 矩阵的加减</h5> <p style="font-size:16px;">  $$\begin{align} A+B &amp;= (a_{ij} + b_{ij} )_{m \times n} \\ &amp;= \begin{bmatrix}
+a_{11}+b_{11} &amp; a_{12}+b_{12} &amp; \cdots &amp; a_{1n}+b_{1n}\\ 
+a_{21}+b_{21} &amp; a_{22}+b_{22} &amp; \cdots &amp; a_{2n}+b_{2n}\\ 
+ \vdots &amp; \vdots &amp;  &amp; \vdots \\ 
+a_{m1}+b_{m11} &amp; a_{m2}+b_{m2} &amp; \cdots &amp; a_{mn}+b_{mn}
+\end{bmatrix} \end{align}. $$</p> <h5 id="_2-矩阵的数乘"><a href="#_2-矩阵的数乘" class="header-anchor">#</a> (2). 矩阵的数乘</h5> <p style="font-size:16px;">  $$kA = (ka_{ij}) = \begin{bmatrix}
+ka_{11} &amp; ka_{12} &amp; \cdots &amp; ka_{1n}\\ 
+ka_{21} &amp; ka_{22} &amp; \cdots &amp; ka_{2n}\\ 
+ \vdots &amp; \vdots &amp;  &amp; \vdots \\ 
+ka_{m1} &amp; ka_{m2} &amp; \cdots &amp; ka_{mn}
+\end{bmatrix}$$</p> <h5 id="_3-矩阵的乘积"><a href="#_3-矩阵的乘积" class="header-anchor">#</a> (3). 矩阵的乘积</h5> <p style="font-size:16px;">  设$A=(a_{ij})_{m \times s} , B = (b_{ij})_{s \times n}$，矩阵$A$与矩阵$B$的乘积$AB=(c_{ij})_{m \times n}$，其中$c_{ij} = \sum_{k=1}^{s}a_{ik}b_{kj}$($i=1, 2, \cdots, m$; $j = 1,2,\cdots, n$).</p> <h5 id="_4-矩阵转置的性质"><a href="#_4-矩阵转置的性质" class="header-anchor">#</a> (4). 矩阵转置的性质</h5> <p style="font-size:16px;">  ①$(A^{T})^{T} = A$.<br>
+  ②$(A+B)^{T} = A^{T}+B^{T}$.<br>
+  ③$(kA)^{T} = kA^{T}$.<br>
+  ④$(AB)^{T} = B^{T}A^{T}$. </p> <h5 id="_5-矩阵的逆"><a href="#_5-矩阵的逆" class="header-anchor">#</a> (5). 矩阵的逆</h5> <p style="font-size:16px;">  <b>定义</b> n阶矩阵$A$可逆的充要条件是其行列式$|A| \neq 0$.当$A$可逆时,$A^{-1} = \frac{A^{* }}{|A|}$，$A$的伴随矩阵
+   $$A^{*} = \begin{bmatrix}
+A_{11} &amp; A_{21} &amp; \cdots &amp; A_{n1}\\ 
+A_{12} &amp; A_{22} &amp; \cdots &amp; A_{n2}\\ 
+\vdots &amp; \vdots &amp;  &amp; \vdots \\ 
+A_{1n} &amp; A_{2n} &amp; \cdots &amp; A_{nn}
+\end{bmatrix}.$$
+    <b>性质</b> ①若$A$可逆，则$A^{-1}$也可逆，且$(A^{-1})^{-1} = A$.<br>
+  ②若$A$可逆，$k \neq 0$，则$(kA)^{-1} = \frac{1}{k}A^{-1}$.<br>
+  ③两个同阶可逆矩阵$A$，$B$的乘积是可逆矩阵，且$(AB)^{-1} = B^{-1}A^{-1}$.<br>
+  ④若$A$可逆，则$A^{T}$也可逆，且$(A^{T})^{-1} = (A^{-1})^{T}$.<br>
+  ⑤若$A$可逆，则$|A^{-1}| = |A|^{-1}$.</p> <h5 id="_6-伴随矩阵-a-的性质"><a href="#_6-伴随矩阵-a-的性质" class="header-anchor">#</a> (6). 伴随矩阵$A^{* }$的性质</h5> <p style="font-size:16px;">  ①$AA^{* } = A^{* }A = |A|E$.<br>
+  ②$|A^{* }| = |A|^{n-1}$.<br>
+  ③$(A^{* })^{* } = |A|^{n-2}A (n \geqslant 3)$. <br>
+  ④$(AB)^{* } = B^{* }A^{* }$.<br>
+  ⑤$(kA^{-1})^{* } = k^{n-1}\frac{A}{|A|}$.<br>
+  ⑥若$|A| \neq 0$，则$(A^{* })^{-1} = (A^{-1})^{* }$;若$A$为正交矩阵，则$A^{* }$也为正交矩阵.<br>
+  ⑦若$A$为正定矩阵，则$A^{* }$也为正定矩阵，
+   $$r(A^{*}) = \begin{cases}
+n &amp; \text{ 当 } r(A) = n \text{时}, \\ 
+1 &amp; \text{ 当 } r(A) = n - 1 \text{时}, \\ 
+0 &amp; \text{ 当 } r(A) &lt; n - 1 \text{时}.
+\end{cases}$$</p> <h4 id="_2-矩阵的初等变换及初等矩阵"><a href="#_2-矩阵的初等变换及初等矩阵" class="header-anchor">#</a> 2. 矩阵的初等变换及初等矩阵</h4> <h5 id="_1-矩阵的初等变换"><a href="#_1-矩阵的初等变换" class="header-anchor">#</a> (1). 矩阵的初等变换</h5> <p style="font-size:16px;">  ①对调两行(列);<br>
+   ②以数$k \neq 0$乘某行(列)中的所有元素;<br>
+   ③把某行(列)所有元素的$k$倍加到另一行(列)对应元素上. </p> <h5 id="_2-矩阵的等价"><a href="#_2-矩阵的等价" class="header-anchor">#</a> (2). 矩阵的等价</h5> <p style="font-size:16px;">  <b>定义</b> 矩阵$A$若经有限次初等变换变成矩阵$B$，称$A$与$B$等价.<br>
+    <b>性质</b> ①若$A$与$B$等价，则$r(A) = r(B)$.<br>
+    ②$A$与$B$等价$\Leftrightarrow $存在$m$阶可逆矩阵$P$及$n$阶可逆矩阵$Q$，使$PAQ=B$.</p> <h5 id="_3-初等矩阵"><a href="#_3-初等矩阵" class="header-anchor">#</a> (3). 初等矩阵</h5> <p style="font-size:16px;">  由单位矩阵经过一次初等变换得到的矩阵称为初等矩阵，三种初等变换分别对应三种初等矩阵.
+   $$E(i,j) = \begin{bmatrix}
+1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp;  &amp;  &amp; 0 &amp; \cdots &amp; 1 &amp;  &amp; \\ 
+ &amp;  &amp;  &amp;  &amp; \ddots &amp;   &amp;  &amp; \\ 
+ &amp;  &amp;  &amp; 1 &amp; \cdots &amp; 0 &amp;  &amp; \\ 
+ &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\ 
+ &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; 1
+\end{bmatrix}$$
+  $E(i,j)$由交换$E$的第i行与第j行或第i列与第j列所得.
+   $$E(i(k)) = \begin{bmatrix}
+1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp;  &amp;  &amp; k &amp;  &amp;  &amp;  &amp; \\ 
+ &amp;  &amp;  &amp;  &amp; \ddots &amp;   &amp;  &amp; \\ 
+ &amp;  &amp;  &amp;  &amp;  &amp; 1 &amp;  &amp; \\ 
+ &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\ 
+ &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; 1
+\end{bmatrix}$$
+  $E(i(k))$是以数$k(k \neq 0)$乘以$E$的第i行或第i列而得.
+   $$E(i+j(k)) = \begin{bmatrix}
+1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp; \\ 
+ &amp;  &amp;  &amp; 1 &amp;  &amp;  &amp;  &amp; \\ 
+ &amp;  &amp;  &amp;  &amp; \ddots &amp;   &amp;  &amp; \\ 
+ &amp;  &amp;  &amp; k &amp; \cdots &amp; 1 &amp;  &amp; \\ 
+ &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\ 
+ &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; 1
+\end{bmatrix}$$
+  $E(i+j(k))$是将$E$的第j行的k倍加到第i行或第j列的k倍加到第i列而得.<br>
+    <span style="font-size:14px;">注：给一个矩阵进行<b style="color:red;">行</b>初等变换相当于左乘初等矩阵，给一个矩阵进行<b style="color:red;">列</b>初等变换相当于右乘初等矩阵，可称为&quot;左行右列&quot;.</span></p> <h4 id="_3-矩阵的秩"><a href="#_3-矩阵的秩" class="header-anchor">#</a> 3. 矩阵的秩</h4> <p style="font-size:16px;">  <b>定义</b> 设$A$为$m \times n$矩阵，如果存在$A$的$r$阶子式不为零，而任何$r+1$阶子式(如果存在的话)都为零，则称数$r$为矩阵$A$的秩，记为$r(A)$(或$R(A)$). 且规定零矩阵的秩等于零.<br>
+    <b>性质</b><br>
+   ①若$A$中由某个$s$阶子式不为零，则$r(A) \geqslant s$.<br>
+   ②若$A$中所有$t$阶子式全为0，则$r(A) &lt; t$.<br>
+   ③若$A$为$m \times n$矩阵，则有$0 \leqslant r(A) \leqslant min \left \{ m, n \right \}$.<br>
+   ④$r(A) = r(A^{T})$<br>
+   ⑤$max \left \{ r(A), r(B) \right \} \leqslant r(A,B) \leqslant r(A) + r(B)$.<br>
+   ⑥$r(A+B) \leqslant r(A) + r(B)$.<br>
+   ⑦$r(AB) \leqslant min \left \{r(A), r(B) \right \}$<br>
+   ⑧若$A_{m \times n}B_{n \times t} = O$,则$r(A) + r(B) \leqslant n$.<br>
+   若$r(A) = min \left \{ m, n \right \}$，则称矩阵$A$为满秩矩阵，否则称为降秩矩阵.</p> <h4 id="_4-分块矩阵"><a href="#_4-分块矩阵" class="header-anchor">#</a> 4. 分块矩阵</h4> <h5 id="_1-分块矩阵的概念"><a href="#_1-分块矩阵的概念" class="header-anchor">#</a> (1). 分块矩阵的概念</h5> <p style="font-size:16px;">  将大矩阵用若干条纵线和横线分成多个小矩阵，每个小矩阵称为$A$的子块，以子块为元素的形式上的矩阵称为分块矩阵.<br>
+    <span style="font-size:14px;">注:矩阵的分块由多种方式，可根据具体需要而定，一个矩阵也可看作以$m \times n$个元素为1阶子块的分块矩阵.</span></p> <h5 id="_2-分块矩阵的运算"><a href="#_2-分块矩阵的运算" class="header-anchor">#</a> (2). 分块矩阵的运算</h5> <p style="font-size:16px;">  分块矩阵的运算与普通矩阵的运算规则相似，分块时要注意，运算的两矩阵按块能运算，并且参与运算的子块也能运算，即内外部都能运算.<br>
+  ①$A=\begin{pmatrix}
+A_{11} &amp; \cdots &amp; A_{1t}\\ 
+\vdots &amp;  &amp; \vdots \\ 
+A_{s1} &amp; \cdots &amp; A_{st} 
+\end{pmatrix}$,$B=\begin{pmatrix}
+B_{11} &amp; \cdots &amp; B_{1t}\\ 
+\vdots &amp;  &amp; \vdots \\ 
+B_{s1} &amp; \cdots &amp; B_{st} 
+\end{pmatrix}$,其中$A_{ij}$与$B_{ij}$的行数相同、列数相同，则
+  $$A^{T} = \begin{pmatrix}
+A_{11}^{T} &amp; \cdots  &amp; A_{s1}^{T}\\ 
+\vdots &amp;  &amp; \vdots \\ 
+A_{1t}^{T} &amp; \cdots &amp; A_{st}^{T}
+\end{pmatrix} , \, kA = \begin{pmatrix}
+kA_{11} &amp; \cdots &amp; kA_{1t}\\ 
+\vdots &amp;  &amp; \vdots \\ 
+kA_{s1} &amp; \cdots &amp; kA_{st} 
+\end{pmatrix}, \, A+B=\begin{pmatrix}
+A_{11}+B_{11} &amp; \cdots &amp; A_{1t}+B_{1t} \\ 
+\vdots &amp;  &amp; \vdots \\ 
+A_{s1}+B_{s1} &amp; \cdots &amp; A_{st}+B_{st}
+\end{pmatrix}.$$
+  ②若$A=\begin{pmatrix}
+A_{1} &amp;  &amp;  &amp; O \\ 
+ &amp; A_{2} &amp;  &amp; \\ 
+ &amp;  &amp; \ddots &amp; \\ 
+O &amp;  &amp;  &amp; A_{s}
+\end{pmatrix}$，则当$|A_{i}| \neq 0(i=1,2,\cdots,s)$时，则$|A| \neq 0$，且$$|A| = |A_{1}| \cdot |A_{2}| \cdot \cdots \cdot |A_{s}|, \, A^{-1}=\begin{pmatrix}
+A_{1}^{-1} &amp;  &amp;  &amp; O \\ 
+ &amp; A_{2}^{-1} &amp;  &amp; \\ 
+ &amp;  &amp; \ddots &amp; \\ 
+O &amp;  &amp;  &amp; A_{s}^{-1}
+\end{pmatrix}.$$
+  $$③\begin{pmatrix}
+O &amp; A\\ 
+B &amp; O
+\end{pmatrix}^{-1} = \begin{pmatrix}
+O &amp; B^{-1}\\ 
+A^{-1} &amp; O
+\end{pmatrix}.$$
+  $$\begin{pmatrix}
+A &amp; O\\ 
+C &amp; B
+\end{pmatrix}^{-1} = \begin{pmatrix}
+A^{-1} &amp; O\\ 
+-B^{-1}CA^{-1} &amp; B^{-1}
+\end{pmatrix}.$$
+  $$\begin{pmatrix}
+A &amp; C\\ 
+O &amp; B
+\end{pmatrix}^{-1} = \begin{pmatrix}
+A^{-1} &amp; -A^{-1}CB^{-1}\\ 
+O &amp; B^{-1}
+\end{pmatrix}.$$</p> <h4 id="_5-一些特殊矩阵"><a href="#_5-一些特殊矩阵" class="header-anchor">#</a> 5. 一些特殊矩阵</h4> <p style="font-size:16px;">  形如$$\begin{bmatrix}
+\lambda_{1} &amp; 0 &amp; \cdots &amp; 0\\ 
+ 0 &amp; \lambda_{2} &amp; \cdots &amp; 0 \\ 
+ \vdots &amp; \vdots &amp;  &amp; \vdots\\ 
+ 0&amp; 0 &amp; \cdots &amp; \lambda_{n} 
+  \end{bmatrix}$$的方阵称为<b>对角矩阵</b>(或<b>对角阵</b>)，其中$\lambda_{1}$,$\lambda_{2}$,$\cdots$, $\lambda_{n}$不全为零.<br>
+  设$A$为n阶方阵：<br>
+    如果$A^{T} = A$，则$A$为<b>对称矩阵</b>;<br>
+    如果$A^{T} = -A$，则$A$为<b>反对称矩阵</b>;<br>
+    如果$A^{2} = A$，则$A$为<b>幂等矩阵</b>;<br>
+    如果$A^{2} = E$，则$A$为<b>对合矩阵</b>;<br>
+    如果$AA^{T} = A^{T}A= E$，则$A$为<b>正交矩阵</b>.</p> <hr> <h3 id="三、向量"><a href="#三、向量" class="header-anchor">#</a> 三、向量</h3> <h4 id="_1-线性组合与线性表示"><a href="#_1-线性组合与线性表示" class="header-anchor">#</a> 1. 线性组合与线性表示</h4> <h5 id="_1-线性组合"><a href="#_1-线性组合" class="header-anchor">#</a> ①. 线性组合</h5> <p style="font-size:16px;">  给定向量组A: $\alpha_{1}$,$\alpha_{2}$,$...$,$\alpha_{s}$,对于任意一组实数$k_{1}$,$k_{2}$,$...$,$k_{s}$,表达式$k_{1}\alpha_{1}+k_{2}\alpha_{2}+...+k_{s}\alpha_{s}$为向量组A的一个线性组合，$k_{1}$,$k_{2}$,$...$,$k_{s}$,称为这个线性组合的系数</p> <h5 id="_2-线性表示"><a href="#_2-线性表示" class="header-anchor">#</a> ②. 线性表示</h5> <p style="font-size:16px;">  给定向量组A：$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{s}$,和向量$\beta$,若存在一组数$k_{1}$,$k_{2}$,$...$,$k_{s}$,使$\beta = k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{s}\alpha_{s}$,则称向量$\beta$是向量组A的线性组合，又称向量$\beta$能由向量组A线性表示. 若向量组B中任一向量均可由向量组A线性表示，则称向量组B可由向量组A线性表示.若向量组B能由向量组A线性表示，即$r_{B} \leqslant r_{A}$.</p> <h5 id="_3-向量组的等价"><a href="#_3-向量组的等价" class="header-anchor">#</a> ③. 向量组的等价</h5> <p style="font-size:16px;">  若向量组A与向量组B能相互线性表示，称两向量组等价，向量组A与向量组B等价$\Leftrightarrow r(A) = r(B) = r(A,B)$,其中$A$,$B$是向量组A,B所构成的矩阵.</p> <p style="font-size:14px;">  注：(1)$\beta$能由向量组$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{s}$唯一线性表示的充要条件是线性方程组$\alpha_{1}x_{1}+\alpha_{2}x_{2}+\cdots+\alpha_{s}x_{s} = \beta$有唯一解;<br>
+  (2)$\beta$能由向量组$\alpha_{1}$,$\alpha_{2}$,$...$,$\alpha_{s}$线性表示但表示不唯一的充要条件是线性方程组$\alpha_{1}x_{1}+\alpha_{2}x_{2}+\cdots+\alpha_{s}x_{s} = \beta$有无穷多解;<br>
+  (3)$\beta$不能由向量组$\alpha_{1}$,$\alpha_{2}$,$...$,$\alpha_{s}$线性表示的充要条件是线性方程组$\alpha_{1}x_{1}+\alpha_{2}x_{2}+\cdots+\alpha_{s}x_{s} = \beta$无解.</p> <h4 id="_2-线性相关与线性无关"><a href="#_2-线性相关与线性无关" class="header-anchor">#</a> 2. 线性相关与线性无关</h4> <p style="font-size:16px;">  <b>定义</b> 给定向量组A：$\alpha_{1}$,$\alpha_{2}$,$...$,$\alpha_{s}$,如果存在不全为零的数$k_{1}$,$k_{2}$,$\cdots$,$k_{s}$,使得
+   $$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{s}\alpha_{s} = 0.$$
+则称向量组$A$线性相关，否则称线性无关，即当且仅当$k_{1}=k_{2}=\cdots=k_{s}=0$时，上式才成立，则向量组$A$线性无关.<br>
+    <b>性质</b> ①向量组$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{s}(s \geqslant 2)$线性相关的充分必要条件是向量组中至少有一个向量可由其余s-1个向量线性表示.<br>
+  ②设$\alpha_{j} = (a_{1j},a_{2j},\cdots,a_{nj})^{T}$($j = 1,2,\cdots,s$)，则向量组$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{s}$线性相关的充要条件是：矩阵$A=(\alpha_{1},\alpha_{2},\cdots,\alpha_{s})$的秩小于向量的个数s.<br>
+  ③n个n维向量$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{n}$线性无关(或线性相关$\Leftrightarrow $矩阵$A=(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})$的秩等于(小于)向量的个数n$\Leftrightarrow |A| \neq 0 (|A| = 0)$.<br>
+  ④当向量组中所含向量的个数大于向量的维数时，此向量组必线性相关.<br>
+  ⑤如果向量组中有一部分向量(部分组)线性相关，则整个向量组线性相关.<br>
+  ⑥线性无关的向量组中的任一部分组皆线性无关.<br>
+  ⑦若向量组$\alpha_{1},\cdots,\alpha_{s},\beta$线性相关，而向量组$\alpha_{1},\cdots,\alpha_{s}$线性无关，则向量组$\beta$可由$\alpha_{1},\cdots,\alpha_{s}$线性表示且表示法唯一.</p> <h4 id="_3-向量组的极大无关组与向量组的秩"><a href="#_3-向量组的极大无关组与向量组的秩" class="header-anchor">#</a> 3. 向量组的极大无关组与向量组的秩</h4> <h5 id="_1-向量组的极大线性无关组"><a href="#_1-向量组的极大线性无关组" class="header-anchor">#</a> ①. 向量组的极大线性无关组</h5> <p style="font-size:16px;">  $\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{r}$是向量组$T$的部分向量组，如果它满足<br>
+   i)$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{r}$线性无关;<br>
+   ii)$\forall \alpha \in T$，总有$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{r}$,$\alpha$线性相关;<br>
+ 则称向量组$\alpha_{1}$,$\alpha_{2}$,$\cdots$,$\alpha_{r}$是向量组$T$的一个极大线性无关组，简称极大无关组.</p> <h5 id="_2-向量组的秩"><a href="#_2-向量组的秩" class="header-anchor">#</a> ②. 向量组的秩</h5> <p style="font-size:16px;">  向量组的极大无关组所含向量的个数称为这个向量组的秩.<br> <span style="font-size:14px;">  注：<br>
+     (1)只含零向量的向量组的秩为0.<br>
+     (2)如果$T$线性无关，则极大无关组即它本身，此时，向量组所含向量个数等于它的秩.</span></p> <h4 id="_4-向量空间"><a href="#_4-向量空间" class="header-anchor">#</a> 4. 向量空间</h4> <h5 id="_1-向量空间-1"><a href="#_1-向量空间-1" class="header-anchor">#</a> (1). <s>向量空间<a href="%E6%95%B0%E5%AD%A6%E4%B8%80%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%8C%E5%8F%A6%E5%A4%96%E8%A1%A5%E5%85%85">^1</a></s></h5> <h5 id="_2-向量的内积与正交化"><a href="#_2-向量的内积与正交化" class="header-anchor">#</a> (2). 向量的内积与正交化</h5> <p style="font-size:16px;">  <b>定义1</b> $n$维向量空间$R^{n}$中任两个向量$\alpha = (a_{1}, a_{2}, \cdots, a_{n})^{T}$，$\beta = (b_{1}, b_{2}, \cdots, b_{n})^{T}$的内积定义为($\alpha$,$\beta$) = $\alpha^{T}\beta = \beta^{T}\alpha = a_{1}b_{1} + a_{2}b_{2} + \cdots + a_{n}b_{n}$，并称定义了内积的向量空间$R^{n}$为欧氏空间.<br>
+    <b>内积的性质</b> <br>
+   ①($\alpha$,$\beta$) = ($\beta$,$\alpha$). (交换性)<br>
+   ②($k\alpha$,$\beta$) = k($\alpha$,$\beta$) = ($\alpha$, k$\beta$),k为数.<br>
+   ③($\alpha+\beta$,$\gamma$) = ($\alpha$,$\gamma$)+($\beta$,$\gamma$)或($\alpha$,$\beta+\gamma$) = ($\alpha$,$\beta$)+($\alpha$,$\gamma$).<br>
+   ④($\alpha$,$\alpha$) $\geqslant 0$，且($\alpha$,$\alpha$) = 0当且仅当$\alpha = 0$.<br>
+    <b>定义2</b> 设$\alpha = (a_{1},a_{2},\cdots,a_{n})^{T}$,
+  $$| \alpha | = \sqrt{(\alpha, \alpha)} = \sqrt{a_{1}^{2}+a_{2}^{2}+ \cdots + a_{n}^{2}},$$称向量$\alpha$的长度，长度为1的向量称为单位向量.<br>
+    <b>定义3</b> 若($\alpha$,$\beta$) = 0,称$\alpha$与$\beta$正交，记$\alpha $⊥$\beta$.<br>
+    <b>定理</b> 设$\alpha_{1}, \alpha_{2}, \cdots, \alpha_{r}$为正交向量组，则$\alpha_{1}, \alpha_{2}, \cdots, \alpha_{r}$是线性无关的.<br>
+    <b>施密特正交化方法</b> 设$\alpha_{1}, \alpha_{2}, \cdots, \alpha_{r}$是线性无关的向量组，寻找一个标准正交向量组$\varepsilon_{1}, \varepsilon_{2}, \cdots, \varepsilon_{r}$使其与 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{r}$等价，其作法分两步：<br>
+   i)正交化
+   $$\beta_{1} = \alpha_{1}$, $\beta_{2} = \alpha_{2} - \frac{(\alpha_{2},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1},$$
+   $$\beta_{3} = \alpha_{3} - \frac{(\alpha_{3},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1} - \frac{(\alpha_{3},\beta_{2})}{(\beta_{2},\beta_{2})}\beta_{2},$$
+   $\cdots \cdots \cdots \cdots $
+   $$\beta_{r} = \alpha_{r} - \frac{(\alpha_{r},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1} - \frac{(\alpha_{r},\beta_{2})}{(\beta_{2},\beta_{2})}\beta_{2} - \cdots - \frac{(\alpha_{r},\beta_{r-1})}{(\beta_{r-1},\beta_{r-1})}\beta_{r-1}.$$
+   ii)单位化(规范化)
+   取$$\varepsilon_{1} = \frac{\beta_{1}}{|\beta_{1} |} \quad \varepsilon_{2} = \frac{\beta_{2}}{|\beta_{2} |} \quad \cdots \quad \varepsilon_{r} = \frac{\beta_{r}}{|\beta_{r} |}$$</p> <hr></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="right-options"><!----> <!----></div> <div id="SOHUCS" style="width:50%;"></div> <section class="is-not-home"><i title="亮度" class="iconfont icon-sun real"></i> <div role="slider" aria-valuemin="0" aria-valuemax="200" aria-orientation="vertical" class="el-slider is-vertical"><!----><div class="el-slider__runway" style="height:200px;"><div class="el-slider__bar" style="height:0%;bottom:0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="bottom:0%;"><div class="el-tooltip el-slider__button"></div></div><!----><!----></div></div></section></main> <footer><div class="site-footer"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg" alt="footer1"> <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg" alt="footer2"></div> <p style="color: #666666">
+          © 2021 JarryChen
+        </p> <p style="font-family: 'Ubuntu', sans-serif; color: #b9b9b9"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p></div></div> <div class="footer-device"><p><span id="busuanzi_container_site_pv">已访问<span id="busuanzi_value_site_pv"></span>次</span>
+         
+        <span id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>
+          位访客
+        </span></p> <p><img src=" /beian.png" alt="备案" style="width: 20px; height: 20px"> <a href="http://www.beian.miit.gov.cn" target="_blank" rel="external nofollow" style="color: #b9b9b9"> 粤ICP备18009401号-2</a></p></div></div></footer></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:45px;bottom:30px;width:135px;height:340px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="340" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:340px;"></canvas></div></div></div>
+    <script src="/assets/js/app.3947d7b6.js" defer></script><script src="/assets/js/1.0fb69fde.js" defer></script><script src="/assets/js/2.d3ee63c7.js" defer></script><script src="/assets/js/41.a5dba266.js" defer></script><script src="/assets/js/12.4c49a5f6.js" defer></script>
+  </body>
+  <script src="/js/APlayer.min.js" async></script>
+  <script src="/js/canvasBarrage.js" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } });
+  </script>
+  <!-- require MetingJS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+    async
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"
+    async
+    defer
+  ></script>
+  <script
+    src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async
+    defer
+  ></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" async>
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter67428265 = new Ya.Metrika({
+            id: 67428265,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer",
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</html>
